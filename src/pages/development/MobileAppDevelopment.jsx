@@ -39,7 +39,7 @@ const portfolio = [
   },
   {
     name: 'QuickApply Recruitment App',
-    image: '/images/mobile-recruitment.jpg',
+    image: '/images/ux-jobapp.jpg',
     description:
       'A job discovery app with profile login, swipe-to-save, and one‑tap apply. Built with React Native for Android and iOS.',
   },
