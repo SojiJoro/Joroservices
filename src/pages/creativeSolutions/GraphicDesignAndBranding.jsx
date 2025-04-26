@@ -44,8 +44,8 @@ const portfolio = [
       'Soft, calming colours and an inclusive design system for a care service — built to communicate trust, empathy, and clarity.',
   },
   {
-    name: 'Top 20 Everywhere Visual Direction',
-    image: '/images/branding-top20.jpg',
+    name: 'Save the Men',
+    image: '/images/savethe-men.jpg',
     description:
       'An expressive, content-first brand using vibrant tones, playful typography, and flexible templates for a blog-centric experience.',
   },
