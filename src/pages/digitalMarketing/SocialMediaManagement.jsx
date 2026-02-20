@@ -33,19 +33,19 @@ const services = [
 const portfolio = [
   {
     name: '1 Noble Healthcare Facebook Campaign',
-    image: '/images/social-noble.jpg',
+    image: '/images/1noble.jpg',
     description:
       'Increased page followers by 58% in 6 weeks through engaging carer spotlights, recruitment videos, and local community posts.',
   },
   {
     name: 'PathSync LinkedIn Content Plan',
-    image: '/images/social-pathsync.jpg',
+    image: '/images/pathsync.jpg',
     description:
       'Built a consistent LinkedIn presence with weekly career tips, role updates, and carousel job breakdowns — tailored to tech professionals.',
   },
   {
     name: 'Top 20 Everywhere Instagram Strategy',
-    image: '/images/social-top20.jpg',
+    image: '/images/savethemen.jpg',
     description:
       'Grew a content-focused Instagram account using themed story highlights, colour-coded post templates, and trending reel edits.',
   },
@@ -70,7 +70,7 @@ const SocialMediaManagement = () => (
       </div>
       <div>
         <img
-          src="/images/social-hero.jpg"
+          src="/images/branding-hero.jpg"
           alt="Social media planning desk setup"
           className="rounded-lg shadow-lg object-cover w-full h-[60vh]"
         />

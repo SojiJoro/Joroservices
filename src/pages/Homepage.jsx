@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../component/Footer';
-import TestimonialGrid from '../component/TestimonialGrid';
 import ImpressionCard from '../component/impressionCard';
 import { ServiceList } from './serviceData';
 import InsightsSection from '../component/insightSection.jsx';
@@ -81,16 +80,10 @@ const Homepage = () => (
       </div>
     </section>
 
-    {/* Testimonials Section */}
+    {/* Stats Section */}
     <section className="bg-slate-900 py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 text-center">
-          Hear from Our Clients
-        </h2>
-        <TestimonialGrid />
-        <div className="mt-12">
-          <ImpressionCard />
-        </div>
+        <ImpressionCard />
       </div>
     </section>
 

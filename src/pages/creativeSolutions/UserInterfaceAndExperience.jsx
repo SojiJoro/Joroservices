@@ -70,7 +70,7 @@ const UXUIExperience = () => (
       </div>
       <div>
         <img
-          src="/images/ux-hero.jpg"
+          src="/images/ux-healthcare.jpg"
           alt="UI/UX design mockups"
           className="rounded-lg shadow-lg object-cover w-full h-[60vh]"
         />

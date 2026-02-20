@@ -33,19 +33,19 @@ const services = [
 const portfolio = [
   {
     name: 'Healthcare Lead Campaign (Google Ads)',
-    image: '/images/ppc-healthcare.jpg',
+    image: '/images/1noble.jpg',
     description:
       'Generated qualified leads at £8 per conversion using targeted Google Ads and custom-built landing pages.',
   },
   {
     name: 'Job Ad Campaign (Meta Ads)',
-    image: '/images/ppc-jobs.jpg',
+    image: '/images/pathsync.jpg',
     description:
       'Attracted over 300 job applicants for PathSync Recruitment in 3 weeks through A/B tested Facebook and Instagram ad sets.',
   },
   {
     name: 'B2B Outreach Campaign (LinkedIn)',
-    image: '/images/ppc-b2b.jpg',
+    image: '/images/branding-pathsync.jpg',
     description:
       'Launched a LinkedIn campaign targeting senior project managers, delivering a 22% lead form completion rate.',
   },
@@ -70,7 +70,7 @@ const PPCAndOnlineCampaigns = () => (
       </div>
       <div>
         <img
-          src="/images/ppc-hero.jpg"
+          src="/images/branding-hero.jpg"
           alt="Digital ad campaign dashboard"
           className="rounded-lg shadow-lg object-cover w-full h-[60vh]"
         />

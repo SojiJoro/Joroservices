@@ -93,7 +93,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-12 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Joro Services Ltd. All rights reserved. | Company registered in England & Wales.
+        &copy; {new Date().getFullYear()} Joro Services Ltd. All rights reserved. | Company No. 14079588 | Registered in England & Wales.
       </div>
     </footer>
   );

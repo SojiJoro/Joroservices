@@ -17,7 +17,7 @@ const TechHeroSection = () => (
     </div>
     <div className="lg:col-span-2">
       <img
-        src="/tech-hero-image.webp"
+        src="/images/web-development-hero.jpg"
         alt="Technical Services"
         className="rounded-lg object-cover w-full h-[50vh] lg:h-[80vh]"
       />

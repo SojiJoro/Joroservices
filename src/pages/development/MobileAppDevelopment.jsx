@@ -45,7 +45,7 @@ const portfolio = [
   },
   {
     name: 'Client Support Portal',
-    image: '/images/mobile-support.jpg',
+    image: '/images/ux-healthcare-mobile.jpg',
     description:
       'Mobile dashboard with in-app notifications, ticket tracking, and secure file uploads — designed for remote teams.',
   },
@@ -70,7 +70,7 @@ const MobileAppDevelopment = () => (
       </div>
       <div>
         <img
-          src="/images/mobile-hero.jpg"
+          src="/images/mobile-timesheet.jpg"
           alt="Mobile app screen mockups"
           className="rounded-lg shadow-lg object-cover w-full h-[60vh]"
         />

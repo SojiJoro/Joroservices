@@ -33,19 +33,19 @@ const services = [
 const portfolio = [
   {
     name: 'Healthcare IT Support Contract',
-    image: '/images/it-healthcare.jpg',
+    image: '/images/1noble.jpg',
     description:
       'Provided full support for care home IT infrastructure, including user account management, PC refreshes, and printer maintenance.',
   },
   {
     name: 'Remote Staff Support & Automation',
-    image: '/images/it-remote.jpg',
+    image: '/images/ux-dashboard.jpg',
     description:
       'Enabled a distributed team with VPN setup, Slack integration, and zero-downtime deployment of security patches.',
   },
   {
     name: 'Infrastructure Uptime Improvement',
-    image: '/images/it-uptime.jpg',
+    image: '/images/data-sales.jpg',
     description:
       'Achieved 99.98% uptime for a financial services firm by implementing load balancing, proactive monitoring, and automated backups.',
   },
@@ -70,7 +70,7 @@ const ItSupportAndMaintenance = () => (
       </div>
       <div>
         <img
-          src="/images/it-hero.jpg"
+          src="/images/data-hero.jpg"
           alt="IT technician working on systems"
           className="rounded-lg shadow-lg object-cover w-full h-[60vh]"
         />

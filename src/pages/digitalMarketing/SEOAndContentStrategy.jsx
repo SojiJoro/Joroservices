@@ -33,19 +33,19 @@ const services = [
 const portfolio = [
   {
     name: 'Healthcare SEO Campaign',
-    image: '/images/seo-healthcare.jpg',
+    image: '/images/1noble.jpg',
     description:
       'Optimised key landing pages and implemented schema markup — increasing organic leads by 63% within three months.',
   },
   {
     name: 'Recruitment Blog Growth Strategy',
-    image: '/images/seo-recruitment.jpg',
+    image: '/images/pathsync.jpg',
     description:
       'Created and executed a content calendar that grew blog traffic from 200 to over 3,000 monthly visits in six months.',
   },
   {
     name: 'Local SEO for Care Homes',
-    image: '/images/seo-local.jpg',
+    image: '/images/savethe-men.jpg',
     description:
       'Improved Google My Business visibility and local pack rankings, boosting calls and walk-in queries for supported living facilities.',
   },
@@ -70,7 +70,7 @@ const SEOAndContentStrategy = () => (
       </div>
       <div>
         <img
-          src="/images/seo-hero.jpg"
+          src="/images/branding-hero.jpg"
           alt="SEO dashboard and content workflow"
           className="rounded-lg shadow-lg object-cover w-full h-[60vh]"
         />

@@ -39,7 +39,7 @@ const portfolio = [
   },
   {
     name: 'ETL Pipeline for Healthcare CRM',
-    image: '/images/data-pipeline.jpg',
+    image: '/images/data-governance.jpg',
     description:
       'Built and deployed automated pipelines that pull and clean data from multiple sources into a centralised healthcare CRM.',
   },

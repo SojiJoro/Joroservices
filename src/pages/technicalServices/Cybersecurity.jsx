@@ -33,19 +33,19 @@ const services = [
 const portfolio = [
   {
     name: 'E-Commerce Cloud Migration (AWS)',
-    image: '/images/cloud-ecommerce.jpg',
+    image: '/images/data-governance.jpg',
     description:
       'Migrated a Shopify‑based backend to AWS with S3, Lambda, and RDS — reducing latency by 40% and improving uptime.',
   },
   {
     name: 'Healthcare Cloud Setup (Azure)',
-    image: '/images/cloud-healthcare.jpg',
+    image: '/images/1noble.jpg',
     description:
       'Designed HIPAA-compliant architecture on Azure with secure storage, VM scaling, and multi-region redundancy.',
   },
   {
     name: 'CI/CD Deployment on GCP',
-    image: '/images/cloud-cicd.jpg',
+    image: '/images/pathsync.jpg',
     description:
       'Automated build and deploy pipelines using GCP Cloud Build and Artifact Registry for a fintech SaaS platform.',
   },
@@ -70,7 +70,7 @@ const CloudInfrastructure = () => (
       </div>
       <div>
         <img
-          src="/images/cloud-hero.jpg"
+          src="/images/data-hero.jpg"
           alt="Cloud infrastructure illustration"
           className="rounded-lg shadow-lg object-cover w-full h-[60vh]"
         />
