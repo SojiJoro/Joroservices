@@ -75,22 +75,26 @@ const Homepage = () => (
       </div>
     </section>
 
-    {/* Companies We Work With - Placeholder */}
+    {/* Trusted By / Certifications */}
     <section className="bg-white py-16">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-          Companies We Work With
+          Trusted Partners & Certifications
         </h2>
         <p className="text-slate-600 mb-12 max-w-2xl mx-auto">
-          Trusted by businesses across the UK to deliver technology solutions that drive real results.
+          Certified and recognised by leading technology and compliance organisations.
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-6 items-center">
+          {Array.from({ length: 15 }, (_, i) => i + 1).map((i) => (
             <div
               key={i}
-              className="bg-gray-100 rounded-xl h-20 flex items-center justify-center"
+              className="bg-gray-50 rounded-xl p-3 flex items-center justify-center hover:shadow-md transition"
             >
-              <span className="text-gray-400 text-sm font-medium">Client Logo</span>
+              <img
+                src={`/logo${i}.webp`}
+                alt={`Partner certification ${i}`}
+                className="h-16 w-auto object-contain"
+              />
             </div>
           ))}
         </div>
