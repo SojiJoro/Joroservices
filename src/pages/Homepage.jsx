@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../component/Footer';
-import TestimonialGrid from '../component/TestimonialGrid';
 import ImpressionCard from '../component/impressionCard';
 import { ServiceList } from './serviceData';
 import InsightsSection from '../component/insightSection.jsx';
@@ -13,15 +12,15 @@ const Homepage = () => (
     {/* Hero Section */}
     <div
       id="hero"
-      className="relative bg-hero-bg bg-cover bg-center min-h-[75vh] w-full"
+      className="relative bg-hero-bg bg-cover bg-center min-h-screen w-full flex items-center justify-center"
     >
       <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 flex flex-col items-center justify-center pt-20 pb-20 text-white px-4 text-center max-w-3xl mx-auto">
-        <h1 className="text-4xl lg:text-6xl font-extrabold mb-4">
+      <div className="relative z-10 flex flex-col items-center justify-center text-white px-4 text-center max-w-3xl mx-auto">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
           Transform Your Digital Vision into Reality
         </h1>
-        <p className="text-lg lg:text-xl mb-6">
-          Custom technology solutions to empower your business for tomorrow’s challenges
+        <p className="text-lg md:text-xl lg:text-xl mb-6">
+          Custom technology solutions to empower your business for tomorrow's challenges
         </p>
         <Link
           to="/getintouch"
@@ -35,32 +34,27 @@ const Homepage = () => (
     {/* Core Services Section */}
     <section className="bg-[#f1f1f1] py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid lg:grid-cols-5 gap-8 mb-12">
-          <h2 className="text-3xl lg:text-5xl font-bold leading-tight lg:col-span-3 text-slate-900">
-            Comprehensive Technology Services
-          </h2>
-          <p className="lg:col-span-2 text-slate-600">
-            From scalable web and mobile applications to secure cloud infrastructure and data analytics,
-            we deliver end-to-end solutions designed for lasting impact and growth.
-          </p>
-        </div>
+        <h2 className="text-3xl lg:text-5xl font-bold leading-tight text-slate-900 mb-12">
+          Comprehensive Technology Services
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {ServiceList.map((service, idx) => (
-            <div
+            <Link
               key={idx}
-              className="relative group overflow-hidden rounded-3xl"
+              to={service.link}
+              className="relative group overflow-hidden rounded-3xl block"
             >
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-52 object-cover rounded-3xl group-hover:opacity-80 transition"
+                className="w-full h-52 object-cover rounded-3xl group-hover:scale-105 transition duration-300"
               />
-              <div className="absolute inset-0 bg-accent/30 rounded-3xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute inset-0 bg-black/40 rounded-3xl flex items-end p-4">
                 <h3 className="text-white text-lg font-semibold">
                   {service.title}
                 </h3>
               </div>
-            </div>
+            </Link>
           ))}
           <div className="col-span-1 sm:col-span-2 lg:col-span-3 bg-gradient-to-bl from-[#46868f] to-[#2b4d55] rounded-3xl p-12 text-center mx-auto">
             <h3 className="text-white text-3xl font-bold mb-4">
@@ -81,16 +75,32 @@ const Homepage = () => (
       </div>
     </section>
 
-    {/* Testimonials Section */}
-    <section className="bg-slate-900 py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 text-center">
-          Hear from Our Clients
+    {/* Companies We Work With - Placeholder */}
+    <section className="bg-white py-16">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+          Companies We Work With
         </h2>
-        <TestimonialGrid />
-        <div className="mt-12">
-          <ImpressionCard />
+        <p className="text-slate-600 mb-12 max-w-2xl mx-auto">
+          Trusted by businesses across the UK to deliver technology solutions that drive real results.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div
+              key={i}
+              className="bg-gray-100 rounded-xl h-20 flex items-center justify-center"
+            >
+              <span className="text-gray-400 text-sm font-medium">Client Logo</span>
+            </div>
+          ))}
         </div>
+      </div>
+    </section>
+
+    {/* Stats */}
+    <section className="bg-slate-900 py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <ImpressionCard />
       </div>
     </section>
 
