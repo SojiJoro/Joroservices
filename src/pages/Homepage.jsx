@@ -75,6 +75,38 @@ const Homepage = () => (
       </div>
     </section>
 
+    {/* Companies We Work With */}
+    <section className="bg-white py-16">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+          Companies We Work With
+        </h2>
+        <p className="text-slate-600 mb-12 max-w-2xl mx-auto">
+          Trusted by businesses across the UK to deliver technology solutions that drive real results.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
+          {[
+            { src: '/Client Logos/1nobleHealthcare.png', alt: '1 Noble Healthcare' },
+            { src: '/Client Logos/ClearVital.ico', alt: 'Clear Vital Social Care' },
+            { src: '/Client Logos/DebtMap.png', alt: 'DebtMap' },
+            { src: '/Client Logos/Logo.png', alt: 'Transcend Plus Care' },
+            { src: '/Client Logos/emk-logo.jpg', alt: 'EMK Aesthetic Beauty' },
+          ].map((client, i) => (
+            <div
+              key={i}
+              className="flex items-center justify-center"
+            >
+              <img
+                src={client.src}
+                alt={client.alt}
+                className="h-16 sm:h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* Stats */}
     <section className="bg-slate-900 py-12">
       <div className="max-w-6xl mx-auto px-4">
