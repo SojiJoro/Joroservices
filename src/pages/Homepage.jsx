@@ -56,17 +56,17 @@ const Homepage = () => (
               </div>
             </Link>
           ))}
-          <div className="col-span-1 sm:col-span-2 lg:col-span-3 bg-gradient-to-bl from-[#46868f] to-[#2b4d55] rounded-3xl p-12 text-center mx-auto">
-            <h3 className="text-white text-3xl font-bold mb-4">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-3 bg-gradient-to-bl from-[#46868f] to-[#2b4d55] rounded-3xl p-6 sm:p-8 lg:p-12 text-center mx-auto w-full">
+            <h3 className="text-white text-2xl sm:text-3xl font-bold mb-4">
               Your Trusted Joro Services Partner
             </h3>
-            <p className="text-white/80 mb-8 max-w-prose mx-auto">
+            <p className="text-white/80 mb-8 max-w-prose mx-auto text-sm sm:text-base">
               We collaborate closely with you to craft bespoke digital strategies,
               combining deep technical expertise with industry insights to accelerate growth and innovation.
             </p>
             <Link
               to="/getintouch"
-              className="bg-accent text-white font-bold px-8 py-4 rounded-xl hover:bg-accent-dark transition"
+              className="inline-block bg-accent text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-accent-dark transition text-sm sm:text-base"
             >
               Start Your Strategy Session
             </Link>
