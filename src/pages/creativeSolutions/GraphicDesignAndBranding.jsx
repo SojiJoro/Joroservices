@@ -8,7 +8,7 @@ const services = [
     icon: FaPenNib,
     title: 'Logo Design & Identity',
     description:
-      ‘We design logos that look professional, work at any size, and represent what your business is about.’,
+      "We design logos that look professional, work at any size, and represent what your business is about.",
   },
   {
     icon: FaPalette,

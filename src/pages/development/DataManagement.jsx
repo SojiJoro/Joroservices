@@ -47,7 +47,7 @@ const portfolio = [
     name: 'Finance Data Governance Setup',
     image: '/images/data-governance.jpg',
     description:
-      'Implemented a role-based access control system, backup strategy, and GDPR compliance for a finance firm’s internal data.',
+      "Implemented a role-based access control system, backup strategy, and GDPR compliance for a finance firm’s internal data.",
   },
 ]
 
