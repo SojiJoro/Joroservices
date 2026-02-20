@@ -3,7 +3,7 @@ import { FaCircleDot } from "react-icons/fa6";
 
 const DigitalHeroSection = () => {
   return (
-    <section className="relative grid p-4 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
+    <section id="hero" className="relative grid p-4 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video

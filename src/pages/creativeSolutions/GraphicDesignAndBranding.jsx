@@ -54,7 +54,7 @@ const portfolio = [
 const GraphicBranding = () => (
   <main className="bg-white text-black">
     {/* Hero Section */}
-    <section className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
+    <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>
         <p className="uppercase text-sm text-accent-dark mb-4">Graphic Design & Branding</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Make a Statement Without Saying a Word</h1>
@@ -62,7 +62,7 @@ const GraphicBranding = () => (
           Great design is more than visuals — it’s your first impression, your story, your voice. At Joro Services, we shape your brand identity with purposeful design that stands out, stays consistent, and connects with your audience.
         </p>
         <Link
-          to="/contact"
+          to="/getintouch"
           className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
         >
           Let’s Shape Your Brand
@@ -116,7 +116,7 @@ const GraphicBranding = () => (
         Branding Is More Than a Logo. It’s a Feeling.
       </h2>
       <Link
-        to="/contact"
+        to="/getintouch"
         className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
         Start Your Brand Journey

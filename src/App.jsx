@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./component/navbar";
 import Homepage from "./pages/Homepage";
 import UnderDevelopment from "./pages/under-development";
+import CookieConsent from "./component/CookieConsent";
 import { FaArrowUp } from "react-icons/fa6";
 
 // Main Pages
@@ -13,6 +14,9 @@ import CreativeSolution from "./pages/creativeSolutions";
 import TechnicalServices from "./pages/technicalServices";
 import Services from "./pages/services";
 import Contact from "./pages/contact";
+import About from "./pages/About";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 // Creative Solutions Subpages (slug-aligned)
 import WebsiteDesign from "./pages/creativeSolutions/WebsiteDesign";
@@ -34,6 +38,15 @@ import ItSupportAndMaintenance from "./pages/technicalServices/ItSupportAndMaint
 import Cybersecurity from "./pages/technicalServices/Cybersecurity";
 import CloudInfrastructure from "./pages/technicalServices/CloudInfrastructure";
 
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -48,11 +61,12 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="bg-background-dark min-h-[100vw] w-full font-nunito">
         {isVisible && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-5 right-5 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-800 transition z-50 duration-300 animate-bounce"
+            className="fixed bottom-16 right-5 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-800 transition z-50 duration-300 animate-bounce"
           >
             <FaArrowUp className="text-xl" />
           </button>
@@ -69,6 +83,9 @@ function App() {
           <Route path="/technical-services" element={<TechnicalServices />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/getintouch" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
 
           {/* Creative Solutions Subpages */}
           <Route path="/creative-solutions/website-design" element={<WebsiteDesign />} />
@@ -93,6 +110,8 @@ function App() {
           {/* Fallback */}
           <Route path="*" element={<UnderDevelopment />} />
         </Routes>
+
+        <CookieConsent />
       </div>
     </BrowserRouter>
   );

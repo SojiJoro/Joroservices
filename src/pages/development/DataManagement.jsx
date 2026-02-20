@@ -54,7 +54,7 @@ const portfolio = [
 const DataManagement = () => (
   <main className="bg-white text-black">
     {/* Hero Section */}
-    <section className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
+    <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>
         <p className="uppercase text-sm text-accent-dark mb-4">Data Management</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">From Raw Data to Real Impact</h1>
@@ -62,7 +62,7 @@ const DataManagement = () => (
           Data is your most powerful business asset — when managed right. We help you store, clean, visualise, and protect your data so you can unlock insights, save time, and scale with confidence.
         </p>
         <Link
-          to="/contact"
+          to="/getintouch"
           className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
         >
           Let’s Talk Data
@@ -113,7 +113,7 @@ const DataManagement = () => (
         Let’s Make Your Data Work for You
       </h2>
       <Link
-        to="/contact"
+        to="/getintouch"
         className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
         Book a Free Consultation

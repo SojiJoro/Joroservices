@@ -54,7 +54,7 @@ const portfolio = [
 const UXUIExperience = () => (
   <main className="bg-white text-black">
     {/* Hero Section */}
-    <section className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
+    <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>
         <p className="uppercase text-sm text-accent-dark mb-4">UI/UX Design</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Design That Feels As Good As It Looks</h1>
@@ -62,7 +62,7 @@ const UXUIExperience = () => (
           From onboarding to checkout, we design thoughtful user experiences that feel effortless and intuitive. By blending empathy, data, and creativity, we create designs people love to use.
         </p>
         <Link
-          to="/contact"
+          to="/getintouch"
           className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
         >
           Book a UX Consultation
@@ -113,7 +113,7 @@ const UXUIExperience = () => (
         Let’s Design Smarter, Smoother Experiences
       </h2>
       <Link
-        to="/contact"
+        to="/getintouch"
         className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
         Get in Touch
