@@ -16,7 +16,7 @@ function Careers() {
         'ITIL or PMP certification preferred',
         'Excellent communication and leadership skills',
       ],
-      link: 'mailto:careers@joroservices.org?subject=IT%20Manager%20Application',
+      link: 'mailto:info@joroservices.org?subject=IT%20Manager%20Application',
     },
     {
       title: 'Senior Cloud Engineer',
@@ -31,7 +31,7 @@ function Careers() {
         'Understanding of networking, security groups, and IAM policies',
         'AWS Solutions Architect or Azure Administrator certification preferred',
       ],
-      link: 'mailto:careers@joroservices.org?subject=Senior%20Cloud%20Engineer%20Application',
+      link: 'mailto:info@joroservices.org?subject=Senior%20Cloud%20Engineer%20Application',
     },
     {
       title: 'Frontend React Developer',
@@ -46,7 +46,7 @@ function Careers() {
         'Understanding of responsive design and cross-browser compatibility',
         'Experience with testing frameworks (Jest, React Testing Library)',
       ],
-      link: 'mailto:careers@joroservices.org?subject=Frontend%20React%20Developer%20Application',
+      link: 'mailto:info@joroservices.org?subject=Frontend%20React%20Developer%20Application',
     },
     {
       title: 'Technical Support Specialist',
@@ -61,7 +61,7 @@ function Careers() {
         'CompTIA A+ or equivalent certification preferred',
         'Strong problem-solving and customer service skills',
       ],
-      link: 'mailto:careers@joroservices.org?subject=Technical%20Support%20Specialist%20Application',
+      link: 'mailto:info@joroservices.org?subject=Technical%20Support%20Specialist%20Application',
     },
     {
       title: 'DevOps Engineer',
@@ -76,7 +76,7 @@ function Careers() {
         'Knowledge of monitoring tools (Prometheus, Grafana, Datadog)',
         'Understanding of security best practices in DevOps workflows',
       ],
-      link: 'mailto:careers@joroservices.org?subject=DevOps%20Engineer%20Application',
+      link: 'mailto:info@joroservices.org?subject=DevOps%20Engineer%20Application',
     },
     {
       title: 'UX/UI Designer',
@@ -91,7 +91,7 @@ function Careers() {
         'Understanding of accessibility standards (WCAG)',
         'Ability to create and maintain design systems and component libraries',
       ],
-      link: 'mailto:careers@joroservices.org?subject=UX/UI%20Designer%20Application',
+      link: 'mailto:info@joroservices.org?subject=UX/UI%20Designer%20Application',
     },
     {
       title: 'Data Analyst',
@@ -106,7 +106,7 @@ function Careers() {
         'Understanding of ETL processes and data warehousing concepts',
         'Excellent analytical thinking and attention to detail',
       ],
-      link: 'mailto:careers@joroservices.org?subject=Data%20Analyst%20Application',
+      link: 'mailto:info@joroservices.org?subject=Data%20Analyst%20Application',
     },
     {
       title: 'Cybersecurity Consultant',
@@ -121,7 +121,7 @@ function Careers() {
         'Understanding of UK data protection regulations (GDPR, DPA 2018)',
         'Experience with security audits and compliance frameworks',
       ],
-      link: 'mailto:careers@joroservices.org?subject=Cybersecurity%20Consultant%20Application',
+      link: 'mailto:info@joroservices.org?subject=Cybersecurity%20Consultant%20Application',
     },
     {
       title: 'Project Manager',
@@ -136,7 +136,7 @@ function Careers() {
         'PRINCE2 or PMP certification preferred',
         'Strong stakeholder management and communication skills',
       ],
-      link: 'mailto:careers@joroservices.org?subject=Project%20Manager%20Application',
+      link: 'mailto:info@joroservices.org?subject=Project%20Manager%20Application',
     },
     {
       title: 'Digital Marketing Executive',
@@ -151,7 +151,7 @@ function Careers() {
         'Strong copywriting and content creation skills',
         'Understanding of conversion rate optimisation and A/B testing',
       ],
-      link: 'mailto:careers@joroservices.org?subject=Digital%20Marketing%20Executive%20Application',
+      link: 'mailto:info@joroservices.org?subject=Digital%20Marketing%20Executive%20Application',
     },
   ], []);
 

@@ -107,14 +107,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <h6 className="text-xl font-semibold text-white">Support Enquiries</h6>
-                  <a href="mailto:enquiry@joroservices.org" className="text-lg underline text-white mb-2 block hover:text-accent">
-                    enquiry@joroservices.org
+                  <a href="mailto:info@joroservices.org" className="text-lg underline text-white mb-2 block hover:text-accent">
+                    info@joroservices.org
                   </a>
                 </div>
                 <div>
                   <h6 className="text-xl font-semibold text-white">Interested in joining the team?</h6>
-                  <a href="mailto:careers@joroservices.org" className="text-lg underline text-white mb-2 block hover:text-accent">
-                    careers@joroservices.org
+                  <a href="mailto:info@joroservices.org" className="text-lg underline text-white mb-2 block hover:text-accent">
+                    info@joroservices.org
                   </a>
                 </div>
               </div>

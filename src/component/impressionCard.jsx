@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { FaHandshake } from 'react-icons/fa';
 
 const stats = [
-  { label: 'Clients Served', value: '50+' },
-  { label: 'Team Members', value: '15+' },
-  { label: 'Projects Delivered', value: '120+' },
+  { label: 'Clients Served', value: '20+' },
+  { label: 'Team Members', value: '8+' },
+  { label: 'Projects Delivered', value: '35+' },
 ];
 
 const ImpressionCard = () => {
