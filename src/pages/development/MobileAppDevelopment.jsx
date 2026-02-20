@@ -45,7 +45,7 @@ const portfolio = [
   },
   {
     name: 'Client Support Portal',
-    image: '/images/mobile-support.jpg',
+    image: '/images/ux-healthcare-mobile.jpg',
     description:
       'Mobile dashboard with in-app notifications, ticket tracking, and secure file uploads — designed for remote teams.',
   },
