@@ -3,10 +3,10 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import { FaPlus } from 'react-icons/fa6';
 
 const metrics = [
-  { desc: 'Years delivering bespoke digital solutions', fig: 10 },
-  { desc: 'Successful projects launched', fig: 75 },
-  { desc: 'Satisfied clients worldwide', fig: 50 },
-  { desc: 'Expert developers & designers', fig: 20 },
+  { desc: 'Years in business', fig: 3 },
+  { desc: 'Projects completed', fig: 35 },
+  { desc: 'Clients served', fig: 20 },
+  { desc: 'Team members', fig: 8 },
 ];
 
 const ExperienceSection = () => (

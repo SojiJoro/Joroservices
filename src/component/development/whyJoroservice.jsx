@@ -4,14 +4,14 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const features = [
   {
-    title: 'Bespoke Web Solutions',
+    title: 'Custom-Built Websites',
     description:
-      'We build custom websites tailored to your brand and business objectives, ensuring a seamless user experience and robust performance.',
+      'We build websites from scratch based on what your business actually needs — not from templates.',
   },
   {
     title: 'Proven Track Record',
     description:
-      'With over a decade of experience and hundreds of successful projects, our team delivers solutions you can trust.',
+      'We have completed projects across healthcare, recruitment, and e-commerce, so we understand real business needs.',
   },
   {
     title: 'Easy Management',

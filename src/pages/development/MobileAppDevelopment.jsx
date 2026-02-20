@@ -8,13 +8,13 @@ const services = [
     icon: FaMobileAlt,
     title: 'Cross‑Platform Development',
     description:
-      'We build high-performance apps using Flutter and React Native to deliver seamless experiences across both Android and iOS from a single codebase.',
+      'We build apps using Flutter and React Native that run on both Android and iOS from a single codebase.',
   },
   {
     icon: FaSyncAlt,
     title: 'Offline & Real-Time Sync',
     description:
-      'Enable your users to work online or offline with seamless syncing, local storage, and instant updates using Firebase or custom APIs.',
+      'Your users can work online or offline. Data syncs automatically when they reconnect, using Firebase or custom APIs.',
   },
   {
     icon: FaCloudUploadAlt,
@@ -26,7 +26,7 @@ const services = [
     icon: FaRocket,
     title: 'Performance & UX Focused',
     description:
-      'From fast loading to native transitions and accessibility support, every app is designed for fluid UX and long-term growth.',
+      'We focus on fast loading, smooth navigation, and accessibility so the app works well for everyone.',
   },
 ]
 

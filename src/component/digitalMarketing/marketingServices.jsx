@@ -4,22 +4,22 @@ const services = [
   {
     title: "Paid Advertising",
     description:
-      "Attract leads and spark conversations through strategic ad campaigns tailored to your target audience.",
+      "We set up and manage ad campaigns on Google, Facebook, and LinkedIn to bring in enquiries from the right people.",
   },
   {
     title: "SEO",
     description:
-      "Boost your search rankings and drive consistent website traffic with ongoing search engine optimization.",
+      "We improve your search rankings so more people find your website when they search for what you offer.",
   },
   {
     title: "Social Media",
     description:
-      "Foster brand loyalty and grow your community with compelling and consistent social media engagement.",
+      "We manage your social media accounts — posting regularly, responding to comments, and growing your following.",
   },
   {
     title: "Content Marketing",
     description:
-      "Strengthen brand awareness by delivering valuable content through emails, blog posts, digital PR, and more.",
+      "We write blog posts, email newsletters, and other content that helps your audience understand what you do.",
   },
 ];
 
@@ -44,19 +44,19 @@ const ServiceCards = () => {
 
 const holisticBenefits = [
   {
-    title: "Tap into Expert Knowledge",
+    title: "Access the Right Skills",
     description:
-      "Leverage our extensive in-house expertise with access to a dedicated team of over 100 professionals.",
+      "You get a dedicated team with experience across SEO, paid ads, design, and content — without hiring in-house.",
   },
   {
-    title: "Seamlessly Align with Your Business",
+    title: "We Learn Your Business",
     description:
-      "We fully embed ourselves in your business, gaining a deep understanding of your goals, vision, and preferences.",
+      "We take the time to understand how your business works, what your goals are, and what your customers care about.",
   },
   {
-    title: "Maximize Your Marketing Budget",
+    title: "Get More from Your Budget",
     description:
-      "Save money by centralizing all your outsourced marketing services under one streamlined solution.",
+      "Having everything under one roof means less duplication and better coordination across your marketing spend.",
   },
   {
     title: "Save Time and Hassle",
@@ -69,9 +69,9 @@ const holisticBenefits = [
       "We’re results-driven and committed to helping you achieve measurable success across all channels.",
   },
   {
-    title: "Unified Omnichannel Strategy",
+    title: "Consistent Across Channels",
     description:
-      "With our integrated team covering every platform, we deliver a consistent and effective omnichannel approach.",
+      "Your messaging stays consistent whether someone finds you through Google, social media, or email.",
   },
 ];
 
@@ -80,7 +80,7 @@ const HolisticBenefits = () => {
     <section className="px-4 md:px-8 lg:px-16 py-12">
       <div className="max-w-5xl mx-auto lg:pt-20 pt-8">
         <h2 className="text-2xl md:text-3xl font-normal text-gray-900 mb-10">
-          Elevate Your Marketing Strategy with a Holistic Retainer Approach
+          Why a Marketing Retainer Makes Sense
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -105,13 +105,12 @@ const MarketingServices = () => {
       {/* Header Section */}
       <div className="max-w-2xl  lg:pt-12 pt-6">
         <h1 className="text-2xl md:text-4xl">
-          Your One-Stop Hub for Marketing Excellence
+          Our Marketing Services
         </h1>
         <p className="mt-4 text-gray-600 text-sm">
-          Eye-catching design is key to making a powerful first impression and
-          building long-term customer connections. Our team crafts distinctive
-          visuals that help your business stand out, capturing attention while
-          staying true to your brand’s voice and objectives.
+          Good marketing is about being visible to the right people at the
+          right time. We handle the strategy, the creative work, and the
+          day-to-day management so you can focus on running your business.
         </p>
       </div>
 

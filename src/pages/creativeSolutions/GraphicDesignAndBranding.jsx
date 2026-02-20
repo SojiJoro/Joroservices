@@ -8,7 +8,7 @@ const services = [
     icon: FaPenNib,
     title: 'Logo Design & Identity',
     description:
-      'Your logo is the face of your business. We create timeless, versatile, and distinct logos that express your brand’s values and personality.',
+      ‘We design logos that look professional, work at any size, and represent what your business is about.’,
   },
   {
     icon: FaPalette,
@@ -20,13 +20,13 @@ const services = [
     icon: FaBullhorn,
     title: 'Marketing & Promotional Design',
     description:
-      'From social graphics to billboards, brochures to merchandise, we design visuals that speak boldly and clearly wherever your brand shows up.',
+      'We design social media graphics, brochures, flyers, and other materials that look consistent with your brand.',
   },
   {
     icon: FaRegImage,
     title: 'Visual Storytelling',
     description:
-      'We combine photography, illustration, layout, and typography to tell compelling stories that build emotional connection with your audience.',
+      'We use photography, illustration, and layout to communicate your message clearly and make your content more engaging.',
   },
 ]
 
@@ -41,7 +41,7 @@ const portfolio = [
     name: 'Clear Vital Social Care Branding',
     image: '/images/branding-clearvital.jpg',
     description:
-      'Soft, calming colours and an inclusive design system for a care service — built to communicate trust, empathy, and clarity.',
+      'Soft, calming colours and an inclusive design system for a care service — warm, approachable, and professional.',
   },
   {
     name: 'Save the Men',

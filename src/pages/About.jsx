@@ -6,11 +6,11 @@ import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 const values = [
   {
     title: 'Client-First Approach',
-    description: 'Every solution we build starts with understanding your business goals. We listen, plan, and deliver with your success as our measure.',
+    description: 'We start by understanding what you actually need, then plan and deliver around that.',
   },
   {
     title: 'Technical Excellence',
-    description: 'Our team stays current with the latest technologies and best practices to ensure we deliver robust, scalable, and secure solutions.',
+    description: 'Our team keeps up with current tools and methods so the work we deliver is solid, secure, and well-built.',
   },
   {
     title: 'Transparency',
@@ -29,7 +29,7 @@ const About = () => {
       <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white py-20 px-6 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4">About Joro Services</h1>
         <p className="text-lg lg:text-xl max-w-3xl mx-auto">
-          A technology partner committed to helping businesses grow through innovative digital solutions.
+          A technology company helping businesses get things done with the right tools and support.
         </p>
       </section>
 
@@ -45,7 +45,7 @@ const About = () => {
               Based in London, our team brings together expertise across software development, cloud infrastructure, cybersecurity, digital marketing, and creative design. We work with clients across healthcare, recruitment, social care, and e-commerce to deliver solutions that make a real difference to their operations.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Whether it is building a patient portal for a healthcare provider, migrating a recruitment platform to the cloud, or running a targeted digital marketing campaign, we approach every project with the same level of dedication and professionalism.
+              We have built patient portals for healthcare providers, migrated recruitment platforms to the cloud, and run marketing campaigns for small businesses. Every project gets the same level of care.
             </p>
           </div>
           <div className="bg-gradient-to-br from-accent/10 to-accent-dark/10 rounded-2xl p-8">
@@ -69,7 +69,7 @@ const About = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
-                <span>End-to-end services from strategy to ongoing support</span>
+                <span>Full service, from planning through to ongoing support</span>
               </li>
             </ul>
           </div>
@@ -101,11 +101,11 @@ const About = () => {
           </Link>
           <Link to="/development" className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition text-center">
             <h3 className="text-lg font-semibold mb-2 group-hover:text-accent-dark transition">Development</h3>
-            <p className="text-gray-600 text-sm">Web and mobile applications built with modern, scalable technologies.</p>
+            <p className="text-gray-600 text-sm">Web and mobile applications using React, Next.js, and Flutter.</p>
           </Link>
           <Link to="/digital-marketing" className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition text-center">
             <h3 className="text-lg font-semibold mb-2 group-hover:text-accent-dark transition">Digital Marketing</h3>
-            <p className="text-gray-600 text-sm">SEO, PPC, social media, and content strategies that drive real results.</p>
+            <p className="text-gray-600 text-sm">SEO, PPC, social media, and content marketing to grow your online presence.</p>
           </Link>
           <Link to="/technical-services" className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition text-center">
             <h3 className="text-lg font-semibold mb-2 group-hover:text-accent-dark transition">Technical Services</h3>

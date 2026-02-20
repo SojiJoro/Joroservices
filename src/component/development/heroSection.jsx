@@ -14,7 +14,7 @@ const DevHeroSection = () => {
           Build a Powerful Online Presence with Joro Services
         </h1>
         <p className="text-sm lg:text-base text-black w-full md:w-4/5 mt-4">
-          Partner with us to create a performant, scalable website tailored to your brand. Our development expertise ensures fast loading times, seamless user experiences, and a platform that grows with your business.
+          We build websites and web apps that load quickly, look good on any device, and are straightforward to update. If you need something more complex, we can handle that too.
         </p>
       </div>
 

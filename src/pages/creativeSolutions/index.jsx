@@ -6,7 +6,7 @@ import Footer from '../../component/Footer';
 const creativeServices = [
   {
     title: 'Website Design',
-    description: 'Custom-crafted websites that balance aesthetics with usability, built to impress and convert.',
+    description: 'Professionally designed websites that look good and are easy for visitors to use.',
     slug: 'website-design',
   },
   {
@@ -16,15 +16,15 @@ const creativeServices = [
   },
   {
     title: 'User Interface and Experience',
-    description: 'Intuitive interfaces designed for smooth user journeys and higher engagement across platforms.',
+    description: 'Clear, well-organised interfaces that make it easy for people to do what they came to do.',
     slug: 'user-interface-and-experience',
   },
 ];
 
 const creativeBenefits = [
   {
-    title: 'Tailored Visual Identity',
-    description: 'We help your brand visually communicate its mission, values, and edge—beautifully and clearly.',
+    title: 'Your Own Visual Identity',
+    description: 'We help you look professional and consistent across your website, social media, and print materials.',
   },
   {
     title: 'High-Conversion Design',
@@ -32,11 +32,11 @@ const creativeBenefits = [
   },
   {
     title: 'Unified Brand Consistency',
-    description: 'From your logo to your website and beyond, we make sure your brand speaks with one voice.',
+    description: 'Your logo, website, social media, and print materials all look like they belong together.',
   },
   {
     title: 'User-Centric Approach',
-    description: 'Our UI/UX solutions are grounded in real user behaviour, ensuring seamless experiences.',
+    description: 'We design based on how real users behave, not assumptions. That means fewer drop-offs and happier visitors.',
   },
 ];
 
@@ -61,11 +61,11 @@ const CreativeSolutions = () => (
           <span>Creative Solutions</span>
         </p>
         <h1 className="text-3xl lg:text-5xl font-[600] text-white">
-          Make Your Brand Unforgettable <br />
-          with World-Class Design
+          Design That Makes <br />
+          Your Business Look Its Best
         </h1>
         <p className="text-sm lg:text-base text-gray-300 w-4/5 mt-4">
-          We help businesses tell better stories through striking design, clean UI, and intuitive UX—so your customers remember and return.
+          We create websites, brand materials, and user interfaces that look professional and actually work for your customers.
         </p>
       </div>
 

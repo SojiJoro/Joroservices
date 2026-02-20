@@ -4,27 +4,27 @@ const services = [
   {
     title: 'Brand Identity & Strategy',
     description:
-      'We craft cohesive brand identities that resonate with your audience. From logo creation to a complete visual language, we ensure every touchpoint reflects your story.',
+      'We create brand identities that look professional and consistent — logos, colour schemes, typography, and guidelines that work across print and digital.',
   },
   {
     title: 'UX/UI Design',
     description:
-      'Our UX research and interface designs focus on clarity and engagement. We streamline user journeys, reducing friction and increasing satisfaction.',
+      'We research how your users actually behave, then design interfaces that are clear and easy to navigate. Less confusion, more completed actions.',
   },
   {
     title: 'Responsive Web Development',
     description:
-      'Using the latest front-end frameworks, we build fast, accessible websites that adapt seamlessly across devices, delivering performance and reliability.',
+      'We build websites using React and Next.js that work well on phones, tablets, and desktops. Fast loading, accessible, and easy to update.',
   },
   {
     title: 'Digital Marketing & SEO',
     description:
-      'From targeted ad campaigns to organic search optimisation, we develop data-driven strategies that boost visibility and drive qualified traffic.',
+      'We run paid ad campaigns and improve your organic search rankings so the right people can find your business online.',
   },
   {
     title: 'Content Strategy & Creation',
     description:
-      'We help you tell your brand’s story with compelling copy, engaging visuals, and multimedia content that connects and converts.',
+      ‘We write copy, create visuals, and produce content that explains what you do clearly and gets people interested.’,
   },
 ];
 
@@ -35,7 +35,7 @@ const DesignCard = () => {
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-3xl md:text-5xl font-bold">Welcome to Joro Services</h1>
         <p className="mt-4 text-black text-base md:text-lg">
-          At Joro Services, we blend creativity, technology, and strategy to deliver tailored digital experiences that captivate your audience and drive growth. From strategic branding to seamless web development and targeted marketing, we support your vision at every step.
+          We handle design, development, and marketing so everything works together. Whether you need a new brand identity, a website rebuild, or help getting found online, we can sort it out.
         </p>
       </div>
 

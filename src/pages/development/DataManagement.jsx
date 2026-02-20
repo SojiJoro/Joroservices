@@ -8,13 +8,13 @@ const services = [
     icon: FaDatabase,
     title: 'Data Architecture & Storage',
     description:
-      'We design efficient, scalable data systems using SQL, NoSQL, cloud-based, or hybrid databases tailored to your business goals.',
+      'We set up the right database for your needs — SQL, NoSQL, cloud-hosted, or a mix — depending on how your business uses data.',
   },
   {
     icon: FaProjectDiagram,
     title: 'ETL & Data Pipeline Automation',
     description:
-      'From ingestion to transformation, we automate your data flow with robust pipelines that eliminate errors and reduce manual effort.',
+      'We automate how your data moves between systems, cutting out manual steps and reducing errors along the way.',
   },
   {
     icon: FaChartBar,
@@ -59,7 +59,7 @@ const DataManagement = () => (
         <p className="uppercase text-sm text-accent-dark mb-4">Data Management</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">From Raw Data to Real Impact</h1>
         <p className="text-lg text-gray-800">
-          Data is your most powerful business asset — when managed right. We help you store, clean, visualise, and protect your data so you can unlock insights, save time, and scale with confidence.
+          Most businesses have more data than they know what to do with. We help you organise it, keep it safe, and turn it into reports and dashboards that are actually useful.
         </p>
         <Link
           to="/getintouch"

@@ -17,10 +17,10 @@ const Homepage = () => (
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex flex-col items-center justify-center pt-20 pb-20 text-white px-4 text-center max-w-3xl mx-auto">
         <h1 className="text-4xl lg:text-6xl font-extrabold mb-4">
-          Transform Your Digital Vision into Reality
+          Technology Services for Growing Businesses
         </h1>
         <p className="text-lg lg:text-xl mb-6">
-          Custom technology solutions to empower your business for tomorrow’s challenges
+          We build websites, apps, and IT systems that help your business run better
         </p>
         <Link
           to="/getintouch"
@@ -36,11 +36,11 @@ const Homepage = () => (
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-5 gap-8 mb-12">
           <h2 className="text-3xl lg:text-5xl font-bold leading-tight lg:col-span-3 text-slate-900">
-            Comprehensive Technology Services
+            What We Do
           </h2>
           <p className="lg:col-span-2 text-slate-600">
-            From scalable web and mobile applications to secure cloud infrastructure and data analytics,
-            we deliver end-to-end solutions designed for lasting impact and growth.
+            We cover everything from web and mobile apps to cloud setup, IT support,
+            and digital marketing — all under one roof.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -66,8 +66,8 @@ const Homepage = () => (
               Your Trusted Joro Services Partner
             </h3>
             <p className="text-white/80 mb-8 max-w-prose mx-auto">
-              We collaborate closely with you to craft bespoke digital strategies,
-              combining deep technical expertise with industry insights to accelerate growth and innovation.
+              We work closely with each client to understand what they actually need,
+              then build the right solution — no overcomplicating things.
             </p>
             <Link
               to="/getintouch"

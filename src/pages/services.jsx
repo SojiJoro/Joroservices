@@ -11,10 +11,10 @@ const Services = () => (
       <div className="h-full bg-black/40 flex items-center justify-center">
         <div className="text-center px-4">
           <h1 className="text-4xl lg:text-6xl font-bold text-white">
-            Our Expertise, Your Advantage
+            Our Services
           </h1>
           <p className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">
-            Explore our digital solutions, crafted to solve complex challenges and accelerate growth.
+            See what we offer and how we can help your business.
           </p>
         </div>
       </div>

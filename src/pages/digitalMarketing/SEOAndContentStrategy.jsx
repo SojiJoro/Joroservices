@@ -20,13 +20,13 @@ const services = [
     icon: FaPenFancy,
     title: 'Content Strategy & Calendar',
     description:
-      'We develop strategic content plans with blog topics, SEO-friendly headlines, and publishing schedules built to attract and convert.',
+      'We plan what to publish, when to publish it, and write SEO-friendly content that brings people to your site.',
   },
   {
     icon: FaSitemap,
     title: 'Landing Pages & Evergreen Content',
     description:
-      'From service pages to cornerstone guides, we write and structure content that performs today — and keeps delivering tomorrow.',
+      'We write service pages, guides, and blog posts that rank well in search and stay relevant over time.',
   },
 ]
 
@@ -59,7 +59,7 @@ const SEOAndContentStrategy = () => (
         <p className="uppercase text-sm text-accent-dark mb-4">SEO & Content</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Be Found, Be Trusted, Be Remembered</h1>
         <p className="text-lg text-gray-800">
-          We craft data‑driven SEO strategies and build content that your audience (and search engines) actually want. From research to results, every word is designed to earn clicks, trust, and rankings.
+          We research what your customers are searching for, then create content and optimise your site so they can find you. No guesswork — just practical SEO that brings in traffic.
         </p>
         <Link
           to="/getintouch"

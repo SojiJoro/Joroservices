@@ -8,7 +8,7 @@ const services = [
     icon: FaMobileAlt,
     title: 'Responsive Design',
     description:
-      'We build mobile‑first layouts that adapt beautifully to every screen size and device — optimised for performance and accessibility.',
+      'We build mobile-first layouts that work properly on every screen size, with good performance and accessibility.',
   },
   {
     icon: FaSearch,
@@ -26,7 +26,7 @@ const services = [
     icon: FaServer,
     title: 'Scalable Architecture',
     description:
-      'We follow modern architecture patterns using frameworks like Next.js, ensuring your app is maintainable, scalable, and future‑ready.',
+      'We use modern frameworks like Next.js and structure the code so it is easy to maintain and extend as your business grows.',
   },
 ]
 
@@ -62,7 +62,7 @@ const WebDevelopment = () => (
         <p className="uppercase text-sm text-accent-dark mb-4">Web Development</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Modern Web Apps Built for Speed and Scale</h1>
         <p className="text-lg text-gray-800">
-          From sleek marketing sites to fully featured web applications, we develop responsive, search‑optimised digital products using frameworks like React and Next.js — clean code, fast loading, and easy to manage.
+          We build everything from company websites to full web applications using React and Next.js. Clean code, fast loading, and straightforward to update.
         </p>
         <Link
           to="/getintouch"

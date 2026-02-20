@@ -12,9 +12,9 @@ const offerings = [
   {
     title: 'Custom Web Development',
     image: '/bg8.webp',
-    tagline: 'Tailored websites built for performance and scale',
+    tagline: 'Websites that load fast and work well',
     desc:
-      'Our team designs and develops secure, responsive websites that grow with your business. From informative sites to complex e-commerce platforms, we deliver solutions focused on reliability and user experience.',
+      'We build secure, responsive websites — from simple company sites to full e-commerce platforms. Everything is built with clean code, tested properly, and easy to maintain.',
     category: [
       { title: 'Front-end Engineering', icon: LiaLaptopCodeSolid },
       { title: 'Back-end Development', icon: FaDatabase },
@@ -26,7 +26,7 @@ const offerings = [
     image: '/bg9.webp',
     tagline: 'Native and cross-platform applications',
     desc:
-      'We build intuitive mobile apps for iOS and Android, ensuring a seamless experience across devices. Whether native, hybrid or cross-platform, our apps are designed to engage users and drive retention.',
+      'We build mobile apps for iOS and Android that work properly on every device. We use native, hybrid, or cross-platform approaches depending on what makes sense for your project.',
     category: [
       { title: 'iOS & Android', icon: FaLaptopCode },
       { title: 'Cross-platform', icon: GiPlatform },
@@ -36,9 +36,9 @@ const offerings = [
   {
     title: 'Data & Analytics Services',
     image: '/pexel3.webp',
-    tagline: 'Insights to power smarter decisions',
+    tagline: 'Make better decisions with your data',
     desc:
-      'Harness your data with end-to-end management, integration and analytics. Our solutions ensure data quality, security and accessibility, turning raw information into actionable insights that fuel growth.',
+      'We help you collect, organise, and make sense of your business data. That means clean databases, proper security, and dashboards that show you what is actually happening.',
     category: [
       { title: 'Data Integration', icon: MdCloudUpload },
       { title: 'Security & Compliance', icon: BsShieldCheck },

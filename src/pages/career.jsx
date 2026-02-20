@@ -23,7 +23,7 @@ function Careers() {
       location: 'London, UK (Hybrid)',
       type: 'Full-time',
       salary: '£65,000 – £80,000',
-      description: 'Design, implement, and maintain scalable cloud infrastructure solutions on AWS and Azure. Work closely with DevOps and development teams to ensure high availability, security, and cost optimisation across all client environments.',
+      description: 'Design, set up, and maintain cloud infrastructure on AWS and Azure. Work with DevOps and development teams to keep systems reliable, secure, and cost-effective.',
       requirements: [
         'Minimum 4 years of experience with AWS or Azure',
         'Proficiency in Infrastructure as Code (Terraform, CloudFormation)',
@@ -38,7 +38,7 @@ function Careers() {
       location: 'Remote',
       type: 'Full-time',
       salary: '£40,000 – £55,000',
-      description: 'Build responsive, high-performance web applications using React and modern JavaScript. Collaborate with UX designers and backend engineers to deliver seamless user experiences for our clients across healthcare, recruitment, and e-commerce sectors.',
+      description: 'Build responsive web applications using React and modern JavaScript. Work with designers and backend engineers to build good interfaces for our clients in healthcare, recruitment, and e-commerce.',
       requirements: [
         'Strong proficiency in React, JavaScript (ES6+), and TypeScript',
         'Experience with state management (Redux, Context API, or Zustand)',
@@ -98,7 +98,7 @@ function Careers() {
       location: 'Cardiff, UK (On-site)',
       type: 'Full-time',
       salary: '£32,000 – £42,000',
-      description: 'Analyse business data to provide actionable insights, build dashboards and reports using Power BI and SQL, and support decision-making across operations, marketing, and client delivery teams.',
+      description: 'Analyse business data, build dashboards and reports using Power BI and SQL, and help teams across operations, marketing, and delivery make better decisions.',
       requirements: [
         'Strong SQL skills and experience with relational databases',
         'Proficiency in Power BI, Tableau, or similar visualisation tools',
@@ -128,7 +128,7 @@ function Careers() {
       location: 'Bristol, UK (On-site)',
       type: 'Full-time',
       salary: '£42,000 – £55,000',
-      description: 'Manage end-to-end delivery of technology projects for clients, from requirements gathering through to launch. Coordinate cross-functional teams, track milestones, manage budgets, and ensure projects are delivered on time and within scope.',
+      description: 'Manage the full delivery of technology projects, from requirements through to launch. Coordinate teams, track milestones, manage budgets, and keep things on time and in scope.',
       requirements: [
         'Proven experience managing IT or digital projects',
         'Familiarity with Agile (Scrum, Kanban) and Waterfall methodologies',
@@ -143,7 +143,7 @@ function Careers() {
       location: 'Remote',
       type: 'Full-time',
       salary: '£28,000 – £38,000',
-      description: 'Plan and execute digital marketing campaigns across SEO, PPC, social media, and email. Track campaign performance using Google Analytics and reporting tools, and collaborate with the content team to drive brand awareness and lead generation.',
+      description: 'Plan and run digital marketing campaigns across SEO, PPC, social media, and email. Track performance using Google Analytics and work with the content team to bring in leads.',
       requirements: [
         'Experience with Google Ads, Meta Business Suite, and LinkedIn Ads',
         'Knowledge of SEO best practices and keyword research tools',

@@ -6,17 +6,17 @@ const faqData = [
   {
     question: 'What digital marketing services do you offer?',
     answer:
-      'We specialise in SEO, PPC, social media management, email marketing, and content strategy. Each campaign is tailored to meet your unique business goals.',
+      'We cover SEO, PPC, social media management, email marketing, and content strategy. We set up each campaign based on what your business is trying to achieve.',
   },
   {
     question: 'How do you measure campaign success?',
     answer:
-      'We track key metrics such as traffic growth, conversion rates, engagement levels, and ROI using industry‑leading analytics tools to ensure transparent reporting.',
+      'We track traffic, conversion rates, engagement, and ROI using tools like Google Analytics and Search Console. You get regular reports showing exactly how things are going.',
   },
   {
     question: 'Can you work with our in‑house team?',
     answer:
-      'Absolutely. We collaborate seamlessly with your internal teams, offering strategic guidance, training, and full support to amplify your existing efforts.',
+      'Yes, we do that regularly. We can work alongside your internal team, provide training, or handle specific areas while your team focuses on other things.',
   },
   {
     question: 'What is your pricing model?',

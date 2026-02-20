@@ -8,13 +8,13 @@ const services = [
     icon: FaUserCheck,
     title: 'User Research & Personas',
     description:
-      'We uncover user needs and behaviours through interviews, surveys, and analytics. The result: clear user personas that guide design decisions.',
+      'We talk to your users, run surveys, and look at how they actually use your product. That research shapes everything we design.',
   },
   {
     icon: FaDraftingCompass,
     title: 'Wireframing & Prototyping',
     description:
-      'We map out user flows and craft interactive wireframes, allowing you to visualise functionality early and gather feedback before build.',
+      'We create wireframes and clickable prototypes so you can see how things will work before any code is written.',
   },
   {
     icon: FaMicroscope,
@@ -35,7 +35,7 @@ const portfolio = [
     name: 'Joro Services Admin Dashboard',
     image: '/images/ux-dashboard.jpg',
     description:
-      'An intuitive admin interface with user analytics, activity tracking, and multi-role access — designed to streamline internal operations.',
+      'An admin interface with user analytics, activity tracking, and role-based access — built to make internal work easier.',
   },
   {
     name: 'Healthcare Referral Portal UX',
@@ -59,7 +59,7 @@ const UXUIExperience = () => (
         <p className="uppercase text-sm text-accent-dark mb-4">UI/UX Design</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Design That Feels As Good As It Looks</h1>
         <p className="text-lg text-gray-800">
-          From onboarding to checkout, we design thoughtful user experiences that feel effortless and intuitive. By blending empathy, data, and creativity, we create designs people love to use.
+          We design interfaces that are clear and easy to use. We base our designs on real user research — not guesswork — so things work the way your customers expect.
         </p>
         <Link
           to="/getintouch"

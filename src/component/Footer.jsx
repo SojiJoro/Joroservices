@@ -14,8 +14,8 @@ const Footer = () => {
             Joro Services
           </Link>
           <p className="mt-4 text-gray-400 text-sm">
-            Empowering businesses and individuals with tailored digital marketing,
-            development, and design solutions that drive growth and engagement.
+            Web development, IT support, digital marketing,
+            and design services for businesses across the UK.
           </p>
           <div className="mt-4">
             <p className="text-gray-400 text-sm">

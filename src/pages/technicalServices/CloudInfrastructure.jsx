@@ -59,7 +59,7 @@ const CloudInfrastructure = () => (
         <p className="uppercase text-sm text-accent-dark mb-4">Cloud Services</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Build, Scale & Protect in the Cloud</h1>
         <p className="text-lg text-gray-800">
-          We help you leverage the power of the cloud — securely and cost-effectively. From first-time migrations to high-availability architecture, we design and manage environments that grow with your business.
+          We set up and manage cloud environments on AWS, Azure, and GCP. Whether you are moving to the cloud for the first time or need better reliability from your current setup, we can help.
         </p>
         <Link
           to="/getintouch"

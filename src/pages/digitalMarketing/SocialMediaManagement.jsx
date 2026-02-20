@@ -14,7 +14,7 @@ const services = [
     icon: FaPenFancy,
     title: 'Creative Design & Copywriting',
     description:
-      'From platform-optimised visuals to scroll-stopping captions, we craft every post with attention to brand voice and storytelling impact.',
+      'We write the captions, design the graphics, and make sure everything matches your brand. Each post is created with your audience in mind.',
   },
   {
     icon: FaCommentDots,
@@ -41,7 +41,7 @@ const portfolio = [
     name: 'PathSync LinkedIn Content Plan',
     image: '/images/pathsync.jpg',
     description:
-      'Built a consistent LinkedIn presence with weekly career tips, role updates, and carousel job breakdowns — tailored to tech professionals.',
+      'Built a consistent LinkedIn presence with weekly career tips, role updates, and carousel job breakdowns aimed at tech professionals.',
   },
   {
     name: 'Top 20 Everywhere Instagram Strategy',
@@ -59,7 +59,7 @@ const SocialMediaManagement = () => (
         <p className="uppercase text-sm text-accent-dark mb-4">Social Media Management</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Turn Scrolls into Connections</h1>
         <p className="text-lg text-gray-800">
-          We help brands show up, speak up, and stay relevant across every platform. From Facebook to LinkedIn, we handle strategy, design, engagement, and reporting — so you can build real relationships at scale.
+          We manage your social media accounts so you do not have to. That means planning content, creating posts, engaging with your audience, and sending you regular reports on how things are going.
         </p>
         <Link
           to="/getintouch"

@@ -6,9 +6,9 @@ import Footer from '../../component/Footer'
 const services = [
   {
     icon: FaPaintBrush,
-    title: 'Bespoke UI/UX Design',
+    title: 'UI/UX Design',
     description:
-      'We design stunning and functional interfaces tailored to your brand identity and audience needs. From wireframes to polished visuals, your users enjoy seamless journeys that convert.',
+      'We design interfaces that look good and work well. Starting with wireframes, we refine the design until it matches your brand and is easy for visitors to use.',
   },
   {
     icon: FaMobileAlt,
@@ -20,7 +20,7 @@ const services = [
     icon: FaCode,
     title: 'Full-Stack Engineering',
     description:
-      'We build websites and web apps with robust frontends and scalable backends. Using the latest tech stacks, our builds are fast, secure, and easy to maintain.',
+      'We handle both the frontend and backend. Our builds use modern tech stacks and are written to be fast, secure, and easy to maintain.',
   },
   {
     icon: FaRocket,
