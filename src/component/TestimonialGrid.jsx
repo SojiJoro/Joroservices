@@ -6,26 +6,38 @@ const testimonials = [
   {
     quote:
       'Joro Services streamlined our patient portal launch in under six weeks, boosting user registrations by 60% within the first month.',
+    name: 'Sarah Mitchell',
+    role: 'Operations Director, 1 Noble Healthcare',
   },
   {
     quote:
-      'Their cloud migration plan was on point—we saw a 35% drop in hosting costs and zero downtime during the transition.',
+      'Their cloud migration plan was on point — we saw a 35% drop in hosting costs and zero downtime during the transition.',
+    name: 'James Okonkwo',
+    role: 'CTO, PathSync Recruitment',
   },
   {
     quote:
       'After implementing their security roadmap, phishing incidents declined by 80% and our audit passed with no critical findings.',
+    name: 'Rebecca Turner',
+    role: 'Head of Compliance, Clear Vital Social Care',
   },
   {
     quote:
-      'Their custom dashboard gave us real‑time metrics we never had before. Our delivery accuracy improved from 92% to 98%.',
+      'Their custom dashboard gave us real-time metrics we never had before. Our delivery accuracy improved from 92% to 98%.',
+    name: 'David Appiah',
+    role: 'Logistics Manager, QuickApply Ltd',
   },
   {
     quote:
-      'The website redesign increased average session duration by 45% and reduced bounce rate by 30%. Our conversion rate is the highest it’s ever been.',
+      'The website redesign increased average session duration by 45% and reduced bounce rate by 30%. Our conversion rate is the highest it has ever been.',
+    name: 'Hannah Clarke',
+    role: 'Marketing Lead, Save the Men Foundation',
   },
   {
     quote:
-      'Their Agile coaching replaced our waterfall delays. Our team now ships features every two weeks with confidence and speed.',
+      'Their team integrated seamlessly with ours. We shipped features faster than we thought possible and the quality was outstanding.',
+    name: 'Michael Adebayo',
+    role: 'Product Manager, Top 20 Everywhere',
   },
 ];
 

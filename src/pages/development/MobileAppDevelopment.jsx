@@ -54,7 +54,7 @@ const portfolio = [
 const MobileAppDevelopment = () => (
   <main className="bg-white text-black">
     {/* Hero Section */}
-    <section className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
+    <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>
         <p className="uppercase text-sm text-accent-dark mb-4">Mobile App Development</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Apps That Work Everywhere, Instantly</h1>
@@ -62,7 +62,7 @@ const MobileAppDevelopment = () => (
           We design and build mobile apps that feel native, perform fast, and scale beautifully. Whether it's Flutter, React Native, or full native, we deliver custom mobile experiences that users love and businesses trust.
         </p>
         <Link
-          to="/contact"
+          to="/getintouch"
           className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
         >
           Let’s Build Your App
@@ -116,7 +116,7 @@ const MobileAppDevelopment = () => (
         Your App Idea Deserves a Seamless Experience
       </h2>
       <Link
-        to="/contact"
+        to="/getintouch"
         className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
         Get Started Today

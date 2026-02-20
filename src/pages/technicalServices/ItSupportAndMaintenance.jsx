@@ -54,7 +54,7 @@ const portfolio = [
 const ItSupportAndMaintenance = () => (
   <main className="bg-white text-black">
     {/* Hero Section */}
-    <section className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
+    <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>
         <p className="uppercase text-sm text-accent-dark mb-4">IT Support Services</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Reliable IT Support That Keeps You Online</h1>
@@ -62,7 +62,7 @@ const ItSupportAndMaintenance = () => (
           Downtime costs money. Our proactive IT support and maintenance services keep your systems running smoothly, securely, and always up to date. From on-prem setups to remote teams, we've got your back.
         </p>
         <Link
-          to="/contact"
+          to="/getintouch"
           className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
         >
           Get Support Now
@@ -113,7 +113,7 @@ const ItSupportAndMaintenance = () => (
         Need Support That’s Always One Step Ahead?
       </h2>
       <Link
-        to="/contact"
+        to="/getintouch"
         className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
         Contact the Team

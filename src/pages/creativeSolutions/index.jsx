@@ -43,7 +43,7 @@ const creativeBenefits = [
 const CreativeSolutions = () => (
   <main className="bg-white text-black">
     {/* Hero Section */}
-    <section className="relative grid p-4 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
+    <section id="hero" className="relative grid p-4 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
           className="object-cover w-full h-full max-w-full"
@@ -120,10 +120,10 @@ const CreativeSolutions = () => (
         Ready to Make a Lasting Impression?
       </h2>
       <Link
-        to="/contact"
+        to="/getintouch"
         className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
-        Let’s Talk Design
+        Let&apos;s Talk Design
       </Link>
     </section>
 

@@ -54,7 +54,7 @@ const portfolio = [
 const SocialMediaManagement = () => (
   <main className="bg-white text-black">
     {/* Hero Section */}
-    <section className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
+    <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>
         <p className="uppercase text-sm text-accent-dark mb-4">Social Media Management</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Turn Scrolls into Connections</h1>
@@ -62,7 +62,7 @@ const SocialMediaManagement = () => (
           We help brands show up, speak up, and stay relevant across every platform. From Facebook to LinkedIn, we handle strategy, design, engagement, and reporting — so you can build real relationships at scale.
         </p>
         <Link
-          to="/contact"
+          to="/getintouch"
           className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
         >
           Let's Manage Your Socials
@@ -113,7 +113,7 @@ const SocialMediaManagement = () => (
         Keep Your Brand Active, Visible & Engaged
       </h2>
       <Link
-        to="/contact"
+        to="/getintouch"
         className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
         Start Your Social Plan

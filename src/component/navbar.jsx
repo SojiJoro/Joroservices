@@ -13,7 +13,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = document.getElementById("hero").offsetHeight;
+      const hero = document.getElementById("hero");
+      const heroHeight = hero ? hero.offsetHeight : 300;
       setScrolled(window.scrollY > heroHeight);
     };
 

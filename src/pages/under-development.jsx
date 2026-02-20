@@ -5,7 +5,7 @@ const UnderDevelopment = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white text-center p-6">
+    <div id="hero" className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white text-center p-6">
       <h1 className="text-3xl font-bold mb-4">
         🚧 This Page is Under Development 🚧
       </h1>

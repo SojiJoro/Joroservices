@@ -2,7 +2,7 @@ import React from 'react';
 import { FaCircleDot } from 'react-icons/fa6';
 
 const TechHeroSection = () => (
-  <section className="grid p-4 justify-center grid-cols-1 lg:grid-cols-4 lg:items-center gap-4 min-h-[75vh] bg-[#f1f5f9]">
+  <section id="hero" className="grid p-4 justify-center grid-cols-1 lg:grid-cols-4 lg:items-center gap-4 min-h-[75vh] bg-[#f1f5f9]">
     <div className="flex pt-16 lg:col-span-2 flex-col text-center lg:text-left">
       <p className="flex items-center justify-center lg:justify-start gap-4 pb-4 text-xs text-gray-700 font-semibold">
         <FaCircleDot className="text-yellow-500" />

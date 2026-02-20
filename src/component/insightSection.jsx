@@ -2,7 +2,6 @@
 import React from 'react';
 import { FaDotCircle } from 'react-icons/fa';
 import { insightData } from '../data';
-import { Link } from 'react-router-dom';
 
 const InsightsSection = () => {
   return (
@@ -12,7 +11,7 @@ const InsightsSection = () => {
         <div className="pb-8">
           <div className="flex text-secondary items-center flex-row gap-4 text-[12px] lg:text-sm font-semibold">
             <FaDotCircle />
-            <span className="uppercase text-gray-800">Featured News</span>
+            <span className="uppercase text-gray-800">Insights</span>
           </div>
           <h2 className="mt-4 text-3xl sm:text-4xl font-bold">Latest Insights for Your Business</h2>
           <p className="mt-2 text-gray-600">
@@ -27,13 +26,13 @@ const InsightsSection = () => {
               <span className="bg-gray-800 h-[1px] w-full"></span>
               <div className="grid lg:gap-20 sm:gap-10 gap-2 py-8 grid-cols-1 sm:grid-cols-5">
                 {/* Image Section */}
-                <Link to={data.link} className="sm:col-span-2">
+                <div className="sm:col-span-2">
                   <img
                     src={data.image}
                     alt={data.title}
                     className="h-[200px] rounded-xl w-full lg:w-4/5 object-cover"
                   />
-                </Link>
+                </div>
 
                 {/* Content Section */}
                 <div className="sm:col-span-3 py-2 relative">
@@ -45,21 +44,21 @@ const InsightsSection = () => {
                       </span>
                     </div>
                   )}
-                  <Link
-                    to={data.link}
-                    className="md:pt-4 py-2 hover:underline text-base lg:text-lg font-semibold tracking-wider font-sans"
-                  >
+                  <h3 className="md:pt-4 py-2 text-base lg:text-lg font-semibold tracking-wider font-sans">
                     {data.title}
-                  </Link>
+                  </h3>
+                  {data.summary && (
+                    <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                      {data.summary}
+                    </p>
+                  )}
 
                   {/* Author Info */}
-                  <div className="flex md:pt-10 mt-auto flex-row items-center">
-                    <img
-                      src={data.author.avatar}
-                      alt={data.author.name}
-                      className="w-12 h-12 mr-4 rounded-full"
-                    />
-                    <p className="rounded-xl bg-white text-center px-4 my-auto py-1 ml-2 text-gray-800 text-sm">
+                  <div className="flex md:pt-6 mt-auto flex-row items-center">
+                    <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm mr-3">
+                      {data.author.initials}
+                    </div>
+                    <p className="rounded-xl bg-white text-center px-4 my-auto py-1 text-gray-800 text-sm">
                       {data.author.name}
                     </p>
                     <p className="rounded-xl bg-white text-center px-4 my-auto py-1 ml-2 text-gray-800 text-sm">
