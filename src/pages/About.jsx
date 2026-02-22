@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../component/Footer';
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import SEO from '../component/SEO';
+import pagesSEO from '../seo/pagesSEO';
+import { organizationSchema, breadcrumbSchema } from '../seo/schemas';
 
 const values = [
   {
@@ -25,6 +28,16 @@ const values = [
 const About = () => {
   return (
     <main className="bg-white text-gray-900 min-h-screen flex flex-col">
+      <SEO
+        {...pagesSEO['/about']}
+        jsonLd={[
+          organizationSchema,
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'About', path: '/about' },
+          ]),
+        ]}
+      />
       {/* Hero Section */}
       <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white py-20 px-6 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4">About Joro Services</h1>

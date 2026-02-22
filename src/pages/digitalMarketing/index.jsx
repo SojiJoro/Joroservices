@@ -3,9 +3,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroSection from '../../component/digitalMarketing/heroSection';
 import Footer from '../../component/Footer';
+import SEO from '../../component/SEO';
+import pagesSEO from '../../seo/pagesSEO';
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas';
 
 const DigitalMarketing = () => (
   <div className="bg-white text-black">
+    <SEO
+      {...pagesSEO['/digital-marketing']}
+      jsonLd={[
+        serviceSchema({
+          name: 'Digital Marketing',
+          description: 'Results-driven digital marketing services including SEO, PPC, and social media management in Aldershot, Hampshire.',
+          url: '/digital-marketing',
+          category: 'Digital Marketing Services',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Digital Marketing', path: '/digital-marketing' },
+        ]),
+      ]}
+    />
     {/* Hero */}
     <HeroSection />
 

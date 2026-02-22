@@ -2,6 +2,9 @@ import React from 'react'
 import { FaMobileAlt, FaSyncAlt, FaCloudUploadAlt, FaRocket } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const services = [
   {
@@ -53,6 +56,22 @@ const portfolio = [
 
 const MobileAppDevelopment = () => (
   <main className="bg-white text-black">
+    <SEO
+      {...pagesSEO['/development/mobile-app-development']}
+      jsonLd={[
+        serviceSchema({
+          name: 'Mobile App Development',
+          description: 'Professional iOS and Android mobile app development in Aldershot, Hampshire.',
+          url: '/development/mobile-app-development',
+          category: 'Mobile App Development',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Development', path: '/development' },
+          { name: 'Mobile App Development', path: '/development/mobile-app-development' },
+        ]),
+      ]}
+    />
     {/* Hero Section */}
     <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>

@@ -14,6 +14,9 @@ import {
 import { FaXTwitter, FaTiktok } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const painPoints = [
   'You haven\'t posted in 3 months and your profiles look abandoned',
@@ -224,6 +227,22 @@ const SocialMediaManagement = () => {
 
   return (
     <main className="bg-white text-black">
+      <SEO
+        {...pagesSEO['/digital-marketing/social-media-management']}
+        jsonLd={[
+          serviceSchema({
+            name: 'Social Media Management',
+            description: 'Expert social media management services in Aldershot, Hampshire.',
+            url: '/digital-marketing/social-media-management',
+            category: 'Social Media Marketing',
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Digital Marketing', path: '/digital-marketing' },
+            { name: 'Social Media Management', path: '/digital-marketing/social-media-management' },
+          ]),
+        ]}
+      />
       {/* Section 1: Hero */}
       <section
         id="hero"

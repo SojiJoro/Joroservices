@@ -1,9 +1,21 @@
 import React from 'react';
 import Footer from '../component/Footer';
+import SEO from '../component/SEO';
+import pagesSEO from '../seo/pagesSEO';
+import { breadcrumbSchema } from '../seo/schemas';
 
 const Privacy = () => {
   return (
     <main className="bg-white text-gray-900 min-h-screen flex flex-col">
+      <SEO
+        {...pagesSEO['/privacy']}
+        jsonLd={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Privacy Policy', path: '/privacy' },
+          ]),
+        ]}
+      />
       <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white py-20 px-6 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4">Privacy Policy</h1>
         <p className="text-lg max-w-3xl mx-auto">

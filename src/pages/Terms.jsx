@@ -1,9 +1,21 @@
 import React from 'react';
 import Footer from '../component/Footer';
+import SEO from '../component/SEO';
+import pagesSEO from '../seo/pagesSEO';
+import { breadcrumbSchema } from '../seo/schemas';
 
 const Terms = () => {
   return (
     <main className="bg-white text-gray-900 min-h-screen flex flex-col">
+      <SEO
+        {...pagesSEO['/terms']}
+        jsonLd={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Terms of Service', path: '/terms' },
+          ]),
+        ]}
+      />
       <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white py-20 px-6 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4">Terms of Service</h1>
         <p className="text-lg max-w-3xl mx-auto">

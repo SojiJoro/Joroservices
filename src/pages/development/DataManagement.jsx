@@ -15,6 +15,9 @@ import {
 } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const infraServices = [
   {
@@ -246,6 +249,22 @@ const DataManagement = () => {
 
   return (
     <main className="bg-white text-black">
+      <SEO
+        {...pagesSEO['/development/data-management']}
+        jsonLd={[
+          serviceSchema({
+            name: 'Data Management',
+            description: 'Data management, database design, and analytics services in Aldershot, Hampshire.',
+            url: '/development/data-management',
+            category: 'Data Management',
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Development', path: '/development' },
+            { name: 'Data Management', path: '/development/data-management' },
+          ]),
+        ]}
+      />
       {/* Section 1: Hero */}
       <section
         id="hero"
