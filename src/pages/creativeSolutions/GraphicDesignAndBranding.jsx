@@ -2,6 +2,9 @@ import React from 'react'
 import { FaPalette, FaPenNib, FaRegImage, FaBullhorn } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const services = [
   {
@@ -53,6 +56,22 @@ const portfolio = [
 
 const GraphicBranding = () => (
   <main className="bg-white text-black">
+    <SEO
+      {...pagesSEO['/creative-solutions/graphic-design-and-branding']}
+      jsonLd={[
+        serviceSchema({
+          name: 'Graphic Design and Branding',
+          description: 'Expert graphic design and branding services in Aldershot, Hampshire.',
+          url: '/creative-solutions/graphic-design-and-branding',
+          category: 'Graphic Design',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Creative Solutions', path: '/creative-solutions' },
+          { name: 'Graphic Design & Branding', path: '/creative-solutions/graphic-design-and-branding' },
+        ]),
+      ]}
+    />
     {/* Hero Section */}
     <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>

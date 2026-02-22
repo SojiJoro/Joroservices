@@ -2,6 +2,9 @@ import React from 'react'
 import { FaUserCheck, FaDraftingCompass, FaMicroscope, FaLaptopCode } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const services = [
   {
@@ -53,6 +56,22 @@ const portfolio = [
 
 const UXUIExperience = () => (
   <main className="bg-white text-black">
+    <SEO
+      {...pagesSEO['/creative-solutions/user-interface-and-experience']}
+      jsonLd={[
+        serviceSchema({
+          name: 'UI/UX Design',
+          description: 'User interface and user experience design services in Aldershot, Hampshire.',
+          url: '/creative-solutions/user-interface-and-experience',
+          category: 'UI/UX Design',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Creative Solutions', path: '/creative-solutions' },
+          { name: 'UI/UX Design', path: '/creative-solutions/user-interface-and-experience' },
+        ]),
+      ]}
+    />
     {/* Hero Section */}
     <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>

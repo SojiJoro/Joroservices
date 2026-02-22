@@ -2,6 +2,9 @@ import React from 'react'
 import { FaMobileAlt, FaSearch, FaCogs, FaServer } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const services = [
   {
@@ -56,6 +59,22 @@ const portfolio = [
 
 const WebDevelopment = () => (
   <main className="bg-white text-black">
+    <SEO
+      {...pagesSEO['/development/web-development']}
+      jsonLd={[
+        serviceSchema({
+          name: 'Web Development',
+          description: 'Custom web development services in Aldershot and Hampshire using React, Next.js, and modern technologies.',
+          url: '/development/web-development',
+          category: 'Web Development',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Development', path: '/development' },
+          { name: 'Web Development', path: '/development/web-development' },
+        ]),
+      ]}
+    />
     {/* Hero Section */}
     <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>

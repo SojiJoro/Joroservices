@@ -16,6 +16,9 @@ import {
 } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
@@ -220,6 +223,22 @@ const CloudInfrastructure = () => {
 
   return (
     <main className="bg-white text-black">
+      <SEO
+        {...pagesSEO['/technical-services/cloud-infrastructure']}
+        jsonLd={[
+          serviceSchema({
+            name: 'Cloud Infrastructure',
+            description: 'Expert cloud infrastructure and migration services in Aldershot, Hampshire.',
+            url: '/technical-services/cloud-infrastructure',
+            category: 'Cloud Services',
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Technical Services', path: '/technical-services' },
+            { name: 'Cloud Infrastructure', path: '/technical-services/cloud-infrastructure' },
+          ]),
+        ]}
+      />
       {/* ============================================================ */}
       {/* SECTION 1 — HERO                                             */}
       {/* ============================================================ */}

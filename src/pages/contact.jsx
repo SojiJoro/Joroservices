@@ -3,6 +3,9 @@ import CardGrid from "../component/CardGrid";
 import Footer from "../component/Footer";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SEO from "../component/SEO";
+import pagesSEO from "../seo/pagesSEO";
+import { organizationSchema, breadcrumbSchema } from "../seo/schemas";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -64,6 +67,16 @@ const Contact = () => {
 
   return (
     <main className="bg-gray-100 flex flex-col items-center justify-center pt-40 min-h-screen w-screen text-gray-900">
+      <SEO
+        {...pagesSEO['/getintouch']}
+        jsonLd={[
+          organizationSchema,
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Contact', path: '/getintouch' },
+          ]),
+        ]}
+      />
       <div className="container">
         {/* First Section */}
         <section id="hero" className="mb-12">

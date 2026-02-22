@@ -7,9 +7,21 @@ import ImpressionCard from '../component/impressionCard';
 import { ServiceList } from './serviceData';
 import InsightsSection from '../component/insightSection.jsx';
 import FAQ from '../component/faq.jsx';
+import SEO from '../component/SEO';
+import pagesSEO from '../seo/pagesSEO';
+import {
+  organizationSchema,
+  localBusinessSchema,
+  websiteSchema,
+  homepageFaqSchema,
+} from '../seo/schemas';
 
 const Homepage = () => (
   <div className="max-w-full overflow-x-hidden">
+    <SEO
+      {...pagesSEO['/']}
+      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema]}
+    />
     {/* Hero Section */}
     <div
       id="hero"

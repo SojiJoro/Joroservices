@@ -3,9 +3,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../component/Footer';
 import { ServiceList } from './serviceData';
+import SEO from '../component/SEO';
+import pagesSEO from '../seo/pagesSEO';
+import { organizationSchema, breadcrumbSchema } from '../seo/schemas';
 
 const Services = () => (
   <div className="bg-gray-50 w-full min-h-screen">
+    <SEO
+      {...pagesSEO['/services']}
+      jsonLd={[
+        organizationSchema,
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Services', path: '/services' },
+        ]),
+      ]}
+    />
     {/* Hero Banner */}
     <div className="bg-services-hero bg-cover bg-center h-[60vh] w-full">
       <div className="h-full bg-black/40 flex items-center justify-center">

@@ -2,6 +2,9 @@ import React from 'react'
 import { FaCode, FaMobileAlt, FaRocket, FaPaintBrush } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const services = [
   {
@@ -56,6 +59,22 @@ const portfolio = [
 
 const WebsiteDesign = () => (
   <main className="bg-white text-black">
+    <SEO
+      {...pagesSEO['/creative-solutions/website-design']}
+      jsonLd={[
+        serviceSchema({
+          name: 'Website Design',
+          description: 'Professional, responsive website design services in Aldershot and Hampshire.',
+          url: '/creative-solutions/website-design',
+          category: 'Website Design',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Creative Solutions', path: '/creative-solutions' },
+          { name: 'Website Design', path: '/creative-solutions/website-design' },
+        ]),
+      ]}
+    />
     {/* Hero Section */}
     <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>

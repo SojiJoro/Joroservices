@@ -14,6 +14,9 @@ import {
 } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const serviceCards = [
   {
@@ -219,6 +222,22 @@ const Cybersecurity = () => {
 
   return (
     <main className="bg-white text-black">
+      <SEO
+        {...pagesSEO['/technical-services/cybersecurity']}
+        jsonLd={[
+          serviceSchema({
+            name: 'Cybersecurity',
+            description: 'Comprehensive cybersecurity services in Aldershot, Hampshire.',
+            url: '/technical-services/cybersecurity',
+            category: 'Cybersecurity',
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Technical Services', path: '/technical-services' },
+            { name: 'Cybersecurity', path: '/technical-services/cybersecurity' },
+          ]),
+        ]}
+      />
       {/* Section 1: Hero */}
       <section
         id="hero"

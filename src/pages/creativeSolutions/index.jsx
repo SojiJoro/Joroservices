@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCircleDot } from 'react-icons/fa6';
 import Footer from '../../component/Footer';
+import SEO from '../../component/SEO';
+import pagesSEO from '../../seo/pagesSEO';
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas';
 
 const creativeServices = [
   {
@@ -42,6 +45,21 @@ const creativeBenefits = [
 
 const CreativeSolutions = () => (
   <main className="bg-white text-black">
+    <SEO
+      {...pagesSEO['/creative-solutions']}
+      jsonLd={[
+        serviceSchema({
+          name: 'Creative Solutions',
+          description: 'Professional website design, graphic design, branding, and UI/UX services in Aldershot, Hampshire.',
+          url: '/creative-solutions',
+          category: 'Creative Design Services',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Creative Solutions', path: '/creative-solutions' },
+        ]),
+      ]}
+    />
     {/* Hero Section */}
     <section id="hero" className="relative grid p-4 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
       <div className="absolute inset-0 w-full h-full overflow-hidden">

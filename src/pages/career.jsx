@@ -1,5 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import Footer from '../component/Footer';
+import SEO from '../component/SEO';
+import pagesSEO from '../seo/pagesSEO';
+import { organizationSchema, breadcrumbSchema } from '../seo/schemas';
 
 function Careers() {
   const allJobs = useMemo(() => [
@@ -176,6 +179,16 @@ function Careers() {
 
   return (
     <main className="bg-white text-gray-900 min-h-screen flex flex-col justify-between">
+      <SEO
+        {...pagesSEO['/careers']}
+        jsonLd={[
+          organizationSchema,
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Careers', path: '/careers' },
+          ]),
+        ]}
+      />
       {/* Hero Section */}
       <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white py-20 px-6 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4">Join Our Team</h1>

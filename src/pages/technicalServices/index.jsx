@@ -3,9 +3,27 @@ import React from 'react';
 import Footer from '../../component/Footer';
 import TechHeroSection from '../../component/technicalServices/techHeroSection';
 import TechServices    from '../../component/technicalServices/techServices';
+import SEO from '../../component/SEO';
+import pagesSEO from '../../seo/pagesSEO';
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas';
 
 const TechnicalServices = () => (
   <div className="bg-white text-black">
+    <SEO
+      {...pagesSEO['/technical-services']}
+      jsonLd={[
+        serviceSchema({
+          name: 'Technical Services',
+          description: 'Professional IT support, cybersecurity, and cloud infrastructure services in Aldershot, Hampshire.',
+          url: '/technical-services',
+          category: 'IT and Technical Services',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Technical Services', path: '/technical-services' },
+        ]),
+      ]}
+    />
     {/* Hero */}
     <TechHeroSection />
 

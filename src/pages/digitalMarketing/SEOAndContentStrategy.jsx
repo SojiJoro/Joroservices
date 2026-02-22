@@ -10,6 +10,9 @@ import {
 } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const painPoints = [
   'You have a website but it\'s invisible on Google',
@@ -192,6 +195,22 @@ const SEOAndContentStrategy = () => {
 
   return (
     <main className="bg-white text-black">
+      <SEO
+        {...pagesSEO['/digital-marketing/seo-and-content-strategy']}
+        jsonLd={[
+          serviceSchema({
+            name: 'SEO and Content Strategy',
+            description: 'Professional SEO and content strategy services in Aldershot, Hampshire. Get found on Google.',
+            url: '/digital-marketing/seo-and-content-strategy',
+            category: 'SEO Services',
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Digital Marketing', path: '/digital-marketing' },
+            { name: 'SEO & Content Strategy', path: '/digital-marketing/seo-and-content-strategy' },
+          ]),
+        ]}
+      />
       {/* Section 1: Hero */}
       <section
         id="hero"

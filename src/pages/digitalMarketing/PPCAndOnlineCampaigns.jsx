@@ -11,6 +11,9 @@ import {
 } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import pagesSEO from '../../seo/pagesSEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const painPoints = [
   'You\'ve tried Google Ads and wasted hundreds with nothing to show',
@@ -228,6 +231,22 @@ const PPCAndOnlineCampaigns = () => {
 
   return (
     <main className="bg-white text-black">
+      <SEO
+        {...pagesSEO['/digital-marketing/ppc-and-online-campaigns']}
+        jsonLd={[
+          serviceSchema({
+            name: 'PPC and Online Campaigns',
+            description: 'Professional PPC and online advertising management in Aldershot, Hampshire.',
+            url: '/digital-marketing/ppc-and-online-campaigns',
+            category: 'PPC Advertising',
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Digital Marketing', path: '/digital-marketing' },
+            { name: 'PPC & Online Campaigns', path: '/digital-marketing/ppc-and-online-campaigns' },
+          ]),
+        ]}
+      />
       {/* Section 1: Hero */}
       <section
         id="hero"
