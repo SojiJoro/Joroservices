@@ -46,7 +46,6 @@ import Camberley from "./pages/locations/Camberley";
 import Hampshire from "./pages/locations/Hampshire";
 import Surrey from "./pages/locations/Surrey";
 
-// Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -70,13 +69,13 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="bg-background-dark min-h-screen w-full font-nunito">
+      <div className="bg-background min-h-screen w-full font-inter antialiased">
         {isVisible && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-16 right-5 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-800 transition z-40 duration-300"
+            className="fixed bottom-6 right-6 p-3 bg-accent text-white rounded-xl shadow-lg shadow-accent/20 hover:bg-accent-dark transition-all duration-300 z-40"
           >
-            <FaArrowUp className="text-xl" />
+            <FaArrowUp className="text-sm" />
           </button>
         )}
 

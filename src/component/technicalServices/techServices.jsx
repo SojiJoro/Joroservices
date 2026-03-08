@@ -23,7 +23,7 @@ const TechServices = () => (
       {services.map((item, i) => (
         <div
           key={i}
-          className="bg-[#f9fafb] rounded-lg shadow p-6 hover:shadow-lg transition"
+          className="bg-gray-50 rounded-2xl shadow p-6 border border-gray-100 hover:shadow-lg transition"
         >
           <h3 className="text-xl font-semibold mb-2">{item}</h3>
           <p className="text-gray-600 text-sm">

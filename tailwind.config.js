@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class", // Enables class-based dark mode
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -12,43 +12,41 @@ export default {
         bgImage7: "url('/pexel1.webp')",
         bgImage8: "url('/pexel2.webp')",
         bgImage9: "url('/pexel3.webp')",
-        //   'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"], // Headings
+        poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
       },
       colors: {
         primary: {
-          DEFAULT: "#0F2027", // Light mode primary
-          dark: "#1B263B", // Dark mode primary
+          DEFAULT: "#0a1628",
+          dark: "#0f1d32",
         },
-
         glass: {
-          lightBlue: "rgba(173, 216, 230, 0.7)", // Light blue with 70% opacity
+          lightBlue: "rgba(173, 216, 230, 0.7)",
         },
         secondary: {
-          DEFAULT: "#2C5364",
-          dark: "#334E68",
+          DEFAULT: "#1e3a5f",
+          dark: "#2a4a72",
         },
-
         accent: {
-          DEFAULT: "#55DDE0",
-          dark: "#48A9A6",
+          DEFAULT: "#2563eb",
+          dark: "#1d4ed8",
+          light: "#3b82f6",
         },
         background: {
-          DEFAULT: "#F8FAFC", // Light mode background
-          dark: "#121212", // Dark mode background
+          DEFAULT: "#F8FAFC",
+          dark: "#0a1628",
         },
         text: {
-          DEFAULT: "#accbd4",
-          dark: "#E5E7EB",
+          DEFAULT: "#94a3b8",
+          dark: "#e2e8f0",
         },
       },
       backdropFilter: {
         none: "none",
-        blur: "blur(10px)", // Adds backdrop blur for glass effect
+        blur: "blur(10px)",
       },
     },
   },

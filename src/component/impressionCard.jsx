@@ -1,7 +1,5 @@
-// src/components/impressionCard.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHandshake } from 'react-icons/fa';
 
 const stats = [
   { label: 'Clients Served', value: '20+' },
@@ -11,31 +9,28 @@ const stats = [
 
 const ImpressionCard = () => {
   return (
-    <div className="w-full max-w-lg mx-auto bg-gradient-to-r from-accent to-accent-dark text-white rounded-3xl p-8 shadow-2xl flex flex-col items-center space-y-8">
-      {/* Icon */}
-      <FaHandshake className="text-5xl" />
-
-      {/* Tagline */}
-      <h3 className="text-center text-xl sm:text-2xl font-semibold">
-        Our collaborative expertise turns challenges into opportunities.
-      </h3>
-
-      {/* Statistics */}
-      <div className="flex flex-wrap justify-center gap-8">
-        {stats.map((stat, idx) => (
-          <div key={idx} className="flex flex-col items-center">
-            <span className="text-4xl sm:text-5xl font-bold">{stat.value}</span>
-            <span className="text-sm sm:text-base uppercase">{stat.label}</span>
-          </div>
-        ))}
+    <div className="bg-gradient-to-r from-accent to-accent-dark rounded-2xl p-10 lg:p-14">
+      <div className="max-w-4xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <div className="flex-1 text-center lg:text-left">
+          <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
+            Our collaborative expertise turns challenges into opportunities.
+          </h3>
+          <Link
+            to="/getintouch"
+            className="inline-block mt-4 bg-white text-accent-dark font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition"
+          >
+            Request a Consultation
+          </Link>
+        </div>
+        <div className="flex gap-10 lg:gap-14">
+          {stats.map((stat, idx) => (
+            <div key={idx} className="flex flex-col items-center text-center">
+              <span className="text-4xl lg:text-5xl font-bold text-white">{stat.value}</span>
+              <span className="text-sm text-white/80 uppercase tracking-wide mt-1">{stat.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
-
-      {/* Call to Action */}
-      <Link to="/getintouch">
-        <button className="mt-4 bg-white text-accent-dark font-semibold px-8 py-3 rounded-full hover:opacity-90 transition">
-          Request a Consultation
-        </button>
-      </Link>
     </div>
   );
 };

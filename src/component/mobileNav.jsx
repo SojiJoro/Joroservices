@@ -33,16 +33,16 @@ const MobileNavbar = ({ isOpen, toggleNav }) => {
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
           transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
-          className="fixed inset-0 z-[60] bg-slate-950/95 backdrop-blur-sm text-white overflow-y-auto lg:hidden"
+          className="fixed inset-0 z-[60] bg-primary/98 backdrop-blur-xl text-white overflow-y-auto lg:hidden"
         >
-          <ul className="flex flex-col pt-20 pb-8 space-y-1 px-4">
+          <ul className="flex flex-col pt-20 pb-8 space-y-1 px-5">
             {Serv.map((item, index) => (
               <li key={index}>
                 {item.offerings && item.offerings.length > 0 ? (
                   <>
                     <button
                       onClick={() => toggleAccordion(index)}
-                      className="flex w-full items-center justify-between py-4 px-4 text-base font-medium border-b border-gray-700/50 active:bg-white/5 touch-manipulation"
+                      className="flex w-full items-center justify-between py-4 px-4 text-base font-medium border-b border-white/5 active:bg-white/5 rounded-lg touch-manipulation"
                     >
                       <Link
                         to={item.path}
@@ -59,7 +59,7 @@ const MobileNavbar = ({ isOpen, toggleNav }) => {
                         transition={{ duration: 0.2 }}
                         className="ml-2 p-1"
                       >
-                        <ChevronDown size={18} />
+                        <ChevronDown size={18} className="text-gray-400" />
                       </motion.div>
                     </button>
                     <AnimatePresence>
@@ -71,13 +71,13 @@ const MobileNavbar = ({ isOpen, toggleNav }) => {
                           transition={{ duration: 0.2 }}
                           className="overflow-hidden"
                         >
-                          <div className="bg-white/5 rounded-lg my-1 mx-2">
+                          <div className="bg-white/5 rounded-xl my-1 mx-2">
                             {item.offerings.map((service, i) => (
                               <Link
                                 key={i}
                                 to={`${item.path}/${toSlug(service)}`}
                                 onClick={toggleNav}
-                                className="block py-3 px-5 text-sm text-gray-300 active:bg-white/10 touch-manipulation"
+                                className="block py-3 px-5 text-sm text-gray-400 hover:text-white active:bg-white/5 touch-manipulation rounded-lg"
                               >
                                 {service}
                               </Link>
@@ -91,20 +91,20 @@ const MobileNavbar = ({ isOpen, toggleNav }) => {
                   <Link
                     to={item.path}
                     onClick={toggleNav}
-                    className="flex justify-between items-center w-full py-4 px-4 text-base font-medium border-b border-gray-700/50 active:bg-white/5 touch-manipulation"
+                    className="flex justify-between items-center w-full py-4 px-4 text-base font-medium border-b border-white/5 active:bg-white/5 rounded-lg touch-manipulation"
                   >
                     {item.category}
-                    <ArrowUpRight size={18} />
+                    <ArrowUpRight size={18} className="text-gray-400" />
                   </Link>
                 )}
               </li>
             ))}
 
             {/* CTA Button */}
-            <li className="pt-6 px-2">
+            <li className="pt-8 px-2">
               <Link
                 onClick={toggleNav}
-                className="block bg-accent text-black text-center py-4 rounded-xl font-semibold text-base active:bg-accent-dark touch-manipulation"
+                className="block bg-accent text-white text-center py-4 rounded-xl font-semibold text-base hover:bg-accent-dark active:bg-accent-dark transition-colors touch-manipulation"
                 to="/getintouch"
               >
                 Get in Touch

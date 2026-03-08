@@ -348,7 +348,7 @@ const SEOAndContentStrategy = () => {
       </section>
 
       {/* Section 4: Differentiator */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-slate-900 text-white">
+      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-6">
             Technical + Content Under One Roof
@@ -469,7 +469,7 @@ const SEOAndContentStrategy = () => {
       </section>
 
       {/* Section 7: Bottom CTA */}
-      <section className="bg-accent-dark text-white py-16 px-4 text-center">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Customers Are Searching. Make Sure They Find You.
@@ -480,7 +480,7 @@ const SEOAndContentStrategy = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent-dark font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
           >
             Get Your Free SEO Audit
           </Link>

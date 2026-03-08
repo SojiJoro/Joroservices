@@ -31,7 +31,7 @@ const ServiceCards = () => {
           key={index}
           className="bg-white rounded-xl shadow-md p-6 border border-gray-200"
         >
-          <span className="text-xs font-medium text-pink-500 uppercase">
+          <span className="text-xs font-medium text-accent uppercase">
             Service
           </span>
           <h2 className="text-2xl font-semibold mt-2">{service.title}</h2>

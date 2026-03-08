@@ -1,7 +1,6 @@
-// src/component/navlinkOverlay.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCircleDot } from 'react-icons/fa6';
+import { ChevronRight } from 'lucide-react';
 
 export const Serv = [
   {
@@ -43,9 +42,6 @@ export const Serv = [
   },
 ];
 
-/**
- * Generate a URL‑safe slug from an offering label
- */
 function toSlug(label) {
   return label
     .toLowerCase()
@@ -54,36 +50,28 @@ function toSlug(label) {
     .replace(/(^-|-$)/g, '');
 }
 
-/**
- * Factory to create each overlay component
- */
 const makeOverlay = (category) => {
   const service = Serv.find((s) => s.category === category);
   if (!service || service.offerings.length === 0) return null;
 
   return (
-    <div className="absolute left-0 top-full w-[min(500px,90vw)] bg-black/90 backdrop-blur-sm shadow-lg rounded-lg text-sm text-white">
-      <div className="flex">
-        {/* Category Header */}
-        <div className="w-2/5">
-          <Link
-            to={service.path}
-            className="text-accent bg-[#072731] rounded-l-lg h-full flex items-center justify-center font-semibold text-base p-4"
-          >
-            {service.category}
-          </Link>
-        </div>
-
-        {/* Offerings */}
-        <ul className="w-3/5 p-4 space-y-2">
+    <div className="w-[280px] bg-primary border border-white/10 shadow-2xl shadow-black/30 rounded-xl overflow-hidden">
+      <div className="p-2">
+        <Link
+          to={service.path}
+          className="block px-4 py-3 text-accent-light font-semibold text-sm border-b border-white/10 mb-1"
+        >
+          {service.category}
+        </Link>
+        <ul className="space-y-0.5">
           {service.offerings.map((label, idx) => (
             <li key={idx}>
               <Link
                 to={`${service.path}/${toSlug(label)}`}
-                className="flex items-center gap-2 hover:text-yellow-400"
+                className="flex items-center justify-between gap-2 px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
               >
-                <FaCircleDot className="text-yellow-600 text-xs" />
                 {label}
+                <ChevronRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
             </li>
           ))}
@@ -93,7 +81,6 @@ const makeOverlay = (category) => {
   );
 };
 
-// Export one overlay per category
 export const CreativeSolutionOverlay = () =>
   makeOverlay('Creative Solutions');
 export const DevelopmentOverlay = () => makeOverlay('Development');
