@@ -114,9 +114,25 @@ const pagesSEO = {
     title: 'Web Development, IT Support & Digital Marketing in Aldershot | Joro Services',
     description: 'Joro Services is Aldershot\'s only full-service digital agency. We provide web development, SEO, IT support, cybersecurity, mobile app development, and cloud solutions for local businesses. Free consultation available.',
   },
+  '/locations/farnborough': {
+    title: 'Web Development, IT Support & Digital Marketing in Farnborough | Joro Services',
+    description: 'Expert web development, IT support, SEO, and digital marketing for businesses in Farnborough, Hampshire. Based just 3 miles away in Aldershot. Free consultation available.',
+  },
+  '/locations/guildford': {
+    title: 'Web Development, IT Support & Digital Marketing in Guildford | Joro Services',
+    description: 'Professional web development, IT support, digital marketing, and cybersecurity for businesses in Guildford, Surrey. Local expertise from Joro Services.',
+  },
+  '/locations/camberley': {
+    title: 'Web Development, IT Support & Digital Marketing in Camberley | Joro Services',
+    description: 'Web development, IT support, SEO, and digital marketing for Camberley businesses. Joro Services delivers full-service digital solutions in Surrey Heath.',
+  },
   '/locations/hampshire': {
     title: 'Web Development, IT Support & Digital Marketing in Hampshire | Joro Services',
     description: 'Joro Services delivers expert web development, IT support, SEO, cybersecurity, and digital marketing to businesses across Hampshire. Based in Aldershot, serving the entire county.',
+  },
+  '/locations/surrey': {
+    title: 'Web Development, IT Support & Digital Marketing in Surrey | Joro Services',
+    description: 'Full-service digital agency serving Surrey businesses with web development, IT support, SEO, cybersecurity, and cloud solutions. From Guildford to Camberley and beyond.',
   },
 };
 

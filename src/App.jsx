@@ -40,7 +40,11 @@ import CloudInfrastructure from "./pages/technicalServices/CloudInfrastructure";
 
 // Location Pages
 import Aldershot from "./pages/locations/Aldershot";
+import Farnborough from "./pages/locations/Farnborough";
+import Guildford from "./pages/locations/Guildford";
+import Camberley from "./pages/locations/Camberley";
 import Hampshire from "./pages/locations/Hampshire";
+import Surrey from "./pages/locations/Surrey";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -113,7 +117,11 @@ function App() {
 
           {/* Location Pages */}
           <Route path="/locations/aldershot" element={<Aldershot />} />
+          <Route path="/locations/farnborough" element={<Farnborough />} />
+          <Route path="/locations/guildford" element={<Guildford />} />
+          <Route path="/locations/camberley" element={<Camberley />} />
           <Route path="/locations/hampshire" element={<Hampshire />} />
+          <Route path="/locations/surrey" element={<Surrey />} />
 
           {/* Fallback */}
           <Route path="*" element={<UnderDevelopment />} />
