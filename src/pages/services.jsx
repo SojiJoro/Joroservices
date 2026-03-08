@@ -20,7 +20,7 @@ const Services = () => (
       ]}
     />
     {/* Hero Banner */}
-    <div className="bg-services-hero bg-cover bg-center h-[60vh] w-full">
+    <div className="bg-services-hero bg-cover bg-center h-[60vh] w-full pt-14">
       <div className="h-full bg-black/40 flex items-center justify-center">
         <div className="text-center px-4">
           <h1 className="text-4xl lg:text-6xl font-bold text-white">

@@ -9,8 +9,6 @@ export default {
         bgImage2: "url('/bg7.webp')",
         bgImage3: "url('/serv2.webp')",
         bgImage4: "url('/bg9.webp')",
-        bgImage5: "url('/bg10.webp')",
-        bgImage6: "url('/bg11.webp')",
         bgImage7: "url('/pexel1.webp')",
         bgImage8: "url('/pexel2.webp')",
         bgImage9: "url('/pexel3.webp')",

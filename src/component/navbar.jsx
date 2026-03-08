@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Button from "./button";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import NavLink from "./links";
 import MobileNavbar from "./mobileNav";
 import Logo from "./logo";
@@ -10,69 +9,89 @@ const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const rafRef = useRef(null);
 
+  // Close mobile nav on route change
   useEffect(() => {
+    setOpenNav(false);
+  }, [location.pathname]);
+
+  // Throttled scroll handler using rAF
+  useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const hero = document.getElementById("hero");
-      const heroHeight = hero ? hero.offsetHeight : 300;
-      setScrolled(window.scrollY > heroHeight);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Function to determine navbar background based on route
-  const getNavbarBg = () => {
-    if (location.pathname === "/") {
-      return `bg-black/30 ${
-        scrolled ? "bg-black/20 shadow-lg" : "bg-transparent"
-      }`;
-    } else {
-      return "bg-black/60 backdrop-blur-sm";
-    }
-  };
-
-  // Close the mobile menu when window size is larger than lg (1024px)
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setOpenNav(false);
+      if (!ticking) {
+        ticking = true;
+        rafRef.current = requestAnimationFrame(() => {
+          const hero = document.getElementById("hero");
+          const heroHeight = hero ? hero.offsetHeight : 300;
+          setScrolled(window.scrollY > heroHeight);
+          ticking = false;
+        });
       }
     };
 
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
+
+  const getNavbarBg = () => {
+    if (location.pathname === "/") {
+      return scrolled ? "bg-black/60 backdrop-blur-md shadow-lg" : "bg-black/30";
+    }
+    return "bg-black/60 backdrop-blur-md";
+  };
+
+  // Close mobile menu on resize to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setOpenNav(false);
+    };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Prevent body scroll when mobile nav is open
+  useEffect(() => {
+    document.body.style.overflow = openNav ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [openNav]);
+
+  const toggleNav = useCallback(() => setOpenNav((prev) => !prev), []);
+  const closeNav = useCallback(() => setOpenNav(false), []);
+
   return (
-    <div
-      className={` z-50   flex justify-between py-2  items-center  rounded-md fixed top-0  w-full bg-transparent text-white   transition-all duration-300`}
-    >
-      <div
-        className={`${getNavbarBg()} shadow-sm z-50 shadow-accent/40 flex justify-between py-2 h-[50px] items-center backdrop-blur-md lg:h-16 rounded-md  top-4 mx-4 w-full  text-white transition-all duration-300`}
+    <>
+      <nav
+        className={`${getNavbarBg()} fixed top-0 left-0 right-0 z-50 flex items-center justify-between h-14 lg:h-16 px-4 text-white transition-colors duration-300`}
       >
         <Logo />
         <NavLink />
-        <div className="md:flex hidden justify-center w-[150px] mr-16 ">
-          <Link to={"/getintouch"}>
-            <Button bg={"black"} title={"Get in Touch"} />
+        <div className="hidden lg:flex items-center mr-4">
+          <Link
+            to="/getintouch"
+            className="px-5 py-2 text-sm font-semibold border border-accent rounded-md text-white hover:bg-accent hover:text-black transition-all duration-300"
+          >
+            Get in Touch
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden absolute bg-accent/20 p-1 lg:p-2 right-4 rounded-md"
-          onClick={() => setOpenNav(!openNav)}
+          className="lg:hidden p-2 rounded-md bg-accent/20 touch-manipulation"
+          onClick={toggleNav}
+          aria-label={openNav ? "Close menu" : "Open menu"}
         >
-          {openNav ? <X size={24} color="white" /> : <Menu size={24} />}
+          {openNav ? <X size={22} color="white" /> : <Menu size={22} />}
         </button>
-      </div>{" "}
+      </nav>
+
       {/* Mobile Navbar */}
-      {openNav && (
-        <MobileNavbar isOpen={openNav} toggleNav={() => setOpenNav(false)} />
-      )}
-    </div>
+      <MobileNavbar isOpen={openNav} toggleNav={closeNav} />
+    </>
   );
 };
 

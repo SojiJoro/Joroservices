@@ -41,7 +41,7 @@ const NavLink = () => {
 
             {/* Conditionally Render Only the Hovered Dropdown */}
             {hoveredLink === link.category && (
-              <div className="absolute -left-40 top-full mt-[6px] w-64 bg-black/90 text-white shadow-lg rounded-md z-50">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-[6px] bg-black/90 text-white shadow-lg rounded-md z-50">
                 {link.category === "Creative Solutions" && (
                   <CreativeSolutionOverlay />
                 )}

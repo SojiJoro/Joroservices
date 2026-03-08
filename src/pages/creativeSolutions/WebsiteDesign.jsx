@@ -76,7 +76,7 @@ const WebsiteDesign = () => (
       ]}
     />
     {/* Hero Section */}
-    <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
+    <section id="hero" className="grid p-4 pt-20 lg:p-20 lg:pt-24 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>
         <p className="uppercase text-sm text-accent-dark mb-4">Web Development</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Custom Websites That Deliver Results</h1>

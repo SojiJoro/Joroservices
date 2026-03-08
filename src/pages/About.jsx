@@ -39,7 +39,7 @@ const About = () => {
         ]}
       />
       {/* Hero Section */}
-      <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white py-20 px-6 text-center">
+      <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white pt-28 pb-20 px-6 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4">About Joro Services</h1>
         <p className="text-lg lg:text-xl max-w-3xl mx-auto">
           A technology partner committed to helping businesses grow through innovative digital solutions.
