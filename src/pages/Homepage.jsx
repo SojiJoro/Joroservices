@@ -20,25 +20,25 @@ const serviceCategories = [
   {
     icon: Palette,
     title: 'Creative Solutions',
-    desc: 'Website design, branding, and UI/UX that elevate your digital presence.',
+    desc: 'Conversion-focused website design, branding, and UI/UX that turn visitors into customers.',
     path: '/creative-solutions',
   },
   {
     icon: Code2,
     title: 'Development',
-    desc: 'Web and mobile applications built with modern, scalable technologies.',
+    desc: 'Scalable web and mobile applications built with React, Next.js, and cloud-native technologies.',
     path: '/development',
   },
   {
     icon: BarChart3,
     title: 'Digital Marketing',
-    desc: 'SEO, PPC, and content strategies that drive measurable growth.',
+    desc: 'SEO, PPC, and content strategies that deliver measurable ROI and sustainable growth.',
     path: '/digital-marketing',
   },
   {
     icon: Shield,
-    title: 'Technical Services',
-    desc: 'IT support, cybersecurity, and cloud infrastructure you can rely on.',
+    title: 'Managed IT & Security',
+    desc: 'AWS-certified cloud infrastructure, 24/7 IT support, and enterprise-grade cybersecurity.',
     path: '/technical-services',
   },
 ];
@@ -63,12 +63,12 @@ const Homepage = () => (
             Trusted by 20+ businesses across the UK
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
-            Technology Solutions
+            Your Technology Partner
             <br />
-            <span className="text-accent">That Deliver Results</span>
+            <span className="text-accent">for Lasting Growth</span>
           </h1>
           <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
-            We build, scale, and secure digital products for ambitious businesses. From design to deployment, your success is our mission.
+            We design, build, and manage the technology that powers your business. From cloud infrastructure and cybersecurity to web applications and digital marketing &mdash; all under one roof.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-3">
             <Link
@@ -172,10 +172,10 @@ const Homepage = () => (
         <div className="mt-10 bg-gradient-to-r from-primary to-secondary rounded-2xl px-6 py-10 sm:p-10 lg:p-12">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-white text-xl sm:text-2xl font-bold mb-3">
-              Your Trusted Technology Partner
+              One Partner. Every Technology Need.
             </h3>
             <p className="text-gray-400 mb-6 text-sm sm:text-base leading-relaxed">
-              We combine deep technical expertise with industry insights to accelerate your growth.
+              Stop juggling multiple vendors. From cloud infrastructure to marketing campaigns, we deliver integrated solutions that work together.
             </p>
             <Link
               to="/getintouch"
@@ -196,17 +196,17 @@ const Homepage = () => (
           <div>
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Why Joro Services</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Built for businesses that demand quality
+              Enterprise expertise. SMB pricing.
             </h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
-              We are a team of engineers, designers, and strategists who understand that technology should work for your business, not the other way around.
+              We bring the same rigour and expertise that large enterprises expect, but at a scale and price point built for growing businesses. No junior handoffs &mdash; the people you speak to are the people who do the work.
             </p>
             <ul className="space-y-4">
               {[
-                'UK-based team with global delivery capability',
-                'Agile methodology with transparent communication',
-                'Post-launch support and ongoing maintenance',
-                'Proven results across healthcare, recruitment, and e-commerce',
+                'AWS Solutions Architect certified team',
+                'GDPR-compliant processes and professional indemnity insured',
+                'Fixed pricing with no hidden fees or hourly surprises',
+                'Proven results across healthcare, financial services, and recruitment',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-600">
                   <CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-0.5" />
@@ -219,7 +219,7 @@ const Homepage = () => (
             {[
               { value: '20+', label: 'Clients Served' },
               { value: '35+', label: 'Projects Delivered' },
-              { value: '8+', label: 'Team Members' },
+              { value: '26.6%', label: 'Avg Cloud Savings' },
               { value: '99%', label: 'Client Satisfaction' },
             ].map((stat, i) => (
               <div key={i} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">

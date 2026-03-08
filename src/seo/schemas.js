@@ -10,7 +10,7 @@ export const organizationSchema = {
   url: BASE_URL,
   logo: `${BASE_URL}/Joro.svg`,
   description:
-    'Joro Services Ltd provides digital marketing, web development, mobile app development, UI/UX design, cloud infrastructure, cybersecurity, and IT support services for businesses across the UK.',
+    'Joro Services Ltd is a UK managed IT services provider delivering web development, cloud infrastructure, cybersecurity, digital marketing, and IT support for SMBs across Aldershot, Hampshire, London, and the UK. AWS-certified, GDPR-compliant.',
   foundingDate: '2022-04-30',
   legalName: 'JORO SERVICES LTD',
   telephone: '+447867374034',

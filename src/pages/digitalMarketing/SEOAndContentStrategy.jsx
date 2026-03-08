@@ -8,6 +8,7 @@ import {
   FaPlus,
   FaMinus,
 } from 'react-icons/fa'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -185,7 +186,7 @@ const SEOAndContentStrategy = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
   return (
-    <main className="bg-white text-black">
+    <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/digital-marketing/seo-and-content-strategy']}
         jsonLd={[
@@ -203,113 +204,55 @@ const SEOAndContentStrategy = () => {
           seoFaqSchema,
         ]}
       />
-      {/* Section 1: Hero */}
-      <section
-        id="hero"
-        className="px-4 lg:px-20 pt-28 pb-16 lg:pt-32 lg:pb-24 min-h-[80vh] flex items-center"
-      >
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="uppercase text-sm text-accent-dark mb-4 font-semibold tracking-wide">
-              SEO & Content Strategy
-            </p>
-            <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-              Get Found on Google —{' '}
-              <span className="text-accent-dark">Without the Guesswork</span>
-            </h1>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              You built a great business. Now let people find it. Our SEO
-              specialists handle keyword research, content strategy, technical
-              optimisation, and ongoing performance tracking — so you show up
-              when your customers are searching.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/getintouch"
-                className="inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition text-center"
-              >
-                Get a Free SEO Audit
-              </Link>
-              <a
-                href="#pricing"
-                className="inline-block px-6 py-3 border-2 border-accent-dark text-accent-dark font-semibold rounded-lg hover:bg-accent-dark hover:text-white transition text-center"
-              >
-                See Our SEO Plans
-              </a>
-            </div>
-          </div>
-          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 bg-white rounded-lg p-3 border border-gray-100">
-                <div className="w-8 h-8 bg-accent-dark/10 rounded flex items-center justify-center">
-                  <span className="text-accent-dark font-bold text-sm">1</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm">Your Business Name</p>
-                  <p className="text-xs text-accent-dark">
-                    www.yourbusiness.co.uk
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    #1 result for your target keywords
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 bg-white rounded-lg p-3 border border-gray-100 opacity-50">
-                <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center">
-                  <span className="text-gray-400 font-bold text-sm">2</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm text-gray-400">
-                    Competitor A
-                  </p>
-                  <p className="text-xs text-gray-400">www.competitor-a.co.uk</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 bg-white rounded-lg p-3 border border-gray-100 opacity-30">
-                <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center">
-                  <span className="text-gray-400 font-bold text-sm">3</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm text-gray-400">
-                    Competitor B
-                  </p>
-                  <p className="text-xs text-gray-400">www.competitor-b.co.uk</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 flex items-center gap-2">
-              <FaChartLine className="text-accent-dark" />
-              <span className="text-sm text-gray-600">
-                Organic traffic trending upward
-              </span>
-            </div>
-          </div>
+
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+            SEO & Content Strategy
+          </p>
+          <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">
+            Get Found on Google — Without the Guesswork
+          </h1>
+          <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
+            You built a great business. Now let people find it. Our SEO
+            specialists handle keyword research, content strategy, technical
+            optimisation, and ongoing performance tracking — so you show up
+            when your customers are searching.
+          </p>
+          <Link
+            to="/getintouch"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          >
+            Get a Free SEO Audit <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
-      {/* Section 2: Pain Points */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
+      {/* Pain Points */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
             Sound Familiar?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {painPoints.map((point, i) => (
               <div
                 key={i}
-                className="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
+                className="flex items-start gap-3 bg-white rounded-2xl border border-gray-100 p-7"
               >
                 <span className="text-red-400 mt-1 text-lg">"</span>
-                <p className="text-gray-700 italic">{point}</p>
+                <p className="text-gray-600 leading-relaxed italic">{point}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 3: Service Cards */}
-      <section id="services" className="py-16 lg:py-20 px-4 lg:px-20">
-        <div className="max-w-6xl mx-auto">
+      {/* Service Cards */}
+      <section id="services" className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
             What We Do
           </h2>
@@ -317,27 +260,27 @@ const SEOAndContentStrategy = () => {
             {serviceCards.map((card, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition"
+                className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition"
               >
-                <card.icon className="text-3xl text-accent-dark mb-4" />
-                <p className="text-xs uppercase tracking-wide text-accent-dark font-semibold mb-1">
+                <card.icon className="text-3xl text-accent mb-4" />
+                <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-1">
                   {card.label}
                 </p>
                 <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{card.description}</p>
+                <p className="text-gray-600 leading-relaxed text-sm mb-4">{card.description}</p>
                 <ul className="space-y-2">
                   {card.items.map((item, j) => (
                     <li
                       key={j}
-                      className="flex items-start gap-2 text-sm text-gray-700"
+                      className="flex items-start gap-2 text-sm text-gray-600"
                     >
-                      <FaCheckCircle className="text-accent-dark mt-0.5 flex-shrink-0 text-xs" />
+                      <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
                 {card.note && (
-                  <p className="mt-4 text-xs text-accent-dark font-medium bg-accent-dark/10 p-2 rounded">
+                  <p className="mt-4 text-xs text-accent font-medium bg-accent/10 p-2 rounded">
                     {card.note}
                   </p>
                 )}
@@ -347,13 +290,13 @@ const SEOAndContentStrategy = () => {
         </div>
       </section>
 
-      {/* Section 4: Differentiator */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+      {/* Differentiator */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-6 max-w-3xl mx-auto">
             Technical + Content Under One Roof
           </h2>
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
             Most SEO agencies are great at content but terrible at technical
             infrastructure. Most IT companies don't touch marketing. We bridge
             the gap — our technical team handles site performance and
@@ -363,29 +306,30 @@ const SEOAndContentStrategy = () => {
         </div>
       </section>
 
-      {/* Section 5: Pricing */}
-      <section id="pricing" className="py-16 lg:py-20 px-4 lg:px-20">
-        <div className="max-w-7xl mx-auto">
+      {/* Pricing */}
+      <section id="pricing" className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Pricing</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
-            Pricing
+            Transparent Pricing
           </h2>
-          <p className="text-center text-gray-600 mb-12">
+          <p className="text-center text-gray-600 leading-relaxed mb-12">
             Transparent pricing. No lock-in beyond the minimum.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {pricingTiers.map((tier, i) => (
               <div
                 key={i}
-                className={`rounded-xl p-6 border-2 ${
+                className={`rounded-2xl p-7 border ${
                   tier.highlighted
-                    ? 'border-accent-dark shadow-lg relative'
+                    ? 'border-accent shadow-lg relative'
                     : tier.isFree
-                    ? 'border-accent-dark/30 bg-accent-dark/5'
-                    : 'border-gray-200'
+                    ? 'border-accent/30 bg-accent/5'
+                    : 'border-gray-100'
                 }`}
               >
                 {tier.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-dark text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">
                     Most Popular
                   </div>
                 )}
@@ -395,16 +339,16 @@ const SEOAndContentStrategy = () => {
                     {tier.commitment}
                   </p>
                 )}
-                <div className="text-xl font-bold text-accent-dark mb-4">
+                <div className="text-xl font-bold text-accent mb-4">
                   {tier.price}
                 </div>
                 <ul className="space-y-2 mb-6">
                   {tier.features.map((feature, j) => (
                     <li
                       key={j}
-                      className="flex items-start gap-2 text-sm text-gray-700"
+                      className="flex items-start gap-2 text-sm text-gray-600"
                     >
-                      <FaCheckCircle className="text-accent-dark mt-0.5 flex-shrink-0 text-xs" />
+                      <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -414,10 +358,10 @@ const SEOAndContentStrategy = () => {
                 </p>
                 <Link
                   to="/getintouch"
-                  className={`inline-block w-full text-center px-4 py-2.5 font-semibold rounded-lg transition text-sm ${
+                  className={`inline-block w-full text-center px-4 py-2.5 font-semibold rounded-xl transition text-sm ${
                     tier.highlighted
-                      ? 'bg-accent-dark text-white hover:bg-opacity-90'
-                      : 'border-2 border-accent-dark text-accent-dark hover:bg-accent-dark hover:text-white'
+                      ? 'bg-accent text-white hover:bg-accent-dark'
+                      : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
                   }`}
                 >
                   {tier.isFree ? 'Get Free Audit' : 'Get Started'}
@@ -428,61 +372,63 @@ const SEOAndContentStrategy = () => {
         </div>
       </section>
 
-      {/* Section 6: FAQ */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {faqData.map((faq, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-lg bg-white"
-              >
-                <button
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? null : index)
-                  }
-                  className="w-full flex justify-between items-center text-left p-5"
+      {/* FAQ */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              {faqData.map((faq, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-100 rounded-2xl bg-white"
                 >
-                  <span className="font-medium text-lg pr-4">
-                    {faq.question}
-                  </span>
-                  {openFaq === index ? (
-                    <FaMinus className="text-accent-dark flex-shrink-0" />
-                  ) : (
-                    <FaPlus className="text-accent-dark flex-shrink-0" />
+                  <button
+                    onClick={() =>
+                      setOpenFaq(openFaq === index ? null : index)
+                    }
+                    className="w-full flex justify-between items-center text-left p-5"
+                  >
+                    <span className="font-medium text-lg pr-4">
+                      {faq.question}
+                    </span>
+                    {openFaq === index ? (
+                      <FaMinus className="text-accent flex-shrink-0" />
+                    ) : (
+                      <FaPlus className="text-accent flex-shrink-0" />
+                    )}
+                  </button>
+                  {openFaq === index && (
+                    <div className="px-5 pb-5">
+                      <p className="text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
                   )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-5 pb-5">
-                    <p className="text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 7: Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
+      {/* Bottom CTA */}
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Customers Are Searching. Make Sure They Find You.
           </h2>
-          <p className="text-lg mb-8 text-white/80">
+          <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
             Start with a free SEO audit. We'll show you exactly where you stand
             and what it'll take to rank.
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
           >
-            Get Your Free SEO Audit
+            Get Your Free SEO Audit <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

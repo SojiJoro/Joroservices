@@ -32,10 +32,10 @@ const TechnicalServices = () => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-          Expert Technical Services
+          Managed IT Services Built for Growing Businesses
         </h2>
         <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-          Cybersecurity, IT support, cloud infrastructure management and more — ensuring your systems run smoothly and securely.
+          From proactive IT support and cybersecurity to AWS cloud management &mdash; enterprise-grade technical services at SMB prices. No junior handoffs, no hidden fees.
         </p>
       </div>
       <TechServices />
@@ -46,10 +46,10 @@ const TechnicalServices = () => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Expertise</p>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-          Our Technical Expertise
+          Why UK Businesses Choose Joro
         </h2>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-          Comprehensive IT services that ensure your systems are secure, reliable, and high-performing.
+          AWS Solutions Architect certified. GDPR compliant. Professional indemnity insured. We manage production infrastructure for regulated industries including financial services and healthcare.
         </p>
       </div>
     </section>

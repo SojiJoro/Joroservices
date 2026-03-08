@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaHeadset, FaShieldAlt, FaClock, FaTools, FaPlus, FaMinus } from 'react-icons/fa'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -11,7 +12,7 @@ const services = [
     icon: FaClock,
     title: '24/7 Monitoring & Response',
     description:
-      'We proactively monitor your servers, workstations, and cloud environments around the clock — resolving issues before they escalate.',
+      'We proactively monitor your servers, workstations, and cloud environments around the clock \u2014 resolving issues before they escalate.',
   },
   {
     icon: FaShieldAlt,
@@ -29,7 +30,7 @@ const services = [
     icon: FaHeadset,
     title: 'Helpdesk & Remote Support',
     description:
-      'Our team resolves user issues quickly through remote access, live chat, or on‑site visits. No ticket is too small or too technical.',
+      'Our team resolves user issues quickly through remote access, live chat, or on\u2011site visits. No ticket is too small or too technical.',
   },
 ]
 
@@ -78,7 +79,7 @@ const faqData = [
   {
     question: 'How much does IT support cost per month?',
     answer:
-      'IT support costs depend on the number of users, devices, and level of service required. Our plans typically start from £30 per user per month for basic support, with comprehensive managed services from £50 per user per month. Contact us for a tailored quote based on your specific needs.',
+      'IT support costs depend on the number of users, devices, and level of service required. Our plans typically start from \u00a330 per user per month for basic support, with comprehensive managed services from \u00a350 per user per month. Contact us for a tailored quote based on your specific needs.',
   },
 ]
 
@@ -99,7 +100,7 @@ const ItSupportAndMaintenance = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
   return (
-  <main className="bg-white text-black">
+  <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/technical-services/it-support-and-maintenance']}
       jsonLd={[
@@ -117,73 +118,71 @@ const ItSupportAndMaintenance = () => {
         itFaqSchema,
       ]}
     />
+
     {/* Hero Section */}
-    <section id="hero" className="grid p-4 pt-28 pb-20 lg:p-20 lg:pt-32 lg:pb-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
-      <div>
-        <p className="uppercase text-sm text-accent mb-4">IT Support Services</p>
-        <h1 className="text-3xl lg:text-5xl font-bold mb-6">Reliable IT Support That Keeps You Online</h1>
-        <p className="text-lg text-gray-800">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">IT Support Services</p>
+        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Reliable IT Support That Keeps You Online</h1>
+        <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
           Downtime costs money. Our proactive IT support and maintenance services keep your systems running smoothly, securely, and always up to date. From on-prem setups to remote teams, we've got your back.
         </p>
         <Link
           to="/getintouch"
-          className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
+          className="mt-8 inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Get Support Now
+          Get Support Now <ArrowRight className="w-4 h-4" />
         </Link>
-      </div>
-      <div className="rounded-lg shadow-lg bg-gradient-to-br from-accent/20 to-accent-dark/30 w-full h-[60vh] flex items-center justify-center">
-        <p className="text-6xl opacity-30">💻</p>
       </div>
     </section>
 
     {/* Services Section */}
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
-      <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-12">What We Cover</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {services.map((s, i) => (
-          <div key={i} className="p-6 border border-gray-100 rounded-2xl shadow-sm bg-white">
-            <s.icon className="text-4xl text-accent-dark mb-4" />
-            <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-            <p className="text-sm text-gray-700">{s.description}</p>
-          </div>
-        ))}
-      </div>
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">What We Cover</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((s, i) => (
+            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-7">
+              <s.icon className="text-4xl text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{s.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 
     {/* Portfolio Section */}
-    <section className="py-20">
+    <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Case Studies</p>
-      <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-12">Where We've Made a Difference</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {portfolio.map((item, i) => (
-          <div key={i} className="bg-white rounded-2xl overflow-hidden shadow border border-gray-100 hover:shadow-lg transition">
-            <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
-              <p className="text-sm text-gray-700 mt-1">{item.description}</p>
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Case Studies</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Where We've Made a Difference</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {portfolio.map((item, i) => (
+            <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
+              <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
+              <div className="p-7">
+                <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm mt-2">{item.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </section>
 
     {/* FAQ Section */}
-    <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
           Frequently Asked Questions About IT Support
         </h2>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg bg-white"
+              className="bg-white rounded-2xl border border-gray-100"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -191,14 +190,14 @@ const ItSupportAndMaintenance = () => {
               >
                 <span className="font-medium text-lg pr-4">{faq.question}</span>
                 {openFaq === index ? (
-                  <FaMinus className="text-accent-dark flex-shrink-0" />
+                  <FaMinus className="text-accent flex-shrink-0" />
                 ) : (
-                  <FaPlus className="text-accent-dark flex-shrink-0" />
+                  <FaPlus className="text-accent flex-shrink-0" />
                 )}
               </button>
               {openFaq === index && (
                 <div className="px-5 pb-5">
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
@@ -208,16 +207,18 @@ const ItSupportAndMaintenance = () => {
     </section>
 
     {/* CTA Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 text-center">
-      <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
-        Need Support That's Always One Step Ahead?
-      </h2>
-      <Link
-        to="/getintouch"
-        className="inline-block bg-white text-accent font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
-      >
-        Contact the Team
-      </Link>
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+          Need Support That's Always One Step Ahead?
+        </h2>
+        <Link
+          to="/getintouch"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+        >
+          Contact the Team <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
     </section>
 
     <Footer />

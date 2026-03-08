@@ -2,155 +2,156 @@
  * Per-page SEO configuration for all routes.
  * Each key matches a route path.
  * Titles and descriptions are optimised for local (Aldershot/Hampshire) and UK-wide search.
+ * Keywords target high-intent, competitive terms used by top UK IT service providers.
  */
 
 const pagesSEO = {
   '/': {
-    title: 'Joro Services | Web Development, Digital Marketing & IT Solutions in Aldershot, Hampshire',
+    title: 'Managed IT Services, Web Development & Cybersecurity | Joro Services | Aldershot & London',
     description:
-      'Joro Services Ltd delivers expert web development, digital marketing, SEO, mobile app development, UI/UX design, cybersecurity, and IT support for businesses in Aldershot, Hampshire, and across the UK. Free consultation available.',
+      'Joro Services is a trusted UK IT services provider delivering managed IT support, web development, cloud solutions, cybersecurity, and digital marketing for SMBs in Aldershot, Hampshire, London, and across the UK. Free consultation available.',
     keywords:
-      'web development Aldershot, digital marketing Hampshire, SEO Aldershot, IT support Farnborough, web design Aldershot, mobile app development Hampshire, cybersecurity UK, cloud infrastructure, Joro Services, digital agency Aldershot, website design Hampshire, PPC management Surrey',
+      'managed IT services UK, IT support Aldershot, web development Hampshire, cybersecurity services UK, cloud migration AWS, digital marketing agency Aldershot, IT outsourcing Hampshire, managed service provider, technology partner UK, MSP Aldershot, IT solutions London, Joro Services',
   },
   '/services': {
-    title: 'Our Services | Web Development, Marketing, IT & Design | Joro Services Aldershot',
+    title: 'IT Services & Digital Solutions for UK Businesses | Joro Services',
     description:
-      'Explore our full range of digital services including web development, SEO, PPC, social media marketing, mobile apps, UI/UX design, IT support, cybersecurity, and cloud solutions. Serving Aldershot, Hampshire, and UK-wide.',
+      'Explore our end-to-end IT services: managed support, cybersecurity, cloud infrastructure, web development, mobile apps, SEO, PPC, and creative design. Trusted by 20+ businesses across the UK. Free consultation.',
     keywords:
-      'digital services Aldershot, web development services Hampshire, digital marketing services UK, IT services Farnborough, creative design Aldershot, technology services Surrey, business IT solutions',
+      'IT services UK, managed IT services, web development services, cybersecurity solutions, cloud services Hampshire, digital transformation, technology consulting, business IT solutions, IT outsourcing, digital agency Aldershot',
   },
   '/about': {
-    title: 'About Joro Services | Digital Agency in Aldershot & London | Est. 2022',
+    title: 'About Joro Services | Trusted IT & Digital Partner | Aldershot & London',
     description:
-      'Learn about Joro Services Ltd, a professional digital agency providing web development, digital marketing, IT support, and creative solutions to businesses in Aldershot, Hampshire, London, and across the UK since 2022.',
+      'Joro Services Ltd is a UK-based technology partner delivering enterprise-grade IT services at SMB prices. AWS-certified, GDPR-compliant, and trusted by businesses in healthcare, recruitment, and financial services since 2022.',
     keywords:
-      'about Joro Services, digital agency Aldershot, IT company Hampshire, web development company London, technology partner UK, digital consultancy Farnborough',
+      'about Joro Services, IT company Aldershot, technology partner UK, digital agency Hampshire, AWS certified, managed service provider London, IT consultancy Farnborough, digital transformation partner',
   },
   '/getintouch': {
-    title: 'Contact Joro Services | Free Consultation | Aldershot, Hampshire',
+    title: 'Get a Free IT Consultation | Contact Joro Services | Aldershot, Hampshire',
     description:
-      'Get in touch with Joro Services for a free consultation on web development, digital marketing, IT support, or any digital project. Based in Aldershot, Hampshire, serving clients UK-wide. Call 07867 374034.',
+      'Book a free consultation with Joro Services to discuss managed IT support, web development, cybersecurity, or cloud migration. Based in Aldershot, Hampshire. Serving clients UK-wide. Call 07867 374034.',
     keywords:
-      'contact Joro Services, free consultation Aldershot, digital agency contact Hampshire, web developer contact, IT support enquiry, get a quote Aldershot',
+      'free IT consultation, contact Joro Services, IT support quote, web development quote, cybersecurity assessment, cloud audit, get a quote Aldershot, IT services enquiry Hampshire',
   },
   '/careers': {
-    title: 'Careers at Joro Services | Digital & IT Jobs in Aldershot, Hampshire',
+    title: 'Careers in Tech | IT, Development & Marketing Jobs | Joro Services',
     description:
-      'Join the Joro Services team. We are hiring talented developers, designers, marketers, and IT professionals in Aldershot, Hampshire. Explore career opportunities in a growing digital agency.',
+      'Join a growing UK technology company. We are hiring cloud engineers, developers, cybersecurity consultants, and digital marketers. Remote, hybrid, and on-site roles available across the UK.',
     keywords:
-      'jobs Aldershot, digital marketing jobs Hampshire, web developer jobs, IT careers Farnborough, design jobs Surrey, tech jobs UK, Joro Services careers',
+      'IT jobs UK, cloud engineer jobs, web developer jobs, cybersecurity jobs, digital marketing careers, tech jobs Hampshire, DevOps engineer, React developer, Joro Services careers',
   },
   '/creative-solutions': {
-    title: 'Creative Solutions | Website Design, Branding & UI/UX | Joro Services Aldershot',
+    title: 'Website Design, Branding & UI/UX Services | Joro Services | Hampshire',
     description:
-      'Professional website design, graphic design, branding, and UI/UX services in Aldershot, Hampshire. We create stunning digital experiences that convert visitors into customers. Serving UK-wide.',
+      'Professional website design, graphic design, branding, and UI/UX services that convert visitors into customers. Mobile-first, SEO-optimised designs for UK businesses. Portfolio and case studies available.',
     keywords:
-      'website design Aldershot, graphic design Hampshire, branding agency Farnborough, UI UX design Surrey, creative agency Aldershot, web design services UK, logo design Hampshire',
+      'website design Hampshire, branding agency Aldershot, UI UX design UK, graphic design services, web design Farnborough, creative agency Surrey, logo design, brand identity, conversion-focused design',
   },
   '/creative-solutions/website-design': {
-    title: 'Website Design Services in Aldershot, Hampshire | Joro Services',
+    title: 'Professional Website Design | Mobile-First & SEO-Optimised | Joro Services',
     description:
-      'Professional, responsive website design services in Aldershot and Hampshire. We build beautiful, fast-loading websites that rank on Google and convert visitors into leads. Mobile-friendly designs for every business.',
+      'Bespoke website design services in Hampshire. We build fast-loading, mobile-first websites that rank on Google and convert visitors into leads. WordPress, React, and Shopify expertise. Prices from £1,500.',
     keywords:
-      'website design Aldershot, web design Hampshire, responsive website Farnborough, WordPress design, Shopify design, business website Aldershot, affordable web design Hampshire, professional website Surrey',
+      'website design Aldershot, web design Hampshire, responsive website, WordPress design, Shopify design, business website, affordable web design, professional website Surrey, mobile-first design, SEO website',
   },
   '/creative-solutions/graphic-design-and-branding': {
-    title: 'Graphic Design & Branding in Aldershot, Hampshire | Joro Services',
+    title: 'Graphic Design & Brand Identity | Logo, Print & Digital | Joro Services',
     description:
-      'Expert graphic design and branding services in Aldershot, Hampshire. From logo design to full brand identity, we help your business stand out. Serving Farnborough, Camberley, Guildford, and UK-wide.',
+      'Expert graphic design and branding services in Hampshire. From logo design and brand guidelines to marketing collateral and digital assets. Build a brand that stands out in your market.',
     keywords:
-      'graphic design Aldershot, branding Hampshire, logo design Farnborough, brand identity Camberley, visual identity Guildford, corporate branding UK, design agency Aldershot',
+      'graphic design Aldershot, branding Hampshire, logo design, brand identity, brand guidelines, corporate branding UK, design agency, visual identity, marketing design, print design',
   },
   '/creative-solutions/user-interface-and-experience': {
-    title: 'UI/UX Design Services in Aldershot, Hampshire | Joro Services',
+    title: 'UI/UX Design | User Research, Wireframing & Prototyping | Joro Services',
     description:
-      'User interface and user experience design services in Aldershot, Hampshire. We create intuitive, user-centred digital products that delight users and drive business results. Wireframing, prototyping, and usability testing.',
+      'User interface and experience design that drives engagement and conversions. Wireframing, prototyping, usability testing, and design systems. We create digital products users love.',
     keywords:
-      'UI design Aldershot, UX design Hampshire, user interface design, user experience design, wireframing, prototyping, usability testing, app design Farnborough, digital product design UK',
+      'UI design, UX design Hampshire, user interface design, user experience design, wireframing, prototyping, usability testing, app design, digital product design UK, design systems, user research',
   },
   '/development': {
-    title: 'Software Development | Web & Mobile Apps | Joro Services Aldershot',
+    title: 'Software Development | Web Apps, Mobile Apps & APIs | Joro Services',
     description:
-      'Expert web development, mobile app development, and data management services in Aldershot, Hampshire. We build scalable, secure applications using React, Next.js, Node.js, and more. UK-wide delivery.',
+      'Custom software development using React, Next.js, Node.js, and cloud-native technologies. We build scalable web applications, mobile apps, and APIs for UK businesses. Agile delivery, post-launch support.',
     keywords:
-      'web development Aldershot, mobile app development Hampshire, software development Farnborough, React developer Surrey, Node.js development UK, custom software Aldershot, app developer Hampshire',
+      'software development UK, web development Hampshire, mobile app development, React developer, Next.js development, Node.js, custom software, full stack developer, API development, agile development',
   },
   '/development/web-development': {
-    title: 'Web Development Services in Aldershot, Hampshire | Joro Services',
+    title: 'Custom Web Development | React & Next.js Experts | Joro Services Hampshire',
     description:
-      'Custom web development services in Aldershot and Hampshire. We build fast, secure, SEO-optimised websites and web applications using React, Next.js, and modern technologies. From startups to enterprises.',
+      'Bespoke web development services using React, Next.js, and modern technologies. Fast, secure, SEO-optimised websites and web applications. From startups to enterprises. Prices from £1,500.',
     keywords:
-      'web development Aldershot, web developer Hampshire, React development Farnborough, Next.js developer, custom web application, ecommerce development Aldershot, full stack developer Hampshire, website developer Surrey',
+      'web development Aldershot, web developer Hampshire, React development, Next.js developer, custom web application, ecommerce development, full stack developer, website developer Surrey, bespoke website',
   },
   '/development/mobile-app-development': {
-    title: 'Mobile App Development in Aldershot, Hampshire | Joro Services',
+    title: 'Mobile App Development | iOS & Android | React Native & Flutter | Joro Services',
     description:
-      'Professional iOS and Android mobile app development in Aldershot, Hampshire. We build native and cross-platform apps that users love. React Native and Flutter expertise. Serving businesses UK-wide.',
+      'Professional iOS and Android mobile app development. We build native and cross-platform apps using React Native and Flutter. From MVPs to enterprise applications. UK-wide delivery.',
     keywords:
-      'mobile app development Aldershot, app developer Hampshire, iOS development Farnborough, Android app development, React Native developer, Flutter development UK, app design and development Surrey',
+      'mobile app development UK, app developer Hampshire, iOS development, Android app development, React Native developer, Flutter development, cross-platform app, app design and development, MVP development',
   },
   '/development/data-management': {
-    title: 'Data Management & Analytics in Aldershot, Hampshire | Joro Services',
+    title: 'Data Management, Analytics & Database Design | Joro Services Hampshire',
     description:
-      'Data management, database design, and analytics services in Aldershot, Hampshire. We help businesses organise, analyse, and leverage their data for better decision-making. Cloud databases and data migration.',
+      'Data management, database design, and business intelligence services. We help UK businesses organise, migrate, and leverage their data for better decision-making. Cloud databases and ETL pipelines.',
     keywords:
-      'data management Aldershot, database design Hampshire, data analytics Farnborough, data migration UK, cloud database, business intelligence, data solutions Surrey, data consultant Hampshire',
+      'data management UK, database design, data analytics, data migration, cloud database, business intelligence, data solutions, data engineering, ETL, data warehouse, Power BI, data consultant',
   },
   '/digital-marketing': {
-    title: 'Digital Marketing Services | SEO, PPC & Social Media | Joro Services Aldershot',
+    title: 'Digital Marketing Agency | SEO, PPC & Social Media | Joro Services Hampshire',
     description:
-      'Results-driven digital marketing services in Aldershot, Hampshire. SEO, PPC advertising, social media management, and content strategy to grow your business online. Free marketing audit available.',
+      'Results-driven digital marketing services for UK businesses. SEO, Google Ads, social media management, and content strategy that delivers measurable ROI. Free marketing audit available.',
     keywords:
-      'digital marketing Aldershot, SEO Hampshire, PPC management Farnborough, social media marketing Surrey, content marketing UK, online marketing Aldershot, Google Ads management, Facebook advertising Hampshire',
+      'digital marketing agency UK, SEO services Hampshire, PPC management, social media marketing, content marketing, Google Ads, Facebook advertising, online marketing, digital strategy, marketing agency Aldershot',
   },
   '/digital-marketing/seo-and-content-strategy': {
-    title: 'SEO & Content Strategy Services in Aldershot, Hampshire | Joro Services',
+    title: 'SEO Services | Technical SEO, Content Strategy & Local SEO | Joro Services',
     description:
-      'Professional SEO and content strategy services in Aldershot, Hampshire. We improve your Google rankings with technical SEO, local SEO, content marketing, and link building. Get found by more customers in Aldershot and beyond.',
+      'Professional SEO services that get results. Technical SEO audits, keyword-targeted content, local SEO for Hampshire businesses, and monthly reporting. Free SEO audit available. No lock-in contracts.',
     keywords:
-      'SEO Aldershot, SEO services Hampshire, local SEO Farnborough, content strategy, Google rankings, search engine optimisation UK, technical SEO, link building, content marketing Aldershot, SEO consultant Hampshire, SEO agency Surrey',
+      'SEO services UK, SEO agency Hampshire, local SEO Aldershot, content strategy, Google rankings, search engine optimisation, technical SEO, link building, content marketing, SEO consultant, SEO audit free',
   },
   '/digital-marketing/social-media-management': {
-    title: 'Social Media Management in Aldershot, Hampshire | Joro Services',
+    title: 'Social Media Management | Strategy, Content & Advertising | Joro Services',
     description:
-      'Expert social media management services in Aldershot, Hampshire. We manage your Facebook, Instagram, LinkedIn, and Twitter accounts to build your brand and engage your audience. Strategy, content creation, and reporting.',
+      'Expert social media management for UK businesses. We manage your LinkedIn, Facebook, Instagram, and X accounts with data-driven strategy, engaging content, and paid advertising. Monthly reporting included.',
     keywords:
-      'social media management Aldershot, social media marketing Hampshire, Facebook management, Instagram marketing Farnborough, LinkedIn management, social media agency Surrey, social media strategy UK',
+      'social media management UK, social media marketing Hampshire, Facebook management, Instagram marketing, LinkedIn management, social media agency, social media strategy, paid social, content creation',
   },
   '/digital-marketing/ppc-and-online-campaigns': {
-    title: 'PPC & Online Advertising in Aldershot, Hampshire | Joro Services',
+    title: 'PPC Management | Google Ads & Social Advertising | Joro Services Hampshire',
     description:
-      'Professional PPC and online campaign management in Aldershot, Hampshire. Google Ads, Facebook Ads, and display advertising to drive targeted traffic and conversions. Transparent reporting and ROI-focused campaigns.',
+      'Expert PPC and paid advertising management. Google Ads, Meta Ads, LinkedIn Ads, and display campaigns. Transparent reporting, no markup on ad spend. Average 4.2x ROAS across clients.',
     keywords:
-      'PPC Aldershot, Google Ads management Hampshire, Facebook Ads Farnborough, online advertising Surrey, pay per click UK, PPC agency Aldershot, SEM services Hampshire, display advertising, remarketing',
+      'PPC management UK, Google Ads agency Hampshire, Facebook Ads, LinkedIn Ads, paid advertising, pay per click, PPC agency, SEM services, display advertising, remarketing, ROAS, conversion tracking',
   },
   '/technical-services': {
-    title: 'IT Support, Cybersecurity & Cloud Services | Joro Services Aldershot',
+    title: 'Managed IT Services | IT Support, Cybersecurity & Cloud | Joro Services',
     description:
-      'Professional IT support, cybersecurity, and cloud infrastructure services in Aldershot, Hampshire. We keep your business secure, online, and running smoothly. 24/7 support available for UK businesses.',
+      'Enterprise-grade IT services at SMB prices. Managed IT support, cybersecurity, and AWS cloud infrastructure for UK businesses. 24/7 monitoring, proactive maintenance, and expert-level support.',
     keywords:
-      'IT support Aldershot, cybersecurity Hampshire, cloud services Farnborough, managed IT services, IT infrastructure Surrey, tech support UK, network security Aldershot, IT solutions Hampshire',
+      'managed IT services UK, IT support Hampshire, cybersecurity services, cloud infrastructure, managed service provider, IT outsourcing, tech support, network security, IT solutions, MSP Aldershot',
   },
   '/technical-services/it-support-and-maintenance': {
-    title: 'IT Support & Maintenance in Aldershot, Hampshire | Joro Services',
+    title: 'Managed IT Support | 24/7 Monitoring & Helpdesk | Joro Services Hampshire',
     description:
-      'Reliable IT support and maintenance services in Aldershot, Hampshire. From helpdesk support to proactive monitoring and maintenance, we keep your systems running. Serving businesses in Farnborough, Camberley, and UK-wide.',
+      'Reliable managed IT support for UK businesses. 24/7 monitoring, proactive maintenance, helpdesk support, and on-site visits. From £30/user/month. Serving Hampshire, Surrey, and UK-wide.',
     keywords:
-      'IT support Aldershot, IT maintenance Hampshire, helpdesk support Farnborough, managed IT services Camberley, computer support, network maintenance Surrey, IT outsourcing UK, tech support Aldershot',
+      'managed IT support UK, IT support Hampshire, helpdesk support, IT maintenance, managed services, proactive monitoring, IT outsourcing, computer support, network maintenance, tech support Aldershot',
   },
   '/technical-services/cybersecurity': {
-    title: 'Cybersecurity Services in Aldershot, Hampshire | Joro Services',
+    title: 'Cybersecurity Services for SMBs | Security Audits & Managed Security | Joro Services',
     description:
-      'Comprehensive cybersecurity services in Aldershot, Hampshire. Protect your business from cyber threats with penetration testing, security audits, compliance, and 24/7 monitoring. GDPR compliant solutions for UK businesses.',
+      'Practical cybersecurity for UK small businesses. Security audits, M365 hardening, endpoint protection, phishing simulations, and ongoing management. Free security health check. We improved client scores from 33% to 61%.',
     keywords:
-      'cybersecurity Aldershot, cyber security Hampshire, penetration testing Farnborough, security audit, GDPR compliance, network security Surrey, data protection UK, cyber threat protection Aldershot',
+      'cybersecurity services UK, cyber security SMB, security audit Hampshire, GDPR compliance, endpoint protection, phishing protection, managed security, Microsoft 365 security, penetration testing, Cyber Essentials',
   },
   '/technical-services/cloud-infrastructure': {
-    title: 'Cloud Infrastructure & Migration in Aldershot, Hampshire | Joro Services',
+    title: 'AWS Cloud Services | Migration, Cost Optimisation & Management | Joro Services',
     description:
-      'Expert cloud infrastructure and migration services in Aldershot, Hampshire. AWS, Azure, and Google Cloud solutions for scalable, secure business operations. Cloud consulting, setup, and ongoing management across the UK.',
+      'AWS-certified cloud services for UK businesses. Cloud migration, cost optimisation (average 26.6% savings), security hardening, and ongoing management. Free AWS cost audit. Fixed pricing, no surprises.',
     keywords:
-      'cloud infrastructure Aldershot, cloud migration Hampshire, AWS services Farnborough, Azure solutions, Google Cloud, cloud consulting Surrey, cloud management UK, cloud hosting Aldershot',
+      'AWS cloud services UK, cloud migration Hampshire, cloud cost optimisation, AWS consulting, cloud infrastructure, managed cloud services, cloud security, DevOps, infrastructure as code, cloud hosting',
   },
   '/privacy': {
     title: 'Privacy Policy | Joro Services Ltd',
