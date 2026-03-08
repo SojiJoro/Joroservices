@@ -3,6 +3,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ServiceList } from './serviceData';
 import Footer from '../component/Footer';
+import SEO from '../component/SEO';
+import { breadcrumbSchema } from '../seo/schemas';
 
 const ServiceDetail = () => {
   const { id } = useParams();
@@ -21,6 +23,17 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
+      <SEO
+        title={`${service.title} | Joro Services`}
+        description={service.details?.[0] || `${service.title} services from Joro Services Ltd in Aldershot, Hampshire.`}
+        jsonLd={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: service.title, path: `/services/${id}` },
+          ]),
+        ]}
+      />
       <header
         className="relative bg-cover bg-center h-72"
         style={{ backgroundImage: `url(${service.image})` }}

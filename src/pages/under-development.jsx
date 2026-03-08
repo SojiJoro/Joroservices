@@ -1,11 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import SEO from '../component/SEO';
 
 const UnderDevelopment = () => {
   const navigate = useNavigate();
 
   return (
     <div id="hero" className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white text-center p-6">
+      <SEO
+        title="Page Not Found | Joro Services"
+        description="The page you are looking for is under development. Return to Joro Services homepage for web development, digital marketing, and IT services in Aldershot, Hampshire."
+      />
       <h1 className="text-3xl font-bold mb-4">
         🚧 This Page is Under Development 🚧
       </h1>
