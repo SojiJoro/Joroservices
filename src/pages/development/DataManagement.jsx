@@ -190,6 +190,19 @@ const faqData = [
   },
 ]
 
+const dataFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 const DataManagement = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
@@ -263,6 +276,7 @@ const DataManagement = () => {
             { name: 'Development', path: '/development' },
             { name: 'Data Management', path: '/development/data-management' },
           ]),
+          dataFaqSchema,
         ]}
       />
       {/* Section 1: Hero */}

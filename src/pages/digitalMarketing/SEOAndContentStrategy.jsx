@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   FaSearch,
   FaCogs,
@@ -168,30 +168,21 @@ const faqData = [
   },
 ]
 
+const seoFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 const SEOAndContentStrategy = () => {
   const [openFaq, setOpenFaq] = useState(null)
-
-  useEffect(() => {
-    document.title =
-      'SEO Services London | Content Strategy & Technical SEO for SMBs | Joro Services'
-    const metaDesc = document.querySelector('meta[name="description"]')
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Get found on Google. SEO audit, content strategy, technical optimisation, and monthly management for small businesses. Free SEO audit available.'
-      )
-    }
-    return () => {
-      document.title =
-        'Joro Services | Digital Marketing, Development & IT Solutions in London'
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Joro Services Ltd offers tailored digital marketing, web development, mobile app development, UI/UX design, cloud infrastructure, cybersecurity, and IT support services for businesses across the UK.'
-        )
-      }
-    }
-  }, [])
 
   return (
     <main className="bg-white text-black">
@@ -209,6 +200,7 @@ const SEOAndContentStrategy = () => {
             { name: 'Digital Marketing', path: '/digital-marketing' },
             { name: 'SEO & Content Strategy', path: '/digital-marketing/seo-and-content-strategy' },
           ]),
+          seoFaqSchema,
         ]}
       />
       {/* Section 1: Hero */}

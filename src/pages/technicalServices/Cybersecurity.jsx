@@ -187,6 +187,19 @@ const faqData = [
   },
 ]
 
+const cyberFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 const healthCheckItems = [
   'Microsoft Secure Score review and analysis',
   'Email authentication check (SPF, DKIM, DMARC)',
@@ -236,6 +249,7 @@ const Cybersecurity = () => {
             { name: 'Technical Services', path: '/technical-services' },
             { name: 'Cybersecurity', path: '/technical-services/cybersecurity' },
           ]),
+          cyberFaqSchema,
         ]}
       />
       {/* Section 1: Hero */}

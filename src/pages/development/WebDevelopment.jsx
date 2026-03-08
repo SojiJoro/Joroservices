@@ -1,5 +1,5 @@
-import React from 'react'
-import { FaMobileAlt, FaSearch, FaCogs, FaServer } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaMobileAlt, FaSearch, FaCogs, FaServer, FaPlus, FaMinus } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -57,7 +57,51 @@ const portfolio = [
   },
 ]
 
-const WebDevelopment = () => (
+const faqData = [
+  {
+    question: 'How much does a bespoke website cost in the UK?',
+    answer:
+      'The cost of a bespoke website depends on the complexity, number of pages, and features required. A simple brochure website typically starts from £1,500, while more complex web applications with custom functionality can range from £5,000 to £25,000+. We provide a detailed quote after understanding your specific requirements during a free consultation.',
+  },
+  {
+    question: 'How long does it take to build a custom website?',
+    answer:
+      'A standard business website typically takes 4-8 weeks from design to launch. Larger web applications with custom features may take 8-16 weeks. We provide a clear timeline at the start of every project and keep you updated throughout the development process.',
+  },
+  {
+    question: 'Do you build websites using WordPress or custom code?',
+    answer:
+      'We work with both. For content-heavy sites that need frequent updates, WordPress with a custom theme is often ideal. For web applications requiring complex functionality, performance, or scalability, we use React, Next.js, and Node.js. We recommend the best approach based on your business needs.',
+  },
+  {
+    question: 'Will my website be mobile-friendly and SEO-optimised?',
+    answer:
+      'Every website we build is mobile-first and fully responsive across all devices. We also implement on-page SEO best practices including semantic HTML, meta tags, structured data, fast loading speeds, and accessible design as standard — not as an add-on.',
+  },
+  {
+    question: 'Can you redesign my existing website?',
+    answer:
+      'Yes, website redesigns are one of our most requested services. We can modernise your existing site\'s design, improve performance, fix SEO issues, and add new functionality while preserving your existing content and search rankings where possible.',
+  },
+]
+
+const webDevFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
+const WebDevelopment = () => {
+  const [openFaq, setOpenFaq] = useState(null)
+
+  return (
   <main className="bg-white text-black">
     <SEO
       {...pagesSEO['/development/web-development']}
@@ -73,6 +117,7 @@ const WebDevelopment = () => (
           { name: 'Development', path: '/development' },
           { name: 'Web Development', path: '/development/web-development' },
         ]),
+        webDevFaqSchema,
       ]}
     />
     {/* Hero Section */}
@@ -135,6 +180,40 @@ const WebDevelopment = () => (
       </div>
     </section>
 
+    {/* FAQ Section */}
+    <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Frequently Asked Questions About Web Development
+        </h2>
+        <div className="space-y-4">
+          {faqData.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-lg bg-white"
+            >
+              <button
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                className="w-full flex justify-between items-center text-left p-5"
+              >
+                <span className="font-medium text-lg pr-4">{faq.question}</span>
+                {openFaq === index ? (
+                  <FaMinus className="text-accent-dark flex-shrink-0" />
+                ) : (
+                  <FaPlus className="text-accent-dark flex-shrink-0" />
+                )}
+              </button>
+              {openFaq === index && (
+                <div className="px-5 pb-5">
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* CTA */}
     <section className="bg-accent-dark text-white py-16 text-center">
       <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
@@ -144,12 +223,13 @@ const WebDevelopment = () => (
         to="/getintouch"
         className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
-        Let’s Build Something
+        Let's Build Something
       </Link>
     </section>
 
     <Footer />
   </main>
-)
+  )
+}
 
 export default WebDevelopment

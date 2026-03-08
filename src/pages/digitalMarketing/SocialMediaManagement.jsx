@@ -200,6 +200,19 @@ const faqData = [
   },
 ]
 
+const socialFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 const SocialMediaManagement = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
@@ -241,6 +254,7 @@ const SocialMediaManagement = () => {
             { name: 'Digital Marketing', path: '/digital-marketing' },
             { name: 'Social Media Management', path: '/digital-marketing/social-media-management' },
           ]),
+          socialFaqSchema,
         ]}
       />
       {/* Section 1: Hero */}

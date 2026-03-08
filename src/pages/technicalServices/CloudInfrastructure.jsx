@@ -190,6 +190,19 @@ const faqData = [
   },
 ]
 
+const cloudFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 /* ------------------------------------------------------------------ */
 /*  COMPONENT                                                          */
 /* ------------------------------------------------------------------ */
@@ -237,6 +250,7 @@ const CloudInfrastructure = () => {
             { name: 'Technical Services', path: '/technical-services' },
             { name: 'Cloud Infrastructure', path: '/technical-services/cloud-infrastructure' },
           ]),
+          cloudFaqSchema,
         ]}
       />
       {/* ============================================================ */}
