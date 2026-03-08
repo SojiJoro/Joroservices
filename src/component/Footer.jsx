@@ -84,7 +84,7 @@ const Footer = () => {
           <div className="mt-6 flex space-x-4">
             <a href="https://www.facebook.com/Joroservices" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
             <a href="https://x.com/Joroservices" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaXTwitter /></a>
-            <a href="https://www.linkedin.com/company/joroservices" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
+            <a href="https://www.linkedin.com/company/joro-services" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
             <a href="https://www.instagram.com/joroservices" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaInstagram /></a>
             <a href="https://wa.me/447345019824" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaWhatsapp /></a>
           </div>

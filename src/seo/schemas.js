@@ -60,7 +60,7 @@ export const organizationSchema = {
   sameAs: [
     'https://www.facebook.com/Joroservices',
     'https://x.com/Joroservices',
-    'https://www.linkedin.com/company/joroservices',
+    'https://www.linkedin.com/company/joro-services',
     'https://www.instagram.com/joroservices',
   ],
   contactPoint: [
@@ -127,7 +127,7 @@ export const localBusinessSchema = {
   sameAs: [
     'https://www.facebook.com/Joroservices',
     'https://x.com/Joroservices',
-    'https://www.linkedin.com/company/joroservices',
+    'https://www.linkedin.com/company/joro-services',
     'https://www.instagram.com/joroservices',
   ],
   hasOfferCatalog: {
