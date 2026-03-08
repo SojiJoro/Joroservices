@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCircleDot } from 'react-icons/fa6';
+import { ArrowRight } from 'lucide-react';
 import Footer from '../../component/Footer';
 import SEO from '../../component/SEO';
 import pagesSEO from '../../seo/pagesSEO';
@@ -27,7 +27,7 @@ const creativeServices = [
 const creativeBenefits = [
   {
     title: 'Tailored Visual Identity',
-    description: 'We help your brand visually communicate its mission, values, and edge—beautifully and clearly.',
+    description: 'We help your brand visually communicate its mission, values, and edge — beautifully and clearly.',
   },
   {
     title: 'High-Conversion Design',
@@ -44,13 +44,13 @@ const creativeBenefits = [
 ];
 
 const CreativeSolutions = () => (
-  <main className="bg-white text-black">
+  <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/creative-solutions']}
       jsonLd={[
         serviceSchema({
           name: 'Creative Solutions',
-          description: 'Professional website design, graphic design, branding, and UI/UX services in Aldershot, Hampshire.',
+          description: 'Professional website design, graphic design, branding, and UI/UX services.',
           url: '/creative-solutions',
           category: 'Creative Design Services',
         }),
@@ -60,75 +60,66 @@ const CreativeSolutions = () => (
         ]),
       ]}
     />
+
     {/* Hero Section */}
-    <section id="hero" className="relative grid p-4 pt-28 pb-20 justify-center grid-cols-1 lg:grid-cols-5 overflow-hidden min-h-screen lg:items-center gap-4">
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <video
-          className="object-cover w-full h-full max-w-full"
-          src="/vid1.mp4"
-          muted
-          loop
-          autoPlay
-        />
+    <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Creative Solutions</p>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            Make Your Brand Unforgettable with World-Class Design
+          </h1>
+          <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
+            We help businesses tell better stories through striking design, clean UI, and intuitive UX — so your customers remember and return.
+          </p>
+          <Link
+            to="/getintouch"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          >
+            Start a Project
+            <ArrowRight size={16} />
+          </Link>
+        </div>
       </div>
-
-      {/* Hero Content */}
-      <div className="relative z-20 pt-16 lg:pt-0 lg:col-span-3 flex flex-col">
-        <p className="flex flex-row items-center gap-4 pb-4 text-xs">
-          <FaCircleDot className="text-red-400" />
-          <span>Creative Solutions</span>
-        </p>
-        <h1 className="text-3xl lg:text-5xl font-[600] text-white">
-          Make Your Brand Unforgettable <br />
-          with World-Class Design
-        </h1>
-        <p className="text-sm lg:text-base text-gray-300 w-4/5 mt-4">
-          We help businesses tell better stories through striking design, clean UI, and intuitive UX—so your customers remember and return.
-        </p>
-      </div>
-
-      {/* Image section */}
-      <div className="absolute bottom-0 right-0 z-20 h-[50vh] lg:w-[40vw] w-[90vw] lg:mt-12 rounded-lg bg-cover bg-center bg-no-repeat bg-bgImage3"></div>
     </section>
 
     {/* Services Grid */}
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
-      <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-12">
-        What We Offer
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {creativeServices.map((service, index) => (
-          <div key={index} className="p-6 bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2 text-accent">{service.title}</h3>
-            <p className="text-sm text-gray-700 mb-4">{service.description}</p>
+        <div className="text-center mb-14">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</p>
+          <h2 className="text-3xl lg:text-4xl font-bold">What We Offer</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {creativeServices.map((service, index) => (
             <Link
+              key={index}
               to={`/creative-solutions/${service.slug}`}
-              className="text-sm font-semibold text-blue-700 hover:underline"
+              className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-lg transition-all duration-300"
             >
-              Learn more →
+              <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-accent transition-colors">{service.title}</h3>
+              <p className="text-sm text-gray-600 mb-4 leading-relaxed">{service.description}</p>
+              <span className="inline-flex items-center gap-1 text-sm font-medium text-accent">
+                Learn more <ArrowRight size={14} />
+              </span>
             </Link>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </section>
 
-    {/* Creative Benefits Section */}
-    <section className="py-12 bg-white">
+    {/* Benefits Section */}
+    <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10 text-center">
-          Why Creative Design Matters
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+        <div className="text-center mb-14">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Benefits</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Why Creative Design Matters</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {creativeBenefits.map((item, index) => (
             <div key={index} className="border-l-4 border-accent pl-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm text-gray-600">{item.description}</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
@@ -136,16 +127,18 @@ const CreativeSolutions = () => (
     </section>
 
     {/* CTA */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 text-center">
-      <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
-        Ready to Make a Lasting Impression?
-      </h2>
-      <Link
-        to="/getintouch"
-        className="inline-block bg-white text-accent font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
-      >
-        Let&apos;s Talk Design
-      </Link>
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Make a Lasting Impression?</h2>
+        <p className="text-gray-400 mb-8">Let us craft a visual identity that sets you apart from the competition.</p>
+        <Link
+          to="/getintouch"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+        >
+          Get in Touch
+          <ArrowRight size={16} />
+        </Link>
+      </div>
     </section>
 
     <Footer />

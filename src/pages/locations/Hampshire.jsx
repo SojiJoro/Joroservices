@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaCheckCircle, FaPlus, FaMinus, FaMapMarkerAlt } from 'react-icons/fa'
+import { CheckCircle, ChevronDown, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -85,7 +85,7 @@ const Hampshire = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
   return (
-    <main className="bg-white text-black">
+    <main className="bg-white text-gray-900">
       <SEO
         title="Web Development, IT Support & Digital Marketing in Hampshire | Joro Services"
         description="Joro Services delivers expert web development, IT support, SEO, cybersecurity, and digital marketing to businesses across Hampshire. Based in Aldershot, serving the entire county. Free consultation available."
@@ -107,11 +107,11 @@ const Hampshire = () => {
       />
 
       {/* Hero */}
-      <section className="px-4 lg:px-20 pt-28 pb-20 lg:pt-32 lg:pb-24 min-h-[70vh] flex items-center bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-4">
-            <FaMapMarkerAlt className="text-accent-dark" />
-            <span className="text-accent-dark font-semibold uppercase text-sm tracking-wide">Hampshire, UK</span>
+            <MapPin className="w-5 h-5 text-accent-dark" />
+            <span className="text-accent font-semibold text-sm uppercase tracking-widest">Hampshire, UK</span>
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
             Digital Services for Businesses Across{' '}
@@ -123,13 +123,13 @@ const Hampshire = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/getintouch"
-              className="inline-block px-8 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition text-center"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
             >
               Get a Free Consultation
             </Link>
             <a
               href="tel:+4407867374034"
-              className="inline-block px-8 py-3 border-2 border-accent-dark text-accent-dark font-semibold rounded-lg hover:bg-accent-dark hover:text-white transition text-center"
+              className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-accent-dark text-accent-dark font-semibold rounded-xl hover:bg-accent-dark hover:text-white transition-all text-sm"
             >
               Call 07867 374034
             </a>
@@ -138,10 +138,10 @@ const Hampshire = () => {
       </section>
 
       {/* Services */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Offer</p>
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">What We Offer</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
             Our Services Across Hampshire
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -152,7 +152,7 @@ const Hampshire = () => {
               <Link
                 key={i}
                 to={service.link}
-                className="p-6 border border-gray-200 rounded-2xl hover:shadow-lg transition bg-white group"
+                className="p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-lg transition group"
               >
                 <h3 className="text-xl font-bold mb-3 group-hover:text-accent-dark transition">{service.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
@@ -163,12 +163,12 @@ const Hampshire = () => {
       </section>
 
       {/* Why Hampshire businesses choose us */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
             Why Hampshire Businesses Trust Joro Services
           </h2>
-          <div className="space-y-6">
+          <div className="max-w-4xl mx-auto space-y-6">
             {[
               {
                 title: 'Hampshire-Based, UK-Wide Capability',
@@ -188,7 +188,7 @@ const Hampshire = () => {
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
-                <FaCheckCircle className="text-accent-dark mt-1 flex-shrink-0 text-lg" />
+                <CheckCircle className="w-5 h-5 text-accent-dark mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-1">{item.title}</h3>
                   <p className="text-gray-600">{item.text}</p>
@@ -200,17 +200,17 @@ const Hampshire = () => {
       </section>
 
       {/* Towns We Serve */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
             Hampshire Towns We Serve
           </h2>
           <p className="text-center text-gray-600 mb-10">
             We provide on-site and remote digital services to businesses across Hampshire.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3">
             {hampshireTowns.map((town, i) => (
-              <div key={i} className="text-center p-3 bg-gray-50 rounded-lg">
+              <div key={i} className="text-center p-3 bg-white rounded-2xl border border-gray-100">
                 <p className="font-medium text-sm">{town}</p>
               </div>
             ))}
@@ -219,30 +219,32 @@ const Hampshire = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
             Frequently Asked Questions About Our Hampshire Services
           </h2>
-          <div className="space-y-4">
+          <div className="max-w-3xl mx-auto space-y-4">
             {faqData.map((faq, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg bg-white">
+              <div key={index} className="bg-white rounded-2xl border border-gray-100">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full flex justify-between items-center text-left p-5"
                 >
                   <span className="font-medium text-lg pr-4">{faq.question}</span>
-                  {openFaq === index ? (
-                    <FaMinus className="text-accent-dark flex-shrink-0" />
-                  ) : (
-                    <FaPlus className="text-accent-dark flex-shrink-0" />
-                  )}
+                  <ChevronDown
+                    className={`w-5 h-5 text-accent-dark flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
                 </button>
-                {openFaq === index && (
-                  <div className="px-5 pb-5">
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                <div
+                  className={`grid transition-all duration-300 ${openFaq === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-5 pb-5">
+                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
@@ -250,8 +252,8 @@ const Hampshire = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Let Us Help Your Hampshire Business Grow
           </h2>
@@ -260,7 +262,7 @@ const Hampshire = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
           >
             Book Your Free Consultation
           </Link>

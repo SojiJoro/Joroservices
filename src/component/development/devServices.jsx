@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { useAnimation, motion, useInView } from 'framer-motion';
-import { FaCircleDot } from 'react-icons/fa6';
 import { LiaLaptopCodeSolid } from 'react-icons/lia';
 import { FaDatabase, FaLaptopCode } from 'react-icons/fa6';
 import { MdShoppingBag, MdCloudUpload, MdAnalytics } from 'react-icons/md';
@@ -49,54 +48,55 @@ const offerings = [
 
 const DevServices = () => {
   return (
-    <div className="mt-10 bg-white rounded-t-xl py-20 px-4 min-h-screen grid gap-12">
-      {offerings.map((serv, i) => {
-        const control = useAnimation();
-        const ref = useRef(null);
-        const isInView = useInView(ref, { once: true });
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12">
+        {offerings.map((serv, i) => {
+          const control = useAnimation();
+          const ref = useRef(null);
+          const isInView = useInView(ref, { once: true });
 
-        useEffect(() => {
-          if (isInView) control.start('visible');
-        }, [isInView, control]);
+          useEffect(() => {
+            if (isInView) control.start('visible');
+          }, [isInView, control]);
 
-        return (
-          <motion.div
-            key={i}
-            ref={ref}
-            variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
-            initial="hidden"
-            animate={control}
-            transition={{ duration: 1, delay: i * 0.3 }}
-            className="flex flex-col rounded-lg shadow-lg overflow-hidden"
-          >
-            <div className={`flex flex-col lg:flex-row gap-6`}>
-              <div className="lg:w-1/2">
-                <img src={serv.image} alt={serv.title} className="w-full h-auto" />
-              </div>
-              <div className="lg:w-1/2 flex flex-col justify-center p-6">
-                <p className="flex items-center gap-2 text-sm font-semibold text-accent-dark mb-2">
-                  <FaCircleDot />
-                  <span>{serv.title}</span>
-                </p>
-                <h2 className="text-2xl font-bold mb-2 text-black">{serv.tagline}</h2>
-                <p className="text-sm text-gray-700 mb-4">{serv.desc}</p>
-                <div className="flex flex-wrap gap-4">
-                  {serv.category.map((cate, idx) => (
-                    <div
-                      key={idx}
-                      className="flex flex-col items-center justify-center bg-black text-white p-4 rounded-lg w-32 h-32"
-                    >
-                      <cate.icon className="text-2xl text-accent-dark mb-2" />
-                      <p className="text-xs text-center">{cate.title}</p>
-                    </div>
-                  ))}
+          return (
+            <motion.div
+              key={i}
+              ref={ref}
+              variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
+              initial="hidden"
+              animate={control}
+              transition={{ duration: 1, delay: i * 0.3 }}
+              className="bg-white rounded-2xl border border-gray-100 overflow-hidden"
+            >
+              <div className="flex flex-col lg:flex-row gap-6">
+                <div className="lg:w-1/2">
+                  <img src={serv.image} alt={serv.title} className="w-full h-auto" />
+                </div>
+                <div className="lg:w-1/2 flex flex-col justify-center p-6">
+                  <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-2">
+                    {serv.title}
+                  </p>
+                  <h2 className="text-2xl font-bold mb-2 text-gray-900">{serv.tagline}</h2>
+                  <p className="text-sm text-gray-700 mb-4">{serv.desc}</p>
+                  <div className="flex flex-wrap gap-4">
+                    {serv.category.map((cate, idx) => (
+                      <div
+                        key={idx}
+                        className="flex flex-col items-center justify-center bg-gray-900 text-white p-4 rounded-xl w-32 h-32"
+                      >
+                        <cate.icon className="text-2xl text-accent-dark mb-2" />
+                        <p className="text-xs text-center">{cate.title}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        );
-      })}
-    </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

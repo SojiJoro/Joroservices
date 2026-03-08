@@ -1,29 +1,17 @@
 import React from 'react';
-import { FaCircleDot } from 'react-icons/fa6';
 
 const DevHeroSection = () => {
   return (
-    <section id="hero" className="grid p-4 pt-28 pb-20 justify-center grid-cols-1 lg:grid-cols-4 lg:items-center gap-4 min-h-screen bg-white">
-      {/* Left Content */}
-      <div className="flex lg:col-span-2 flex-col">
-        <p className="flex items-center gap-4 pb-4 text-xs">
-          <FaCircleDot className="text-accent-dark" />
-          <span className="text-accent-dark uppercase">Development</span>
-        </p>
-        <h1 className="text-3xl lg:text-5xl font-medium text-black">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Development</p>
+        <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
           Build a Powerful Online Presence with Joro Services
         </h1>
-        <p className="text-sm lg:text-base text-black w-full md:w-4/5 mt-4">
+        <p className="text-lg text-gray-300 max-w-3xl mt-4 leading-relaxed">
           Partner with us to create a performant, scalable website tailored to your brand. Our development expertise ensures fast loading times, seamless user experiences, and a platform that grows with your business.
         </p>
       </div>
-
-      {/* Right Image */}
-      <div
-        className="bg-bgImage3 h-[50vh] lg:h-[80vh] lg:mt-12 lg:col-span-2 rounded-lg bg-cover bg-center bg-no-repeat"
-        role="img"
-        aria-label="Website development showcase"
-      />
     </section>
   );
 };

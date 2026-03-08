@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { ChevronDown } from 'lucide-react';
 import Footer from '../component/Footer';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
@@ -10,7 +11,7 @@ function Careers() {
       title: 'IT Manager',
       location: 'London, UK (Hybrid)',
       type: 'Full-time',
-      salary: '£55,000 – £70,000',
+      salary: '\u00a355,000 \u2013 \u00a370,000',
       description: 'Lead and manage our internal IT operations, oversee infrastructure projects, coordinate with development and support teams, and ensure the security and reliability of all technology systems across the business.',
       requirements: [
         'Proven experience managing IT teams and infrastructure',
@@ -25,8 +26,8 @@ function Careers() {
       title: 'Senior Cloud Engineer',
       location: 'London, UK (Hybrid)',
       type: 'Full-time',
-      salary: '£65,000 – £80,000',
-      description: 'Design, implement, and maintain scalable cloud infrastructure solutions on AWS and Azure. Work closely with DevOps and development teams to ensure high availability, security, and cost optimisation across all client environments.',
+      salary: '\u00a365,000 \u2013 \u00a380,000',
+      description: 'Design, implement, and maintain scalable cloud infrastructure solutions on AWS and Azure.',
       requirements: [
         'Minimum 4 years of experience with AWS or Azure',
         'Proficiency in Infrastructure as Code (Terraform, CloudFormation)',
@@ -40,8 +41,8 @@ function Careers() {
       title: 'Frontend React Developer',
       location: 'Remote',
       type: 'Full-time',
-      salary: '£40,000 – £55,000',
-      description: 'Build responsive, high-performance web applications using React and modern JavaScript. Collaborate with UX designers and backend engineers to deliver seamless user experiences for our clients across healthcare, recruitment, and e-commerce sectors.',
+      salary: '\u00a340,000 \u2013 \u00a355,000',
+      description: 'Build responsive, high-performance web applications using React and modern JavaScript.',
       requirements: [
         'Strong proficiency in React, JavaScript (ES6+), and TypeScript',
         'Experience with state management (Redux, Context API, or Zustand)',
@@ -55,8 +56,8 @@ function Careers() {
       title: 'Technical Support Specialist',
       location: 'Birmingham, UK (On-site)',
       type: 'Full-time',
-      salary: '£26,000 – £34,000',
-      description: 'Provide first and second-line technical support to clients via phone, email, and remote desktop. Diagnose and resolve hardware, software, and network issues while maintaining detailed logs in our ticketing system.',
+      salary: '\u00a326,000 \u2013 \u00a334,000',
+      description: 'Provide first and second-line technical support to clients via phone, email, and remote desktop.',
       requirements: [
         'Experience in an IT helpdesk or technical support role',
         'Knowledge of Windows, macOS, and common business applications',
@@ -70,8 +71,8 @@ function Careers() {
       title: 'DevOps Engineer',
       location: 'Manchester, UK (Hybrid)',
       type: 'Full-time',
-      salary: '£50,000 – £65,000',
-      description: 'Build and maintain CI/CD pipelines, automate infrastructure provisioning, and ensure smooth deployment workflows. Monitor production systems and collaborate with engineering teams to improve reliability and release velocity.',
+      salary: '\u00a350,000 \u2013 \u00a365,000',
+      description: 'Build and maintain CI/CD pipelines, automate infrastructure provisioning, and ensure smooth deployment workflows.',
       requirements: [
         'Experience with CI/CD tools (GitHub Actions, Jenkins, GitLab CI)',
         'Proficiency in scripting (Bash, Python)',
@@ -85,8 +86,8 @@ function Careers() {
       title: 'UX/UI Designer',
       location: 'Leeds, UK (Remote)',
       type: 'Full-time',
-      salary: '£35,000 – £48,000',
-      description: 'Create user-centred designs for web and mobile applications. Conduct user research, build wireframes and prototypes, and work closely with developers to ensure pixel-perfect implementation of design systems.',
+      salary: '\u00a335,000 \u2013 \u00a348,000',
+      description: 'Create user-centred designs for web and mobile applications.',
       requirements: [
         'Proficiency in Figma, Sketch, or Adobe XD',
         'Portfolio demonstrating strong UI/UX design skills',
@@ -100,8 +101,8 @@ function Careers() {
       title: 'Data Analyst',
       location: 'Cardiff, UK (On-site)',
       type: 'Full-time',
-      salary: '£32,000 – £42,000',
-      description: 'Analyse business data to provide actionable insights, build dashboards and reports using Power BI and SQL, and support decision-making across operations, marketing, and client delivery teams.',
+      salary: '\u00a332,000 \u2013 \u00a342,000',
+      description: 'Analyse business data to provide actionable insights, build dashboards and reports.',
       requirements: [
         'Strong SQL skills and experience with relational databases',
         'Proficiency in Power BI, Tableau, or similar visualisation tools',
@@ -115,8 +116,8 @@ function Careers() {
       title: 'Cybersecurity Consultant',
       location: 'Glasgow, UK (Hybrid)',
       type: 'Contract',
-      salary: '£450 – £600 per day',
-      description: 'Conduct security assessments, penetration testing, and vulnerability analysis for client environments. Develop security policies, incident response plans, and advise on compliance requirements including Cyber Essentials and ISO 27001.',
+      salary: '\u00a3450 \u2013 \u00a3600 per day',
+      description: 'Conduct security assessments, penetration testing, and vulnerability analysis for client environments.',
       requirements: [
         'CEH, CISSP, or CISM certification',
         'Experience with penetration testing tools (Burp Suite, Nessus, Metasploit)',
@@ -130,8 +131,8 @@ function Careers() {
       title: 'Project Manager',
       location: 'Bristol, UK (On-site)',
       type: 'Full-time',
-      salary: '£42,000 – £55,000',
-      description: 'Manage end-to-end delivery of technology projects for clients, from requirements gathering through to launch. Coordinate cross-functional teams, track milestones, manage budgets, and ensure projects are delivered on time and within scope.',
+      salary: '\u00a342,000 \u2013 \u00a355,000',
+      description: 'Manage end-to-end delivery of technology projects for clients.',
       requirements: [
         'Proven experience managing IT or digital projects',
         'Familiarity with Agile (Scrum, Kanban) and Waterfall methodologies',
@@ -145,8 +146,8 @@ function Careers() {
       title: 'Digital Marketing Executive',
       location: 'Remote',
       type: 'Full-time',
-      salary: '£28,000 – £38,000',
-      description: 'Plan and execute digital marketing campaigns across SEO, PPC, social media, and email. Track campaign performance using Google Analytics and reporting tools, and collaborate with the content team to drive brand awareness and lead generation.',
+      salary: '\u00a328,000 \u2013 \u00a338,000',
+      description: 'Plan and execute digital marketing campaigns across SEO, PPC, social media, and email.',
       requirements: [
         'Experience with Google Ads, Meta Business Suite, and LinkedIn Ads',
         'Knowledge of SEO best practices and keyword research tools',
@@ -174,9 +175,6 @@ function Careers() {
   const pageCount = Math.ceil(filtered.length / pageSize);
   const currentJobs = filtered.slice(page * pageSize, (page + 1) * pageSize);
 
-  const handlePrev = () => setPage(prev => Math.max(prev - 1, 0));
-  const handleNext = () => setPage(prev => Math.min(prev + 1, pageCount - 1));
-
   return (
     <main className="bg-white text-gray-900 min-h-screen flex flex-col justify-between">
       <SEO
@@ -189,52 +187,58 @@ function Careers() {
           ]),
         ]}
       />
-      {/* Hero Section */}
-      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20 px-6 text-center">
-        <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-3">Careers</p>
-        <h1 className="text-4xl lg:text-5xl font-bold mb-4">Join Our Team</h1>
-        <p className="text-lg lg:text-xl max-w-3xl mx-auto">
-          We are always looking for driven, creative minds to help us grow. Explore open roles and apply today.
-        </p>
+
+      {/* Hero */}
+      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Careers</p>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">Join Our Team</h1>
+            <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
+              We are always looking for driven, creative minds to help us grow. Explore open roles and apply today.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Jobs List Section */}
-      <section className="max-w-5xl w-full mx-auto px-4 py-16">
+      {/* Jobs */}
+      <section className="max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 flex-1">
         <input
           type="search"
           placeholder="Search positions or locations..."
           value={search}
           onChange={e => { setSearch(e.target.value); setPage(0); setExpandedJob(null); }}
-          className="w-full p-4 border border-gray-300 rounded-lg mb-10 focus:outline-none focus:ring-2 focus:ring-accent-dark"
+          className="w-full p-3.5 bg-gray-50 border border-gray-200 rounded-xl mb-10 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm transition-all"
         />
 
         {filtered.length === 0 ? (
-          <p className="text-center text-gray-600">No positions match your search.</p>
+          <p className="text-center text-gray-500 text-sm">No positions match your search.</p>
         ) : (
-          <ul className="grid gap-6">
+          <ul className="space-y-4">
             {currentJobs.map((job, idx) => {
               const globalIdx = page * pageSize + idx;
               return (
-                <li key={globalIdx} className="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
+                <li key={globalIdx} className="bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow">
                   <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4">
                     <div className="flex-1">
-                      <div className="flex flex-wrap items-center gap-3 mb-2">
-                        <h2 className="text-xl font-semibold">{job.title}</h2>
-                        <span className="text-xs bg-accent/20 text-accent-dark px-2 py-1 rounded-full font-medium">{job.type}</span>
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
+                        <h2 className="text-lg font-bold">{job.title}</h2>
+                        <span className="text-xs bg-accent/10 text-accent-dark px-2.5 py-0.5 rounded-full font-medium">{job.type}</span>
                       </div>
-                      <p className="text-sm text-gray-600 mb-1">{job.location}</p>
+                      <p className="text-sm text-gray-600 mb-0.5">{job.location}</p>
                       <p className="text-sm text-gray-500 mb-3">{job.salary}</p>
 
                       <button
                         onClick={() => setExpandedJob(expandedJob === globalIdx ? null : globalIdx)}
-                        className="text-sm text-accent-dark hover:underline font-medium"
+                        className="inline-flex items-center gap-1 text-sm text-accent hover:text-accent-dark font-medium transition-colors"
                       >
                         {expandedJob === globalIdx ? 'Hide Details' : 'View Details'}
+                        <ChevronDown size={14} className={`transition-transform duration-200 ${expandedJob === globalIdx ? 'rotate-180' : ''}`} />
                       </button>
 
                       {expandedJob === globalIdx && (
                         <div className="mt-4 space-y-3">
-                          <p className="text-gray-700">{job.description}</p>
+                          <p className="text-gray-600 text-sm leading-relaxed">{job.description}</p>
                           <div>
                             <h4 className="font-semibold text-sm text-gray-800 mb-2">Requirements:</h4>
                             <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
@@ -248,7 +252,7 @@ function Careers() {
                     </div>
                     <a
                       href={job.link}
-                      className="px-6 py-2 bg-accent-dark text-white font-semibold rounded hover:opacity-90 transition text-sm text-center whitespace-nowrap self-start"
+                      className="px-5 py-2.5 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition text-sm text-center whitespace-nowrap self-start"
                     >
                       Apply Now
                     </a>
@@ -259,23 +263,20 @@ function Careers() {
           </ul>
         )}
 
-        {/* Pagination */}
         {pageCount > 1 && (
           <div className="mt-10 flex justify-between items-center">
             <button
-              onClick={handlePrev}
+              onClick={() => setPage(prev => Math.max(prev - 1, 0))}
               disabled={page === 0}
-              className="px-4 py-2 border border-accent-dark text-accent-dark rounded disabled:opacity-50"
+              className="px-4 py-2 border border-gray-200 text-gray-600 rounded-xl disabled:opacity-40 hover:bg-gray-50 transition text-sm"
             >
               Previous
             </button>
-            <span className="text-sm text-gray-600">
-              Page {page + 1} of {pageCount}
-            </span>
+            <span className="text-sm text-gray-500">Page {page + 1} of {pageCount}</span>
             <button
-              onClick={handleNext}
+              onClick={() => setPage(prev => Math.min(prev + 1, pageCount - 1))}
               disabled={page >= pageCount - 1}
-              className="px-4 py-2 border border-accent-dark text-accent-dark rounded disabled:opacity-50"
+              className="px-4 py-2 border border-gray-200 text-gray-600 rounded-xl disabled:opacity-40 hover:bg-gray-50 transition text-sm"
             >
               Next
             </button>

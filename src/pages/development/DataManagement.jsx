@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   FaDatabase,
   FaShieldAlt,
@@ -13,6 +13,7 @@ import {
   FaServer,
   FaChartLine,
 } from 'react-icons/fa'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -25,7 +26,7 @@ const infraServices = [
     title: 'Databases That Don\'t Keep You Up at Night',
     label: 'Database Administration & Optimisation',
     description:
-      'We set up, manage, and optimise your databases — whether that\'s AWS RDS, DynamoDB, PostgreSQL, MySQL, or SQL Server. Performance tuning, query optimisation, and monitoring so your applications run fast.',
+      'We set up, manage, and optimise your databases \u2014 whether that\'s AWS RDS, DynamoDB, PostgreSQL, MySQL, or SQL Server. Performance tuning, query optimisation, and monitoring so your applications run fast.',
     items: [
       'Database setup/migration',
       'Performance tuning',
@@ -39,7 +40,7 @@ const infraServices = [
     title: 'Automated Backups. Tested Recovery. Peace of Mind.',
     label: 'Backup & Disaster Recovery',
     description:
-      'We configure automated backups with defined retention policies and — critically — we test the recovery process regularly. A backup you\'ve never tested is just a hope.',
+      'We configure automated backups with defined retention policies and \u2014 critically \u2014 we test the recovery process regularly. A backup you\'ve never tested is just a hope.',
     items: [
       'Automated backup configuration',
       'Retention policy design',
@@ -68,7 +69,7 @@ const infraServices = [
     title: 'Stop Paying to Store Data You Don\'t Need',
     label: 'Data Storage Optimisation',
     description:
-      'S3 lifecycle policies, archive strategies, storage class optimisation — we make sure you\'re not paying hot-storage prices for data nobody\'s accessed in two years.',
+      'S3 lifecycle policies, archive strategies, storage class optimisation \u2014 we make sure you\'re not paying hot-storage prices for data nobody\'s accessed in two years.',
     items: [
       'Storage audit',
       'Lifecycle policy implementation',
@@ -85,7 +86,7 @@ const insightServices = [
     title: 'See Your Business at a Glance',
     label: 'Analytics Dashboards',
     description:
-      'Custom dashboards that pull data from your systems and show you the metrics that matter — revenue, operations, customer data, whatever drives your decisions. Built in tools you can actually use.',
+      'Custom dashboards that pull data from your systems and show you the metrics that matter \u2014 revenue, operations, customer data, whatever drives your decisions. Built in tools you can actually use.',
     items: [
       'Requirements gathering',
       'Data source connection',
@@ -113,7 +114,7 @@ const insightServices = [
     title: 'Fix the Mess Before You Analyse It',
     label: 'Data Cleanup & Structuring',
     description:
-      'Duplicates, missing fields, inconsistent formats, data spread across 15 spreadsheets — we clean it up, structure it properly, and put it somewhere sensible so you can actually use it.',
+      'Duplicates, missing fields, inconsistent formats, data spread across 15 spreadsheets \u2014 we clean it up, structure it properly, and put it somewhere sensible so you can actually use it.',
     items: [
       'Data audit',
       'Deduplication',
@@ -137,7 +138,7 @@ const pricingTiers = [
   },
   {
     name: 'One-Off Projects',
-    price: 'From £1,000',
+    price: 'From \u00a31,000',
     features: [
       'Database migration',
       'Backup & DR setup',
@@ -150,7 +151,7 @@ const pricingTiers = [
   },
   {
     name: 'Ongoing Management',
-    price: 'From £400/month',
+    price: 'From \u00a3400/month',
     features: [
       'Database monitoring & maintenance',
       'Backup management & recovery testing',
@@ -166,7 +167,7 @@ const faqData = [
   {
     question: 'What databases do you work with?',
     answer:
-      'AWS RDS (PostgreSQL, MySQL, SQL Server), DynamoDB, MongoDB, and standard on-prem SQL Server and PostgreSQL installations. If you\'re using something else, we can likely help — just ask.',
+      'AWS RDS (PostgreSQL, MySQL, SQL Server), DynamoDB, MongoDB, and standard on-prem SQL Server and PostgreSQL installations. If you\'re using something else, we can likely help \u2014 just ask.',
   },
   {
     question: 'Can you build dashboards from our existing spreadsheets?',
@@ -206,49 +207,27 @@ const dataFaqSchema = {
 const DataManagement = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
-  useEffect(() => {
-    document.title =
-      'Data Management Services London | Database Admin, Analytics & Backup | Joro Services'
-    const metaDesc = document.querySelector('meta[name="description"]')
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Database administration, automated backups, data migration, and analytics dashboards for SMBs. Built on real AWS infrastructure experience. Free data assessment available.'
-      )
-    }
-    return () => {
-      document.title =
-        'Joro Services | Digital Marketing, Development & IT Solutions in London'
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Joro Services Ltd offers tailored digital marketing, web development, mobile app development, UI/UX design, cloud infrastructure, cybersecurity, and IT support services for businesses across the UK.'
-        )
-      }
-    }
-  }, [])
-
   const renderServiceCard = (card, i) => (
     <div
       key={i}
-      className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition"
+      className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition"
     >
-      <card.icon className="text-3xl text-accent-dark mb-4" />
-      <p className="text-xs uppercase tracking-wide text-accent-dark font-semibold mb-1">
+      <card.icon className="text-3xl text-accent mb-4" />
+      <p className="text-xs uppercase tracking-wide text-accent font-semibold mb-1">
         {card.label}
       </p>
       <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-      <p className="text-gray-600 text-sm mb-4">{card.description}</p>
+      <p className="text-gray-600 leading-relaxed text-sm mb-4">{card.description}</p>
       <ul className="space-y-2">
         {card.items.map((item, j) => (
-          <li key={j} className="flex items-start gap-2 text-sm text-gray-700">
-            <FaCheckCircle className="text-accent-dark mt-0.5 flex-shrink-0 text-xs" />
+          <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
+            <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
             <span>{item}</span>
           </li>
         ))}
       </ul>
       {card.proof && (
-        <p className="mt-4 text-xs text-accent-dark font-medium bg-accent-dark/10 p-2 rounded italic">
+        <p className="mt-4 text-xs text-accent font-medium bg-accent/10 p-2 rounded italic">
           {card.proof}
         </p>
       )}
@@ -261,7 +240,7 @@ const DataManagement = () => {
   )
 
   return (
-    <main className="bg-white text-black">
+    <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/development/data-management']}
         jsonLd={[
@@ -279,122 +258,79 @@ const DataManagement = () => {
           dataFaqSchema,
         ]}
       />
-      {/* Section 1: Hero */}
-      <section
-        id="hero"
-        className="px-4 lg:px-20 pt-28 pb-16 lg:pt-32 lg:pb-24 min-h-[80vh] flex items-center"
-      >
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="uppercase text-sm text-accent-dark mb-4 font-semibold tracking-wide">
-              Data Management
-            </p>
-            <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-              Your Data Is Your Business.{' '}
-              <span className="text-accent-dark">
-                Let's Make Sure It's Safe, Organised, and Useful.
-              </span>
-            </h1>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              From database administration and automated backups to analytics
-              dashboards that show you what's actually happening in your business
-              — we help SMBs get control of their data. Built on real cloud
-              infrastructure experience and a Master's in Data Analytics.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/getintouch"
-                className="inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition text-center"
-              >
-                Book a Free Data Assessment
-              </Link>
-              <a
-                href="#services"
-                className="inline-block px-6 py-3 border-2 border-accent-dark text-accent-dark font-semibold rounded-lg hover:bg-accent-dark hover:text-white transition text-center"
-              >
-                See Our Data Services
-              </a>
-            </div>
-          </div>
-          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex-1 bg-red-50 rounded-lg p-4 text-center border border-red-100">
-                <FaHdd className="text-2xl text-red-400 mx-auto mb-2" />
-                <p className="text-xs text-red-600 font-medium">Messy Data</p>
-                <p className="text-[10px] text-gray-500 mt-1">
-                  Spreadsheets everywhere
-                </p>
-              </div>
-              <div className="text-2xl text-gray-400">→</div>
-              <div className="flex-1 bg-accent-dark/10 rounded-lg p-4 text-center border border-accent-dark/20">
-                <FaChartLine className="text-2xl text-accent-dark mx-auto mb-2" />
-                <p className="text-xs text-accent-dark font-medium">
-                  Clear Insights
-                </p>
-                <p className="text-[10px] text-gray-500 mt-1">
-                  Dashboards & reports
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-3">
-              {['Database Admin', 'Backups & DR', 'Migration', 'Dashboards'].map(
-                (item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-2 bg-white rounded-lg p-2 border border-gray-100"
-                  >
-                    <FaCheckCircle className="text-accent-dark text-xs flex-shrink-0" />
-                    <span className="text-xs text-gray-700">{item}</span>
-                  </div>
-                )
-              )}
-            </div>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Data Management</p>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-6">
+            Your Data Is Your Business. Let's Make Sure It's Safe, Organised, and Useful.
+          </h1>
+          <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
+            From database administration and automated backups to analytics
+            dashboards that show you what's actually happening in your business
+            \u2014 we help SMBs get control of their data. Built on real cloud
+            infrastructure experience and a Master's in Data Analytics.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <Link
+              to="/getintouch"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            >
+              Book a Free Data Assessment <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="#services"
+              className="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-white hover:text-primary transition-all text-sm"
+            >
+              See Our Data Services
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Section 2: Two Sides of Data Management */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Overview</p>
-          <h2 className="text-2xl lg:text-3xl font-bold mb-8">
+      {/* Two Sides of Data Management */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Overview</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">
             Two Sides of Data Management
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/10 rounded-xl p-6 backdrop-blur">
+            <div className="bg-white rounded-2xl border border-gray-100 p-7 text-center">
               <FaServer className="text-3xl text-accent mx-auto mb-3" />
               <h3 className="text-xl font-bold mb-2">Data Infrastructure</h3>
-              <p className="text-sm text-gray-300 italic">
+              <p className="text-sm text-gray-600 italic">
                 "Keep It Safe, Keep It Running"
               </p>
-              <p className="text-sm text-gray-400 mt-2">
-                The plumbing — your databases, backups, migrations, and storage.
+              <p className="text-sm text-gray-600 mt-2">
+                The plumbing \u2014 your databases, backups, migrations, and storage.
               </p>
             </div>
-            <div className="bg-white/10 rounded-xl p-6 backdrop-blur">
+            <div className="bg-white rounded-2xl border border-gray-100 p-7 text-center">
               <FaChartBar className="text-3xl text-accent mx-auto mb-3" />
               <h3 className="text-xl font-bold mb-2">Data Insights</h3>
-              <p className="text-sm text-gray-300 italic">
+              <p className="text-sm text-gray-600 italic">
                 "Turn It Into Decisions"
               </p>
-              <p className="text-sm text-gray-400 mt-2">
+              <p className="text-sm text-gray-600 mt-2">
                 Dashboards, reports, and analytics that tell you what's happening
                 in your business.
               </p>
             </div>
           </div>
-          <p className="mt-8 text-gray-300">
-            Most SMBs need both. <strong className="text-white">We handle both.</strong>
+          <p className="mt-8 text-gray-600 text-center">
+            Most SMBs need both. <strong className="text-gray-900">We handle both.</strong>
           </p>
         </div>
       </section>
 
-      {/* Section 3: Data Infrastructure Services */}
-      <section id="services" className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+      {/* Data Infrastructure Services */}
+      <section id="services" className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
-            <FaServer className="text-2xl text-accent-dark" />
-            <h2 className="text-3xl lg:text-4xl font-bold">
+            <FaServer className="text-2xl text-accent" />
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
               Data Infrastructure
             </h2>
           </div>
@@ -404,12 +340,12 @@ const DataManagement = () => {
         </div>
       </section>
 
-      {/* Section 4: Data Insights Services */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20">
-        <div className="max-w-6xl mx-auto">
+      {/* Data Insights Services */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
-            <FaChartBar className="text-2xl text-accent-dark" />
-            <h2 className="text-3xl lg:text-4xl font-bold">Data Insights</h2>
+            <FaChartBar className="text-2xl text-accent" />
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Data Insights</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {insightServices.map(renderServiceCard)}
@@ -417,10 +353,10 @@ const DataManagement = () => {
         </div>
       </section>
 
-      {/* Section 5: Pricing */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+      {/* Pricing */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
             Pricing
           </h2>
           <p className="text-center text-gray-600 mb-12">
@@ -430,34 +366,30 @@ const DataManagement = () => {
             {pricingTiers.map((tier, i) => (
               <div
                 key={i}
-                className={`rounded-xl p-6 border-2 ${
+                className={`rounded-2xl p-7 border-2 ${
                   tier.highlighted
-                    ? 'border-accent-dark shadow-lg relative'
+                    ? 'border-accent shadow-lg relative'
                     : tier.isFree
-                    ? 'border-accent-dark/30 bg-accent-dark/5'
-                    : 'border-gray-200'
+                    ? 'border-accent/30 bg-accent/5'
+                    : 'border-gray-100'
                 }`}
               >
                 {tier.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-dark text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">
                     Most Popular
                   </div>
                 )}
                 <h3 className="text-xl font-bold mb-2">{tier.name}</h3>
-                <div
-                  className={`text-2xl font-bold mb-4 ${
-                    tier.isFree ? 'text-accent-dark' : 'text-accent-dark'
-                  }`}
-                >
+                <div className="text-2xl font-bold text-accent mb-4">
                   {tier.price}
                 </div>
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((feature, j) => (
                     <li
                       key={j}
-                      className="flex items-start gap-2 text-sm text-gray-700"
+                      className="flex items-start gap-2 text-sm text-gray-600"
                     >
-                      <FaCheckCircle className="text-accent-dark mt-0.5 flex-shrink-0 text-xs" />
+                      <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -467,10 +399,10 @@ const DataManagement = () => {
                 </p>
                 <Link
                   to="/getintouch"
-                  className={`inline-block w-full text-center px-6 py-3 font-semibold rounded-lg transition ${
+                  className={`inline-block w-full text-center px-6 py-3 font-semibold rounded-xl transition ${
                     tier.highlighted
-                      ? 'bg-accent-dark text-white hover:bg-opacity-90'
-                      : 'border-2 border-accent-dark text-accent-dark hover:bg-accent-dark hover:text-white'
+                      ? 'bg-accent text-white hover:bg-accent-dark'
+                      : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
                   }`}
                 >
                   {tier.isFree ? 'Book Free Assessment' : 'Get Started'}
@@ -481,17 +413,17 @@ const DataManagement = () => {
         </div>
       </section>
 
-      {/* Section 6: FAQ */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+      {/* FAQ */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqData.map((faq, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg bg-white"
+                className="bg-white rounded-2xl border border-gray-100"
               >
                 <button
                   onClick={() =>
@@ -503,14 +435,14 @@ const DataManagement = () => {
                     {faq.question}
                   </span>
                   {openFaq === index ? (
-                    <FaMinus className="text-accent-dark flex-shrink-0" />
+                    <FaMinus className="text-accent flex-shrink-0" />
                   ) : (
-                    <FaPlus className="text-accent-dark flex-shrink-0" />
+                    <FaPlus className="text-accent flex-shrink-0" />
                   )}
                 </button>
                 {openFaq === index && (
                   <div className="px-5 pb-5">
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -521,21 +453,21 @@ const DataManagement = () => {
         </div>
       </section>
 
-      {/* Section 7: Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
+      {/* Bottom CTA */}
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Data Should Work For You, Not Against You
           </h2>
           <p className="text-lg mb-8 text-white/80">
             Book a free data assessment. We'll help you figure out what you need
-            — and what you don't.
+            \u2014 and what you don't.
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
           >
-            Book a Free Data Assessment
+            Book a Free Data Assessment <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

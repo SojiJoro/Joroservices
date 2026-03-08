@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code2, Palette, BarChart3, Shield } from 'lucide-react';
+import { ArrowRight, Code2, Palette, BarChart3, Shield, CheckCircle2 } from 'lucide-react';
 import Footer from '../component/Footer';
 import TestimonialGrid from '../component/TestimonialGrid';
 import ImpressionCard from '../component/impressionCard';
@@ -51,75 +51,75 @@ const Homepage = () => (
     />
 
     {/* Hero Section */}
-    <div
+    <section
       id="hero"
-      className="relative bg-hero-bg bg-cover bg-center min-h-[90vh] w-full"
+      className="relative bg-gradient-to-br from-primary via-[#0e1f38] to-secondary min-h-[92vh] w-full flex items-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary" />
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-[90vh] text-white px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 mb-8 text-sm font-medium text-gray-300">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(20,184,166,0.08),transparent_60%)]" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 bg-white/[0.06] border border-white/[0.08] rounded-full px-4 py-1.5 mb-8 text-sm text-gray-400">
+            <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
             Trusted by 20+ businesses across the UK
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tight text-balance">
-            Transform Your Digital
-            <span className="text-accent-light"> Vision </span>
-            into Reality
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
+            Technology Solutions
+            <br />
+            <span className="text-accent">That Deliver Results</span>
           </h1>
-          <p className="text-lg lg:text-xl mb-10 text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Custom technology solutions to empower your business for tomorrow's challenges. From design to deployment, we deliver excellence.
+          <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
+            We build, scale, and secure digital products for ambitious businesses. From design to deployment, your success is our mission.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-start gap-3">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/20 text-sm"
             >
-              Schedule Your Free Consultation
-              <ArrowRight size={18} />
+              Get Your Free Consultation
+              <ArrowRight size={16} />
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-xl border border-white/10 hover:bg-white/20 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-white/[0.06] border border-white/[0.08] text-white font-medium px-7 py-3.5 rounded-xl hover:bg-white/[0.1] transition-all duration-300 text-sm"
             >
               View Our Services
             </Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     {/* Service Categories */}
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
-            Comprehensive Technology Services
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            End-to-End Technology Services
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            From scalable applications to secure infrastructure, we deliver end-to-end solutions designed for lasting impact.
+          <p className="text-gray-500 max-w-2xl mx-auto">
+            From scalable applications to secure infrastructure, we deliver solutions designed for lasting impact.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {serviceCategories.map((cat, idx) => {
             const Icon = cat.icon;
             return (
               <Link
                 key={idx}
                 to={cat.path}
-                className="group relative bg-gray-50 rounded-2xl p-8 hover:bg-primary hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-transparent"
+                className="group relative bg-gray-50 rounded-2xl p-7 hover:bg-primary hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-transparent"
               >
-                <div className="w-12 h-12 bg-accent/10 group-hover:bg-accent/20 rounded-xl flex items-center justify-center mb-5 transition-colors">
-                  <Icon size={24} className="text-accent" />
+                <div className="w-11 h-11 bg-accent/10 group-hover:bg-accent/20 rounded-xl flex items-center justify-center mb-5 transition-colors">
+                  <Icon size={20} className="text-accent" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 group-hover:text-white mb-3 transition-colors">
+                <h3 className="text-base font-bold text-gray-900 group-hover:text-white mb-2 transition-colors">
                   {cat.title}
                 </h3>
-                <p className="text-gray-600 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">
+                <p className="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">
                   {cat.desc}
                 </p>
-                <div className="mt-5 flex items-center gap-1 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-4 flex items-center gap-1 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   Learn more <ArrowRight size={14} />
                 </div>
               </Link>
@@ -132,19 +132,18 @@ const Homepage = () => (
     {/* Portfolio / Services Grid */}
     <section className="bg-gray-50 py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-10 items-end mb-14">
           <div>
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Solutions</p>
-            <h2 className="text-3xl lg:text-5xl font-bold leading-tight text-gray-900 text-balance">
+            <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-gray-900">
               Solutions That Drive Growth
             </h2>
           </div>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            From scalable web and mobile applications to secure cloud infrastructure and data analytics,
-            we deliver end-to-end solutions designed for lasting impact and growth.
+          <p className="text-gray-500 lg:text-right">
+            From scalable web and mobile applications to secure cloud infrastructure, we deliver end-to-end solutions designed for lasting impact.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {ServiceList.map((service, idx) => (
             <Link
               key={idx}
@@ -157,11 +156,11 @@ const Homepage = () => (
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-white text-lg font-bold mb-1">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="text-white text-base font-bold mb-1">
                   {service.title}
                 </h3>
-                <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
                   {service.summary}
                 </p>
               </div>
@@ -170,21 +169,65 @@ const Homepage = () => (
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-12 bg-gradient-to-r from-primary to-secondary rounded-2xl px-6 py-12 sm:p-12 lg:p-14 text-center">
-          <h3 className="text-white text-2xl lg:text-3xl font-bold mb-4">
-            Your Trusted Technology Partner
-          </h3>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-sm sm:text-base">
-            We collaborate closely with you to craft bespoke digital strategies,
-            combining deep technical expertise with industry insights to accelerate growth.
-          </p>
-          <Link
-            to="/getintouch"
-            className="inline-flex items-center justify-center gap-2 bg-accent text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/20 text-sm sm:text-base"
-          >
-            Start Your Strategy Session
-            <ArrowRight size={18} />
-          </Link>
+        <div className="mt-10 bg-gradient-to-r from-primary to-secondary rounded-2xl px-6 py-10 sm:p-10 lg:p-12">
+          <div className="max-w-2xl mx-auto text-center">
+            <h3 className="text-white text-xl sm:text-2xl font-bold mb-3">
+              Your Trusted Technology Partner
+            </h3>
+            <p className="text-gray-400 mb-6 text-sm sm:text-base leading-relaxed">
+              We combine deep technical expertise with industry insights to accelerate your growth.
+            </p>
+            <Link
+              to="/getintouch"
+              className="inline-flex items-center justify-center gap-2 bg-accent text-white font-semibold px-6 py-3 rounded-xl hover:bg-accent-dark transition-all duration-300 text-sm"
+            >
+              Start Your Project
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Why Us */}
+    <section className="bg-white py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Why Joro Services</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Built for businesses that demand quality
+            </h2>
+            <p className="text-gray-500 mb-8 leading-relaxed">
+              We are a team of engineers, designers, and strategists who understand that technology should work for your business, not the other way around.
+            </p>
+            <ul className="space-y-4">
+              {[
+                'UK-based team with global delivery capability',
+                'Agile methodology with transparent communication',
+                'Post-launch support and ongoing maintenance',
+                'Proven results across healthcare, recruitment, and e-commerce',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-gray-600">
+                  <CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { value: '20+', label: 'Clients Served' },
+              { value: '35+', label: 'Projects Delivered' },
+              { value: '8+', label: 'Team Members' },
+              { value: '99%', label: 'Client Satisfaction' },
+            ].map((stat, i) => (
+              <div key={i} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+                <span className="text-3xl lg:text-4xl font-bold text-accent block mb-1">{stat.value}</span>
+                <span className="text-xs text-gray-500 uppercase tracking-wider">{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -194,12 +237,12 @@ const Homepage = () => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Testimonials</p>
-          <h2 className="text-3xl lg:text-5xl font-bold text-white text-balance">
-            Hear from Our Clients
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">
+            What Our Clients Say
           </h2>
         </div>
         <TestimonialGrid />
-        <div className="mt-16">
+        <div className="mt-14">
           <ImpressionCard />
         </div>
       </div>

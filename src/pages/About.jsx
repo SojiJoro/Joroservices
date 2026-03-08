@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Palette, Code2, BarChart3, Shield } from 'lucide-react';
 import Footer from '../component/Footer';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
@@ -26,9 +26,16 @@ const values = [
   },
 ];
 
+const serviceAreas = [
+  { icon: Palette, title: 'Creative Solutions', desc: 'Website design, branding, and UI/UX that make your brand stand out.', path: '/creative-solutions' },
+  { icon: Code2, title: 'Development', desc: 'Web and mobile applications built with modern, scalable technologies.', path: '/development' },
+  { icon: BarChart3, title: 'Digital Marketing', desc: 'SEO, PPC, social media, and content strategies that drive real results.', path: '/digital-marketing' },
+  { icon: Shield, title: 'Technical Services', desc: 'IT support, cybersecurity, and cloud infrastructure you can rely on.', path: '/technical-services' },
+];
+
 const About = () => {
   return (
-    <main className="bg-white text-gray-900 min-h-screen flex flex-col">
+    <main className="bg-white text-gray-900 min-h-screen">
       <SEO
         {...pagesSEO['/about']}
         jsonLd={[
@@ -40,14 +47,16 @@ const About = () => {
         ]}
       />
 
-      {/* Hero Section */}
-      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">About Us</p>
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">About Joro Services</h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            A technology partner committed to helping businesses grow through innovative digital solutions.
-          </p>
+      {/* Hero */}
+      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">About Us</p>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">About Joro Services</h1>
+            <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
+              A technology partner committed to helping businesses grow through innovative digital solutions.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -91,7 +100,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Values */}
+      {/* Values */}
       <section className="bg-gray-50 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -102,7 +111,7 @@ const About = () => {
             {values.map((value, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-8 border border-gray-100">
                 <h3 className="text-lg font-bold mb-3 text-gray-900">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <p className="text-gray-600 leading-relaxed text-sm">{value.description}</p>
               </div>
             ))}
           </div>
@@ -116,21 +125,22 @@ const About = () => {
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Services</p>
             <h2 className="text-3xl font-bold">What We Do</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: 'Creative Solutions', desc: 'Website design, branding, and UI/UX that make your brand stand out.', path: '/creative-solutions' },
-              { title: 'Development', desc: 'Web and mobile applications built with modern, scalable technologies.', path: '/development' },
-              { title: 'Digital Marketing', desc: 'SEO, PPC, social media, and content strategies that drive real results.', path: '/digital-marketing' },
-              { title: 'Technical Services', desc: 'IT support, cybersecurity, and cloud infrastructure you can rely on.', path: '/technical-services' },
-            ].map((item, idx) => (
-              <Link key={idx} to={item.path} className="group bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:bg-primary hover:border-transparent hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-white transition-colors">{item.title}</h3>
-                <p className="text-gray-600 group-hover:text-gray-400 text-sm transition-colors">{item.desc}</p>
-                <div className="mt-4 flex items-center gap-1 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                  Explore <ArrowRight size={14} />
-                </div>
-              </Link>
-            ))}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {serviceAreas.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <Link key={idx} to={item.path} className="group bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:bg-primary hover:border-transparent hover:shadow-2xl transition-all duration-500">
+                  <div className="w-10 h-10 bg-accent/10 group-hover:bg-accent/20 rounded-xl flex items-center justify-center mb-4 transition-colors">
+                    <Icon size={18} className="text-accent" />
+                  </div>
+                  <h3 className="text-base font-bold mb-2 text-gray-900 group-hover:text-white transition-colors">{item.title}</h3>
+                  <p className="text-gray-500 group-hover:text-gray-400 text-sm transition-colors leading-relaxed">{item.desc}</p>
+                  <div className="mt-3 flex items-center gap-1 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                    Explore <ArrowRight size={14} />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -138,23 +148,23 @@ const About = () => {
       {/* Contact CTA */}
       <section className="bg-primary text-white py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Work Together?</h2>
-          <p className="text-gray-400 mb-10">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Work Together?</h2>
+          <p className="text-gray-400 mb-8">
             Get in touch to discuss your project. We would love to hear about your goals and explore how we can help.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
             >
               Get in Touch
-              <ArrowRight size={18} />
+              <ArrowRight size={16} />
             </Link>
             <a
               href="https://wa.me/447867374034"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-green-700 transition"
+              className="inline-flex items-center gap-2 bg-green-600 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-green-700 transition text-sm"
             >
               <FaWhatsapp />
               WhatsApp Us
@@ -162,10 +172,10 @@ const About = () => {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400 text-sm">
             <a href="tel:+4407867374034" className="flex items-center gap-2 hover:text-white transition-colors">
-              <FaPhoneAlt /> 07867 374034
+              <FaPhoneAlt size={12} /> 07867 374034
             </a>
             <a href="mailto:info@joroservices.org" className="flex items-center gap-2 hover:text-white transition-colors">
-              <FaEnvelope /> info@joroservices.org
+              <FaEnvelope size={12} /> info@joroservices.org
             </a>
           </div>
         </div>

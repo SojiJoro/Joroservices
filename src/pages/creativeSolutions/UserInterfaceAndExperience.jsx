@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaUserCheck, FaDraftingCompass, FaMicroscope, FaLaptopCode } from 'react-icons/fa'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -38,7 +39,7 @@ const portfolio = [
     name: 'Joro Services Admin Dashboard',
     image: '/images/ux-dashboard.jpg',
     description:
-      'An intuitive admin interface with user analytics, activity tracking, and multi-role access — designed to streamline internal operations.',
+      'An intuitive admin interface with user analytics, activity tracking, and multi-role access \u2014 designed to streamline internal operations.',
   },
   {
     name: 'Healthcare Referral Portal UX',
@@ -55,7 +56,7 @@ const portfolio = [
 ]
 
 const UXUIExperience = () => (
-  <main className="bg-white text-black">
+  <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/creative-solutions/user-interface-and-experience']}
       jsonLd={[
@@ -72,73 +73,73 @@ const UXUIExperience = () => (
         ]),
       ]}
     />
+
     {/* Hero Section */}
-    <section id="hero" className="grid p-4 pt-28 pb-20 lg:p-20 lg:pt-32 lg:pb-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
-      <div>
-        <p className="uppercase text-sm text-accent mb-4">UI/UX Design</p>
-        <h1 className="text-3xl lg:text-5xl font-bold mb-6">Design That Feels As Good As It Looks</h1>
-        <p className="text-lg text-gray-800">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">UI/UX Design</p>
+        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Design That Feels As Good As It Looks</h1>
+        <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
           From onboarding to checkout, we design thoughtful user experiences that feel effortless and intuitive. By blending empathy, data, and creativity, we create designs people love to use.
         </p>
         <Link
           to="/getintouch"
-          className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
+          className="mt-8 inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Book a UX Consultation
+          Book a UX Consultation <ArrowRight className="w-4 h-4" />
         </Link>
-      </div>
-      <div className="rounded-lg shadow-lg bg-gradient-to-br from-accent/20 to-accent-dark/30 w-full h-[60vh] flex items-center justify-center">
-        <p className="text-6xl opacity-30">🎨</p>
       </div>
     </section>
 
     {/* UX/UI Services Section */}
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
-      <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-12">What We Offer</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {services.map((s, i) => (
-          <div key={i} className="p-6 border border-gray-100 rounded-2xl shadow-sm bg-white">
-            <s.icon className="text-4xl text-accent-dark mb-4" />
-            <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-            <p className="text-sm text-gray-700">{s.description}</p>
-          </div>
-        ))}
-      </div>
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">What We Offer</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((s, i) => (
+            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-7">
+              <s.icon className="text-4xl text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{s.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 
     {/* UX Case Studies / Projects */}
-    <section className="py-20">
+    <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Case Studies</p>
-      <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-12">UX in Action</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {portfolio.map((item, i) => (
-          <div key={i} className="bg-white rounded-2xl overflow-hidden shadow border border-gray-100 hover:shadow-lg transition">
-            <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
-              <p className="text-sm text-gray-700 mt-1">{item.description}</p>
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Case Studies</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">UX in Action</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {portfolio.map((item, i) => (
+            <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
+              <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
+              <div className="p-7">
+                <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm mt-2">{item.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </section>
 
     {/* CTA Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 text-center">
-      <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
-        Let’s Design Smarter, Smoother Experiences
-      </h2>
-      <Link
-        to="/getintouch"
-        className="inline-block bg-white text-accent font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
-      >
-        Get in Touch
-      </Link>
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+          Let's Design Smarter, Smoother Experiences
+        </h2>
+        <Link
+          to="/getintouch"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+        >
+          Get in Touch <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
     </section>
 
     <Footer />
