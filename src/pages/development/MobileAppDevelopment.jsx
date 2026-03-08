@@ -118,7 +118,7 @@ const MobileAppDevelopment = () => {
       ]}
     />
     {/* Hero Section */}
-    <section id="hero" className="grid p-4 lg:p-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
+    <section id="hero" className="grid p-4 pt-20 lg:p-20 lg:pt-24 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
       <div>
         <p className="uppercase text-sm text-accent-dark mb-4">Mobile App Development</p>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6">Apps That Work Everywhere, Instantly</h1>
@@ -132,12 +132,8 @@ const MobileAppDevelopment = () => {
           Let's Build Your App
         </Link>
       </div>
-      <div>
-        <img
-          src="/images/mobile-hero.jpg"
-          alt="Mobile app screen mockups"
-          className="rounded-lg shadow-lg object-cover w-full h-[60vh]"
-        />
+      <div className="rounded-lg shadow-lg bg-gradient-to-br from-accent/20 to-accent-dark/30 w-full h-[60vh] flex items-center justify-center">
+        <p className="text-6xl opacity-30">📱</p>
       </div>
     </section>
 

@@ -61,7 +61,7 @@ const CreativeSolutions = () => (
       ]}
     />
     {/* Hero Section */}
-    <section id="hero" className="relative grid p-4 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
+    <section id="hero" className="relative grid p-4 pt-20 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
           className="object-cover w-full h-full max-w-full"

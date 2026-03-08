@@ -16,7 +16,7 @@ const Terms = () => {
           ]),
         ]}
       />
-      <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white py-20 px-6 text-center">
+      <section id="hero" className="bg-gradient-to-r from-accent-dark to-blue-800 text-white pt-28 pb-20 px-6 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4">Terms of Service</h1>
         <p className="text-lg max-w-3xl mx-auto">
           Please read these terms carefully before using our services.

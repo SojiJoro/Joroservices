@@ -70,11 +70,11 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="bg-background-dark min-h-[100vw] w-full font-nunito">
+      <div className="bg-background-dark min-h-screen w-full font-nunito">
         {isVisible && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-16 right-5 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-800 transition z-50 duration-300 animate-bounce"
+            className="fixed bottom-16 right-5 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-800 transition z-40 duration-300"
           >
             <FaArrowUp className="text-xl" />
           </button>

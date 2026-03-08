@@ -43,45 +43,55 @@ const testimonials = [
 
 const TestimonialGrid = () => {
   const containerRef = useRef(null);
+  const rafIdRef = useRef(null);
 
   useEffect(() => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container || !container.children[0]) return;
 
-    // Duplicate testimonials for seamless loop
-    const items = [...testimonials, ...testimonials];
-    const cardWidth = container.children[0]?.offsetWidth || 300;
-    container.style.width = `${items.length * cardWidth}px`;
-
+    const cardWidth = container.children[0].offsetWidth + 32; // width + gap
+    const totalWidth = testimonials.length * cardWidth;
     let offset = 0;
-    const speed = 1; // px per frame
+    const speed = 0.5; // slower = smoother on mobile
 
     const animate = () => {
-      offset = (offset + speed) % ((items.length * cardWidth) / 2);
-      container.style.transform = `translateX(-${offset}px)`;
-      requestAnimationFrame(animate);
+      offset = (offset + speed) % totalWidth;
+      container.style.transform = `translate3d(-${offset}px, 0, 0)`;
+      rafIdRef.current = requestAnimationFrame(animate);
     };
 
-    animate();
+    rafIdRef.current = requestAnimationFrame(animate);
 
-    return () => cancelAnimationFrame(animate);
+    // Pause animation when tab is not visible
+    const handleVisibility = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(rafIdRef.current);
+      } else {
+        rafIdRef.current = requestAnimationFrame(animate);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+
+    return () => {
+      cancelAnimationFrame(rafIdRef.current);
+      document.removeEventListener('visibilitychange', handleVisibility);
+    };
   }, []);
 
   return (
-    <section className="py-16 bg-white text-black">
-      <h2 className="text-3xl font-semibold text-center mb-8">
-        What Our Clients Say
-      </h2>
-      <div className="overflow-hidden">
-        <div ref={containerRef} className="flex gap-8 lg:gap-12">
-          {[...testimonials, ...testimonials].map((data, idx) => (
-            <div key={idx} className="flex-shrink-0 w-72 md:w-80">
-              <TestimonialCard data={data} />
-            </div>
-          ))}
-        </div>
+    <div className="overflow-hidden">
+      <div
+        ref={containerRef}
+        className="flex gap-8 will-change-transform"
+        style={{ width: 'max-content' }}
+      >
+        {[...testimonials, ...testimonials].map((data, idx) => (
+          <div key={idx} className="flex-shrink-0 w-72 md:w-80">
+            <TestimonialCard data={data} />
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 

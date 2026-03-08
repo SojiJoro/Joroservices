@@ -6,7 +6,7 @@ const UnderDevelopment = () => {
   const navigate = useNavigate();
 
   return (
-    <div id="hero" className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white text-center p-6">
+    <div id="hero" className="flex flex-col items-center justify-center h-screen pt-14 bg-gray-900 text-white text-center p-6">
       <SEO
         title="Page Not Found | Joro Services"
         description="The page you are looking for is under development. Return to Joro Services homepage for web development, digital marketing, and IT services in Aldershot, Hampshire."

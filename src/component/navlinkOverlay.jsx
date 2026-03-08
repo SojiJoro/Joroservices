@@ -62,20 +62,20 @@ const makeOverlay = (category) => {
   if (!service || service.offerings.length === 0) return null;
 
   return (
-    <div className="absolute left-4 top-full w-[500px] bg-black/80 shadow-lg rounded-lg text-sm text-white transition duration-300 ease-in-out">
+    <div className="absolute left-0 top-full w-[min(500px,90vw)] bg-black/90 backdrop-blur-sm shadow-lg rounded-lg text-sm text-white">
       <div className="flex">
         {/* Category Header */}
         <div className="w-2/5">
           <Link
             to={service.path}
-            className="block text-accent bg-[#072731] rounded-l-lg h-full flex items-center justify-center font-semibold text-base"
+            className="text-accent bg-[#072731] rounded-l-lg h-full flex items-center justify-center font-semibold text-base p-4"
           >
             {service.category}
           </Link>
         </div>
 
         {/* Offerings */}
-        <ul className="w-3/5 p-6 space-y-2">
+        <ul className="w-3/5 p-4 space-y-2">
           {service.offerings.map((label, idx) => (
             <li key={idx}>
               <Link

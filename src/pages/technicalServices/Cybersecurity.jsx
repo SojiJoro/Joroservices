@@ -255,7 +255,7 @@ const Cybersecurity = () => {
       {/* Section 1: Hero */}
       <section
         id="hero"
-        className="px-4 lg:px-20 py-16 lg:py-24 min-h-[80vh] flex items-center"
+        className="px-4 lg:px-20 pt-28 pb-16 lg:pt-32 lg:pb-24 min-h-[80vh] flex items-center"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
