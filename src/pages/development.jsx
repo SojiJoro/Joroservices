@@ -1,17 +1,16 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import React from "react";
-import Footer from "../component/Footer";
-import ExperienceSection from "../component/development/experienceSection";
-import DevHeroSection from "../component/development/heroSection";
-import DevServices from "../component/development/devServices";
-import WhyJoroservice from "../component/development/whyJoroservice";
+import React from 'react';
+import Footer from '../component/Footer';
+import ExperienceSection from '../component/development/experienceSection';
+import DevHeroSection from '../component/development/heroSection';
+import DevServices from '../component/development/devServices';
+import WhyJoroservice from '../component/development/whyJoroservice';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
 import { serviceSchema, breadcrumbSchema } from '../seo/schemas';
 
 function Development() {
   return (
-    <div className="min-h-screen bg-black text-text font-poppins">
+    <div className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/development']}
         jsonLd={[

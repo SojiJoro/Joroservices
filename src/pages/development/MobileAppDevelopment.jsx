@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaMobileAlt, FaSyncAlt, FaCloudUploadAlt, FaRocket, FaPlus, FaMinus } from 'react-icons/fa'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -9,7 +10,7 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     icon: FaMobileAlt,
-    title: 'Cross‑Platform Development',
+    title: 'Cross\u2011Platform Development',
     description:
       'We build high-performance apps using Flutter and React Native to deliver seamless experiences across both Android and iOS from a single codebase.',
   },
@@ -38,19 +39,19 @@ const portfolio = [
     name: 'Care Timesheet App (Flutter)',
     image: '/images/mobile-timesheet.jpg',
     description:
-      'A hybrid timesheet app for carers to log hours, sign on-screen, and export to PDF — with offline-first capabilities and real-time data sync.',
+      'A hybrid timesheet app for carers to log hours, sign on-screen, and export to PDF \u2014 with offline-first capabilities and real-time data sync.',
   },
   {
     name: 'QuickApply Recruitment App',
     image: '/images/ux-jobapp.jpg',
     description:
-      'A job discovery app with profile login, swipe-to-save, and one‑tap apply. Built with React Native for Android and iOS.',
+      'A job discovery app with profile login, swipe-to-save, and one\u2011tap apply. Built with React Native for Android and iOS.',
   },
   {
     name: 'Client Support Portal',
     image: '/images/ux-healthcare-mobile.jpg',
     description:
-      'Mobile dashboard with in-app notifications, ticket tracking, and secure file uploads — designed for remote teams.',
+      'Mobile dashboard with in-app notifications, ticket tracking, and secure file uploads \u2014 designed for remote teams.',
   },
 ]
 
@@ -58,12 +59,12 @@ const faqData = [
   {
     question: 'How much does it cost to build a mobile app in the UK?',
     answer:
-      'Mobile app costs vary significantly based on complexity. A simple app with basic features typically starts from £10,000, while a feature-rich app with backend integration, real-time data, and multiple user roles can range from £25,000 to £75,000+. We provide detailed estimates after a free discovery session where we scope your requirements.',
+      'Mobile app costs vary significantly based on complexity. A simple app with basic features typically starts from \u00a310,000, while a feature-rich app with backend integration, real-time data, and multiple user roles can range from \u00a325,000 to \u00a375,000+. We provide detailed estimates after a free discovery session where we scope your requirements.',
   },
   {
     question: 'Should I build a native app or a cross-platform app?',
     answer:
-      'For most businesses, cross-platform development with React Native or Flutter offers the best value — you get a single codebase that runs on both iOS and Android, reducing development time and cost by up to 40%. We recommend native development only when you need highly specialised platform features or maximum performance for graphics-intensive apps.',
+      'For most businesses, cross-platform development with React Native or Flutter offers the best value \u2014 you get a single codebase that runs on both iOS and Android, reducing development time and cost by up to 40%. We recommend native development only when you need highly specialised platform features or maximum performance for graphics-intensive apps.',
   },
   {
     question: 'How long does it take to develop a mobile app?',
@@ -99,7 +100,7 @@ const MobileAppDevelopment = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
   return (
-  <main className="bg-white text-black">
+  <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/development/mobile-app-development']}
       jsonLd={[
@@ -117,76 +118,74 @@ const MobileAppDevelopment = () => {
         mobileFaqSchema,
       ]}
     />
+
     {/* Hero Section */}
-    <section id="hero" className="grid p-4 pt-28 pb-20 lg:p-20 lg:pt-32 lg:pb-20 grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen items-center">
-      <div>
-        <p className="uppercase text-sm text-accent mb-4">Mobile App Development</p>
-        <h1 className="text-3xl lg:text-5xl font-bold mb-6">Apps That Work Everywhere, Instantly</h1>
-        <p className="text-lg text-gray-800">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Mobile App Development</p>
+        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Apps That Work Everywhere, Instantly</h1>
+        <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
           We design and build mobile apps that feel native, perform fast, and scale beautifully. Whether it's Flutter, React Native, or full native, we deliver custom mobile experiences that users love and businesses trust.
         </p>
         <Link
           to="/getintouch"
-          className="mt-6 inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
+          className="mt-8 inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Let's Build Your App
+          Let's Build Your App <ArrowRight className="w-4 h-4" />
         </Link>
-      </div>
-      <div className="rounded-lg shadow-lg bg-gradient-to-br from-accent/20 to-accent-dark/30 w-full h-[60vh] flex items-center justify-center">
-        <p className="text-6xl opacity-30">📱</p>
       </div>
     </section>
 
     {/* Services Section */}
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Expertise</p>
-      <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-12">What We Deliver</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {services.map((s, i) => (
-          <div key={i} className="p-6 border border-gray-100 rounded-2xl shadow-sm bg-white">
-            <s.icon className="text-4xl text-accent-dark mb-4" />
-            <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-            <p className="text-sm text-gray-700">{s.description}</p>
-          </div>
-        ))}
-      </div>
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Expertise</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">What We Deliver</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((s, i) => (
+            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-7">
+              <s.icon className="text-4xl text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{s.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 
     {/* Portfolio Section */}
-    <section className="py-20">
+    <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Work</p>
-      <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-12">Apps We've Built</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {portfolio.map((app, i) => (
-          <div
-            key={i}
-            className="bg-white rounded-2xl overflow-hidden shadow border border-gray-100 hover:shadow-lg transition"
-          >
-            <img src={app.image} alt={app.name} className="h-48 w-full object-cover" />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-accent">{app.name}</h3>
-              <p className="text-sm text-gray-700 mt-1">{app.description}</p>
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Work</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Apps We've Built</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {portfolio.map((app, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
+            >
+              <img src={app.image} alt={app.name} className="h-48 w-full object-cover" />
+              <div className="p-7">
+                <h3 className="text-xl font-semibold text-accent">{app.name}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm mt-2">{app.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </section>
 
     {/* FAQ Section */}
-    <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
           Frequently Asked Questions About Mobile App Development
         </h2>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg bg-white"
+              className="bg-white rounded-2xl border border-gray-100"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -194,14 +193,14 @@ const MobileAppDevelopment = () => {
               >
                 <span className="font-medium text-lg pr-4">{faq.question}</span>
                 {openFaq === index ? (
-                  <FaMinus className="text-accent-dark flex-shrink-0" />
+                  <FaMinus className="text-accent flex-shrink-0" />
                 ) : (
-                  <FaPlus className="text-accent-dark flex-shrink-0" />
+                  <FaPlus className="text-accent flex-shrink-0" />
                 )}
               </button>
               {openFaq === index && (
                 <div className="px-5 pb-5">
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
@@ -211,16 +210,18 @@ const MobileAppDevelopment = () => {
     </section>
 
     {/* CTA Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 text-center">
-      <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
-        Your App Idea Deserves a Seamless Experience
-      </h2>
-      <Link
-        to="/getintouch"
-        className="inline-block bg-white text-accent font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
-      >
-        Get Started Today
-      </Link>
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+          Your App Idea Deserves a Seamless Experience
+        </h2>
+        <Link
+          to="/getintouch"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+        >
+          Get Started Today <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
     </section>
 
     <Footer />

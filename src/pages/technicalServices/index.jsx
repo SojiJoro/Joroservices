@@ -8,7 +8,7 @@ import pagesSEO from '../../seo/pagesSEO';
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas';
 
 const TechnicalServices = () => (
-  <div className="bg-white text-black">
+  <div className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/technical-services']}
       jsonLd={[
@@ -27,17 +27,31 @@ const TechnicalServices = () => (
     {/* Hero */}
     <TechHeroSection />
 
-    {/* Offerings */}
-    <section className="py-20 px-4 lg:px-20">
-      <div className="max-w-5xl mx-auto text-center mb-12">
-        <h2 className="text-3xl lg:text-5xl font-bold">
+    {/* Overview */}
+    <section className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
           Expert Technical Services
         </h2>
-        <p className="mt-4 text-lg text-gray-700">
-          Cybersecurity, IT support, cloud infrastructure management and more—ensuring your systems run smoothly and securely.
+        <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+          Cybersecurity, IT support, cloud infrastructure management and more — ensuring your systems run smoothly and securely.
         </p>
       </div>
       <TechServices />
+    </section>
+
+    {/* Expertise Section */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Expertise</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+          Our Technical Expertise
+        </h2>
+        <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          Comprehensive IT services that ensure your systems are secure, reliable, and high-performing.
+        </p>
+      </div>
     </section>
 
     <Footer />

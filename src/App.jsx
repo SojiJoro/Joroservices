@@ -17,6 +17,7 @@ import Contact from "./pages/contact";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import ServiceDetail from "./pages/ServiceDetail";
 
 // Creative Solutions Subpages (slug-aligned)
 import WebsiteDesign from "./pages/creativeSolutions/WebsiteDesign";
@@ -93,6 +94,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/services/:id" element={<ServiceDetail />} />
 
           {/* Creative Solutions Subpages */}
           <Route path="/creative-solutions/website-design" element={<WebsiteDesign />} />
