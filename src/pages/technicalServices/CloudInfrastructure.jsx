@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   FaCloud,
   FaPoundSign,
@@ -14,6 +14,7 @@ import {
   FaBuilding,
   FaHandshake,
 } from 'react-icons/fa'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -210,32 +211,8 @@ const cloudFaqSchema = {
 const CloudInfrastructure = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
-  useEffect(() => {
-    document.title =
-      'AWS Cloud Services London | Migration, Cost Optimisation & Management | Joro Services'
-
-    const metaDesc = document.querySelector('meta[name="description"]')
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'AWS-certified cloud services for SMBs. Cloud migration, cost optimisation (avg 26.6% savings), security hardening & ongoing management. Free AWS Cost Audit available.'
-      )
-    }
-
-    return () => {
-      document.title =
-        'Joro Services | Digital Marketing, Development & IT Solutions in London'
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Joro Services Ltd offers tailored digital marketing, web development, mobile app development, UI/UX design, cloud infrastructure, cybersecurity, and IT support services for businesses across the UK.'
-        )
-      }
-    }
-  }, [])
-
   return (
-    <main className="bg-white text-black">
+    <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/technical-services/cloud-infrastructure']}
         jsonLd={[
@@ -253,40 +230,32 @@ const CloudInfrastructure = () => {
           cloudFaqSchema,
         ]}
       />
-      {/* ============================================================ */}
-      {/* SECTION 1 — HERO                                             */}
-      {/* ============================================================ */}
-      <section
-        id="hero"
-        className="px-4 pt-28 pb-16 lg:px-20 lg:pt-36 lg:pb-24"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="uppercase text-sm tracking-widest text-accent-dark mb-4 font-semibold">
-            AWS Cloud Services &mdash; London
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+            AWS Cloud Services
           </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
             Stop Overpaying for Cloud.
             <br className="hidden sm:block" /> Start Getting It Right.
           </h1>
-          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto mb-4">
+          <p className="text-lg text-white/80 leading-relaxed max-w-2xl mb-8">
             We help SMBs build, migrate, and optimise their AWS infrastructure
             &mdash; cutting costs, improving security, and keeping things running
-            without the enterprise price tag.
+            without the enterprise price tag. Led by an AWS Solutions Architect
+            who manages cloud infrastructure for financial services firms daily.
           </p>
-          <p className="text-base text-gray-500 max-w-2xl mx-auto mb-8">
-            Led by an AWS Solutions Architect who manages cloud infrastructure
-            for financial services firms daily.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/getintouch"
-              className="inline-block px-8 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition text-center"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
             >
-              Get a Free AWS Cost Audit
+              Get a Free AWS Cost Audit <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href="#pricing"
-              className="inline-block px-8 py-3 border-2 border-accent-dark text-accent-dark font-semibold rounded-lg hover:bg-accent-dark hover:text-white transition text-center"
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-white/10 transition-all text-sm"
             >
               See Our Cloud Plans
             </a>
@@ -294,27 +263,23 @@ const CloudInfrastructure = () => {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 2 — STATS BANNER                                     */}
-      {/* ============================================================ */}
-      <section className="bg-primary text-white py-12 px-4">
+      {/* Stats Banner */}
+      <section className="py-12 px-4 bg-gray-50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {stats.map((s, i) => (
             <div key={i}>
-              <p className="text-3xl lg:text-4xl font-bold text-accent mb-2">
+              <p className="text-2xl lg:text-3xl font-bold text-accent mb-2">
                 {s.value}
               </p>
-              <p className="text-sm text-gray-300">{s.label}</p>
+              <p className="text-sm text-gray-600">{s.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 3 — WHO THIS IS FOR                                  */}
-      {/* ============================================================ */}
-      <section className="py-20 px-4 lg:px-20">
-        <div className="max-w-5xl mx-auto">
+      {/* Who This Is For */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
             Is This You?
           </h2>
@@ -363,11 +328,9 @@ const CloudInfrastructure = () => {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 4 — WHAT WE DO (capability cards)                    */}
-      {/* ============================================================ */}
-      <section className="py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+      {/* What We Do */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
             What We Do
           </h2>
@@ -379,7 +342,7 @@ const CloudInfrastructure = () => {
             {services.map((s, i) => (
               <div
                 key={i}
-                className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition"
+                className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition"
               >
                 <s.icon className="text-3xl text-accent-dark mb-4" />
                 <h3 className="text-xl font-bold mb-3">{s.title}</h3>
@@ -401,11 +364,9 @@ const CloudInfrastructure = () => {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 5 — AWS COST AUDIT (lead magnet)                     */}
-      {/* ============================================================ */}
-      <section className="py-20 px-4 lg:px-20 bg-accent-dark/5" id="cost-audit">
-        <div className="max-w-4xl mx-auto">
+      {/* AWS Cost Audit */}
+      <section className="py-20 lg:py-28" id="cost-audit">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <FaFileAlt className="text-4xl text-accent-dark mx-auto mb-4" />
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -440,7 +401,7 @@ const CloudInfrastructure = () => {
           </p>
 
           {/* How It Works (mini) */}
-          <div className="bg-white rounded-lg p-8 border border-gray-200 mb-10">
+          <div className="bg-white rounded-2xl p-8 border border-gray-100 mb-10">
             <h3 className="text-lg font-bold mb-6 text-center">
               How the Audit Works
             </h3>
@@ -464,9 +425,9 @@ const CloudInfrastructure = () => {
           <div className="text-center">
             <Link
               to="/getintouch"
-              className="inline-block px-8 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
             >
-              Book Your Free AWS Cost Audit
+              Book Your Free AWS Cost Audit <ArrowRight className="w-4 h-4" />
             </Link>
             <p className="text-xs text-gray-500 mt-4">
               Read-only access only. We never modify your infrastructure without
@@ -476,11 +437,9 @@ const CloudInfrastructure = () => {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 6 — PRICING                                          */}
-      {/* ============================================================ */}
-      <section className="py-20 px-4 lg:px-20" id="pricing">
-        <div className="max-w-6xl mx-auto">
+      {/* Pricing */}
+      <section className="py-20 lg:py-28 bg-gray-50" id="pricing">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
             Simple, Transparent Pricing
           </h2>
@@ -492,10 +451,10 @@ const CloudInfrastructure = () => {
             {pricingPlans.map((plan, i) => (
               <div
                 key={i}
-                className={`rounded-lg p-8 border transition ${
+                className={`rounded-2xl p-7 border-2 transition ${
                   plan.featured
-                    ? 'border-accent-dark shadow-lg bg-white ring-2 ring-accent-dark'
-                    : 'border-gray-200 shadow-sm bg-white hover:shadow-md'
+                    ? 'border-accent-dark shadow-lg bg-white'
+                    : 'border-gray-200 bg-white hover:shadow-lg'
                 }`}
               >
                 {plan.featured && (
@@ -530,19 +489,17 @@ const CloudInfrastructure = () => {
             </p>
             <Link
               to="/getintouch"
-              className="inline-block px-8 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
             >
-              Let&rsquo;s Talk About Your Cloud
+              Let&rsquo;s Talk About Your Cloud <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 7 — HOW IT WORKS                                     */}
-      {/* ============================================================ */}
-      <section className="py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
+      {/* How It Works */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
             How It Works
           </h2>
@@ -560,10 +517,8 @@ const CloudInfrastructure = () => {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 8 — TRUST SIGNALS                                    */}
-      {/* ============================================================ */}
-      <section className="py-12 px-4 bg-white border-y border-gray-100">
+      {/* Trust Signals */}
+      <section className="py-12 px-4 bg-gray-50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-8 lg:gap-12">
           {trustSignals.map((t, i) => (
             <div
@@ -577,11 +532,9 @@ const CloudInfrastructure = () => {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 9 — FAQ                                              */}
-      {/* ============================================================ */}
-      <section className="py-20 px-4 lg:px-20" id="faq">
-        <div className="max-w-3xl mx-auto">
+      {/* FAQ */}
+      <section className="py-20 lg:py-28" id="faq">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
             Frequently Asked Questions
           </h2>
@@ -589,15 +542,15 @@ const CloudInfrastructure = () => {
             {faqData.map((faq, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg p-4"
+                className="bg-white rounded-2xl border border-gray-100"
               >
                 <button
                   onClick={() =>
                     setOpenFaq(openFaq === index ? null : index)
                   }
-                  className="w-full flex justify-between items-center text-left"
+                  className="w-full flex justify-between items-center text-left p-5"
                 >
-                  <span className="font-medium text-lg">{faq.question}</span>
+                  <span className="font-medium text-lg pr-4">{faq.question}</span>
                   {openFaq === index ? (
                     <FaMinus className="text-accent-dark flex-shrink-0 ml-4" />
                   ) : (
@@ -605,7 +558,9 @@ const CloudInfrastructure = () => {
                   )}
                 </button>
                 {openFaq === index && (
-                  <p className="mt-3 text-gray-700">{faq.answer}</p>
+                  <div className="px-5 pb-5">
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </div>
                 )}
               </div>
             ))}
@@ -613,35 +568,27 @@ const CloudInfrastructure = () => {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 10 — BOTTOM CTA                                      */}
-      {/* ============================================================ */}
-      <section className="bg-primary text-white py-20 px-4 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4">
+      {/* Bottom CTA */}
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Cloud Should Save You Money, Not Drain It
           </h2>
-          <p className="text-gray-300 mb-4 text-lg">
+          <p className="text-white/80 mb-8 text-lg max-w-2xl mx-auto">
             Start with a free AWS Cost Audit. In 48 hours, you&rsquo;ll know
             exactly where your money&rsquo;s going &mdash; and how to keep more
             of it.
           </p>
-          <p className="text-gray-400 mb-8 text-sm">
-            We&rsquo;re not a sales team handing you off to junior engineers.
-            The person you speak to is the person who does the work &mdash; an
-            AWS-certified SRE who manages production cloud infrastructure for
-            regulated financial services firms every day.
-          </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/getintouch"
-              className="inline-block px-8 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
             >
-              Book Your Free AWS Cost Audit
+              Book Your Free AWS Cost Audit <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               to="/getintouch"
-              className="inline-block px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary transition"
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-white/10 transition-all text-sm"
             >
               Schedule a Discovery Call
             </Link>

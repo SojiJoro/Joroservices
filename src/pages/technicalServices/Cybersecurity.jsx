@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   FaShieldAlt,
   FaEnvelopeOpenText,
@@ -12,6 +12,7 @@ import {
   FaCertificate,
   FaLock,
 } from 'react-icons/fa'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -211,30 +212,8 @@ const healthCheckItems = [
 const Cybersecurity = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
-  useEffect(() => {
-    document.title =
-      'Cybersecurity for Small Business London | Security Audit & Management | Joro Services'
-    const metaDesc = document.querySelector('meta[name="description"]')
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Practical cybersecurity for SMBs. Free security health check, M365 hardening, endpoint protection, and ongoing management. We improved client security scores from 33% to 61%.'
-      )
-    }
-    return () => {
-      document.title =
-        'Joro Services | Digital Marketing, Development & IT Solutions in London'
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Joro Services Ltd offers tailored digital marketing, web development, mobile app development, UI/UX design, cloud infrastructure, cybersecurity, and IT support services for businesses across the UK.'
-        )
-      }
-    }
-  }, [])
-
   return (
-    <main className="bg-white text-black">
+    <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/technical-services/cybersecurity']}
         jsonLd={[
@@ -252,64 +231,59 @@ const Cybersecurity = () => {
           cyberFaqSchema,
         ]}
       />
-      {/* Section 1: Hero */}
-      <section
-        id="hero"
-        className="px-4 lg:px-20 pt-28 pb-16 lg:pt-32 lg:pb-24 min-h-[80vh] flex items-center"
-      >
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="uppercase text-sm text-accent-dark mb-4 font-semibold tracking-wide">
+            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Cybersecurity
             </p>
-            <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-              Most SMBs Don't Get Hacked by Geniuses.{' '}
-              <span className="text-accent-dark">
-                They Get Hacked by Basics.
-              </span>
+            <h1 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+              Most SMBs Don't Get Hacked by Geniuses.
+              They Get Hacked by Basics.
             </h1>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-lg text-white/80 leading-relaxed mb-8">
               Weak passwords, unpatched systems, no MFA, admin accounts
-              everywhere — these are the real threats to your business. We fix
+              everywhere &mdash; these are the real threats to your business. We fix
               the basics first, then build from there. Practical cybersecurity
               for small businesses, not enterprise theatre.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/getintouch"
-                className="inline-block px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition text-center"
+                className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
               >
-                Get a Free Security Health Check
+                Get a Free Security Health Check <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="#services"
-                className="inline-block px-6 py-3 border-2 border-accent-dark text-accent-dark font-semibold rounded-lg hover:bg-accent-dark hover:text-white transition text-center"
+                className="inline-flex items-center gap-2 border-2 border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-white/10 transition-all text-sm"
               >
                 See What We Cover
               </a>
             </div>
           </div>
-          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-lg font-semibold mb-4">
               Security Scorecard
             </h3>
             <div className="flex items-center gap-6 mb-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-500">33%</div>
-                <p className="text-xs text-gray-500 mt-1">Before</p>
+                <div className="text-3xl font-bold text-red-400">33%</div>
+                <p className="text-xs text-white/60 mt-1">Before</p>
               </div>
-              <div className="text-2xl text-gray-400">→</div>
+              <div className="text-2xl text-white/40">&rarr;</div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent-dark">61%</div>
-                <p className="text-xs text-gray-500 mt-1">After</p>
+                <div className="text-3xl font-bold text-accent">61%</div>
+                <p className="text-xs text-white/60 mt-1">After</p>
               </div>
             </div>
             <div className="space-y-3">
               {['MFA', 'Patching', 'Backup', 'Email Security', 'Staff Training'].map(
                 (item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-accent-dark flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
+                    <FaCheckCircle className="text-accent flex-shrink-0" />
+                    <span className="text-white/90">{item}</span>
                   </div>
                 )
               )}
@@ -318,23 +292,23 @@ const Cybersecurity = () => {
         </div>
       </section>
 
-      {/* Section 2: Stats Banner */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-12 px-4">
+      {/* Stats Banner */}
+      <section className="py-12 px-4 bg-gray-50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-2xl lg:text-3xl font-bold text-accent mb-2">
                 {stat.value}
               </div>
-              <p className="text-sm text-gray-300">{stat.label}</p>
+              <p className="text-sm text-gray-600">{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Section 3: Pain Points */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20">
-        <div className="max-w-4xl mx-auto">
+      {/* Pain Points */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
             The Reality for SMBs
           </h2>
@@ -359,9 +333,9 @@ const Cybersecurity = () => {
         </div>
       </section>
 
-      {/* Section 4: Service Cards */}
-      <section id="services" className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+      {/* Service Cards */}
+      <section id="services" className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
             What We Do
           </h2>
@@ -369,7 +343,7 @@ const Cybersecurity = () => {
             {serviceCards.map((card, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition"
+                className="bg-white rounded-2xl p-7 border border-gray-100 hover:shadow-lg transition"
               >
                 <card.icon className="text-3xl text-accent-dark mb-4" />
                 <p className="text-xs uppercase tracking-wide text-accent-dark font-semibold mb-1">
@@ -396,9 +370,9 @@ const Cybersecurity = () => {
         </div>
       </section>
 
-      {/* Section 5: Free Security Health Check */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-accent-dark/5">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Free Security Health Check */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Free Security Health Check
           </h2>
@@ -411,7 +385,7 @@ const Cybersecurity = () => {
             give you a prioritised action plan. Takes us 48 hours. Costs you
             nothing.
           </p>
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-left max-w-xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 border border-gray-100 text-left max-w-xl mx-auto">
             <h3 className="font-semibold text-lg mb-4">What's included:</h3>
             <ul className="space-y-3">
               {healthCheckItems.map((item, i) => (
@@ -423,9 +397,9 @@ const Cybersecurity = () => {
             </ul>
             <Link
               to="/getintouch"
-              className="mt-6 inline-block w-full text-center px-6 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
+              className="mt-6 inline-flex items-center justify-center gap-2 w-full bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
             >
-              Book Your Free Security Health Check
+              Book Your Free Security Health Check <ArrowRight className="w-4 h-4" />
             </Link>
             <p className="mt-3 text-xs text-gray-500 text-center">
               We only need read-only access to your M365 tenant. We never make
@@ -435,9 +409,9 @@ const Cybersecurity = () => {
         </div>
       </section>
 
-      {/* Section 6: Pricing */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20">
-        <div className="max-w-6xl mx-auto">
+      {/* Pricing */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
             Pricing
           </h2>
@@ -448,10 +422,10 @@ const Cybersecurity = () => {
             {pricingTiers.map((tier, i) => (
               <div
                 key={i}
-                className={`rounded-xl p-6 border-2 ${
+                className={`rounded-2xl p-7 border-2 transition ${
                   tier.highlighted
                     ? 'border-accent-dark shadow-lg relative'
-                    : 'border-gray-200'
+                    : 'border-gray-200 hover:shadow-lg'
                 }`}
               >
                 {tier.highlighted && (
@@ -476,13 +450,13 @@ const Cybersecurity = () => {
                 </p>
                 <Link
                   to="/getintouch"
-                  className={`mt-4 inline-block w-full text-center px-6 py-3 font-semibold rounded-lg transition ${
+                  className={`mt-4 inline-flex items-center justify-center gap-2 w-full px-7 py-3.5 font-semibold rounded-xl transition-all text-sm ${
                     tier.highlighted
-                      ? 'bg-accent-dark text-white hover:bg-opacity-90'
+                      ? 'bg-accent text-white hover:bg-accent-dark shadow-lg shadow-accent/20'
                       : 'border-2 border-accent-dark text-accent-dark hover:bg-accent-dark hover:text-white'
                   }`}
                 >
-                  Get Started
+                  Get Started <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             ))}
@@ -490,9 +464,9 @@ const Cybersecurity = () => {
         </div>
       </section>
 
-      {/* Section 7: FAQ */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
+      {/* FAQ */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
             Frequently Asked Questions
           </h2>
@@ -530,21 +504,21 @@ const Cybersecurity = () => {
         </div>
       </section>
 
-      {/* Section 8: Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
+      {/* Bottom CTA */}
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Cybersecurity Doesn't Have to Be Complicated or Expensive
           </h2>
-          <p className="text-lg mb-8 text-white/80">
+          <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
             Start with a free health check. In 48 hours, you'll know exactly
-            where your business is exposed — and what to do about it.
+            where your business is exposed &mdash; and what to do about it.
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
           >
-            Book Your Free Security Health Check
+            Book Your Free Security Health Check <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
