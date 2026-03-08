@@ -49,7 +49,11 @@ Aldershot, Farnborough, Farnham, Camberley, Guildford, Fleet, Reading, Basingsto
 
 ## Location Pages
 - [Aldershot](https://joroservices.org/locations/aldershot): Our home base — web development, IT support, digital marketing, and all services for Aldershot businesses
+- [Farnborough](https://joroservices.org/locations/farnborough): Digital services for Farnborough's tech and defence sector businesses, just 3 miles from our base
+- [Guildford](https://joroservices.org/locations/guildford): Web development, IT support, and digital marketing for Surrey's county town and gaming industry hub
+- [Camberley](https://joroservices.org/locations/camberley): Full-service digital agency for Camberley and Surrey Heath businesses
 - [Hampshire](https://joroservices.org/locations/hampshire): County-wide digital services across Hampshire including Farnborough, Farnham, Basingstoke, Winchester, and more
+- [Surrey](https://joroservices.org/locations/surrey): Web development, IT, and marketing services across Surrey from Guildford to Camberley
 
 ## Unique Differentiators
 - Only Aldershot-based company combining IT consultancy, web development, digital marketing, and creative solutions
