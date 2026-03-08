@@ -1,0 +1,274 @@
+import React, { useState } from 'react'
+import { FaCheckCircle, FaPlus, FaMinus, FaMapMarkerAlt } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import Footer from '../../component/Footer'
+import SEO from '../../component/SEO'
+import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+
+const services = [
+  {
+    title: 'Web Development',
+    description: 'Custom websites, e-commerce stores, and web applications for Hampshire businesses. Built with modern frameworks for speed, security, and search visibility.',
+    link: '/development/web-development',
+  },
+  {
+    title: 'SEO & Digital Marketing',
+    description: 'Local and national SEO, Google Ads, social media marketing, and content strategy to help Hampshire businesses attract more customers online.',
+    link: '/digital-marketing',
+  },
+  {
+    title: 'IT Support & Managed Services',
+    description: 'Remote and on-site IT support across Hampshire. Helpdesk, server management, Microsoft 365 administration, and proactive monitoring.',
+    link: '/technical-services/it-support-and-maintenance',
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Protect your Hampshire business with penetration testing, vulnerability assessments, security audits, and GDPR compliance support.',
+    link: '/technical-services/cybersecurity',
+  },
+  {
+    title: 'Mobile App Development',
+    description: 'Cross-platform iOS and Android apps for Hampshire businesses. From staff management tools to customer-facing applications.',
+    link: '/development/mobile-app-development',
+  },
+  {
+    title: 'Cloud Infrastructure',
+    description: 'AWS, Azure, and Google Cloud consulting, migration, and management for Hampshire organisations looking to modernise their IT.',
+    link: '/technical-services/cloud-infrastructure',
+  },
+]
+
+const faqData = [
+  {
+    question: 'Do you provide IT services across all of Hampshire?',
+    answer: 'Yes, we serve businesses throughout Hampshire including Aldershot, Farnborough, Farnham, Basingstoke, Winchester, Eastleigh, Southampton, Portsmouth, and Andover. We provide both remote support and on-site visits across the county.',
+  },
+  {
+    question: 'What makes Joro Services different from other Hampshire digital agencies?',
+    answer: 'We are the only Hampshire-based agency that combines IT consultancy, web development, digital marketing, and creative solutions under one roof. This means you get a single partner for your entire digital presence, rather than managing multiple suppliers.',
+  },
+  {
+    question: 'Can you help Hampshire businesses with local SEO?',
+    answer: 'Absolutely. Local SEO is one of our core specialities. We optimise your Google Business Profile, build local citations, create location-specific content, and manage review strategies to help Hampshire businesses rank prominently in local search results and Google Maps.',
+  },
+  {
+    question: 'Do you work with public sector organisations in Hampshire?',
+    answer: 'Yes, we work with both private and public sector organisations. Our SIC codes cover IT consultancy (62020) and other IT service activities (62090). We understand the procurement requirements and compliance standards that public sector organisations require.',
+  },
+  {
+    question: 'How quickly can you respond to IT issues in Hampshire?',
+    answer: 'For managed IT support clients, we aim to respond within 1 hour during business hours, with critical issues prioritised within 15-30 minutes. For on-site visits across Hampshire, we typically schedule within 24 hours for non-emergency issues.',
+  },
+]
+
+const hampshireFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
+const hampshireTowns = [
+  'Aldershot', 'Farnborough', 'Farnham', 'Fleet', 'Basingstoke',
+  'Winchester', 'Andover', 'Eastleigh', 'Petersfield', 'Liss',
+  'Bordon', 'Liphook', 'Yateley', 'Hook', 'Odiham',
+  'Whitchurch',
+]
+
+const Hampshire = () => {
+  const [openFaq, setOpenFaq] = useState(null)
+
+  return (
+    <main className="bg-white text-black">
+      <SEO
+        title="Web Development, IT Support & Digital Marketing in Hampshire | Joro Services"
+        description="Joro Services delivers expert web development, IT support, SEO, cybersecurity, and digital marketing to businesses across Hampshire. Based in Aldershot, serving the entire county. Free consultation available."
+        keywords="web development Hampshire, IT support Hampshire, digital marketing Hampshire, SEO Hampshire, web design Hampshire, cybersecurity Hampshire, IT services Hampshire, digital agency Hampshire, IT consultancy Hampshire"
+        jsonLd={[
+          serviceSchema({
+            name: 'Digital Services in Hampshire',
+            description: 'Full-service digital agency serving Hampshire with web development, digital marketing, IT support, cybersecurity, and cloud solutions.',
+            url: '/locations/hampshire',
+            category: 'Digital Agency',
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Locations', path: '/locations/hampshire' },
+            { name: 'Hampshire', path: '/locations/hampshire' },
+          ]),
+          hampshireFaqSchema,
+        ]}
+      />
+
+      {/* Hero */}
+      <section className="px-4 lg:px-20 py-16 lg:py-24 min-h-[70vh] flex items-center bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-2 mb-4">
+            <FaMapMarkerAlt className="text-accent-dark" />
+            <span className="text-accent-dark font-semibold uppercase text-sm tracking-wide">Hampshire, UK</span>
+          </div>
+          <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+            Digital Services for Businesses Across{' '}
+            <span className="text-accent-dark">Hampshire</span>
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
+            From Aldershot to Winchester, Basingstoke to Portsmouth — Joro Services provides web development, IT support, digital marketing, and cybersecurity to businesses across Hampshire. We combine local knowledge with technical expertise to help Hampshire businesses compete online.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              to="/getintouch"
+              className="inline-block px-8 py-3 bg-accent-dark text-white font-semibold rounded-lg hover:bg-opacity-90 transition text-center"
+            >
+              Get a Free Consultation
+            </Link>
+            <a
+              href="tel:+4407867374034"
+              className="inline-block px-8 py-3 border-2 border-accent-dark text-accent-dark font-semibold rounded-lg hover:bg-accent-dark hover:text-white transition text-center"
+            >
+              Call 07867 374034
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-16 lg:py-20 px-4 lg:px-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+            Our Services Across Hampshire
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Whether you are a startup in Basingstoke, a retailer in Winchester, or a professional services firm in Farnborough, we have the expertise to help your business grow.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, i) => (
+              <Link
+                key={i}
+                to={service.link}
+                className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition bg-white group"
+              >
+                <h3 className="text-xl font-bold mb-3 group-hover:text-accent-dark transition">{service.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Hampshire businesses choose us */}
+      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+            Why Hampshire Businesses Trust Joro Services
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                title: 'Hampshire-Based, UK-Wide Capability',
+                text: 'We are based in Aldershot, Hampshire, giving us local presence for on-site visits and face-to-face meetings. Our team also works remotely with clients across the UK and internationally.',
+              },
+              {
+                title: 'Full-Service Digital Partner',
+                text: 'Hampshire businesses no longer need to hire separate agencies for web design, SEO, IT support, and cybersecurity. We deliver all of these services with a single team that understands your entire digital ecosystem.',
+              },
+              {
+                title: 'Public and Private Sector Experience',
+                text: 'We work with Hampshire-based businesses, charities, healthcare providers, and public sector organisations. We understand procurement processes, data compliance, and the specific needs of different sectors.',
+              },
+              {
+                title: 'Results-Driven Approach',
+                text: 'Every project starts with clear objectives and measurable outcomes. Whether it is increasing organic traffic, reducing IT downtime, or launching a new application, we focus on delivering tangible business results.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <FaCheckCircle className="text-accent-dark mt-1 flex-shrink-0 text-lg" />
+                <div>
+                  <h3 className="font-bold text-lg mb-1">{item.title}</h3>
+                  <p className="text-gray-600">{item.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Towns We Serve */}
+      <section className="py-16 lg:py-20 px-4 lg:px-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+            Hampshire Towns We Serve
+          </h2>
+          <p className="text-center text-gray-600 mb-10">
+            We provide on-site and remote digital services to businesses across Hampshire.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {hampshireTowns.map((town, i) => (
+              <div key={i} className="text-center p-3 bg-gray-50 rounded-lg">
+                <p className="font-medium text-sm">{town}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+            Frequently Asked Questions About Our Hampshire Services
+          </h2>
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <div key={index} className="border border-gray-200 rounded-lg bg-white">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full flex justify-between items-center text-left p-5"
+                >
+                  <span className="font-medium text-lg pr-4">{faq.question}</span>
+                  {openFaq === index ? (
+                    <FaMinus className="text-accent-dark flex-shrink-0" />
+                  ) : (
+                    <FaPlus className="text-accent-dark flex-shrink-0" />
+                  )}
+                </button>
+                {openFaq === index && (
+                  <div className="px-5 pb-5">
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-accent-dark text-white py-16 px-4 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+            Let Us Help Your Hampshire Business Grow
+          </h2>
+          <p className="text-lg mb-8 text-white/80">
+            Book a free consultation and find out how we can support your digital goals.
+          </p>
+          <Link
+            to="/getintouch"
+            className="inline-block bg-white text-accent-dark font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+          >
+            Book Your Free Consultation
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  )
+}
+
+export default Hampshire

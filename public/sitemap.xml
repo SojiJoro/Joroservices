@@ -142,6 +142,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Location Pages -->
+  <url>
+    <loc>https://joroservices.org/locations/aldershot</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://joroservices.org/locations/hampshire</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Legal -->
   <url>
     <loc>https://joroservices.org/privacy</loc>

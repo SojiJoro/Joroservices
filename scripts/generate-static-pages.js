@@ -110,6 +110,14 @@ const pagesSEO = {
     title: 'Terms of Service | Joro Services Ltd',
     description: 'Review the terms of service for Joro Services Ltd.',
   },
+  '/locations/aldershot': {
+    title: 'Web Development, IT Support & Digital Marketing in Aldershot | Joro Services',
+    description: 'Joro Services is Aldershot\'s only full-service digital agency. We provide web development, SEO, IT support, cybersecurity, mobile app development, and cloud solutions for local businesses. Free consultation available.',
+  },
+  '/locations/hampshire': {
+    title: 'Web Development, IT Support & Digital Marketing in Hampshire | Joro Services',
+    description: 'Joro Services delivers expert web development, IT support, SEO, cybersecurity, and digital marketing to businesses across Hampshire. Based in Aldershot, serving the entire county.',
+  },
 };
 
 const BASE_URL = 'https://joroservices.org';

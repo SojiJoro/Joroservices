@@ -38,6 +38,10 @@ import ItSupportAndMaintenance from "./pages/technicalServices/ItSupportAndMaint
 import Cybersecurity from "./pages/technicalServices/Cybersecurity";
 import CloudInfrastructure from "./pages/technicalServices/CloudInfrastructure";
 
+// Location Pages
+import Aldershot from "./pages/locations/Aldershot";
+import Hampshire from "./pages/locations/Hampshire";
+
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -106,6 +110,10 @@ function App() {
           <Route path="/technical-services/it-support-and-maintenance" element={<ItSupportAndMaintenance />} />
           <Route path="/technical-services/cybersecurity" element={<Cybersecurity />} />
           <Route path="/technical-services/cloud-infrastructure" element={<CloudInfrastructure />} />
+
+          {/* Location Pages */}
+          <Route path="/locations/aldershot" element={<Aldershot />} />
+          <Route path="/locations/hampshire" element={<Hampshire />} />
 
           {/* Fallback */}
           <Route path="*" element={<UnderDevelopment />} />
