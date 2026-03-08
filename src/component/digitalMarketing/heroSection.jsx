@@ -13,7 +13,7 @@ const DigitalHeroSection = () => {
           <span className="text-accent">Measurable Results</span>
         </h1>
         <p className="text-lg text-white/80 max-w-2xl mt-4 leading-relaxed">
-          SEO, PPC, social media, and content strategy that drives qualified leads and real revenue. Data-driven campaigns with transparent reporting &mdash; you always know where your money goes.
+          SEO, PPC, social media, and content strategy that brings in qualified leads and real revenue. Campaigns backed by real data, with transparent reporting. You always know where your money goes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           <Link

@@ -8,22 +8,22 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     title: 'Web Development',
-    description: 'High-performance websites and web applications for Farnborough businesses. Built with React, Next.js, and modern frameworks — optimised for speed, security, and search rankings.',
+    description: 'Fast, well-built websites and web applications for Farnborough businesses. Built with React, Next.js, and modern frameworks, and optimised for speed, security, and search rankings.',
     link: '/development/web-development',
   },
   {
     title: 'Digital Marketing & SEO',
-    description: 'Data-driven SEO, PPC campaigns, and social media marketing to help Farnborough businesses stand out in a competitive tech-driven market.',
+    description: 'SEO, PPC campaigns, and social media marketing to help Farnborough businesses stand out in a competitive, tech-heavy market.',
     link: '/digital-marketing/seo-and-content-strategy',
   },
   {
     title: 'IT Support & Maintenance',
-    description: 'Reliable IT support for Farnborough\'s defence, aerospace, and tech businesses. Helpdesk, infrastructure management, and proactive monitoring to minimise downtime.',
+    description: 'Reliable IT support for Farnborough\'s defence, aerospace, and tech businesses. Helpdesk, infrastructure management, and ongoing monitoring to keep downtime to a minimum.',
     link: '/technical-services/it-support-and-maintenance',
   },
   {
     title: 'Cybersecurity',
-    description: 'Enterprise-grade security for Farnborough businesses handling sensitive data. Penetration testing, vulnerability assessments, GDPR compliance, and ongoing threat monitoring.',
+    description: 'Serious security for Farnborough businesses that handle sensitive data. Penetration testing, vulnerability assessments, GDPR compliance, and ongoing threat monitoring.',
     link: '/technical-services/cybersecurity',
   },
   {
@@ -33,7 +33,7 @@ const services = [
   },
   {
     title: 'Cloud Infrastructure',
-    description: 'AWS, Azure, and Google Cloud solutions tailored to Farnborough\'s tech sector. Scalable architecture, migration support, and ongoing management.',
+    description: 'AWS, Azure, and Google Cloud solutions built for Farnborough\'s tech sector. We handle architecture, migration, and day-to-day management.',
     link: '/technical-services/cloud-infrastructure',
   },
 ]
@@ -41,7 +41,7 @@ const services = [
 const faqData = [
   {
     question: 'What digital services does Joro Services offer in Farnborough?',
-    answer: 'Joro Services provides web development, digital marketing and SEO, IT support and maintenance, cybersecurity, mobile app development, cloud infrastructure, and UI/UX design to businesses in Farnborough. We specialise in working with tech, defence, and aerospace sector clients alongside high-street businesses and startups.',
+    answer: 'We offer web development, digital marketing and SEO, IT support and maintenance, cybersecurity, mobile app development, cloud infrastructure, and UI/UX design to businesses in Farnborough. We work with tech, defence, and aerospace companies as well as high-street businesses and startups.',
   },
   {
     question: 'Do you work with defence and aerospace companies near Farnborough Airport?',
@@ -53,7 +53,7 @@ const faqData = [
   },
   {
     question: 'Can you help a Farnborough startup build its digital presence from scratch?',
-    answer: 'Absolutely. We work with startups at every stage — from building your first website and setting up cloud infrastructure to creating a digital marketing strategy that drives early traction. Farnborough\'s growing startup ecosystem means we understand the lean, fast-paced approach founders need.',
+    answer: 'Absolutely. We work with startups at every stage, from building your first website and setting up cloud infrastructure to creating a digital marketing strategy that gets you early traction. Farnborough\'s growing startup scene means we understand the lean, fast-paced approach founders need.',
   },
   {
     question: 'Do you provide cybersecurity services for Farnborough tech companies?',
@@ -126,7 +126,7 @@ const Farnborough = () => {
             <span className="text-accent-dark">Farnborough</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
-            Farnborough is a hub for defence, aerospace, and technology — home to Farnborough Airport, QinetiQ, and a growing community of startups and tech firms. Joro Services delivers expert web development, IT support, cybersecurity, and digital marketing to businesses across this thriving tech corridor.
+            Farnborough is a hub for defence, aerospace, and technology, home to Farnborough Airport, QinetiQ, and a growing community of startups and tech firms. Joro Services provides web development, IT support, cybersecurity, and digital marketing to businesses across this busy tech corridor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -188,7 +188,7 @@ const Farnborough = () => {
               },
               {
                 title: 'Startup-Friendly Packages',
-                text: 'Farnborough\'s startup scene is growing rapidly. We offer flexible, scalable service packages that let early-stage businesses access professional web development, cloud infrastructure, and marketing without enterprise-level budgets.',
+                text: 'Farnborough\'s startup scene is growing fast. We offer flexible packages that let early-stage businesses get professional web development, cloud infrastructure, and marketing without needing a big budget.',
               },
               {
                 title: 'Security-First Approach',

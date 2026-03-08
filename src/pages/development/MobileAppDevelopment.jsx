@@ -10,15 +10,15 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     icon: FaMobileAlt,
-    title: 'Cross\u2011Platform Development',
+    title: 'Cross-Platform Development',
     description:
-      'We build high-performance apps using Flutter and React Native to deliver seamless experiences across both Android and iOS from a single codebase.',
+      'We build high-performance apps using Flutter and React Native, so you get one codebase that works properly on both Android and iOS.',
   },
   {
     icon: FaSyncAlt,
     title: 'Offline & Real-Time Sync',
     description:
-      'Enable your users to work online or offline with seamless syncing, local storage, and instant updates using Firebase or custom APIs.',
+      'Let your users work online or offline with automatic syncing, local storage, and instant updates using Firebase or custom APIs.',
   },
   {
     icon: FaCloudUploadAlt,
@@ -30,7 +30,7 @@ const services = [
     icon: FaRocket,
     title: 'Performance & UX Focused',
     description:
-      'From fast loading to native transitions and accessibility support, every app is designed for fluid UX and long-term growth.',
+      'Fast loading, smooth transitions, and accessibility support. Every app is built to feel great and grow with your business.',
   },
 ]
 
@@ -39,19 +39,19 @@ const portfolio = [
     name: 'Care Timesheet App (Flutter)',
     image: '/images/mobile-timesheet.jpg',
     description:
-      'A hybrid timesheet app for carers to log hours, sign on-screen, and export to PDF \u2014 with offline-first capabilities and real-time data sync.',
+      'A hybrid timesheet app for carers to log hours, sign on-screen, and export to PDF. Works offline and syncs data in real time.',
   },
   {
     name: 'QuickApply Recruitment App',
     image: '/images/ux-jobapp.jpg',
     description:
-      'A job discovery app with profile login, swipe-to-save, and one\u2011tap apply. Built with React Native for Android and iOS.',
+      'A job discovery app with profile login, swipe-to-save, and one-tap apply. Built with React Native for Android and iOS.',
   },
   {
     name: 'Client Support Portal',
     image: '/images/ux-healthcare-mobile.jpg',
     description:
-      'Mobile dashboard with in-app notifications, ticket tracking, and secure file uploads \u2014 designed for remote teams.',
+      'Mobile dashboard with in-app notifications, ticket tracking, and secure file uploads. Built for remote teams.',
   },
 ]
 
@@ -64,7 +64,7 @@ const faqData = [
   {
     question: 'Should I build a native app or a cross-platform app?',
     answer:
-      'For most businesses, cross-platform development with React Native or Flutter offers the best value \u2014 you get a single codebase that runs on both iOS and Android, reducing development time and cost by up to 40%. We recommend native development only when you need highly specialised platform features or maximum performance for graphics-intensive apps.',
+      'For most businesses, cross-platform development with React Native or Flutter offers the best value. You get a single codebase that runs on both iOS and Android, which can cut development time and cost by up to 40%. We only recommend native development when you need very specialised platform features or maximum performance for graphics-heavy apps.',
   },
   {
     question: 'How long does it take to develop a mobile app?',
@@ -125,7 +125,7 @@ const MobileAppDevelopment = () => {
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Mobile App Development</p>
         <h1 className="text-3xl lg:text-4xl font-bold mb-6">Apps That Work Everywhere, Instantly</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-          We design and build mobile apps that feel native, perform fast, and scale beautifully. Whether it's Flutter, React Native, or full native, we deliver custom mobile experiences that users love and businesses trust.
+          We design and build mobile apps that feel native and run fast. Whether it's Flutter, React Native, or full native, we build apps that people actually enjoy using and businesses can rely on.
         </p>
         <Link
           to="/getintouch"
@@ -213,7 +213,7 @@ const MobileAppDevelopment = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-          Your App Idea Deserves a Seamless Experience
+          Ready to Turn Your App Idea Into Reality?
         </h2>
         <Link
           to="/getintouch"

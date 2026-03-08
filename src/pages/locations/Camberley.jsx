@@ -8,27 +8,27 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     title: 'Web Development',
-    description: 'Professional websites and web applications for Camberley businesses. Clean, responsive design paired with robust development — built to reflect the quality your clients expect.',
+    description: 'Professional websites and web applications for Camberley businesses. Clean, responsive design with solid development behind it, built to reflect the quality your clients expect.',
     link: '/development/web-development',
   },
   {
     title: 'Digital Marketing & SEO',
-    description: 'Local SEO, Google Ads, and strategic content marketing to help Camberley businesses attract more customers. We target the Surrey Heath area and beyond.',
+    description: 'Local SEO, Google Ads, and content marketing to help Camberley businesses attract more customers. We focus on the Surrey Heath area and beyond.',
     link: '/digital-marketing/seo-and-content-strategy',
   },
   {
     title: 'IT Support & Maintenance',
-    description: 'Proactive IT support for Camberley offices. Helpdesk, device management, network monitoring, Microsoft 365 administration, and on-site troubleshooting when needed.',
+    description: 'IT support for Camberley offices that stays ahead of problems. Helpdesk, device management, network monitoring, Microsoft 365 admin, and on-site troubleshooting when needed.',
     link: '/technical-services/it-support-and-maintenance',
   },
   {
     title: 'Cybersecurity',
-    description: 'Comprehensive security services for Camberley businesses. Penetration testing, Cyber Essentials certification support, GDPR compliance, and ongoing threat monitoring.',
+    description: 'Full security services for Camberley businesses. Penetration testing, Cyber Essentials certification support, GDPR compliance, and ongoing threat monitoring.',
     link: '/technical-services/cybersecurity',
   },
   {
     title: 'Mobile App Development',
-    description: 'iOS and Android app development for Camberley businesses and startups. We handle the full lifecycle from concept and design through to launch and ongoing maintenance.',
+    description: 'iOS and Android app development for Camberley businesses and startups. We handle the whole process from concept and design through to launch and ongoing maintenance.',
     link: '/development/mobile-app-development',
   },
   {
@@ -53,11 +53,11 @@ const faqData = [
   },
   {
     question: 'Can you help Camberley retailers with e-commerce websites?',
-    answer: 'Absolutely. Camberley has a strong retail community, and we help local retailers expand online with custom e-commerce websites. We build on platforms like Shopify and WooCommerce, or create fully bespoke solutions, with integrated payment processing, stock management, and SEO optimisation.',
+    answer: 'Yes. Camberley has a strong retail community, and we help local retailers sell online with custom e-commerce websites. We build on Shopify and WooCommerce, or create fully custom solutions with payment processing, stock management, and SEO built in.',
   },
   {
     question: 'How much does IT support cost for a small business in Camberley?',
-    answer: 'IT support costs depend on the number of users and the level of service required. Our managed IT support packages for small businesses typically start from around £30-50 per user per month. We offer a free consultation to assess your needs and provide a tailored quote.',
+    answer: 'IT support costs depend on the number of users and the level of service you need. Our managed IT support packages for small businesses typically start from around £30-50 per user per month. We offer a free consultation to understand your situation and give you a proper quote.',
   },
   {
     question: 'Do you offer cybersecurity services for Camberley professional services firms?',
@@ -126,7 +126,7 @@ const Camberley = () => {
             <span className="text-accent-dark">Camberley</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
-            Camberley is an affluent Surrey town with a strong professional services community, thriving retail sector, and growing business hub around the Surrey Heath area. Joro Services provides web development, IT support, cybersecurity, and digital marketing to help Camberley businesses build a powerful online presence and streamline their technology.
+            Camberley is a well-established Surrey town with a strong professional services community, a busy retail sector, and a growing business hub in the Surrey Heath area. Joro Services provides web development, IT support, cybersecurity, and digital marketing to help Camberley businesses get online and keep their technology running well.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -180,7 +180,7 @@ const Camberley = () => {
             {[
               {
                 title: 'We Understand the Surrey Heath Market',
-                text: 'Camberley is the commercial heart of Surrey Heath, with a business community that values quality and professionalism. We deliver digital services that reflect those standards — polished websites, reliable IT systems, and marketing strategies that generate results.',
+                text: 'Camberley is the commercial heart of Surrey Heath, with a business community that values quality and professionalism. We deliver digital services that match those standards: polished websites, reliable IT systems, and marketing that actually generates results.',
               },
               {
                 title: 'Close Enough for a Same-Day Visit',
@@ -192,7 +192,7 @@ const Camberley = () => {
               },
               {
                 title: 'Trusted by Professional Services Firms',
-                text: 'We understand the specific needs of accountants, solicitors, financial advisers, and consultancies — from GDPR-compliant data handling and secure client portals to professional branding and local search visibility.',
+                text: 'We understand the specific needs of accountants, solicitors, financial advisers, and consultancies, from GDPR-compliant data handling and secure client portals to professional branding and local search visibility.',
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">

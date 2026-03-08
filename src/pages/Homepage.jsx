@@ -20,25 +20,25 @@ const serviceCategories = [
   {
     icon: Palette,
     title: 'Creative Solutions',
-    desc: 'Conversion-focused website design, branding, and UI/UX that turn visitors into customers.',
+    desc: 'Website design, branding, and UI/UX that look great and actually get people to take action.',
     path: '/creative-solutions',
   },
   {
     icon: Code2,
     title: 'Development',
-    desc: 'Scalable web and mobile applications built with React, Next.js, and cloud-native technologies.',
+    desc: 'Web and mobile apps built with React, Next.js, and modern cloud tools. Made to grow with you.',
     path: '/development',
   },
   {
     icon: BarChart3,
     title: 'Digital Marketing',
-    desc: 'SEO, PPC, and content strategies that deliver measurable ROI and sustainable growth.',
+    desc: 'SEO, PPC, and content that actually brings in leads and keeps your business growing.',
     path: '/digital-marketing',
   },
   {
     icon: Shield,
     title: 'Managed IT & Security',
-    desc: 'AWS-certified cloud infrastructure, 24/7 IT support, and enterprise-grade cybersecurity.',
+    desc: 'AWS-certified cloud setup, round-the-clock IT support, and proper cybersecurity for your business.',
     path: '/technical-services',
   },
 ];
@@ -68,7 +68,7 @@ const Homepage = () => (
             <span className="text-accent">for Lasting Growth</span>
           </h1>
           <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
-            We design, build, and manage the technology that powers your business. From cloud infrastructure and cybersecurity to web applications and digital marketing &mdash; all under one roof.
+            We design, build, and look after the tech that keeps your business running. Cloud, security, web apps, marketing. Everything in one place.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-3">
             <Link
@@ -95,10 +95,10 @@ const Homepage = () => (
         <div className="text-center mb-14">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            End-to-End Technology Services
+            Everything Your Business Needs, Tech-wise
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            From scalable applications to secure infrastructure, we deliver solutions designed for lasting impact.
+            Apps, infrastructure, security, marketing. We handle it all so you can focus on running your business.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -140,7 +140,7 @@ const Homepage = () => (
             </h2>
           </div>
           <p className="text-gray-500 lg:text-right">
-            From scalable web and mobile applications to secure cloud infrastructure, we deliver end-to-end solutions designed for lasting impact.
+            Web apps, mobile apps, cloud infrastructure, security. We build what you need and make sure it keeps working.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -175,7 +175,7 @@ const Homepage = () => (
               One Partner. Every Technology Need.
             </h3>
             <p className="text-gray-400 mb-6 text-sm sm:text-base leading-relaxed">
-              Stop juggling multiple vendors. From cloud infrastructure to marketing campaigns, we deliver integrated solutions that work together.
+              Stop dealing with five different agencies. We handle your cloud, your website, your marketing, and your IT. One team, one bill.
             </p>
             <Link
               to="/getintouch"
@@ -199,7 +199,7 @@ const Homepage = () => (
               Enterprise expertise. SMB pricing.
             </h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
-              We bring the same rigour and expertise that large enterprises expect, but at a scale and price point built for growing businesses. No junior handoffs &mdash; the people you speak to are the people who do the work.
+              We bring the same quality of work that big companies get, but at prices that make sense for smaller businesses. The people you talk to are the people doing the work. No passing you off to juniors.
             </p>
             <ul className="space-y-4">
               {[

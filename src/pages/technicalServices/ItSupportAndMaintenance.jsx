@@ -12,7 +12,7 @@ const services = [
     icon: FaClock,
     title: '24/7 Monitoring & Response',
     description:
-      'We proactively monitor your servers, workstations, and cloud environments around the clock \u2014 resolving issues before they escalate.',
+      'We proactively monitor your servers, workstations, and cloud environments around the clock, resolving issues before they escalate.',
   },
   {
     icon: FaShieldAlt,
@@ -30,7 +30,7 @@ const services = [
     icon: FaHeadset,
     title: 'Helpdesk & Remote Support',
     description:
-      'Our team resolves user issues quickly through remote access, live chat, or on\u2011site visits. No ticket is too small or too technical.',
+      'Our team resolves user issues quickly through remote access, live chat, or on-site visits. No ticket is too small or too technical.',
   },
 ]
 
@@ -79,7 +79,7 @@ const faqData = [
   {
     question: 'How much does IT support cost per month?',
     answer:
-      'IT support costs depend on the number of users, devices, and level of service required. Our plans typically start from \u00a330 per user per month for basic support, with comprehensive managed services from \u00a350 per user per month. Contact us for a tailored quote based on your specific needs.',
+      'It depends on how many users and devices you have and what level of support you need. Our plans start from \u00a330 per user per month for basic support, with full managed services from \u00a350 per user per month. Get in touch and we will give you a quote based on your setup.',
   },
 ]
 

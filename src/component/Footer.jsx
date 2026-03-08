@@ -14,8 +14,8 @@ const Footer = () => {
               Joro<span className="text-accent-light">Services</span>
             </Link>
             <p className="mt-5 text-gray-400 text-sm leading-relaxed">
-              Empowering businesses with tailored digital marketing,
-              development, and design solutions that drive growth and engagement.
+              We help UK businesses with digital marketing, web development,
+              and design. From SEO and PPC to custom web apps and IT support.
             </p>
             <div className="mt-5 space-y-2">
               <p className="text-gray-400 text-sm">

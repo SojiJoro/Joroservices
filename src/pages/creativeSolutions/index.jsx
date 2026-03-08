@@ -9,37 +9,37 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas';
 const creativeServices = [
   {
     title: 'Website Design',
-    description: 'Custom-crafted websites that balance aesthetics with usability, built to impress and convert.',
+    description: 'Good-looking websites that are easy to use and actually get people to take action.',
     slug: 'website-design',
   },
   {
     title: 'Graphic Design and Branding',
-    description: 'Create a consistent brand identity with logos, typography, colours, and marketing visuals.',
+    description: 'Build a brand that looks the same everywhere, from your logo and fonts to your colours and marketing materials.',
     slug: 'graphic-design-and-branding',
   },
   {
     title: 'User Interface and Experience',
-    description: 'Intuitive interfaces designed for smooth user journeys and higher engagement across platforms.',
+    description: 'Interfaces that make sense to your users so they stick around and come back.',
     slug: 'user-interface-and-experience',
   },
 ];
 
 const creativeBenefits = [
   {
-    title: 'Tailored Visual Identity',
-    description: 'We help your brand visually communicate its mission, values, and edge — beautifully and clearly.',
+    title: 'A Look That Fits Your Brand',
+    description: 'We help your brand show what it stands for through visuals that are clear and memorable.',
   },
   {
-    title: 'High-Conversion Design',
-    description: 'Every layout, element, and CTA is optimised to move your audience toward action.',
+    title: 'Design That Gets Results',
+    description: 'Every layout, button, and page element is set up to get your visitors to do what you need them to do.',
   },
   {
-    title: 'Unified Brand Consistency',
-    description: 'From your logo to your website and beyond, we make sure your brand speaks with one voice.',
+    title: 'Consistent Everywhere',
+    description: 'From your logo to your website and everything in between, we make sure it all looks and feels like you.',
   },
   {
-    title: 'User-Centric Approach',
-    description: 'Our UI/UX solutions are grounded in real user behaviour, ensuring seamless experiences.',
+    title: 'Built Around Real Users',
+    description: 'Our design work is based on how people actually use your product, not guesswork.',
   },
 ];
 
@@ -67,10 +67,10 @@ const CreativeSolutions = () => (
         <div className="max-w-3xl">
           <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Creative Solutions</p>
           <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Make Your Brand Unforgettable with World-Class Design
+            Design That Makes People Remember Your Brand
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
-            We help businesses tell better stories through striking design, clean UI, and intuitive UX — so your customers remember and return.
+            We help businesses look their best online. Clean design, simple navigation, and the kind of experience that keeps people coming back.
           </p>
           <Link
             to="/getintouch"
@@ -129,8 +129,8 @@ const CreativeSolutions = () => (
     {/* CTA */}
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Make a Lasting Impression?</h2>
-        <p className="text-gray-400 mb-8">Let us craft a visual identity that sets you apart from the competition.</p>
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">Want Your Brand to Stand Out?</h2>
+        <p className="text-gray-400 mb-8">Let's create a look that makes you different from everyone else in your space.</p>
         <Link
           to="/getintouch"
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"

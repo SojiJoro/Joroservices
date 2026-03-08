@@ -4,7 +4,7 @@ const services = [
   {
     title: 'Paid Advertising',
     description:
-      'Attract leads and spark conversations through strategic ad campaigns tailored to your target audience.',
+      'Attract leads and start real conversations through ad campaigns built around your target audience.',
   },
   {
     title: 'SEO',
@@ -14,12 +14,12 @@ const services = [
   {
     title: 'Social Media',
     description:
-      'Foster brand loyalty and grow your community with compelling and consistent social media engagement.',
+      'Build a loyal following with regular, quality social media posts that people actually engage with.',
   },
   {
     title: 'Content Marketing',
     description:
-      'Strengthen brand awareness by delivering valuable content through emails, blog posts, digital PR, and more.',
+      'Get your name out there with useful content, including emails, blog posts, digital PR, and more.',
   },
 ];
 
@@ -46,32 +46,32 @@ const holisticBenefits = [
   {
     title: 'Tap into Expert Knowledge',
     description:
-      'Leverage our extensive in-house expertise with access to a dedicated team of over 100 professionals.',
+      'Get access to our team\'s experience, with a dedicated group of over 100 professionals ready to help.',
   },
   {
-    title: 'Seamlessly Align with Your Business',
+    title: 'We Get to Know Your Business',
     description:
-      'We fully embed ourselves in your business, gaining a deep understanding of your goals, vision, and preferences.',
+      'We take the time to understand your goals, your vision, and what matters to you before we start any work.',
   },
   {
     title: 'Maximize Your Marketing Budget',
     description:
-      'Save money by centralizing all your outsourced marketing services under one streamlined solution.',
+      'Save money by keeping all your marketing services with one team instead of juggling multiple agencies.',
   },
   {
     title: 'Save Time and Hassle',
     description:
-      'Avoid the overhead of managing multiple vendors by partnering with a single, full-service team.',
+      'Stop spending time managing multiple vendors. Work with one team that handles everything.',
   },
   {
     title: 'Get Results That Matter',
     description:
-      'We\'re results-driven and committed to helping you achieve measurable success across all channels.',
+      'We focus on results you can actually measure, across every channel we manage for you.',
   },
   {
-    title: 'Unified Omnichannel Strategy',
+    title: 'One Strategy Across All Channels',
     description:
-      'With our integrated team covering every platform, we deliver a consistent and effective omnichannel approach.',
+      'Our team covers every platform, so your messaging stays consistent and works together instead of in silos.',
   },
 ];
 
@@ -80,7 +80,7 @@ const HolisticBenefits = () => {
     <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-10">
-          Elevate Your Marketing Strategy with a Holistic Retainer Approach
+          Get More From Your Marketing With a Retainer
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -106,13 +106,12 @@ const MarketingServices = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Expertise</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-            Your One-Stop Hub for Marketing Excellence
+            All Your Marketing, One Team
           </h2>
           <p className="mt-4 text-gray-600 text-sm max-w-2xl">
-            Eye-catching design is key to making a powerful first impression and
-            building long-term customer connections. Our team crafts distinctive
-            visuals that help your business stand out, capturing attention while
-            staying true to your brand's voice and objectives.
+            Good design makes a strong first impression and keeps customers coming back.
+            Our team creates visuals that help your business stand out while
+            staying true to your brand.
           </p>
 
           <ServiceCards />

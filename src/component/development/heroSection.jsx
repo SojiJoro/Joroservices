@@ -13,7 +13,7 @@ const DevHeroSection = () => {
           <span className="text-accent">Built to Scale</span>
         </h1>
         <p className="text-lg text-white/80 max-w-2xl mt-4 leading-relaxed">
-          Custom web applications, mobile apps, and APIs built with React, Next.js, and cloud-native technologies. Fast, secure, and designed for growth. From MVPs to enterprise platforms.
+          We build web applications, mobile apps, and APIs using React, Next.js, and cloud technologies. Fast, secure, and built to grow with you. Whether you need an MVP or a full platform.
         </p>
         <Link
           to="/getintouch"

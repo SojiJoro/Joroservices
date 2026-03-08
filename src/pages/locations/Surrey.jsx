@@ -8,32 +8,32 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     title: 'Web Development',
-    description: 'Custom websites, e-commerce platforms, and web applications for Surrey businesses. Built with modern frameworks for performance, accessibility, and search engine visibility.',
+    description: 'Websites, online shops, and web applications for Surrey businesses. We build with modern frameworks and focus on speed, accessibility, and getting you found on Google.',
     link: '/development/web-development',
   },
   {
     title: 'SEO & Digital Marketing',
-    description: 'Local and national SEO, PPC advertising, social media marketing, and content strategy to help Surrey businesses attract more customers and outperform competitors online.',
+    description: 'Local and national SEO, PPC advertising, social media marketing, and content planning to help Surrey businesses bring in more customers and stay ahead of competitors.',
     link: '/digital-marketing',
   },
   {
     title: 'IT Support & Managed Services',
-    description: 'Remote and on-site IT support across Surrey. Helpdesk, server management, network administration, Microsoft 365, and proactive monitoring for businesses of all sizes.',
+    description: 'Remote and on-site IT support across Surrey. Helpdesk, server management, network admin, Microsoft 365, and ongoing monitoring for businesses of all sizes.',
     link: '/technical-services/it-support-and-maintenance',
   },
   {
     title: 'Cybersecurity',
-    description: 'Protect your Surrey business with penetration testing, vulnerability assessments, Cyber Essentials certification, GDPR compliance, and security awareness training.',
+    description: 'Keep your Surrey business safe with penetration testing, vulnerability assessments, Cyber Essentials certification, GDPR compliance, and security awareness training.',
     link: '/technical-services/cybersecurity',
   },
   {
     title: 'Mobile App Development',
-    description: 'Cross-platform iOS and Android applications for Surrey businesses. From internal tools and staff apps to customer-facing products, we handle the full development lifecycle.',
+    description: 'iOS and Android apps for Surrey businesses. Whether you need internal tools for your team or a customer-facing product, we take care of the whole process from start to finish.',
     link: '/development/mobile-app-development',
   },
   {
     title: 'Cloud Infrastructure',
-    description: 'AWS, Azure, and Google Cloud consulting, migration, and ongoing management for Surrey organisations looking to modernise, scale, and reduce IT costs.',
+    description: 'AWS, Azure, and Google Cloud consulting, migration, and ongoing management for Surrey organisations that want to update their systems, grow, and cut IT costs.',
     link: '/technical-services/cloud-infrastructure',
   },
 ]
@@ -45,7 +45,7 @@ const faqData = [
   },
   {
     question: 'What makes Surrey a strong location for business technology services?',
-    answer: 'Surrey benefits from its position along the M3 and A3 corridors, creating a tech-rich belt between London and Hampshire. The county is home to major employers, a highly educated workforce, thriving professional services, and a strong startup ecosystem — all of which demand reliable, expert digital services.',
+    answer: 'Surrey sits along the M3 and A3 corridors, creating a tech-rich belt between London and Hampshire. The county has major employers, a well-educated workforce, busy professional services firms, and a strong startup scene. All of that creates real demand for reliable, expert digital services.',
   },
   {
     question: 'Can you help Surrey businesses compete with London agencies?',
@@ -57,7 +57,7 @@ const faqData = [
   },
   {
     question: 'How do you support Surrey professional services firms?',
-    answer: 'Surrey has a high concentration of law firms, accountancy practices, wealth managers, and consultancies. We support these businesses with professional website design, local SEO, GDPR-compliant IT infrastructure, secure client portals, and ongoing IT maintenance — ensuring their technology is as polished and reliable as the services they provide.',
+    answer: 'Surrey has a high concentration of law firms, accountancy practices, wealth managers, and consultancies. We support these businesses with professional website design, local SEO, GDPR-compliant IT infrastructure, secure client portals, and ongoing IT maintenance. The goal is to make sure their technology is as polished and reliable as the services they provide.',
   },
   {
     question: 'What is your response time for IT issues in Surrey?',
@@ -121,7 +121,7 @@ const Surrey = () => {
             <span className="text-accent-dark">Surrey</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
-            Surrey is one of England's most affluent and commercially active counties — home to a thriving tech corridor along the M3 and A3, a strong professional services sector, and thousands of ambitious businesses within easy reach of London. Joro Services provides web development, IT support, digital marketing, and cybersecurity to businesses across the county.
+            Surrey is one of England's most commercially active counties, with a busy tech corridor along the M3 and A3, a strong professional services sector, and thousands of businesses within easy reach of London. Joro Services provides web development, IT support, digital marketing, and cybersecurity to businesses across the county.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -175,15 +175,15 @@ const Surrey = () => {
             {[
               {
                 title: 'London Quality Without London Prices',
-                text: 'Surrey businesses deserve the same calibre of digital services as central London firms, without the inflated agency fees. We deliver enterprise-grade web development, IT infrastructure, and marketing strategy at rates that make sense for businesses outside the capital.',
+                text: 'Surrey businesses deserve the same quality of digital services as central London firms, without the inflated agency fees. We deliver high-quality web development, IT infrastructure, and marketing at rates that make sense for businesses outside the capital.',
               },
               {
-                title: 'A Single Partner for Your Entire Digital Ecosystem',
-                text: 'Surrey businesses no longer need to juggle separate providers for web design, SEO, IT support, and cybersecurity. We manage your complete digital presence with a single team that understands how each element connects — from server performance affecting your search rankings to security practices protecting your reputation.',
+                title: 'One Partner for Everything Digital',
+                text: 'Surrey businesses no longer need to juggle separate providers for web design, SEO, IT support, and cybersecurity. We manage your whole online presence with one team that understands how it all connects. Server performance affects your search rankings, and security practices protect your reputation. We handle both.',
               },
               {
                 title: 'Deep Roots in the Surrey and Hampshire Region',
-                text: 'Based in Aldershot on the Surrey-Hampshire border, we have a genuine understanding of the local business landscape. We know the market dynamics, the competitive pressures, and the opportunities that Surrey businesses face, and we tailor our services accordingly.',
+                text: 'Based in Aldershot on the Surrey-Hampshire border, we genuinely understand the local business landscape. We know the competition, the pressures, and the opportunities Surrey businesses deal with, and we shape our work to fit.',
               },
               {
                 title: 'Built for the Surrey Business Community',

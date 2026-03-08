@@ -5,17 +5,17 @@ const faqData = [
   {
     question: 'What digital marketing services do you offer?',
     answer:
-      'We specialise in SEO, PPC, social media management, email marketing, and content strategy. Each campaign is tailored to meet your unique business goals.',
+      'We cover SEO, PPC advertising, social media management, email marketing, and content strategy. We build each campaign around what your business actually needs.',
   },
   {
     question: 'How do you measure campaign success?',
     answer:
-      'We track key metrics such as traffic growth, conversion rates, engagement levels, and ROI using industry-leading analytics tools to ensure transparent reporting.',
+      'We look at traffic growth, conversion rates, engagement, and return on investment. You get regular reports so you can see exactly what is working.',
   },
   {
     question: 'Can you work with our in-house team?',
     answer:
-      'Absolutely. We collaborate seamlessly with your internal teams, offering strategic guidance, training, and full support to amplify your existing efforts.',
+      'Yes, we do this all the time. We can work alongside your team, help with strategy, offer training, and fill in the gaps where you need extra support.',
   },
   {
     question: 'What is your pricing model?',
@@ -25,7 +25,7 @@ const faqData = [
   {
     question: 'How long until we see results?',
     answer:
-      'While paid campaigns can yield quick wins, organic strategies like SEO typically take 3-6 months to fully mature. We set realistic timelines and milestones from the start.',
+      'Paid campaigns like Google Ads can bring results quickly. SEO takes longer, usually 3 to 6 months before you see real traction. We will be upfront about timelines from the start.',
   },
 ];
 

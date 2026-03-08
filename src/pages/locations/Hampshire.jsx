@@ -8,32 +8,32 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     title: 'Web Development',
-    description: 'Custom websites, e-commerce stores, and web applications for Hampshire businesses. Built with modern frameworks for speed, security, and search visibility.',
+    description: 'Websites, online shops, and web applications for Hampshire businesses. We use modern frameworks and make sure everything loads fast, stays secure, and ranks well.',
     link: '/development/web-development',
   },
   {
     title: 'SEO & Digital Marketing',
-    description: 'Local and national SEO, Google Ads, social media marketing, and content strategy to help Hampshire businesses attract more customers online.',
+    description: 'Local and national SEO, Google Ads, social media marketing, and content planning to help Hampshire businesses bring in more customers online.',
     link: '/digital-marketing',
   },
   {
     title: 'IT Support & Managed Services',
-    description: 'Remote and on-site IT support across Hampshire. Helpdesk, server management, Microsoft 365 administration, and proactive monitoring.',
+    description: 'Remote and on-site IT support across Hampshire. Helpdesk, server management, Microsoft 365 admin, and ongoing monitoring to catch problems early.',
     link: '/technical-services/it-support-and-maintenance',
   },
   {
     title: 'Cybersecurity',
-    description: 'Protect your Hampshire business with penetration testing, vulnerability assessments, security audits, and GDPR compliance support.',
+    description: 'Keep your Hampshire business protected with penetration testing, vulnerability assessments, security audits, and GDPR compliance support.',
     link: '/technical-services/cybersecurity',
   },
   {
     title: 'Mobile App Development',
-    description: 'Cross-platform iOS and Android apps for Hampshire businesses. From staff management tools to customer-facing applications.',
+    description: 'iOS and Android apps for Hampshire businesses. Whether you need a staff management tool or a customer-facing app, we can build it.',
     link: '/development/mobile-app-development',
   },
   {
     title: 'Cloud Infrastructure',
-    description: 'AWS, Azure, and Google Cloud consulting, migration, and management for Hampshire organisations looking to modernise their IT.',
+    description: 'AWS, Azure, and Google Cloud consulting, migration, and management for Hampshire organisations that want to bring their IT up to date.',
     link: '/technical-services/cloud-infrastructure',
   },
 ]
@@ -45,11 +45,11 @@ const faqData = [
   },
   {
     question: 'What makes Joro Services different from other Hampshire digital agencies?',
-    answer: 'We are the only Hampshire-based agency that combines IT consultancy, web development, digital marketing, and creative solutions under one roof. This means you get a single partner for your entire digital presence, rather than managing multiple suppliers.',
+    answer: 'We are the only agency in Hampshire that does IT consultancy, web development, digital marketing, and creative work all in one place. That means one partner for everything digital, instead of dealing with multiple suppliers.',
   },
   {
     question: 'Can you help Hampshire businesses with local SEO?',
-    answer: 'Absolutely. Local SEO is one of our core specialities. We optimise your Google Business Profile, build local citations, create location-specific content, and manage review strategies to help Hampshire businesses rank prominently in local search results and Google Maps.',
+    answer: 'Yes, local SEO is one of our main strengths. We optimise your Google Business Profile, build local citations, create location-specific content, and manage your reviews to help Hampshire businesses show up higher in local search results and Google Maps.',
   },
   {
     question: 'Do you work with public sector organisations in Hampshire?',
@@ -118,7 +118,7 @@ const Hampshire = () => {
             <span className="text-accent-dark">Hampshire</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
-            From Aldershot to Winchester, Basingstoke to Portsmouth — Joro Services provides web development, IT support, digital marketing, and cybersecurity to businesses across Hampshire. We combine local knowledge with technical expertise to help Hampshire businesses compete online.
+            From Aldershot to Winchester and Basingstoke to Portsmouth, Joro Services provides web development, IT support, digital marketing, and cybersecurity to businesses across Hampshire. We pair local knowledge with real technical skill to help Hampshire businesses compete online.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -175,16 +175,16 @@ const Hampshire = () => {
                 text: 'We are based in Aldershot, Hampshire, giving us local presence for on-site visits and face-to-face meetings. Our team also works remotely with clients across the UK and internationally.',
               },
               {
-                title: 'Full-Service Digital Partner',
-                text: 'Hampshire businesses no longer need to hire separate agencies for web design, SEO, IT support, and cybersecurity. We deliver all of these services with a single team that understands your entire digital ecosystem.',
+                title: 'One Team for Everything Digital',
+                text: 'Hampshire businesses no longer need to hire separate agencies for web design, SEO, IT support, and cybersecurity. We handle all of it with a single team that understands how everything fits together.',
               },
               {
                 title: 'Public and Private Sector Experience',
                 text: 'We work with Hampshire-based businesses, charities, healthcare providers, and public sector organisations. We understand procurement processes, data compliance, and the specific needs of different sectors.',
               },
               {
-                title: 'Results-Driven Approach',
-                text: 'Every project starts with clear objectives and measurable outcomes. Whether it is increasing organic traffic, reducing IT downtime, or launching a new application, we focus on delivering tangible business results.',
+                title: 'Focused on What Actually Matters',
+                text: 'Every project starts with clear goals. Whether it is increasing organic traffic, reducing IT downtime, or launching a new application, we stay focused on getting you real, measurable results.',
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">

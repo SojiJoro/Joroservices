@@ -144,9 +144,9 @@ const Contact = () => {
                 <div className="flex flex-col gap-4 relative">
                   <div className="absolute left-[7px] top-3 bottom-3 w-px bg-gray-700" />
                   {[
-                    'An expert contacts you after reviewing your requirements.',
-                    'If necessary, we provide an NDA and initiate Discovery.',
-                    'We provide a project proposal with estimates and timeline.',
+                    'We review what you need and get back to you quickly.',
+                    'If needed, we sign an NDA before discussing anything sensitive.',
+                    'You get a clear proposal with costs, scope, and timeline.',
                   ].map((text, i) => (
                     <div key={i} className="flex items-start gap-4 relative">
                       <span className="w-[15px] h-[15px] bg-accent rounded-full flex-shrink-0 mt-0.5 relative z-10" />

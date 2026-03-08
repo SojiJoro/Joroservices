@@ -9,7 +9,7 @@ export const insightData = [
     },
     date: "15.01.2026",
     summary:
-      "Our team worked with a London-based healthcare provider to design and deploy a secure patient portal, reducing administrative workload by 40% and improving appointment booking rates within the first quarter.",
+      "We worked with a London healthcare provider to build a secure patient portal. It cut their admin workload by 40% and improved appointment booking rates in the first quarter.",
   },
   {
     title: "Five Cloud Migration Mistakes Businesses Should Avoid",
@@ -21,7 +21,7 @@ export const insightData = [
     },
     date: "02.12.2025",
     summary:
-      "Moving to the cloud is a strategic decision that requires careful planning. Based on our experience migrating SMEs to AWS and Azure, here are the five most common pitfalls and how to avoid them.",
+      "Moving to the cloud takes proper planning. Based on what we have seen migrating SMEs to AWS and Azure, here are the five most common mistakes and how to avoid them.",
   },
   {
     title: "Why Every Small Business Needs a Cybersecurity Strategy in 2026",
@@ -33,6 +33,6 @@ export const insightData = [
     },
     date: "20.11.2025",
     summary:
-      "Cyber threats are no longer just a concern for large enterprises. We break down why SMEs are increasingly targeted and the practical steps any business can take to protect itself.",
+      "Cyber threats are not just a big business problem anymore. We look at why SMEs are being targeted more often and what you can actually do to protect your business.",
   },
 ];

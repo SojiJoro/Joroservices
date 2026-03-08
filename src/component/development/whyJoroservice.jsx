@@ -4,24 +4,24 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const features = [
   {
-    title: 'Bespoke Web Solutions',
+    title: 'Custom-Built Websites',
     description:
-      'We build custom websites tailored to your brand and business objectives, ensuring a seamless user experience and robust performance.',
+      'We build websites from scratch to match your brand and your goals. Everything is designed to work well and be easy for your visitors to use.',
   },
   {
-    title: 'Proven Track Record',
+    title: 'We Have the Runs on the Board',
     description:
-      'With over a decade of experience and hundreds of successful projects, our team delivers solutions you can trust.',
+      'Over ten years and hundreds of projects. We have done this before, and we know how to get it right.',
   },
   {
-    title: 'Easy Management',
+    title: 'Easy to Manage Yourself',
     description:
-      'Our sites come with intuitive content management systems, giving you full control over updates without technical overhead.',
+      'Your site comes with a simple content management system, so you can update things yourself without needing a developer every time.',
   },
   {
-    title: 'Dedicated Support',
+    title: 'Support When You Need It',
     description:
-      'From initial training to ongoing maintenance, our support team ensures your site stays secure, updated, and optimised.',
+      'We train you up when the site launches, and we are here for ongoing maintenance to keep everything secure and running well.',
   },
 ];
 

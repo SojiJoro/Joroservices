@@ -11,9 +11,9 @@ const offerings = [
   {
     title: 'Custom Web Development',
     image: '/bg8.webp',
-    tagline: 'Tailored websites built for performance and scale',
+    tagline: 'Websites that work hard and handle growth',
     desc:
-      'Our team designs and develops secure, responsive websites that grow with your business. From informative sites to complex e-commerce platforms, we deliver solutions focused on reliability and user experience.',
+      'We design and build secure, responsive websites that grow with your business. From simple brochure sites to full e-commerce platforms, we focus on making things reliable and easy to use.',
     category: [
       { title: 'Front-end Engineering', icon: LiaLaptopCodeSolid },
       { title: 'Back-end Development', icon: FaDatabase },
@@ -23,9 +23,9 @@ const offerings = [
   {
     title: 'Mobile App Solutions',
     image: '/bg9.webp',
-    tagline: 'Native and cross-platform applications',
+    tagline: 'Native and cross-platform apps',
     desc:
-      'We build intuitive mobile apps for iOS and Android, ensuring a seamless experience across devices. Whether native, hybrid or cross-platform, our apps are designed to engage users and drive retention.',
+      'We build mobile apps for iOS and Android that feel natural and work properly on every device. Whether native, hybrid, or cross-platform, we make apps that people actually want to keep using.',
     category: [
       { title: 'iOS & Android', icon: FaLaptopCode },
       { title: 'Cross-platform', icon: GiPlatform },
@@ -35,9 +35,9 @@ const offerings = [
   {
     title: 'Data & Analytics Services',
     image: '/pexel3.webp',
-    tagline: 'Insights to power smarter decisions',
+    tagline: 'Make sense of your data and use it',
     desc:
-      'Harness your data with end-to-end management, integration and analytics. Our solutions ensure data quality, security and accessibility, turning raw information into actionable insights that fuel growth.',
+      'We help you manage, connect, and understand your data. From keeping it clean and secure to building dashboards that show you what is actually going on, so you can make better decisions.',
     category: [
       { title: 'Data Integration', icon: MdCloudUpload },
       { title: 'Security & Compliance', icon: BsShieldCheck },

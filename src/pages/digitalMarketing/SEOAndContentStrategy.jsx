@@ -29,7 +29,7 @@ const serviceCards = [
     title: 'Know Exactly Where You Stand',
     label: 'SEO Audit & Strategy',
     description:
-      'We audit your website\'s current SEO performance — rankings, technical issues, content gaps, backlink profile — and build a strategy tailored to your business and your market.',
+      'We audit your website\'s current SEO performance, including rankings, technical issues, content gaps, and backlink profile. Then we build a strategy that fits your business and your market.',
     items: [
       'Technical SEO audit',
       'Keyword research',
@@ -43,7 +43,7 @@ const serviceCards = [
     title: 'Fix What Google Can\'t See',
     label: 'Technical SEO',
     description:
-      'Site speed, mobile responsiveness, Core Web Vitals, structured data, crawlability — the technical foundation that determines whether Google even considers ranking you.',
+      'Site speed, mobile responsiveness, Core Web Vitals, structured data, and crawlability. This is the technical foundation that determines whether Google even considers ranking you.',
     items: [
       'Site speed optimisation',
       'Mobile audit',
@@ -51,14 +51,14 @@ const serviceCards = [
       'Sitemap and robots.txt configuration',
       'Core Web Vitals improvements',
     ],
-    note: 'This is where Joro\'s technical infrastructure expertise adds genuine value — site performance is an infrastructure problem.',
+    note: 'This is where Joro\'s technical infrastructure expertise adds genuine value. Site performance is an infrastructure problem.',
   },
   {
     icon: FaPenFancy,
     title: 'Content That Ranks and Converts',
     label: 'Content Strategy & Creation',
     description:
-      'Keyword-targeted blog posts, landing pages, and website copy created by specialist content writers who understand both SEO and your industry. Not AI-generated fluff — real content for real readers.',
+      'Keyword-targeted blog posts, landing pages, and website copy created by specialist content writers who understand both SEO and your industry. Not AI-generated fluff. Real content for real readers.',
     items: [
       'Monthly content calendar',
       'Keyword-targeted articles',
@@ -145,12 +145,12 @@ const faqData = [
   {
     question: 'Do you guarantee rankings?',
     answer:
-      'No. Anyone who guarantees specific Google rankings is being dishonest. What we guarantee is a clear strategy, quality content, technical best practices, and transparent reporting. The results follow from doing the right things consistently.',
+      'No. Anyone who guarantees specific Google rankings is not being straight with you. What we guarantee is a clear strategy, quality content, technical best practices, and transparent reporting. The results follow from doing the right things consistently.',
   },
   {
     question: 'Who writes the content?',
     answer:
-      'Our specialist content writers — real people who research your industry and write for human readers first, search engines second. We don\'t use AI-generated content.',
+      'Our specialist content writers. Real people who research your industry and write for human readers first, search engines second. We don\'t use AI-generated content.',
   },
   {
     question: 'Can you work with our existing website?',
@@ -160,12 +160,12 @@ const faqData = [
   {
     question: 'What do we need to provide?',
     answer:
-      'Access to Google Analytics, Google Search Console, and your website CMS. Beyond that, we handle everything — though we\'ll occasionally need your input on industry-specific topics.',
+      'Access to Google Analytics, Google Search Console, and your website CMS. Beyond that, we handle everything, though we\'ll occasionally need your input on industry-specific topics.',
   },
   {
     question: 'How is Joro different from a pure SEO agency?',
     answer:
-      'We combine technical infrastructure expertise with SEO strategy. Site speed, server configuration, Core Web Vitals — these are infrastructure problems that affect your rankings. Most SEO agencies can\'t fix them. We can.',
+      'We combine technical infrastructure expertise with SEO strategy. Site speed, server configuration, and Core Web Vitals are infrastructure problems that affect your rankings. Most SEO agencies can\'t fix them. We can.',
   },
 ]
 
@@ -212,12 +212,12 @@ const SEOAndContentStrategy = () => {
             SEO & Content Strategy
           </p>
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">
-            Get Found on Google — Without the Guesswork
+            Get Found on Google. No Guesswork.
           </h1>
           <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
             You built a great business. Now let people find it. Our SEO
             specialists handle keyword research, content strategy, technical
-            optimisation, and ongoing performance tracking — so you show up
+            optimisation, and ongoing performance tracking, so you show up
             when your customers are searching.
           </p>
           <Link
@@ -299,8 +299,8 @@ const SEOAndContentStrategy = () => {
           <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
             Most SEO agencies are great at content but terrible at technical
             infrastructure. Most IT companies don't touch marketing. We bridge
-            the gap — our technical team handles site performance and
-            infrastructure, our SEO specialists handle strategy and content. You
+            the gap. Our technical team handles site performance and
+            infrastructure, and our SEO specialists handle strategy and content. You
             get the full picture from one provider.
           </p>
         </div>

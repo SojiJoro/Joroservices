@@ -8,22 +8,22 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     title: 'Web Development',
-    description: 'Bespoke websites and web applications for Guildford businesses. From professional services firms on the high street to gaming studios, we build fast, modern, SEO-optimised sites.',
+    description: 'Custom websites and web applications for Guildford businesses. From professional services firms on the high street to gaming studios, we build fast, modern, SEO-friendly sites.',
     link: '/development/web-development',
   },
   {
     title: 'Digital Marketing & SEO',
-    description: 'Local SEO, Google Ads, content marketing, and social media strategy tailored to Guildford\'s competitive business landscape and diverse professional community.',
+    description: 'Local SEO, Google Ads, content marketing, and social media strategy designed for Guildford\'s competitive business landscape and its mix of professional services.',
     link: '/digital-marketing/seo-and-content-strategy',
   },
   {
     title: 'IT Support & Maintenance',
-    description: 'Proactive IT support for Guildford businesses. Remote helpdesk, on-site visits, server management, and Microsoft 365 administration to keep your operations running.',
+    description: 'IT support for Guildford businesses that catches problems early. Remote helpdesk, on-site visits, server management, and Microsoft 365 admin to keep your operations running.',
     link: '/technical-services/it-support-and-maintenance',
   },
   {
     title: 'Cybersecurity',
-    description: 'Comprehensive security services for Guildford\'s professional services and tech firms. Penetration testing, compliance audits, data protection, and real-time threat monitoring.',
+    description: 'Full security services for Guildford\'s professional services and tech firms. Penetration testing, compliance audits, data protection, and real-time threat monitoring.',
     link: '/technical-services/cybersecurity',
   },
   {
@@ -33,7 +33,7 @@ const services = [
   },
   {
     title: 'Cloud Infrastructure',
-    description: 'Cloud strategy, migration, and managed services on AWS, Azure, and Google Cloud. We help Guildford businesses modernise their infrastructure for scalability and resilience.',
+    description: 'Cloud strategy, migration, and managed services on AWS, Azure, and Google Cloud. We help Guildford businesses update their infrastructure so it can grow with them and stay reliable.',
     link: '/technical-services/cloud-infrastructure',
   },
 ]
@@ -45,7 +45,7 @@ const faqData = [
   },
   {
     question: 'Do you work with gaming and creative studios in Guildford?',
-    answer: 'Yes. Guildford is one of the UK\'s leading gaming industry hubs, home to studios like EA and Supermassive Games. We provide web development, cloud infrastructure, IT support, and marketing services tailored to the specific needs of creative and gaming companies.',
+    answer: 'Yes. Guildford is one of the UK\'s leading gaming industry hubs, home to studios like EA and Supermassive Games. We provide web development, cloud infrastructure, IT support, and marketing services built around the specific needs of creative and gaming companies.',
   },
   {
     question: 'Can you support businesses near the University of Surrey?',
@@ -61,7 +61,7 @@ const faqData = [
   },
   {
     question: 'What does a website cost for a Guildford-based business?',
-    answer: 'Website costs depend on scope and complexity. A professional business website starts from around £1,500, while bespoke web applications, e-commerce platforms, or sites with complex integrations typically range from £5,000 to £25,000+. We provide a free consultation and detailed quote before any work begins.',
+    answer: 'It depends on scope and complexity. A professional business website starts from around £1,500, while custom web applications, e-commerce platforms, or sites with complex integrations typically range from £5,000 to £25,000+. We offer a free consultation and give you a detailed quote before any work starts.',
   },
 ]
 
@@ -126,7 +126,7 @@ const Guildford = () => {
             <span className="text-accent-dark">Guildford</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
-            Guildford is Surrey's county town and one of the South East's most vibrant business centres — home to a thriving high street, the University of Surrey, and the UK's largest cluster of gaming studios. Joro Services provides expert web development, IT support, and digital marketing to businesses across Guildford and the surrounding area.
+            Guildford is Surrey's county town and one of the South East's busiest business centres, home to a lively high street, the University of Surrey, and the UK's biggest cluster of gaming studios. Joro Services provides web development, IT support, and digital marketing to businesses across Guildford and the surrounding area.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -184,7 +184,7 @@ const Guildford = () => {
               },
               {
                 title: 'Technical and Creative Under One Roof',
-                text: 'Most agencies offer either technical services or marketing. We deliver both — meaning your website, cloud infrastructure, SEO, and cybersecurity are all managed by one team that sees the full picture.',
+                text: 'Most agencies offer either technical services or marketing. We do both, meaning your website, cloud infrastructure, SEO, and cybersecurity are all managed by one team that sees the full picture.',
               },
               {
                 title: 'Competitive Without Compromising Quality',

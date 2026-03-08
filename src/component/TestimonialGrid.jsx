@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     quote:
-      'Their cloud migration plan was on point — we saw a 35% drop in hosting costs and zero downtime during the transition.',
+      'Their cloud migration plan was spot on. We saw a 35% drop in hosting costs and zero downtime during the transition.',
     name: 'James Okonkwo',
     role: 'CTO, PathSync Recruitment',
   },

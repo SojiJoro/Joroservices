@@ -26,7 +26,7 @@ const infraServices = [
     title: 'Databases That Don\'t Keep You Up at Night',
     label: 'Database Administration & Optimisation',
     description:
-      'We set up, manage, and optimise your databases \u2014 whether that\'s AWS RDS, DynamoDB, PostgreSQL, MySQL, or SQL Server. Performance tuning, query optimisation, and monitoring so your applications run fast.',
+      'We set up, manage, and optimise your databases, whether that\'s AWS RDS, DynamoDB, PostgreSQL, MySQL, or SQL Server. Performance tuning, query optimisation, and monitoring so your applications run fast.',
     items: [
       'Database setup/migration',
       'Performance tuning',
@@ -40,7 +40,7 @@ const infraServices = [
     title: 'Automated Backups. Tested Recovery. Peace of Mind.',
     label: 'Backup & Disaster Recovery',
     description:
-      'We configure automated backups with defined retention policies and \u2014 critically \u2014 we test the recovery process regularly. A backup you\'ve never tested is just a hope.',
+      'We configure automated backups with defined retention policies, and we actually test the recovery process regularly. A backup you\'ve never tested is just a hope.',
     items: [
       'Automated backup configuration',
       'Retention policy design',
@@ -69,7 +69,7 @@ const infraServices = [
     title: 'Stop Paying to Store Data You Don\'t Need',
     label: 'Data Storage Optimisation',
     description:
-      'S3 lifecycle policies, archive strategies, storage class optimisation \u2014 we make sure you\'re not paying hot-storage prices for data nobody\'s accessed in two years.',
+      'S3 lifecycle policies, archive strategies, and storage class optimisation. We make sure you\'re not paying hot-storage prices for data nobody\'s accessed in two years.',
     items: [
       'Storage audit',
       'Lifecycle policy implementation',
@@ -86,7 +86,7 @@ const insightServices = [
     title: 'See Your Business at a Glance',
     label: 'Analytics Dashboards',
     description:
-      'Custom dashboards that pull data from your systems and show you the metrics that matter \u2014 revenue, operations, customer data, whatever drives your decisions. Built in tools you can actually use.',
+      'Custom dashboards that pull data from your systems and show you the metrics that matter, like revenue, operations, and customer data. Built in tools you can actually use.',
     items: [
       'Requirements gathering',
       'Data source connection',
@@ -114,7 +114,7 @@ const insightServices = [
     title: 'Fix the Mess Before You Analyse It',
     label: 'Data Cleanup & Structuring',
     description:
-      'Duplicates, missing fields, inconsistent formats, data spread across 15 spreadsheets \u2014 we clean it up, structure it properly, and put it somewhere sensible so you can actually use it.',
+      'Duplicates, missing fields, inconsistent formats, data spread across 15 spreadsheets. We clean it up, structure it properly, and put it somewhere sensible so you can actually use it.',
     items: [
       'Data audit',
       'Deduplication',
@@ -167,7 +167,7 @@ const faqData = [
   {
     question: 'What databases do you work with?',
     answer:
-      'AWS RDS (PostgreSQL, MySQL, SQL Server), DynamoDB, MongoDB, and standard on-prem SQL Server and PostgreSQL installations. If you\'re using something else, we can likely help \u2014 just ask.',
+      'AWS RDS (PostgreSQL, MySQL, SQL Server), DynamoDB, MongoDB, and standard on-prem SQL Server and PostgreSQL installations. If you\'re using something else, we can likely help. Just ask.',
   },
   {
     question: 'Can you build dashboards from our existing spreadsheets?',
@@ -268,8 +268,8 @@ const DataManagement = () => {
           </h1>
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
             From database administration and automated backups to analytics
-            dashboards that show you what's actually happening in your business
-            \u2014 we help SMBs get control of their data. Built on real cloud
+            dashboards that show you what's actually happening in your business.
+            We help SMBs get control of their data. Built on real cloud
             infrastructure experience and a Master's in Data Analytics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -304,7 +304,7 @@ const DataManagement = () => {
                 "Keep It Safe, Keep It Running"
               </p>
               <p className="text-sm text-gray-600 mt-2">
-                The plumbing \u2014 your databases, backups, migrations, and storage.
+                The plumbing: your databases, backups, migrations, and storage.
               </p>
             </div>
             <div className="bg-white rounded-2xl border border-gray-100 p-7 text-center">
@@ -460,8 +460,8 @@ const DataManagement = () => {
             Your Data Should Work For You, Not Against You
           </h2>
           <p className="text-lg mb-8 text-white/80">
-            Book a free data assessment. We'll help you figure out what you need
-            \u2014 and what you don't.
+            Book a free data assessment. We'll help you figure out what you need,
+            and what you don't.
           </p>
           <Link
             to="/getintouch"
