@@ -8,15 +8,13 @@ import {
   TechnicalServicesOverlay,
 } from "./navlinkOverlay";
 
-// eslint-disable-next-line react-refresh/only-export-components
-
 const NavLink = () => {
   const location = useLocation();
-  const [hoveredLink, setHoveredLink] = useState(null); // Store hovered link title
+  const [hoveredLink, setHoveredLink] = useState(null);
 
   return (
-    <div className="hidden lg:flex items-center justify-center w-3/5">
-      <div className="flex flex-row justify-center items-center whitespace-nowrap relative mx-auto w-full tracking-wider">
+    <div className="hidden lg:flex items-center justify-center flex-1">
+      <div className="flex flex-row justify-center items-center whitespace-nowrap relative gap-1">
         {Serv.map((link, i) => (
           <div
             key={i}
@@ -26,22 +24,22 @@ const NavLink = () => {
                 location.pathname === link.path ? null : link.category
               )
             }
-            onMouseLeave={() => setHoveredLink(null)} // Hide dropdown when mouse leaves
+            onMouseLeave={() => setHoveredLink(null)}
           >
             <Link
               to={link.path}
               onClick={() => setHoveredLink(null)}
-              className={`text-[16px] lg:text-[13px] font-semibold relative lg:font-bold hover:bg-neutral-700/70 xl:px-8 lg:px-2 py-2 ${
-                location.pathname === link.path ? "text-accent" : "text-white"
-              } group transition-all duration-300`}
+              className={`text-[13px] font-medium relative px-4 py-2 rounded-lg transition-all duration-200 ${
+                location.pathname === link.path
+                  ? "text-accent-light"
+                  : "text-gray-300 hover:text-white hover:bg-white/5"
+              }`}
             >
               {link.category}
-              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-accent group-hover:scale-x-100 scale-x-0 origin-left transition-transform duration-300 ease-in-out"></span>
             </Link>
 
-            {/* Conditionally Render Only the Hovered Dropdown */}
             {hoveredLink === link.category && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-[6px] bg-black/90 text-white shadow-lg rounded-md z-50">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 z-50">
                 {link.category === "Creative Solutions" && (
                   <CreativeSolutionOverlay />
                 )}

@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const HeroSection = () => {
   return (
-    <section className="grid p-4 pt-16 justify-center grid-cols-1 lg:grid-cols-4 lg:items-center gap-4 min-h-screen bg-white">
+    <section className="grid p-4 pt-28 pb-20 justify-center grid-cols-1 lg:grid-cols-4 lg:items-center gap-4 min-h-screen bg-white">
       {/* Left: Text */}
       <div className="flex lg:col-span-2 flex-col">
         <p className="flex items-center gap-4 pb-4 text-xs">

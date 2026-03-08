@@ -44,7 +44,7 @@ const DesignCard = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 border border-accent-dark hover:shadow-xl transition"
+            className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition"
           >
             <span className="text-sm font-medium text-accent-dark uppercase">
               Service

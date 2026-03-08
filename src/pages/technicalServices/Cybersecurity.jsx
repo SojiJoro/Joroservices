@@ -319,7 +319,7 @@ const Cybersecurity = () => {
       </section>
 
       {/* Section 2: Stats Banner */}
-      <section className="bg-slate-900 text-white py-12 px-4">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-12 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
@@ -531,7 +531,7 @@ const Cybersecurity = () => {
       </section>
 
       {/* Section 8: Bottom CTA */}
-      <section className="bg-accent-dark text-white py-16 px-4 text-center">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Cybersecurity Doesn't Have to Be Complicated or Expensive
@@ -542,7 +542,7 @@ const Cybersecurity = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent-dark font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
           >
             Book Your Free Security Health Check
           </Link>

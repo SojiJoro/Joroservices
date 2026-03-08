@@ -3,7 +3,7 @@ import { FaCircleDot } from 'react-icons/fa6';
 
 const DevHeroSection = () => {
   return (
-    <section id="hero" className="grid p-4 pt-16 justify-center grid-cols-1 lg:grid-cols-4 lg:items-center gap-4 min-h-screen bg-white">
+    <section id="hero" className="grid p-4 pt-28 pb-20 justify-center grid-cols-1 lg:grid-cols-4 lg:items-center gap-4 min-h-screen bg-white">
       {/* Left Content */}
       <div className="flex lg:col-span-2 flex-col">
         <p className="flex items-center gap-4 pb-4 text-xs">

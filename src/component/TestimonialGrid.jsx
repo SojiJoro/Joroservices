@@ -1,4 +1,3 @@
-// src/components/TestimonialGrid.jsx
 import React, { useEffect, useRef } from 'react';
 import TestimonialCard from './TestimonialCard';
 
@@ -49,10 +48,10 @@ const TestimonialGrid = () => {
     const container = containerRef.current;
     if (!container || !container.children[0]) return;
 
-    const cardWidth = container.children[0].offsetWidth + 32; // width + gap
+    const cardWidth = container.children[0].offsetWidth + 24;
     const totalWidth = testimonials.length * cardWidth;
     let offset = 0;
-    const speed = 0.5; // slower = smoother on mobile
+    const speed = 0.4;
 
     const animate = () => {
       offset = (offset + speed) % totalWidth;
@@ -62,7 +61,6 @@ const TestimonialGrid = () => {
 
     rafIdRef.current = requestAnimationFrame(animate);
 
-    // Pause animation when tab is not visible
     const handleVisibility = () => {
       if (document.hidden) {
         cancelAnimationFrame(rafIdRef.current);
@@ -82,11 +80,11 @@ const TestimonialGrid = () => {
     <div className="overflow-hidden">
       <div
         ref={containerRef}
-        className="flex gap-8 will-change-transform"
+        className="flex gap-6 will-change-transform"
         style={{ width: 'max-content' }}
       >
         {[...testimonials, ...testimonials].map((data, idx) => (
-          <div key={idx} className="flex-shrink-0 w-72 md:w-80">
+          <div key={idx} className="flex-shrink-0 w-80 lg:w-96">
             <TestimonialCard data={data} />
           </div>
         ))}

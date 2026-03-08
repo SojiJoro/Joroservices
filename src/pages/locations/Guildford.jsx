@@ -115,7 +115,7 @@ const Guildford = () => {
       />
 
       {/* Hero */}
-      <section className="px-4 lg:px-20 py-16 lg:py-24 min-h-[70vh] flex items-center bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <section className="px-4 lg:px-20 pt-28 pb-20 lg:pt-32 lg:pb-24 min-h-[70vh] flex items-center bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-2 mb-4">
             <FaMapMarkerAlt className="text-accent-dark" />
@@ -149,6 +149,7 @@ const Guildford = () => {
       <section className="py-16 lg:py-20 px-4 lg:px-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Offer</p>
             Our Services in Guildford
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -159,7 +160,7 @@ const Guildford = () => {
               <Link
                 key={i}
                 to={service.link}
-                className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition bg-white group"
+                className="p-6 border border-gray-200 rounded-2xl hover:shadow-lg transition bg-white group"
               >
                 <h3 className="text-xl font-bold mb-3 group-hover:text-accent-dark transition">{service.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
@@ -261,7 +262,7 @@ const Guildford = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-accent-dark text-white py-16 px-4 text-center">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Ready to Grow Your Guildford Business Online?
@@ -271,7 +272,7 @@ const Guildford = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent-dark font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
           >
             Book Your Free Consultation
           </Link>

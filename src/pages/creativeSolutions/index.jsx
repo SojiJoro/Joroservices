@@ -61,7 +61,7 @@ const CreativeSolutions = () => (
       ]}
     />
     {/* Hero Section */}
-    <section id="hero" className="relative grid p-4 pt-20 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
+    <section id="hero" className="relative grid p-4 pt-28 pb-20 justify-center grid-cols-1 lg:grid-cols-5 overflow-hidden min-h-screen lg:items-center gap-4">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
           className="object-cover w-full h-full max-w-full"
@@ -92,13 +92,15 @@ const CreativeSolutions = () => (
     </section>
 
     {/* Services Grid */}
-    <section className="py-20 px-4 lg:px-32 bg-gray-50">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
       <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-12">
         What We Offer
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {creativeServices.map((service, index) => (
-          <div key={index} className="p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition">
+          <div key={index} className="p-6 bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-lg transition">
             <h3 className="text-xl font-semibold mb-2 text-accent">{service.title}</h3>
             <p className="text-sm text-gray-700 mb-4">{service.description}</p>
             <Link
@@ -110,11 +112,12 @@ const CreativeSolutions = () => (
           </div>
         ))}
       </div>
+      </div>
     </section>
 
     {/* Creative Benefits Section */}
-    <section className="px-4 md:px-8 lg:px-16 py-12 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10 text-center">
           Why Creative Design Matters
         </h2>
@@ -133,13 +136,13 @@ const CreativeSolutions = () => (
     </section>
 
     {/* CTA */}
-    <section className="bg-accent-dark text-white py-16 text-center">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 text-center">
       <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
         Ready to Make a Lasting Impression?
       </h2>
       <Link
         to="/getintouch"
-        className="inline-block bg-white text-accent-dark font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
+        className="inline-block bg-white text-accent font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
       >
         Let&apos;s Talk Design
       </Link>

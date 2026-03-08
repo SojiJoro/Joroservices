@@ -1,4 +1,3 @@
-// src/pages/Services.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../component/Footer';
@@ -8,7 +7,7 @@ import pagesSEO from '../seo/pagesSEO';
 import { organizationSchema, breadcrumbSchema } from '../seo/schemas';
 
 const Services = () => (
-  <div className="bg-gray-50 w-full min-h-screen">
+  <div className="bg-white min-h-screen">
     <SEO
       {...pagesSEO['/services']}
       jsonLd={[
@@ -19,42 +18,46 @@ const Services = () => (
         ]),
       ]}
     />
+
     {/* Hero Banner */}
-    <div className="bg-services-hero bg-cover bg-center h-[60vh] w-full pt-14">
-      <div className="h-full bg-black/40 flex items-center justify-center">
-        <div className="text-center px-4">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white">
-            Our Expertise, Your Advantage
-          </h1>
-          <p className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">
-            Explore our digital solutions, crafted to solve complex challenges and accelerate growth.
-          </p>
-        </div>
+    <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20 px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Our Expertise</p>
+        <h1 className="text-4xl lg:text-6xl font-bold mb-4">
+          Our Expertise, Your Advantage
+        </h1>
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          Explore our digital solutions, crafted to solve complex challenges and accelerate growth.
+        </p>
       </div>
-    </div>
+    </section>
 
     {/* Services Grid */}
-    <section id="hero" className="py-16 px-4 lg:px-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {ServiceList.map((service) => (
-          <Link
-            key={service.id}
-            to={`/services/${service.id}`}
-            className="group block bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition"
-          >
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h2 className="text-xl font-semibold mb-2 group-hover:text-accent-dark">
-                {service.title}
-              </h2>
-              <p className="text-gray-600">{service.summary}</p>
-            </div>
-          </Link>
-        ))}
+    <section className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {ServiceList.map((service) => (
+            <Link
+              key={service.id}
+              to={`/services/${service.id}`}
+              className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-accent transition-colors">
+                  {service.title}
+                </h2>
+                <p className="text-gray-600 text-sm leading-relaxed">{service.summary}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
 

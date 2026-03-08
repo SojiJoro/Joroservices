@@ -1,21 +1,22 @@
 import { FaWhatsapp } from 'react-icons/fa';
+import { MapPin, Phone } from 'lucide-react';
 
 const CardGrid = () => {
   const cards = [
     {
       img: 'https://tecdn.b-cdn.net/img/new/standard/city/042.webp',
       location: 'Registered Office',
-      address: 'Kemp House, 152–160 City Road, London, EC1V 2NX, United Kingdom',
+      address: 'Kemp House, 152-160 City Road, London, EC1V 2NX, United Kingdom',
       phone: '07867 374034',
     },
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-6 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {cards.map((card, index) => (
         <div
           key={index}
-          className="flex flex-col self-start rounded-lg text-gray-900 shadow-lg sm:shrink-0 sm:grow sm:basis-0 w-full sm:w-1/2 lg:w-1/3 overflow-hidden"
+          className="bg-gray-50 border border-gray-100 rounded-2xl overflow-hidden"
         >
           <img
             className="w-full h-48 object-cover"
@@ -23,13 +24,14 @@ const CardGrid = () => {
             alt={card.location}
           />
           <div className="p-6">
-            <h5 className="mb-4 text-xl font-semibold leading-tight">
+            <h5 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <MapPin size={18} className="text-accent" />
               {card.location}
             </h5>
-            <p className="mb-4 text-base text-gray-600">{card.address}</p>
-            <p className="text-base text-gray-600">
-              <strong>Phone:</strong>{' '}
-              <a href="tel:+4407867374034" className="hover:text-accent-dark">
+            <p className="text-sm text-gray-600 mb-3">{card.address}</p>
+            <p className="text-sm text-gray-600 flex items-center gap-2">
+              <Phone size={14} className="text-accent" />
+              <a href="tel:+4407867374034" className="hover:text-accent transition-colors">
                 {card.phone}
               </a>
             </p>
@@ -37,9 +39,9 @@ const CardGrid = () => {
               href="https://wa.me/447867374034"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium"
+              className="mt-4 inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium text-sm transition-colors"
             >
-              <FaWhatsapp className="text-xl" />
+              <FaWhatsapp className="text-lg" />
               Chat on WhatsApp
             </a>
           </div>

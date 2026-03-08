@@ -354,8 +354,9 @@ const DataManagement = () => {
       </section>
 
       {/* Section 2: Two Sides of Data Management */}
-      <section className="bg-slate-900 text-white py-12 px-4">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Overview</p>
           <h2 className="text-2xl lg:text-3xl font-bold mb-8">
             Two Sides of Data Management
           </h2>
@@ -521,7 +522,7 @@ const DataManagement = () => {
       </section>
 
       {/* Section 7: Bottom CTA */}
-      <section className="bg-accent-dark text-white py-16 px-4 text-center">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Data Should Work For You, Not Against You
@@ -532,7 +533,7 @@ const DataManagement = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent-dark font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
           >
             Book a Free Data Assessment
           </Link>

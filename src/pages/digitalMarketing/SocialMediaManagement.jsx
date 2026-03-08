@@ -390,7 +390,7 @@ const SocialMediaManagement = () => {
       </section>
 
       {/* Section 4: Platforms */}
-      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-slate-900 text-white">
+      <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl lg:text-3xl font-bold text-center mb-10">
             Platforms We Manage
@@ -524,7 +524,7 @@ const SocialMediaManagement = () => {
       </section>
 
       {/* Section 7: Bottom CTA */}
-      <section className="bg-accent-dark text-white py-16 px-4 text-center">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Audience Is Already Scrolling. Show Up.
@@ -535,7 +535,7 @@ const SocialMediaManagement = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-block bg-white text-accent-dark font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
           >
             Get Your Free Social Media Review
           </Link>
