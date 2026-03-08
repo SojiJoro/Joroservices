@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import { ArrowRight, Palette, Code2, BarChart3, Shield } from 'lucide-react';
+import { ArrowRight, Palette, Code2, BarChart3, Shield, Award, ShieldCheck, FileCheck, Building2 } from 'lucide-react';
 import Footer from '../component/Footer';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
@@ -53,8 +53,8 @@ const About = () => {
           <div className="max-w-3xl">
             <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">About Us</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">About Joro Services</h1>
-            <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              A technology partner committed to helping businesses grow through innovative digital solutions.
+            <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
+              Enterprise-grade technology services at SMB prices. We are a UK-based managed service provider helping ambitious businesses build, secure, and grow their digital operations.
             </p>
           </div>
         </div>
@@ -83,11 +83,12 @@ const About = () => {
               <h3 className="text-xl font-bold mb-6 text-gray-900">Quick Facts</h3>
               <ul className="space-y-4 text-gray-600">
                 {[
-                  'Registered in England & Wales',
-                  'Office at Kemp House, 152\u2013160 City Road, London EC1V 2NX',
-                  'Serving clients across the UK and internationally',
-                  'Specialists in healthcare, recruitment, and SME technology',
-                  'End-to-end services from strategy to ongoing support',
+                  'Registered in England & Wales (Companies House)',
+                  'Offices: Kemp House, 152\u2013160 City Road, London EC1V 2NX',
+                  'Serving 20+ clients across the UK and internationally',
+                  'Specialists in healthcare, financial services, and recruitment',
+                  'AWS Solutions Architect certified, GDPR compliant',
+                  'End-to-end services from strategy to ongoing managed support',
                 ].map((fact, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
@@ -114,6 +115,28 @@ const About = () => {
                 <p className="text-gray-600 leading-relaxed text-sm">{value.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Credentials & Trust */}
+      <section className="py-16 border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: Award, label: 'AWS Solutions Architect Certified' },
+              { icon: ShieldCheck, label: 'Professional Indemnity Insured' },
+              { icon: FileCheck, label: 'GDPR Compliant' },
+              { icon: Building2, label: 'Regulated Industry Experience' },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div key={idx} className="flex items-center gap-3 text-gray-700">
+                  <Icon size={20} className="text-accent flex-shrink-0" />
+                  <span className="text-sm font-medium">{item.label}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
