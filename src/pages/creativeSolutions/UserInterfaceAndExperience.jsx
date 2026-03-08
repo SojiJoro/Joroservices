@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import { serviceSchema, breadcrumbSchema, faqSchema } from '../../seo/schemas'
 
 const services = [
   {
@@ -97,6 +97,7 @@ const UXUIExperience = () => {
           { name: 'Creative Solutions', path: '/creative-solutions' },
           { name: 'UI/UX Design', path: '/creative-solutions/user-interface-and-experience' },
         ]),
+        faqSchema(faqData),
       ]}
     />
 

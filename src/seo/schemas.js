@@ -276,6 +276,22 @@ export function serviceSchema({ name, description, url, category, areaServed }) 
   };
 }
 
+// FAQ schema helper
+export function faqSchema(faqs) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
 // WebPage schema helper
 export function webPageSchema({ name, description, url }) {
   return {

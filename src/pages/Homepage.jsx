@@ -75,7 +75,7 @@ const Homepage = () => (
               to="/getintouch"
               className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/20 text-sm"
             >
-              Get Your Free Consultation
+              Book a Free Consultation
               <ArrowRight size={16} />
             </Link>
             <Link
@@ -85,6 +85,28 @@ const Homepage = () => (
               View Our Services
             </Link>
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Trusted By */}
+    <section className="bg-white py-12 border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-center text-xs uppercase tracking-widest text-gray-400 font-medium mb-8">Trusted by businesses across the UK</p>
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60 grayscale">
+          {[
+            { name: '1 Noble Healthcare', logo: '/images/1noble-logo.png' },
+            { name: 'PathSync Recruitment', logo: '/images/pathsync-logo.png' },
+            { name: 'Clear Vital', logo: '/images/clearvital-logo.png' },
+            { name: 'Save the Men', logo: '/images/savethemen-logo.png' },
+          ].map((client, idx) => (
+            <img
+              key={idx}
+              src={client.logo}
+              alt={client.name}
+              className="h-8 sm:h-10 object-contain"
+            />
+          ))}
         </div>
       </div>
     </section>

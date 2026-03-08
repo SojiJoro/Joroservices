@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import { ArrowRight, Palette, Code2, BarChart3, Shield, Award, ShieldCheck, FileCheck, Building2 } from 'lucide-react';
+import { ArrowRight, Palette, Code2, BarChart3, Shield, Award, ShieldCheck, FileCheck, Building2, BadgeCheck } from 'lucide-react';
 import Footer from '../component/Footer';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
@@ -122,9 +122,10 @@ const About = () => {
       {/* Credentials & Trust */}
       <section className="py-16 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
             {[
               { icon: Award, label: 'AWS Solutions Architect Certified' },
+              { icon: BadgeCheck, label: 'Cyber Essentials Aligned' },
               { icon: ShieldCheck, label: 'Professional Indemnity Insured' },
               { icon: FileCheck, label: 'GDPR Compliant' },
               { icon: Building2, label: 'Regulated Industry Experience' },
