@@ -1,5 +1,5 @@
-import React from 'react'
-import { FaCode, FaMobileAlt, FaRocket, FaPaintBrush } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaCode, FaMobileAlt, FaRocket, FaPaintBrush, FaPlus, FaMinus } from 'react-icons/fa'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
@@ -58,7 +58,33 @@ const portfolio = [
   },
 ]
 
-const WebsiteDesign = () => (
+const faqData = [
+  {
+    question: 'How much does a custom website cost?',
+    answer:
+      'Our websites typically start from £2,500 for a brochure site and scale up based on complexity. We provide a detailed quote after understanding your requirements — no hidden fees.',
+  },
+  {
+    question: 'How long does it take to build a website?',
+    answer:
+      'A standard business website takes 4–8 weeks from kickoff to launch. More complex projects with custom functionality or integrations may take 8–12 weeks.',
+  },
+  {
+    question: 'Do you offer ongoing maintenance and support?',
+    answer:
+      'Yes. We offer managed support plans covering hosting, security updates, content changes, and performance monitoring. Most clients choose our monthly retainer for peace of mind.',
+  },
+  {
+    question: 'Will my website be optimised for search engines?',
+    answer:
+      'Every website we build includes technical SEO fundamentals — clean code, meta tags, structured data, fast load times, and mobile responsiveness. For ongoing SEO campaigns, see our digital marketing services.',
+  },
+]
+
+const WebsiteDesign = () => {
+  const [openFaq, setOpenFaq] = useState(null)
+
+  return (
   <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/creative-solutions/website-design']}
@@ -78,7 +104,7 @@ const WebsiteDesign = () => (
     />
 
     {/* Hero Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+    <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Web Development</p>
         <h1 className="text-3xl lg:text-4xl font-bold mb-6">Custom Websites That Deliver Results</h1>
@@ -137,6 +163,40 @@ const WebsiteDesign = () => (
       </div>
     </section>
 
+    {/* FAQ */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          {faqData.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-100 rounded-2xl bg-white"
+            >
+              <button
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                className="w-full flex justify-between items-center text-left p-5"
+              >
+                <span className="font-medium text-lg pr-4">{faq.question}</span>
+                {openFaq === index ? (
+                  <FaMinus className="text-accent flex-shrink-0" />
+                ) : (
+                  <FaPlus className="text-accent flex-shrink-0" />
+                )}
+              </button>
+              {openFaq === index && (
+                <div className="px-5 pb-5">
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* CTA */}
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -154,6 +214,7 @@ const WebsiteDesign = () => (
 
     <Footer />
   </main>
-)
+  )
+}
 
 export default WebsiteDesign

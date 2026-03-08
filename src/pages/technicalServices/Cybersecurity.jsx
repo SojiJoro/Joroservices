@@ -474,7 +474,7 @@ const Cybersecurity = () => {
             {faqData.map((faq, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg bg-white"
+                className="border border-gray-100 rounded-2xl bg-white"
               >
                 <button
                   onClick={() =>

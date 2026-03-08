@@ -1,5 +1,5 @@
-import React from 'react'
-import { FaUserCheck, FaDraftingCompass, FaMicroscope, FaLaptopCode } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaUserCheck, FaDraftingCompass, FaMicroscope, FaLaptopCode, FaPlus, FaMinus } from 'react-icons/fa'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
@@ -55,7 +55,33 @@ const portfolio = [
   },
 ]
 
-const UXUIExperience = () => (
+const faqData = [
+  {
+    question: 'What is the difference between UI and UX design?',
+    answer:
+      'UX (user experience) focuses on how a product works — the flow, logic, and ease of use. UI (user interface) focuses on how it looks — layout, colours, typography. We handle both to ensure your product is beautiful and functional.',
+  },
+  {
+    question: 'Do you conduct user testing?',
+    answer:
+      'Yes. We run usability tests, A/B tests, and heatmap analysis throughout the design process. Testing early and often means fewer costly changes after development.',
+  },
+  {
+    question: 'Can you redesign an existing product?',
+    answer:
+      'Absolutely. We often audit existing apps and websites, identify UX pain points, and redesign the experience while preserving what already works well.',
+  },
+  {
+    question: 'What tools do you use for design?',
+    answer:
+      'We primarily use Figma for collaborative design and prototyping, with Miro for workshops and user journey mapping. All deliverables include developer-ready specs and assets.',
+  },
+]
+
+const UXUIExperience = () => {
+  const [openFaq, setOpenFaq] = useState(null)
+
+  return (
   <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/creative-solutions/user-interface-and-experience']}
@@ -75,7 +101,7 @@ const UXUIExperience = () => (
     />
 
     {/* Hero Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+    <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">UI/UX Design</p>
         <h1 className="text-3xl lg:text-4xl font-bold mb-6">Design That Feels As Good As It Looks</h1>
@@ -127,6 +153,40 @@ const UXUIExperience = () => (
       </div>
     </section>
 
+    {/* FAQ */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          {faqData.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-100 rounded-2xl bg-white"
+            >
+              <button
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                className="w-full flex justify-between items-center text-left p-5"
+              >
+                <span className="font-medium text-lg pr-4">{faq.question}</span>
+                {openFaq === index ? (
+                  <FaMinus className="text-accent flex-shrink-0" />
+                ) : (
+                  <FaPlus className="text-accent flex-shrink-0" />
+                )}
+              </button>
+              {openFaq === index && (
+                <div className="px-5 pb-5">
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* CTA Section */}
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -144,6 +204,7 @@ const UXUIExperience = () => (
 
     <Footer />
   </main>
-)
+  )
+}
 
 export default UXUIExperience

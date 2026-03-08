@@ -1,5 +1,5 @@
-import React from 'react'
-import { FaPalette, FaPenNib, FaRegImage, FaBullhorn } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaPalette, FaPenNib, FaRegImage, FaBullhorn, FaPlus, FaMinus } from 'react-icons/fa'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
@@ -55,7 +55,33 @@ const portfolio = [
   },
 ]
 
-const GraphicBranding = () => (
+const faqData = [
+  {
+    question: 'How long does a full brand identity project take?',
+    answer:
+      'A typical brand identity project — including logo design, colour palette, typography, and brand guidelines — takes 3–6 weeks depending on complexity and feedback rounds.',
+  },
+  {
+    question: 'Do you design for print as well as digital?',
+    answer:
+      'Yes. We deliver assets optimised for both digital (social media, web, email) and print (business cards, brochures, signage). All files are provided in industry-standard formats.',
+  },
+  {
+    question: 'Can you rebrand an existing business?',
+    answer:
+      'Absolutely. We work with established businesses to modernise their visual identity while retaining the brand equity they\'ve built. We handle everything from strategy to rollout.',
+  },
+  {
+    question: 'What files do I receive at the end of the project?',
+    answer:
+      'You receive all logo variations (colour, mono, reversed), a comprehensive brand guidelines document, source files (AI/PSD/Figma), and optimised exports for web and print.',
+  },
+]
+
+const GraphicBranding = () => {
+  const [openFaq, setOpenFaq] = useState(null)
+
+  return (
   <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/creative-solutions/graphic-design-and-branding']}
@@ -75,7 +101,7 @@ const GraphicBranding = () => (
     />
 
     {/* Hero Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+    <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Graphic Design & Branding</p>
         <h1 className="text-3xl lg:text-4xl font-bold mb-6">Make a Statement Without Saying a Word</h1>
@@ -130,6 +156,40 @@ const GraphicBranding = () => (
       </div>
     </section>
 
+    {/* FAQ */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          {faqData.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-100 rounded-2xl bg-white"
+            >
+              <button
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                className="w-full flex justify-between items-center text-left p-5"
+              >
+                <span className="font-medium text-lg pr-4">{faq.question}</span>
+                {openFaq === index ? (
+                  <FaMinus className="text-accent flex-shrink-0" />
+                ) : (
+                  <FaPlus className="text-accent flex-shrink-0" />
+                )}
+              </button>
+              {openFaq === index && (
+                <div className="px-5 pb-5">
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* CTA Section */}
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -147,6 +207,7 @@ const GraphicBranding = () => (
 
     <Footer />
   </main>
-)
+  )
+}
 
 export default GraphicBranding

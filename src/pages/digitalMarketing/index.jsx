@@ -1,6 +1,7 @@
 // src/pages/digitalMarketing/index.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import HeroSection from '../../component/digitalMarketing/heroSection';
 import MarketingServices from '../../component/digitalMarketing/marketingServices';
 import Footer from '../../component/Footer';
@@ -46,16 +47,20 @@ const DigitalMarketing = () => (
         {/* Sub-page Links */}
         <ul className="max-w-3xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { label: 'SEO & Content Strategy', slug: 'seo-and-content-strategy' },
-            { label: 'Social Media Management', slug: 'social-media-management' },
-            { label: 'PPC & Online Campaigns', slug: 'ppc-and-online-campaigns' },
-          ].map(({ label, slug }) => (
-            <li key={slug} className="bg-white rounded-2xl border border-gray-100 p-6 text-center hover:shadow-lg transition">
+            { label: 'SEO & Content Strategy', slug: 'seo-and-content-strategy', desc: 'Rank higher and attract organic traffic with data-driven content.' },
+            { label: 'Social Media Management', slug: 'social-media-management', desc: 'Build engaged communities across the platforms that matter.' },
+            { label: 'PPC & Online Campaigns', slug: 'ppc-and-online-campaigns', desc: 'Targeted ads that deliver measurable ROI from day one.' },
+          ].map(({ label, slug, desc }) => (
+            <li key={slug}>
               <Link
                 to={`/digital-marketing/${slug}`}
-                className="text-2xl font-semibold text-accent hover:underline"
+                className="group block bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg transition"
               >
-                {label}
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-accent transition-colors mb-2">{label}</h3>
+                <p className="text-sm text-gray-600 mb-3">{desc}</p>
+                <span className="inline-flex items-center gap-1 text-accent text-sm font-medium">
+                  Learn more <ArrowRight size={14} />
+                </span>
               </Link>
             </li>
           ))}
@@ -65,6 +70,22 @@ const DigitalMarketing = () => (
 
     {/* Marketing Services */}
     <MarketingServices />
+
+    {/* CTA */}
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Grow Your Business Online?</h2>
+        <p className="text-white/80 mb-8">
+          Get a free marketing audit and discover where your biggest growth opportunities are. No obligation, no jargon — just actionable insights.
+        </p>
+        <Link
+          to="/getintouch"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+        >
+          Get a Free Marketing Audit <ArrowRight size={16} />
+        </Link>
+      </div>
+    </section>
 
     <Footer />
   </div>
