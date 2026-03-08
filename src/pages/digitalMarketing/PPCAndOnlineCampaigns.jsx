@@ -30,7 +30,7 @@ const serviceCards = [
     title: 'Built to Convert From Day One',
     label: 'PPC Strategy & Setup',
     description:
-      'We research your market, your competitors, and your ideal customer \u2014 then build campaigns structured for conversions, not just clicks. Every campaign has clear goals and tracking from the start.',
+      'We research your market, your competitors, and your ideal customer, then build campaigns structured for conversions, not just clicks. Every campaign has clear goals and tracking from the start.',
     items: [
       'Keyword research',
       'Competitor analysis',
@@ -45,7 +45,7 @@ const serviceCards = [
     title: 'Show Up When They\'re Searching for What You Sell',
     label: 'Google Ads Management',
     description:
-      'Search ads, display ads, shopping ads, remarketing \u2014 we manage your Google Ads account daily, optimising bids, testing ad copy, and cutting wasted spend.',
+      'Search ads, display ads, shopping ads, and remarketing. We manage your Google Ads account daily, optimising bids, testing ad copy, and cutting wasted spend.',
     items: [
       'Campaign management',
       'Bid optimisation',
@@ -57,7 +57,7 @@ const serviceCards = [
   },
   {
     icon: FaShareAlt,
-    title: 'Reach Your Ideal Customer \u2014 Even If They\'ve Never Heard of You',
+    title: 'Reach Your Ideal Customer, Even If They\'ve Never Heard of You',
     label: 'Social Media Advertising',
     description:
       'LinkedIn Ads for B2B, Meta (Facebook/Instagram) Ads for B2C, or both. We build targeted campaigns that reach the right people based on demographics, interests, job titles, and behaviour.',
@@ -74,7 +74,7 @@ const serviceCards = [
     title: 'You\'ll Always Know Where Your Money Goes',
     label: 'Reporting & Optimisation',
     description:
-      'Monthly reports in plain English \u2014 not dashboards full of metrics you don\'t care about. We show you: what we spent, what we got, what it cost per lead, and what we\'re changing next month.',
+      'Monthly reports in plain English, not dashboards full of metrics you don\'t care about. We show you what we spent, what we got, what it cost per lead, and what we\'re changing next month.',
     items: [
       'Monthly ROI report',
       'Cost-per-lead tracking',
@@ -94,12 +94,12 @@ const transparencyPromises = [
   {
     title: 'No Markup on Ad Spend',
     description:
-      'Your ad spend goes directly to Google/Meta/LinkedIn \u2014 we never mark up media costs.',
+      'Your ad spend goes directly to Google/Meta/LinkedIn. We never mark up media costs.',
   },
   {
     title: 'Transparent Fees',
     description:
-      'Our management fee is separate and transparent \u2014 you always know what you\'re paying us vs. what\'s going to ads.',
+      'Our management fee is separate and transparent. You always know what you\'re paying us vs. what\'s going to ads.',
   },
   {
     title: 'Full Reporting',
@@ -191,12 +191,12 @@ const faqData = [
   {
     question: 'Do you charge a percentage of ad spend?',
     answer:
-      'No. Our management fee is a flat monthly rate, not a percentage of your spend. This means we\'re incentivised to make your budget work harder \u2014 not to encourage you to spend more.',
+      'No. Our management fee is a flat monthly rate, not a percentage of your spend. This means we\'re incentivised to make your budget work harder, not to encourage you to spend more.',
   },
   {
     question: 'What if the ads aren\'t working?',
     answer:
-      'We monitor campaigns closely and make adjustments weekly. If a campaign isn\'t performing after reasonable optimisation, we\'ll tell you honestly and recommend changes \u2014 including pausing if necessary. We\'d rather lose a fee than waste your money.',
+      'We monitor campaigns closely and make adjustments weekly. If a campaign isn\'t performing after reasonable optimisation, we\'ll tell you honestly and recommend changes, including pausing if necessary. We\'d rather lose a fee than waste your money.',
   },
   {
     question: 'Do you create the ad graphics and copy?',
@@ -249,11 +249,11 @@ const PPCAndOnlineCampaigns = () => {
             Paid Ads That Pay for Themselves
           </h1>
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-            Google Ads, LinkedIn Ads, Meta Ads \u2014 done right, paid advertising
+            Google Ads, LinkedIn Ads, Meta Ads. Done right, paid advertising
             is the fastest way to get qualified leads. Done wrong, it's the
             fastest way to burn money. Our PPC specialists manage your
             campaigns with full transparency, clear reporting, and a focus on
-            ROI \u2014 not vanity clicks.
+            ROI, not vanity clicks.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
@@ -423,7 +423,7 @@ const PPCAndOnlineCampaigns = () => {
           </div>
           <p className="text-center text-sm text-gray-500 mt-6">
             Management fees are separate from ad spend. We never touch your ad
-            budget \u2014 it goes directly to the platforms.
+            budget. It goes directly to the platforms.
           </p>
         </div>
       </section>
@@ -476,7 +476,7 @@ const PPCAndOnlineCampaigns = () => {
           </h2>
           <p className="text-lg mb-8 text-white/80">
             Get a free PPC audit and find out if paid advertising is right for
-            your business \u2014 and how much you should invest.
+            your business, and how much you should invest.
           </p>
           <Link
             to="/getintouch"

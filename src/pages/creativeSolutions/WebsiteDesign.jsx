@@ -10,27 +10,27 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     icon: FaPaintBrush,
-    title: 'Bespoke UI/UX Design',
+    title: 'Custom UI/UX Design',
     description:
-      'We design stunning and functional interfaces tailored to your brand identity and audience needs. From wireframes to polished visuals, your users enjoy seamless journeys that convert.',
+      'We design interfaces that look great and work well for your audience. From early sketches to finished designs, we make sure visitors can find what they need and take action.',
   },
   {
     icon: FaMobileAlt,
     title: 'Mobile-First Development',
     description:
-      'Our websites adapt beautifully across all screen sizes, ensuring an exceptional experience whether your users visit from a phone, tablet, or desktop.',
+      'Our websites look and work great on any screen size. Whether someone visits from a phone, tablet, or desktop, everything just works.',
   },
   {
     icon: FaCode,
     title: 'Full-Stack Engineering',
     description:
-      'We build websites and web apps with robust frontends and scalable backends. Using the latest tech stacks, our builds are fast, secure, and easy to maintain.',
+      'We build both the front and back end of websites and web apps. We use modern tools to make sure everything runs fast, stays secure, and is easy to update.',
   },
   {
     icon: FaRocket,
-    title: 'Performance & SEO Optimisation',
+    title: 'Performance & SEO',
     description:
-      'We optimise every site for speed, accessibility, and discoverability, using clean code, image compression, keyword strategy, and technical SEO best practices.',
+      'We make every site fast and easy to find on Google. That means clean code, compressed images, smart keyword use, and proper technical SEO.',
   },
 ]
 
@@ -40,14 +40,14 @@ const portfolio = [
     image: '/images/1noble.jpg',
     url: 'https://1noblehealthcare.com',
     description:
-      'A modern healthcare site focused on supported living, with integrated contact forms, smooth scrolling, and a clean layout.',
+      'A clean, modern healthcare site for supported living services, with easy-to-use contact forms and a straightforward layout.',
   },
   {
     name: 'PathSync Recruitment',
     image: '/images/pathsync.jpg',
     url: 'https://pathsyncrecruitment.com',
     description:
-      'A sleek, professional site for a niche tech recruitment agency with blog features, application forms, and responsive layouts.',
+      'A professional site for a tech recruitment agency, complete with a blog, application forms, and a layout that works on any device.',
   },
   {
     name: 'save the men',
@@ -81,10 +81,9 @@ const WebsiteDesign = () => (
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Web Development</p>
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Custom Websites That Deliver Results</h1>
+        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Websites That Actually Work for Your Business</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-          At Joro Services, we create high-performance websites that combine sleek design with solid engineering.
-          Whether you're launching a startup or refreshing your brand, we bring your vision to life with websites that work, load fast, and rank well.
+          We build websites that look great and do their job. Whether you're starting something new or updating what you have, we'll make sure your site loads fast, ranks well, and turns visitors into customers.
         </p>
         <Link
           to="/getintouch"
@@ -141,7 +140,7 @@ const WebsiteDesign = () => (
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-          Let's Build Something Powerful Together
+          Ready to Get Your Website Built?
         </h2>
         <Link
           to="/getintouch"

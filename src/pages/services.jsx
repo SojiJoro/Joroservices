@@ -33,10 +33,10 @@ const Services = () => (
         <div className="max-w-3xl">
           <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Our Expertise</p>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            Our Expertise, Your Advantage
+            What We Do Best
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-            Explore our digital solutions, crafted to solve complex challenges and accelerate growth.
+            From web development and cloud infrastructure to digital marketing and IT support, here is everything we can help you with.
           </p>
         </div>
       </div>
@@ -105,8 +105,8 @@ const Services = () => (
     {/* CTA */}
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl lg:text-3xl font-bold mb-4">Not sure which service you need?</h2>
-        <p className="text-gray-400 mb-8">Book a free consultation and we will help you find the right solution for your business.</p>
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">Not sure where to start?</h2>
+        <p className="text-gray-400 mb-8">Book a free consultation and we will work out the right solution for your business together.</p>
         <Link
           to="/getintouch"
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"

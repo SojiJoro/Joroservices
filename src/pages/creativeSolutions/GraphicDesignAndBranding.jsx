@@ -12,25 +12,25 @@ const services = [
     icon: FaPenNib,
     title: 'Logo Design & Identity',
     description:
-      'Your logo is the face of your business. We create timeless, versatile, and distinct logos that express your brand\u2019s values and personality.',
+      'Your logo is the first thing people see. We design logos that are clear, memorable, and actually represent what your business is about.',
   },
   {
     icon: FaPalette,
     title: 'Brand Guidelines',
     description:
-      'We develop detailed brand guides covering logo use, colour systems, typography, and tone \u2014 giving you consistency across every platform.',
+      'We put together brand guides that cover your logo, colours, fonts, and voice, so everything looks and sounds like you no matter where it shows up.',
   },
   {
     icon: FaBullhorn,
     title: 'Marketing & Promotional Design',
     description:
-      'From social graphics to billboards, brochures to merchandise, we design visuals that speak boldly and clearly wherever your brand shows up.',
+      'Social posts, flyers, brochures, merch. Whatever you need, we design it so your brand looks sharp and gets noticed.',
   },
   {
     icon: FaRegImage,
     title: 'Visual Storytelling',
     description:
-      'We combine photography, illustration, layout, and typography to tell compelling stories that build emotional connection with your audience.',
+      'We use photos, illustrations, and smart layouts to tell your story in a way that actually makes people feel something.',
   },
 ]
 
@@ -39,19 +39,19 @@ const portfolio = [
     name: 'PathSync Recruitment Identity',
     image: '/images/branding-pathsync.jpg',
     description:
-      'A modern and bold brand system with sharp typography, grid-based layouts, and category-specific colour cues for tech recruiting.',
+      'A bold brand with clean fonts, structured layouts, and colour-coded sections to help a tech recruitment agency stand out.',
   },
   {
     name: 'Clear Vital Social Care Branding',
     image: '/images/branding-clearvital.jpg',
     description:
-      'Soft, calming colours and an inclusive design system for a care service \u2014 built to communicate trust, empathy, and clarity.',
+      'Warm, calming colours and a friendly design system for a care service. The goal was to feel trustworthy and approachable from the first glance.',
   },
   {
     name: 'Save the Men',
     image: '/images/savethe-men.jpg',
     description:
-      'An expressive, content-first brand using vibrant tones, playful typography, and flexible templates for a blog-centric experience.',
+      'A bold, content-focused brand with bright colours, fun fonts, and flexible templates built around blog and article content.',
   },
 ]
 
@@ -80,13 +80,13 @@ const GraphicBranding = () => (
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Graphic Design & Branding</p>
         <h1 className="text-3xl lg:text-4xl font-bold mb-6">Make a Statement Without Saying a Word</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-          Great design is more than visuals \u2014 it's your first impression, your story, your voice. At Joro Services, we shape your brand identity with purposeful design that stands out, stays consistent, and connects with your audience.
+          Your design is the first thing people notice. It tells them who you are before you say a word. We help you build a brand that looks great, stays consistent, and actually connects with the people you want to reach.
         </p>
         <Link
           to="/getintouch"
           className="mt-8 inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Let's Shape Your Brand <ArrowRight className="w-4 h-4" />
+          Start Your Brand Project <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>
@@ -134,13 +134,13 @@ const GraphicBranding = () => (
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-          Branding Is More Than a Logo. It's a Feeling.
+          Your Brand Is More Than a Logo
         </h2>
         <Link
           to="/getintouch"
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Start Your Brand Journey <ArrowRight className="w-4 h-4" />
+          Get in Touch <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>

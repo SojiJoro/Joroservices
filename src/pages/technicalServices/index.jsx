@@ -35,7 +35,7 @@ const TechnicalServices = () => (
           Managed IT Services Built for Growing Businesses
         </h2>
         <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-          From proactive IT support and cybersecurity to AWS cloud management &mdash; enterprise-grade technical services at SMB prices. No junior handoffs, no hidden fees.
+          From proactive IT support and cybersecurity to AWS cloud management, all built for small and mid-sized businesses. No junior handoffs, no hidden fees.
         </p>
       </div>
       <TechServices />

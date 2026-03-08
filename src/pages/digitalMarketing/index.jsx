@@ -34,12 +34,12 @@ const DigitalMarketing = () => (
         <div className="max-w-4xl mx-auto text-center mb-12">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Solutions</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-            Holistic Digital Marketing Solutions
+            Full-Service Digital Marketing
           </h2>
           <p className="mt-4 text-lg text-gray-700">
-            At JoroServices we combine creativity with analytics to build tailored marketing campaigns.
-            From SEO and PPC to social media and content strategy, our data-driven approach ensures
-            your message reaches the right audience, drives engagement and grows your bottom line.
+            At JoroServices we mix creative thinking with real numbers to build marketing campaigns that fit your business.
+            From SEO and PPC to social media and content strategy, we make sure
+            your message reaches the right people, gets them interested, and brings in more revenue.
           </p>
         </div>
 

@@ -12,7 +12,7 @@ const services = [
     icon: FaMobileAlt,
     title: 'Responsive Design',
     description:
-      'We build mobile\u2011first layouts that adapt beautifully to every screen size and device \u2014 optimised for performance and accessibility.',
+      'We build mobile-first layouts that look great on every screen size and device, optimised for performance and accessibility.',
   },
   {
     icon: FaSearch,
@@ -28,9 +28,9 @@ const services = [
   },
   {
     icon: FaServer,
-    title: 'Scalable Architecture',
+    title: 'Built to Grow',
     description:
-      'We follow modern architecture patterns using frameworks like Next.js, ensuring your app is maintainable, scalable, and future\u2011ready.',
+      'We use modern patterns with frameworks like Next.js, so your app is easy to maintain and ready for what comes next.',
   },
 ]
 
@@ -46,7 +46,7 @@ const portfolio = [
     name: '1 Noble Healthcare Website',
     image: '/images/1noble.jpg',
     description:
-      'Fully responsive, SEO\u2011optimised corporate site with custom contact forms and a CMS for easy updates.',
+      'Fully responsive, SEO-optimised corporate site with custom contact forms and a CMS for easy updates.',
     url: 'https://1noblehealthcare.com',
   },
   {
@@ -60,9 +60,9 @@ const portfolio = [
 
 const faqData = [
   {
-    question: 'How much does a bespoke website cost in the UK?',
+    question: 'How much does a custom website cost in the UK?',
     answer:
-      'The cost of a bespoke website depends on the complexity, number of pages, and features required. A simple brochure website typically starts from \u00a31,500, while more complex web applications with custom functionality can range from \u00a35,000 to \u00a325,000+. We provide a detailed quote after understanding your specific requirements during a free consultation.',
+      'It depends on how complex the site is, how many pages you need, and what features you want. A simple brochure website typically starts from \u00a31,500, while more complex web applications with custom functionality can range from \u00a35,000 to \u00a325,000+. We give you a detailed quote after a free consultation.',
   },
   {
     question: 'How long does it take to build a custom website?',
@@ -77,7 +77,7 @@ const faqData = [
   {
     question: 'Will my website be mobile-friendly and SEO-optimised?',
     answer:
-      'Every website we build is mobile-first and fully responsive across all devices. We also implement on-page SEO best practices including semantic HTML, meta tags, structured data, fast loading speeds, and accessible design as standard \u2014 not as an add-on.',
+      'Every website we build is mobile-first and works properly across all devices. We also build in on-page SEO from the start, including semantic HTML, meta tags, structured data, fast loading speeds, and accessible design. That comes as standard, not as an add-on.',
   },
   {
     question: 'Can you redesign my existing website?',
@@ -126,9 +126,9 @@ const WebDevelopment = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Web Development</p>
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Modern Web Apps Built for Speed and Scale</h1>
+        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Modern Web Apps Built for Speed and Growth</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-          From sleek marketing sites to fully featured web applications, we develop responsive, search\u2011optimised digital products using frameworks like React and Next.js \u2014 clean code, fast loading, and easy to manage.
+          From marketing sites to full web applications, we build responsive, search-optimised products using React and Next.js. Clean code, fast loading, and easy to manage.
         </p>
         <Link
           to="/getintouch"

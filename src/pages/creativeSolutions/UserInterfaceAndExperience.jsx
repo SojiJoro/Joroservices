@@ -12,13 +12,13 @@ const services = [
     icon: FaUserCheck,
     title: 'User Research & Personas',
     description:
-      'We uncover user needs and behaviours through interviews, surveys, and analytics. The result: clear user personas that guide design decisions.',
+      'We talk to your users, run surveys, and dig into analytics to figure out what they actually need. Then we use that to guide every design choice.',
   },
   {
     icon: FaDraftingCompass,
     title: 'Wireframing & Prototyping',
     description:
-      'We map out user flows and craft interactive wireframes, allowing you to visualise functionality early and gather feedback before build.',
+      'We sketch out how everything works and build clickable prototypes so you can see it and give feedback before any real development starts.',
   },
   {
     icon: FaMicroscope,
@@ -30,7 +30,7 @@ const services = [
     icon: FaLaptopCode,
     title: 'Design-to-Development Handoff',
     description:
-      'We create pixel-perfect designs with clear guidelines, assets, and dev-friendly documentation for a smooth implementation process.',
+      'We hand off clean, detailed designs with all the assets and notes your developers need to build it right the first time.',
   },
 ]
 
@@ -39,19 +39,19 @@ const portfolio = [
     name: 'Joro Services Admin Dashboard',
     image: '/images/ux-dashboard.jpg',
     description:
-      'An intuitive admin interface with user analytics, activity tracking, and multi-role access \u2014 designed to streamline internal operations.',
+      'A simple admin dashboard with user stats, activity logs, and role-based access. Built to make day-to-day operations easier.',
   },
   {
     name: 'Healthcare Referral Portal UX',
     image: '/images/ux-healthcare.jpg',
     description:
-      'A simplified user flow for patients and staff with accessibility-first navigation, clear CTAs, and responsive forms.',
+      'A clean, accessible flow for patients and staff with easy navigation, clear buttons, and forms that work on any device.',
   },
   {
     name: 'Mobile Job App UI',
     image: '/images/ux-jobapp.jpg',
     description:
-      'Designed a job search mobile app with swipeable cards, saved jobs, and quick-apply features optimised for thumb-first navigation.',
+      'A job search app with swipeable cards, saved jobs, and quick-apply. Designed so you can do everything with one thumb.',
   },
 ]
 
@@ -80,7 +80,7 @@ const UXUIExperience = () => (
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">UI/UX Design</p>
         <h1 className="text-3xl lg:text-4xl font-bold mb-6">Design That Feels As Good As It Looks</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-          From onboarding to checkout, we design thoughtful user experiences that feel effortless and intuitive. By blending empathy, data, and creativity, we create designs people love to use.
+          We design every step of the user journey, from signing up to checking out, so it feels easy and natural. We pay attention to how real people use things, and we design around that.
         </p>
         <Link
           to="/getintouch"
@@ -131,7 +131,7 @@ const UXUIExperience = () => (
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-          Let's Design Smarter, Smoother Experiences
+          Ready to Make Your Product Easier to Use?
         </h2>
         <Link
           to="/getintouch"

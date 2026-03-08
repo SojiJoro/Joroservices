@@ -10,27 +10,27 @@ import { organizationSchema, breadcrumbSchema } from '../seo/schemas';
 const values = [
   {
     title: 'Client-First Approach',
-    description: 'Every solution we build starts with understanding your business goals. We listen, plan, and deliver with your success as our measure.',
+    description: 'We start every project by getting to know your business properly. What are you trying to achieve? We figure that out first, then build around it.',
   },
   {
     title: 'Technical Excellence',
-    description: 'Our team stays current with the latest technologies and best practices to ensure we deliver robust, scalable, and secure solutions.',
+    description: 'We keep up with what works in tech and use it properly. The things we build are solid, grow with you, and stay secure.',
   },
   {
     title: 'Transparency',
-    description: 'We believe in open communication at every stage. From project scoping to delivery, you will always know where things stand.',
+    description: 'You will always know what is going on with your project. No surprises, no radio silence. We keep you in the loop from day one.',
   },
   {
     title: 'Long-Term Partnerships',
-    description: 'We do not just deliver projects and walk away. We build lasting relationships with our clients, providing ongoing support and guidance.',
+    description: 'We do not just finish a project and disappear. Most of our clients stick with us because we keep looking after them long after launch.',
   },
 ];
 
 const serviceAreas = [
-  { icon: Palette, title: 'Creative Solutions', desc: 'Website design, branding, and UI/UX that make your brand stand out.', path: '/creative-solutions' },
-  { icon: Code2, title: 'Development', desc: 'Web and mobile applications built with modern, scalable technologies.', path: '/development' },
-  { icon: BarChart3, title: 'Digital Marketing', desc: 'SEO, PPC, social media, and content strategies that drive real results.', path: '/digital-marketing' },
-  { icon: Shield, title: 'Technical Services', desc: 'IT support, cybersecurity, and cloud infrastructure you can rely on.', path: '/technical-services' },
+  { icon: Palette, title: 'Creative Solutions', desc: 'Websites, branding, and UI/UX design that makes your business look as good as it is.', path: '/creative-solutions' },
+  { icon: Code2, title: 'Development', desc: 'Web and mobile apps built with modern tools that won\'t fall apart as you grow.', path: '/development' },
+  { icon: BarChart3, title: 'Digital Marketing', desc: 'SEO, PPC, social media, and content that actually brings in customers.', path: '/digital-marketing' },
+  { icon: Shield, title: 'Technical Services', desc: 'IT support, cybersecurity, and cloud setup you can count on.', path: '/technical-services' },
 ];
 
 const About = () => {
@@ -54,7 +54,7 @@ const About = () => {
             <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">About Us</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">About Joro Services</h1>
             <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
-              Enterprise-grade technology services at SMB prices. We are a UK-based managed service provider helping ambitious businesses build, secure, and grow their digital operations.
+              Big-company tech services at small-business prices. We are a UK-based team that helps businesses build, protect, and grow their online presence.
             </p>
           </div>
         </div>
@@ -69,13 +69,13 @@ const About = () => {
               <h2 className="text-3xl font-bold mb-8">Building technology that matters</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Joro Services Ltd was founded with a clear mission: to provide small and medium-sized businesses with the same quality of technology services that large enterprises enjoy, but at a scale and price point that works for growing companies.
+                  We started Joro Services because we saw too many smaller businesses getting stuck with bad tech or paying over the odds for it. We wanted to give growing companies access to the same quality of work that the big firms get, without the big firm price tag.
                 </p>
                 <p>
-                  Based in London, our team brings together expertise across software development, cloud infrastructure, cybersecurity, digital marketing, and creative design. We work with clients across healthcare, recruitment, social care, and e-commerce to deliver solutions that make a real difference.
+                  We are based in London and our team covers everything from software development and cloud infrastructure to cybersecurity, digital marketing, and design. We work with clients in healthcare, recruitment, social care, and e-commerce, and we focus on doing work that actually makes a difference to their day-to-day.
                 </p>
                 <p>
-                  Whether it is building a patient portal for a healthcare provider, migrating a recruitment platform to the cloud, or running a targeted digital marketing campaign, we approach every project with the same level of dedication and professionalism.
+                  Whether we are building a patient portal for a healthcare provider, moving a recruitment platform to the cloud, or running a marketing campaign, we put the same care into every project.
                 </p>
               </div>
             </div>
@@ -88,7 +88,7 @@ const About = () => {
                   'Serving 20+ clients across the UK and internationally',
                   'Specialists in healthcare, financial services, and recruitment',
                   'AWS Solutions Architect certified, GDPR compliant',
-                  'End-to-end services from strategy to ongoing managed support',
+                  'Full service from planning through to ongoing support',
                 ].map((fact, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
@@ -173,7 +173,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Work Together?</h2>
           <p className="text-gray-400 mb-8">
-            Get in touch to discuss your project. We would love to hear about your goals and explore how we can help.
+            Drop us a line about what you are working on. We are always happy to chat and see if we can help.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
             <Link

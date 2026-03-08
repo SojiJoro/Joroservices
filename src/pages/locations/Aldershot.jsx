@@ -8,32 +8,32 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 const services = [
   {
     title: 'Web Development',
-    description: 'Custom websites and web applications built with React, Next.js, and modern technologies. SEO-optimised, mobile-first, and designed to convert.',
+    description: 'We build websites and web apps using React, Next.js, and other modern tools. Every site is SEO-friendly, works great on mobile, and is built to get results.',
     link: '/development/web-development',
   },
   {
     title: 'Digital Marketing & SEO',
-    description: 'Search engine optimisation, PPC advertising, social media management, and content strategy to grow your online presence in Aldershot and beyond.',
+    description: 'SEO, PPC advertising, social media management, and content planning to help you get found online in Aldershot and the surrounding area.',
     link: '/digital-marketing/seo-and-content-strategy',
   },
   {
     title: 'IT Support & Maintenance',
-    description: 'Proactive IT support, helpdesk services, security patching, and infrastructure maintenance. We keep Aldershot businesses running smoothly.',
+    description: 'Hands-on IT support, helpdesk access, security updates, and ongoing maintenance. We keep things running smoothly for Aldershot businesses.',
     link: '/technical-services/it-support-and-maintenance',
   },
   {
     title: 'Cybersecurity',
-    description: 'Penetration testing, security audits, GDPR compliance, and 24/7 monitoring to protect your business from cyber threats.',
+    description: 'Penetration testing, security audits, GDPR compliance, and round-the-clock monitoring to keep your business safe from cyber threats.',
     link: '/technical-services/cybersecurity',
   },
   {
     title: 'Mobile App Development',
-    description: 'iOS and Android apps built with React Native and Flutter. From MVPs to full-featured applications for businesses of all sizes.',
+    description: 'iOS and Android apps built with React Native and Flutter. Whether you need an MVP or a full-featured app, we work with businesses of all sizes.',
     link: '/development/mobile-app-development',
   },
   {
     title: 'Cloud Infrastructure',
-    description: 'AWS, Azure, and Google Cloud solutions. We design, migrate, and manage cloud infrastructure for scalability and cost efficiency.',
+    description: 'AWS, Azure, and Google Cloud solutions. We help you set up, move to, and manage cloud infrastructure so it grows with your business and keeps costs down.',
     link: '/technical-services/cloud-infrastructure',
   },
 ]
@@ -41,7 +41,7 @@ const services = [
 const faqData = [
   {
     question: 'What services does Joro Services offer in Aldershot?',
-    answer: 'Joro Services provides web development, digital marketing (SEO, PPC, social media), IT support and maintenance, cybersecurity, mobile app development, cloud infrastructure, UI/UX design, and graphic design and branding. We are the only Aldershot-based agency combining all these services under one roof.',
+    answer: 'We offer web development, digital marketing (SEO, PPC, social media), IT support and maintenance, cybersecurity, mobile app development, cloud infrastructure, UI/UX design, and branding. We are the only agency in Aldershot that brings all of these services together in one place.',
   },
   {
     question: 'Where exactly are you based in Aldershot?',
@@ -57,11 +57,11 @@ const faqData = [
   },
   {
     question: 'Can you help my Aldershot business rank higher on Google?',
-    answer: 'Absolutely. We specialise in local SEO for Aldershot and Hampshire businesses. Our approach includes technical SEO, content strategy, Google Business Profile optimisation, local citation building, and review management to improve your visibility in local search results.',
+    answer: 'Yes, that is what we do best. We specialise in local SEO for Aldershot and Hampshire businesses. That means technical SEO, content planning, Google Business Profile optimisation, local citations, and review management to help you show up in local search results.',
   },
   {
     question: 'Do you work with small businesses in Aldershot?',
-    answer: 'Yes, we work with businesses of all sizes in Aldershot, from sole traders and startups to established SMEs and larger organisations. Our flexible service packages are designed to scale with your business needs and budget.',
+    answer: 'Yes, we work with businesses of all sizes in Aldershot, from sole traders and startups to established SMEs and larger companies. Our service packages are flexible and can grow with your business needs and budget.',
   },
 ]
 
@@ -126,7 +126,7 @@ const Aldershot = () => {
             <span className="text-accent-dark">Aldershot</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
-            Joro Services is the only Aldershot-based agency combining IT consultancy, web development, digital marketing, and creative solutions under one roof. We help local businesses grow online with expert technical services and results-driven marketing.
+            Joro Services is the only agency in Aldershot that does IT consultancy, web development, digital marketing, and creative work all in one place. We help local businesses get online, get noticed, and get results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -153,7 +153,7 @@ const Aldershot = () => {
             Our Services in Aldershot
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            From building your website to managing your IT infrastructure, we deliver the full spectrum of digital services to Aldershot businesses.
+            Whether you need a new website or someone to look after your IT, we cover the lot for Aldershot businesses.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
@@ -180,11 +180,11 @@ const Aldershot = () => {
             {[
               {
                 title: 'Local Expertise, National Reach',
-                text: 'Based in Aldershot, we understand the local business landscape. Whether you serve customers on the high street or across the UK, we tailor our approach to your market.',
+                text: 'We are based in Aldershot, so we know the local business scene. Whether your customers are on the high street or across the UK, we shape our work around your market.',
               },
               {
                 title: 'One Agency, Every Digital Service',
-                text: 'No need to juggle multiple suppliers. We handle your website, SEO, IT support, cybersecurity, and cloud infrastructure — all under one roof, with one point of contact.',
+                text: 'No need to juggle multiple suppliers. We handle your website, SEO, IT support, cybersecurity, and cloud infrastructure, all under one roof with one point of contact.',
               },
               {
                 title: 'Transparent Pricing, No Lock-In',
@@ -192,7 +192,7 @@ const Aldershot = () => {
               },
               {
                 title: 'Technical Depth Others Cannot Match',
-                text: 'Most web agencies cannot fix server performance issues. Most IT companies do not do marketing. We bridge both worlds — our technical infrastructure expertise directly improves your SEO and site performance.',
+                text: 'Most web agencies cannot fix server performance issues. Most IT companies do not do marketing. We do both, and our infrastructure know-how directly improves your SEO and site speed.',
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
@@ -270,7 +270,7 @@ const Aldershot = () => {
             Ready to Grow Your Aldershot Business Online?
           </h2>
           <p className="text-lg mb-8 text-white/80">
-            Get a free consultation and discover how we can help your business thrive in the digital world.
+            Get a free consultation and find out how we can help your business do better online.
           </p>
           <Link
             to="/getintouch"

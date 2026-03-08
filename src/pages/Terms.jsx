@@ -35,7 +35,7 @@ const Terms = () => {
         <div>
           <h2 className="text-2xl font-bold mb-3">1. Introduction</h2>
           <p className="text-gray-600 leading-relaxed">
-            These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the website and services provided by Joro Services Ltd (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), a company registered in England and Wales with its registered office at Kemp House, 152&ndash;160 City Road, London, EC1V 2NX, United Kingdom. By accessing our website or engaging our services, you agree to be bound by these Terms.
+            These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the website and services provided by Joro Services Ltd (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), a company registered in England and Wales with its registered office at Kemp House, 152-160 City Road, London, EC1V 2NX, United Kingdom. By accessing our website or engaging our services, you agree to be bound by these Terms.
           </p>
         </div>
 
@@ -116,7 +116,7 @@ const Terms = () => {
           </p>
           <div className="mt-3 text-gray-600">
             <p><strong>Joro Services Ltd</strong></p>
-            <p>Kemp House, 152&ndash;160 City Road, London, EC1V 2NX</p>
+            <p>Kemp House, 152-160 City Road, London, EC1V 2NX</p>
             <p className="mt-2">
               Email: <a href="mailto:info@joroservices.org" className="text-accent hover:text-accent-dark underline">info@joroservices.org</a>
             </p>

@@ -11,7 +11,7 @@ const InsightsSection = () => {
             Latest Insights for Your Business
           </h2>
           <p className="text-gray-600 max-w-2xl text-lg">
-            Stay informed with our expert articles, industry trends, and practical guides.
+            Articles, guides, and lessons from our work with real clients.
           </p>
         </div>
 

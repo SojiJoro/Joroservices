@@ -35,7 +35,7 @@ const Privacy = () => {
 
           <h2 className="text-2xl font-bold mb-3">1. Who We Are</h2>
           <p className="text-gray-600 leading-relaxed">
-            Joro Services Ltd (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is a technology services company registered in England and Wales. Our registered office is at Kemp House, 152&ndash;160 City Road, London, EC1V 2NX, United Kingdom. We are committed to protecting your privacy and handling your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
+            Joro Services Ltd (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is a technology services company registered in England and Wales. Our registered office is at Kemp House, 152-160 City Road, London, EC1V 2NX, United Kingdom. We are committed to protecting your privacy and handling your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
           </p>
         </div>
 
@@ -122,7 +122,7 @@ const Privacy = () => {
           </p>
           <div className="mt-3 text-gray-600">
             <p><strong>Joro Services Ltd</strong></p>
-            <p>Kemp House, 152&ndash;160 City Road</p>
+            <p>Kemp House, 152-160 City Road</p>
             <p>London, EC1V 2NX, United Kingdom</p>
             <p className="mt-2">
               Email: <a href="mailto:info@joroservices.org" className="text-accent hover:text-accent-dark underline">info@joroservices.org</a>

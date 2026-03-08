@@ -33,7 +33,7 @@ const serviceCards = [
     title: 'A Plan That Makes Sense for Your Business',
     label: 'Social Media Strategy',
     description:
-      'We research your audience, your competitors, and your goals — then build a content strategy for the platforms that actually matter for your business. Not every business needs TikTok.',
+      'We research your audience, your competitors, and your goals, then build a content strategy for the platforms that actually matter for your business. Not every business needs TikTok.',
     items: [
       'Platform audit',
       'Audience research',
@@ -48,7 +48,7 @@ const serviceCards = [
     title: 'Professional Content, Posted Consistently',
     label: 'Content Creation & Scheduling',
     description:
-      'Our team creates branded posts — graphics, copy, and captions — and schedules them across your platforms. You approve the content calendar each month, we handle the rest.',
+      'Our team creates branded posts (graphics, copy, and captions) and schedules them across your platforms. You approve the content calendar each month, we handle the rest.',
     items: [
       'Branded post designs',
       'Copywriting',
@@ -62,7 +62,7 @@ const serviceCards = [
     title: 'We Respond So You Don\'t Have To',
     label: 'Community Management',
     description:
-      'Comments, messages, mentions — we monitor your profiles and engage with your audience in your brand voice. No more ignoring customer messages for days.',
+      'Comments, messages, and mentions. We monitor your profiles and engage with your audience in your brand voice. No more ignoring customer messages for days.',
     items: [
       'Daily monitoring',
       'Response to comments and DMs',
@@ -75,7 +75,7 @@ const serviceCards = [
     title: 'Know What\'s Working',
     label: 'Monthly Reporting',
     description:
-      'Every month you get a clear report showing follower growth, engagement rates, top-performing content, and recommendations for the next month. No vanity metrics — just what matters.',
+      'Every month you get a clear report showing follower growth, engagement rates, top-performing content, and recommendations for the next month. No vanity metrics, just what matters.',
     items: [
       'Monthly analytics report',
       'Performance insights',
@@ -197,7 +197,7 @@ const faqData = [
   {
     question: 'What if we already have a brand identity?',
     answer:
-      'Great — we\'ll work within your existing brand guidelines. If you don\'t have formal brand guidelines, we\'ll create a social media style guide as part of onboarding.',
+      'Great, we\'ll work within your existing brand guidelines. If you don\'t have formal brand guidelines, we\'ll create a social media style guide as part of onboarding.',
   },
 ]
 
@@ -249,7 +249,7 @@ const SocialMediaManagement = () => {
           <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
             You don't need to go viral. You need consistent, professional
             social media that builds trust, attracts customers, and keeps your
-            brand visible. Our social media specialists handle everything —
+            brand visible. Our social media specialists handle everything:
             strategy, content creation, scheduling, and reporting.
           </p>
           <Link
@@ -340,7 +340,7 @@ const SocialMediaManagement = () => {
             ))}
           </div>
           <p className="text-center mt-8 text-gray-400 text-sm">
-            We'll recommend which platforms to focus on based on your business —
+            We'll recommend which platforms to focus on based on your business,
             not all of them.
           </p>
         </div>

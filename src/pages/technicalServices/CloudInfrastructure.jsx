@@ -27,7 +27,7 @@ import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
 const stats = [
   { value: '26.6%', label: 'Average AWS cost reduction achieved' },
-  { value: '33% \u2192 61%', label: 'Security score improvement delivered' },
+  { value: '33% to 61%', label: 'Security score improvement delivered' },
   { value: 'AWS Certified', label: 'Solutions Architect certified' },
   { value: '100+', label: 'Infrastructure tickets resolved monthly' },
 ]
@@ -37,7 +37,7 @@ const services = [
     icon: FaCloud,
     title: 'Move to AWS Without the Drama',
     description:
-      'We plan and execute your migration \u2014 from legacy hosting, on-prem servers, or other cloud platforms to a properly architected AWS setup. No downtime surprises, no data loss.',
+      'We plan and execute your migration from legacy hosting, on-prem servers, or other cloud platforms to a properly architected AWS setup. No downtime surprises, no data loss.',
     proof:
       'Successfully migrated a financial services firm from WordPress hosting to a React/AWS architecture with zero client-facing downtime.',
     deliverables:
@@ -45,11 +45,11 @@ const services = [
   },
   {
     icon: FaPoundSign,
-    title: 'Cut Your AWS Bill \u2014 Guaranteed Savings or It\u2019s Free',
+    title: 'Cut Your AWS Bill. Guaranteed Savings or It\'s Free',
     description:
-      'We audit your AWS account and find the waste: oversized instances, idle resources, missing Reserved Instance opportunities, storage bloat. Most clients save 20\u201330% within the first month.',
+      'We audit your AWS account and find the waste: oversized instances, idle resources, missing Reserved Instance opportunities, storage bloat. Most clients save 20-30% within the first month.',
     proof:
-      'Achieved 26.6% cost reduction for a client \u2014 exceeding their board-level savings target.',
+      'Achieved 26.6% cost reduction for a client, exceeding their board-level savings target.',
     deliverables:
       'Full cost audit report, right-sizing recommendations, Reserved Instance strategy, S3 lifecycle policies, ongoing cost monitoring.',
   },
@@ -57,17 +57,17 @@ const services = [
     icon: FaShieldAlt,
     title: 'Lock Down Your Cloud Before Someone Else Gets In',
     description:
-      'IAM policies, encryption, logging, monitoring, compliance checks \u2014 we make sure your AWS environment follows best practices, not just best guesses.',
+      'IAM policies, encryption, logging, monitoring, and compliance checks. We make sure your AWS environment follows best practices, not just best guesses.',
     proof:
-      'Improved a client\u2019s security posture score from 33% to 61% in 6 months.',
+      'Improved a client\'s security posture score from 33% to 61% in 6 months.',
     deliverables:
       'Security audit, IAM review, CloudTrail/GuardDuty setup, compliance recommendations, security hardening implementation.',
   },
   {
     icon: FaCogs,
-    title: 'Your AWS Managed For You \u2014 Monthly',
+    title: 'Your AWS, Managed For You Monthly',
     description:
-      'Don\u2019t just build it and forget it. We monitor performance, manage costs, apply patches, handle scaling, and give you a monthly report so you always know where you stand.',
+      'Don\'t just build it and forget it. We monitor performance, manage costs, apply patches, handle scaling, and give you a monthly report so you always know where you stand.',
     proof:
       'Currently managing production AWS infrastructure for a regulated financial services firm.',
     deliverables:
@@ -109,7 +109,7 @@ const pricingPlans = [
       'No obligation, no commitment',
       'Get your report in 48 hours',
     ],
-    note: 'Book now and see where your money\u2019s going.',
+    note: 'Book now and see where your money\'s going.',
   },
 ]
 
@@ -118,7 +118,7 @@ const steps = [
     step: 1,
     title: 'Discovery Call (Free, 30 mins)',
     description:
-      'We learn about your current setup, your goals, and your pain points. You learn about how we work and whether we\u2019re a good fit.',
+      'We learn about your current setup, your goals, and your pain points. You learn about how we work and whether we\'re a good fit.',
   },
   {
     step: 2,
@@ -130,13 +130,13 @@ const steps = [
     step: 3,
     title: 'Implementation',
     description:
-      'We do the work \u2014 migration, optimisation, security hardening \u2014 with regular updates and zero surprises.',
+      'We do the work: migration, optimisation, security hardening. Regular updates, zero surprises.',
   },
   {
     step: 4,
     title: 'Ongoing Support (Optional)',
     description:
-      'If you want ongoing management, we transition to a monthly retainer. If not, we hand over full documentation and you\u2019re good to go.',
+      'If you want ongoing management, we transition to a monthly retainer. If not, we hand over full documentation and you\'re good to go.',
   },
 ]
 
@@ -145,44 +145,44 @@ const trustSignals = [
   { icon: FaShieldAlt, label: 'Professional Indemnity Insured' },
   { icon: FaLock, label: 'GDPR Compliant' },
   { icon: FaBuilding, label: 'Experience in Regulated Industries' },
-  { icon: FaHandshake, label: 'Enterprise Expertise. SMB Pricing.' },
+  { icon: FaHandshake, label: 'Enterprise-level expertise at small-business prices.' },
 ]
 
 const faqData = [
   {
     question: 'Which cloud platforms do you support?',
     answer:
-      'We specialise in AWS, which is what we\u2019re certified in and use daily. We can advise on Azure and GCP at a high level, but our hands-on expertise is AWS.',
+      'We specialise in AWS, which is what we\'re certified in and use daily. We can advise on Azure and GCP at a high level, but our hands-on expertise is AWS.',
   },
   {
     question: 'How much does a cloud migration typically cost?',
     answer:
-      'It depends on complexity. A simple website migration might be \u00a31,500\u2013\u00a33,000. A full infrastructure migration with databases, applications, and DR could be \u00a35,000\u2013\u00a315,000. We always quote fixed prices after the discovery call \u2014 no hourly billing surprises.',
+      'It depends on complexity. A simple website migration might be \u00a31,500-\u00a33,000. A full infrastructure migration with databases, applications, and DR could be \u00a35,000-\u00a315,000. We always quote fixed prices after the discovery call, so there are no hourly billing surprises.',
   },
   {
     question: 'How much can I realistically save on my AWS bill?',
     answer:
-      'Most SMBs we audit are overspending by 20\u201340%. Common culprits include oversized EC2 instances, unused Elastic IPs, S3 storage without lifecycle policies, and missing Reserved Instance commitments. Our best result so far is a 26.6% reduction.',
+      'Most SMBs we audit are overspending by 20-40%. Common culprits include oversized EC2 instances, unused Elastic IPs, S3 storage without lifecycle policies, and missing Reserved Instance commitments. Our best result so far is a 26.6% reduction.',
   },
   {
     question: 'Will there be downtime during migration?',
     answer:
-      'We plan migrations to minimise or eliminate downtime. For most projects, the DNS cutover happens in minutes and users don\u2019t notice. We\u2019ll agree the maintenance window with you in advance.',
+      'We plan migrations to minimise or eliminate downtime. For most projects, the DNS cutover happens in minutes and users don\'t notice. We\'ll agree the maintenance window with you in advance.',
   },
   {
     question: 'Do I need to give you full access to my AWS account?',
     answer:
-      'For the cost audit, we only need read-only access. For implementation work, we\u2019ll need appropriate permissions, but we follow the principle of least privilege and document everything.',
+      'For the cost audit, we only need read-only access. For implementation work, we\'ll need appropriate permissions, but we follow the principle of least privilege and document everything.',
   },
   {
     question: 'Can you work with our existing development team?',
     answer:
-      'Absolutely. We often work alongside in-house developers \u2014 we handle the infrastructure and DevOps side while they focus on application code.',
+      'Absolutely. We often work alongside in-house developers. We handle the infrastructure and DevOps side while they focus on application code.',
   },
   {
-    question: 'What if I\u2019m not on AWS yet?',
+    question: 'What if I\'m not on AWS yet?',
     answer:
-      'That\u2019s fine. We can assess your current setup and plan a migration from scratch \u2014 whether you\u2019re on traditional hosting, on-prem servers, or another cloud provider.',
+      'That\'s fine. We can assess your current setup and plan a migration from scratch, whether you\'re on traditional hosting, on-prem servers, or another cloud provider.',
   },
   {
     question: 'Do you offer support after the project is done?',
@@ -241,10 +241,10 @@ const CloudInfrastructure = () => {
             <br className="hidden sm:block" /> Start Getting It Right.
           </h1>
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl mb-8">
-            We help SMBs build, migrate, and optimise their AWS infrastructure
-            &mdash; cutting costs, improving security, and keeping things running
-            without the enterprise price tag. Led by an AWS Solutions Architect
-            who manages cloud infrastructure for financial services firms daily.
+            We help SMBs build, migrate, and optimise their AWS infrastructure.
+            Cut costs, improve security, and keep things running without
+            overpaying. Led by an AWS Solutions Architect who manages cloud
+            infrastructure for financial services firms daily.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -288,14 +288,14 @@ const CloudInfrastructure = () => {
             <div>
               <h3 className="text-xl font-semibold mb-4 text-accent-dark flex items-center gap-2">
                 <FaExclamationCircle className="text-accent-dark" />
-                You&rsquo;re already on AWS but&hellip;
+                You're already on AWS but...
               </h3>
               <ul className="space-y-3">
                 {[
-                  'Your bill keeps climbing and you don\u2019t know why',
-                  'You set it up yourself (or a previous developer did) and it\u2019s a mess',
+                  "Your bill keeps climbing and you don't know why",
+                  "You set it up yourself (or a previous developer did) and it's a mess",
                   'You have no monitoring, no alerts, no idea if things are secure',
-                  'You need to scale but don\u2019t know if your architecture can handle it',
+                  "You need to scale but don't know if your architecture can handle it",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-700">
                     <span className="mt-1 text-accent-dark text-sm">&bull;</span>
@@ -309,13 +309,13 @@ const CloudInfrastructure = () => {
             <div>
               <h3 className="text-xl font-semibold mb-4 text-accent-dark flex items-center gap-2">
                 <FaCloud className="text-accent-dark" />
-                You&rsquo;re NOT on the cloud yet but&hellip;
+                You're NOT on the cloud yet but...
               </h3>
               <ul className="space-y-3">
                 {[
                   'Your hosting is slow, expensive, or unreliable',
-                  'You need to migrate but don\u2019t know where to start',
-                  'You\u2019ve been quoted \u00a350k+ by big consultancies and need a realistic option',
+                  "You need to migrate but don't know where to start",
+                  "You've been quoted \u00a350k+ by big consultancies and need a realistic option",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-700">
                     <span className="mt-1 text-accent-dark text-sm">&bull;</span>
@@ -373,21 +373,21 @@ const CloudInfrastructure = () => {
               Free AWS Cost Audit
             </h2>
             <p className="text-xl text-gray-700">
-              See Exactly Where You&rsquo;re Overspending
+              See Exactly Where You're Overspending
             </p>
           </div>
 
           <p className="text-gray-700 text-center mb-8 max-w-2xl mx-auto">
-            In 48 hours, we&rsquo;ll analyse your AWS account and deliver a
+            In 48 hours, we'll analyse your AWS account and deliver a
             clear report showing:
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10">
             {[
-              'What you\u2019re spending and where',
+              'What you\'re spending and where',
               'Which resources are oversized, idle, or misconfigured',
-              'Specific recommendations to cut your bill by 20\u201330%',
-              'A prioritised action plan you can implement yourself \u2014 or hire us to do it',
+              'Specific recommendations to cut your bill by 20-30%',
+              'A prioritised action plan you can implement yourself, or hire us to do it',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
                 <FaCheckCircle className="text-accent-dark mt-1 flex-shrink-0" />
@@ -410,7 +410,7 @@ const CloudInfrastructure = () => {
                 'You give us read-only access to your AWS account (we provide the IAM policy)',
                 'We run our audit (takes 48 hours)',
                 'You get a PDF report with findings and recommendations',
-                'If you want us to implement the changes, we\u2019ll quote it. If not, keep the report \u2014 it\u2019s yours.',
+                "If you want us to implement the changes, we'll quote it. If not, keep the report. It's yours.",
               ].map((step, i) => (
                 <div key={i} className="text-center">
                   <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent-dark text-white font-bold text-sm mb-3">
@@ -484,14 +484,14 @@ const CloudInfrastructure = () => {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">
-              Every engagement starts with a conversation. We&rsquo;ll tell you
-              honestly what you need &mdash; and what you don&rsquo;t.
+              Every engagement starts with a conversation. We'll tell you
+              honestly what you need, and what you don't.
             </p>
             <Link
               to="/getintouch"
               className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
             >
-              Let&rsquo;s Talk About Your Cloud <ArrowRight className="w-4 h-4" />
+              Let's Talk About Your Cloud <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -575,8 +575,8 @@ const CloudInfrastructure = () => {
             Your Cloud Should Save You Money, Not Drain It
           </h2>
           <p className="text-white/80 mb-8 text-lg max-w-2xl mx-auto">
-            Start with a free AWS Cost Audit. In 48 hours, you&rsquo;ll know
-            exactly where your money&rsquo;s going &mdash; and how to keep more
+            Start with a free AWS Cost Audit. In 48 hours, you'll know
+            exactly where your money's going, and how to keep more
             of it.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

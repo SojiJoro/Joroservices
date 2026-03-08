@@ -13,7 +13,7 @@ const ImpressionCard = () => {
       <div className="max-w-4xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         <div className="flex-1 text-center lg:text-left">
           <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
-            Our collaborative expertise turns challenges into opportunities.
+            We have helped 20+ businesses solve their tech problems and grow.
           </h3>
           <Link
             to="/getintouch"

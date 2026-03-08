@@ -11,8 +11,8 @@ function Careers() {
       title: 'IT Manager',
       location: 'London, UK (Hybrid)',
       type: 'Full-time',
-      salary: '\u00a355,000 \u2013 \u00a370,000',
-      description: 'Lead and manage our internal IT operations, oversee infrastructure projects, coordinate with development and support teams, and ensure the security and reliability of all technology systems across the business.',
+      salary: '\u00a355,000 -\u00a370,000',
+      description: 'You will run our internal IT operations, oversee infrastructure projects, work closely with the dev and support teams, and keep all our technology systems secure and running smoothly.',
       requirements: [
         'Proven experience managing IT teams and infrastructure',
         'Strong knowledge of cloud platforms (AWS, Azure, or GCP)',
@@ -26,8 +26,8 @@ function Careers() {
       title: 'Senior Cloud Engineer',
       location: 'London, UK (Hybrid)',
       type: 'Full-time',
-      salary: '\u00a365,000 \u2013 \u00a380,000',
-      description: 'Design, implement, and maintain scalable cloud infrastructure solutions on AWS and Azure.',
+      salary: '\u00a365,000 -\u00a380,000',
+      description: 'You will design, build, and look after cloud infrastructure on AWS and Azure, making sure everything scales properly and stays reliable.',
       requirements: [
         'Minimum 4 years of experience with AWS or Azure',
         'Proficiency in Infrastructure as Code (Terraform, CloudFormation)',
@@ -41,8 +41,8 @@ function Careers() {
       title: 'Frontend React Developer',
       location: 'Remote',
       type: 'Full-time',
-      salary: '\u00a340,000 \u2013 \u00a355,000',
-      description: 'Build responsive, high-performance web applications using React and modern JavaScript.',
+      salary: '\u00a340,000 -\u00a355,000',
+      description: 'You will build fast, responsive web applications using React and modern JavaScript for our clients across the UK.',
       requirements: [
         'Strong proficiency in React, JavaScript (ES6+), and TypeScript',
         'Experience with state management (Redux, Context API, or Zustand)',
@@ -56,8 +56,8 @@ function Careers() {
       title: 'Technical Support Specialist',
       location: 'Birmingham, UK (On-site)',
       type: 'Full-time',
-      salary: '\u00a326,000 \u2013 \u00a334,000',
-      description: 'Provide first and second-line technical support to clients via phone, email, and remote desktop.',
+      salary: '\u00a326,000 -\u00a334,000',
+      description: 'You will provide first and second-line technical support to our clients over phone, email, and remote desktop.',
       requirements: [
         'Experience in an IT helpdesk or technical support role',
         'Knowledge of Windows, macOS, and common business applications',
@@ -71,8 +71,8 @@ function Careers() {
       title: 'DevOps Engineer',
       location: 'Manchester, UK (Hybrid)',
       type: 'Full-time',
-      salary: '\u00a350,000 \u2013 \u00a365,000',
-      description: 'Build and maintain CI/CD pipelines, automate infrastructure provisioning, and ensure smooth deployment workflows.',
+      salary: '\u00a350,000 -\u00a365,000',
+      description: 'You will build and maintain CI/CD pipelines, automate infrastructure setup, and keep deployments running smoothly.',
       requirements: [
         'Experience with CI/CD tools (GitHub Actions, Jenkins, GitLab CI)',
         'Proficiency in scripting (Bash, Python)',
@@ -86,8 +86,8 @@ function Careers() {
       title: 'UX/UI Designer',
       location: 'Leeds, UK (Remote)',
       type: 'Full-time',
-      salary: '\u00a335,000 \u2013 \u00a348,000',
-      description: 'Create user-centred designs for web and mobile applications.',
+      salary: '\u00a335,000 -\u00a348,000',
+      description: 'You will create user-friendly designs for web and mobile apps, from wireframes through to finished UI.',
       requirements: [
         'Proficiency in Figma, Sketch, or Adobe XD',
         'Portfolio demonstrating strong UI/UX design skills',
@@ -101,8 +101,8 @@ function Careers() {
       title: 'Data Analyst',
       location: 'Cardiff, UK (On-site)',
       type: 'Full-time',
-      salary: '\u00a332,000 \u2013 \u00a342,000',
-      description: 'Analyse business data to provide actionable insights, build dashboards and reports.',
+      salary: '\u00a332,000 -\u00a342,000',
+      description: 'You will dig into business data, spot useful patterns, and build dashboards and reports that help teams make better decisions.',
       requirements: [
         'Strong SQL skills and experience with relational databases',
         'Proficiency in Power BI, Tableau, or similar visualisation tools',
@@ -116,8 +116,8 @@ function Careers() {
       title: 'Cybersecurity Consultant',
       location: 'Glasgow, UK (Hybrid)',
       type: 'Contract',
-      salary: '\u00a3450 \u2013 \u00a3600 per day',
-      description: 'Conduct security assessments, penetration testing, and vulnerability analysis for client environments.',
+      salary: '\u00a3450 -\u00a3600 per day',
+      description: 'You will run security assessments, penetration tests, and vulnerability scans for our clients, then help them fix what you find.',
       requirements: [
         'CEH, CISSP, or CISM certification',
         'Experience with penetration testing tools (Burp Suite, Nessus, Metasploit)',
@@ -131,8 +131,8 @@ function Careers() {
       title: 'Project Manager',
       location: 'Bristol, UK (On-site)',
       type: 'Full-time',
-      salary: '\u00a342,000 \u2013 \u00a355,000',
-      description: 'Manage end-to-end delivery of technology projects for clients.',
+      salary: '\u00a342,000 -\u00a355,000',
+      description: 'You will manage technology projects from start to finish, keeping clients informed and deliveries on track.',
       requirements: [
         'Proven experience managing IT or digital projects',
         'Familiarity with Agile (Scrum, Kanban) and Waterfall methodologies',
@@ -146,8 +146,8 @@ function Careers() {
       title: 'Digital Marketing Executive',
       location: 'Remote',
       type: 'Full-time',
-      salary: '\u00a328,000 \u2013 \u00a338,000',
-      description: 'Plan and execute digital marketing campaigns across SEO, PPC, social media, and email.',
+      salary: '\u00a328,000 -\u00a338,000',
+      description: 'You will plan and run digital marketing campaigns across SEO, PPC, social media, and email for our clients.',
       requirements: [
         'Experience with Google Ads, Meta Business Suite, and LinkedIn Ads',
         'Knowledge of SEO best practices and keyword research tools',
@@ -195,7 +195,7 @@ function Careers() {
             <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Careers</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">Join Our Team</h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              We are always looking for driven, creative minds to help us grow. Explore open roles and apply today.
+              We are growing and looking for good people to join us. Have a look at our open roles below.
             </p>
           </div>
         </div>

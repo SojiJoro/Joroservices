@@ -25,7 +25,7 @@ const serviceCards = [
     title: 'Find Out Where You\'re Exposed',
     label: 'Security Assessment & Audit',
     description:
-      'We assess your entire IT environment — endpoints, email, cloud, passwords, permissions — and give you a clear report showing what\'s at risk and what to fix first. No jargon, just priorities.',
+      'We assess your entire IT environment (endpoints, email, cloud, passwords, permissions) and give you a clear report showing what\'s at risk and what to fix first. No jargon, just priorities.',
     items: [
       'Microsoft Secure Score review',
       'Vulnerability scan',
@@ -75,10 +75,10 @@ const serviceCards = [
   },
   {
     icon: FaUsers,
-    title: 'Your Team Is Your Biggest Vulnerability — And Your Best Defence',
+    title: 'Your Team Is Your Biggest Risk and Your Best Defence',
     label: 'Security Awareness Training',
     description:
-      'We provide practical security awareness training for your staff — not death-by-PowerPoint compliance exercises, but real scenarios they\'ll actually remember. Phishing simulations included.',
+      'We provide practical security awareness training for your staff. Not death-by-PowerPoint compliance exercises, but real scenarios they\'ll actually remember. Phishing simulations included.',
     items: [
       'Staff training sessions (remote or in-person)',
       'Phishing simulation campaigns',
@@ -90,7 +90,7 @@ const serviceCards = [
 
 const stats = [
   {
-    value: '33% → 61%',
+    value: '33% to 61%',
     label: 'Microsoft Secure Score improvement delivered',
   },
   {
@@ -99,7 +99,7 @@ const stats = [
   },
   {
     value: 'AWS Certified',
-    label: 'Solutions Architect — security is infrastructure',
+    label: 'Solutions Architect, because security is infrastructure',
   },
   {
     value: 'GDPR Compliant',
@@ -109,7 +109,7 @@ const stats = [
 
 const painPoints = [
   'We think we\'re secure but we\'ve never actually checked',
-  'We don\'t have MFA on everything — or anything',
+  'We don\'t have MFA on everything... or anything',
   'Our passwords are weak and shared on sticky notes or spreadsheets',
   'We haven\'t patched our systems in months',
   'We have no idea what happens if we get hit by ransomware',
@@ -137,7 +137,7 @@ const pricingTiers = [
       'Endpoint protection deployment',
       'Patch management setup',
     ],
-    bestFor: 'I know I need to fix things — do it for me',
+    bestFor: 'I know I need to fix things, just do it for me',
     highlighted: true,
   },
   {
@@ -157,19 +157,19 @@ const pricingTiers = [
 
 const faqData = [
   {
-    question: 'We\'re a small business — are we really a target?',
+    question: 'We\'re a small business. Are we really a target?',
     answer:
       'Yes. 43% of cyberattacks target small businesses (UK Government Cyber Security Breaches Survey). Attackers target SMBs specifically because they tend to have weaker defences than enterprises.',
   },
   {
-    question: 'We use Microsoft 365 — aren\'t we already protected?',
+    question: 'We use Microsoft 365. Aren\'t we already protected?',
     answer:
-      'M365 has excellent security features, but most of them aren\'t turned on by default. MFA, conditional access, anti-phishing policies, email authentication — these all need to be configured. That\'s what we do.',
+      'M365 has excellent security features, but most of them aren\'t turned on by default. MFA, conditional access, anti-phishing policies, email authentication. These all need to be configured. That\'s what we do.',
   },
   {
     question: 'What\'s a Microsoft Secure Score?',
     answer:
-      'It\'s Microsoft\'s own measurement of your security posture, scored as a percentage. Most SMBs we see score between 20-40%. We\'ve improved clients from 33% to 61% — and continue pushing higher.',
+      'It\'s Microsoft\'s own measurement of your security posture, scored as a percentage. Most SMBs we see score between 20-40%. We\'ve improved clients from 33% to 61% and keep pushing higher.',
   },
   {
     question: 'How long does a security implementation take?',
@@ -179,12 +179,12 @@ const faqData = [
   {
     question: 'Will security changes annoy my team?',
     answer:
-      'MFA adds a few seconds to login. Beyond that, most security improvements are invisible to your team. We always balance security with usability — locking everything down so tightly that nobody can work defeats the purpose.',
+      'MFA adds a few seconds to login. Beyond that, most security improvements are invisible to your team. We always balance security with usability. Locking everything down so tightly that nobody can work defeats the purpose.',
   },
   {
     question: 'Do you help with GDPR compliance?',
     answer:
-      'We help with the technical side of GDPR — data protection, access controls, encryption, breach notification readiness. For legal compliance advice, we recommend working with a data protection solicitor alongside our technical work.',
+      'We help with the technical side of GDPR: data protection, access controls, encryption, and breach notification readiness. For legal compliance advice, we recommend working with a data protection solicitor alongside our technical work.',
   },
 ]
 
@@ -244,7 +244,7 @@ const Cybersecurity = () => {
             </h1>
             <p className="text-lg text-white/80 leading-relaxed mb-8">
               Weak passwords, unpatched systems, no MFA, admin accounts
-              everywhere &mdash; these are the real threats to your business. We fix
+              everywhere. These are the real threats to your business. We fix
               the basics first, then build from there. Practical cybersecurity
               for small businesses, not enterprise theatre.
             </p>
@@ -327,7 +327,7 @@ const Cybersecurity = () => {
             ))}
           </div>
           <p className="text-center mt-8 text-lg text-gray-700">
-            Sound familiar? You're not alone — and fixing it is{' '}
+            Sound familiar? You're not alone, and fixing it is{' '}
             <strong>simpler than you think</strong>.
           </p>
         </div>
@@ -512,7 +512,7 @@ const Cybersecurity = () => {
           </h2>
           <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
             Start with a free health check. In 48 hours, you'll know exactly
-            where your business is exposed &mdash; and what to do about it.
+            where your business is exposed and what to do about it.
           </p>
           <Link
             to="/getintouch"
