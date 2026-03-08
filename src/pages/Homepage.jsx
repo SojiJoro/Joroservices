@@ -146,9 +146,10 @@ const Homepage = () => (
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {ServiceList.map((service, idx) => (
-            <div
+            <Link
               key={idx}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/3]"
+              to={`/services/${service.id}`}
+              className="group relative overflow-hidden rounded-2xl aspect-[4/3] block"
             >
               <img
                 src={service.image}
@@ -164,22 +165,22 @@ const Homepage = () => (
                   {service.summary}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-12 bg-gradient-to-r from-primary to-secondary rounded-2xl p-10 lg:p-14 text-center">
+        <div className="mt-12 bg-gradient-to-r from-primary to-secondary rounded-2xl px-6 py-12 sm:p-12 lg:p-14 text-center">
           <h3 className="text-white text-2xl lg:text-3xl font-bold mb-4">
             Your Trusted Technology Partner
           </h3>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-sm sm:text-base">
             We collaborate closely with you to craft bespoke digital strategies,
             combining deep technical expertise with industry insights to accelerate growth.
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/20"
+            className="inline-flex items-center justify-center gap-2 bg-accent text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/20 text-sm sm:text-base"
           >
             Start Your Strategy Session
             <ArrowRight size={18} />
