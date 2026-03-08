@@ -6,7 +6,7 @@ const CardGrid = () => {
       img: 'https://tecdn.b-cdn.net/img/new/standard/city/042.webp',
       location: 'Registered Office',
       address: 'Kemp House, 152–160 City Road, London, EC1V 2NX, United Kingdom',
-      phone: '07345 019824',
+      phone: '07867 374034',
     },
   ];
 
@@ -29,12 +29,12 @@ const CardGrid = () => {
             <p className="mb-4 text-base text-gray-600">{card.address}</p>
             <p className="text-base text-gray-600">
               <strong>Phone:</strong>{' '}
-              <a href="tel:+4407345019824" className="hover:text-accent-dark">
+              <a href="tel:+4407867374034" className="hover:text-accent-dark">
                 {card.phone}
               </a>
             </p>
             <a
-              href="https://wa.me/447345019824"
+              href="https://wa.me/447867374034"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium"

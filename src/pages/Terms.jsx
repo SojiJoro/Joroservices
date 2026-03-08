@@ -115,7 +115,7 @@ const Terms = () => {
               Email: <a href="mailto:info@joroservices.org" className="text-accent-dark underline">info@joroservices.org</a>
             </p>
             <p>
-              Phone: <a href="tel:+4407345019824" className="text-accent-dark underline">07345 019824</a>
+              Phone: <a href="tel:+4407867374034" className="text-accent-dark underline">07867 374034</a>
             </p>
           </div>
         </div>

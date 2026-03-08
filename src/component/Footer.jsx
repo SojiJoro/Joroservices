@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="mt-4">
             <p className="text-gray-400 text-sm">
               <strong className="text-white">Phone:</strong>{' '}
-              <a href="tel:+4407345019824" className="hover:text-accent">07345 019824</a>
+              <a href="tel:+4407867374034" className="hover:text-accent">07867 374034</a>
             </p>
             <p className="text-gray-400 text-sm mt-1">
               <strong className="text-white">Email:</strong>{' '}
@@ -84,9 +84,9 @@ const Footer = () => {
           <div className="mt-6 flex space-x-4">
             <a href="https://www.facebook.com/Joroservices" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
             <a href="https://x.com/Joroservices" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaXTwitter /></a>
-            <a href="https://www.linkedin.com/company/joroservices" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
+            <a href="https://www.linkedin.com/company/joro-services" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
             <a href="https://www.instagram.com/joroservices" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaInstagram /></a>
-            <a href="https://wa.me/447345019824" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaWhatsapp /></a>
+            <a href="https://wa.me/447867374034" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaWhatsapp /></a>
           </div>
         </div>
       </div>

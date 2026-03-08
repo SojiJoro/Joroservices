@@ -142,7 +142,7 @@ const About = () => {
               Get in Touch
             </Link>
             <a
-              href="https://wa.me/447345019824"
+              href="https://wa.me/447867374034"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-green-700 transition"
@@ -152,8 +152,8 @@ const About = () => {
             </a>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400 text-sm">
-            <a href="tel:+4407345019824" className="flex items-center gap-2 hover:text-white">
-              <FaPhoneAlt /> 07345 019824
+            <a href="tel:+4407867374034" className="flex items-center gap-2 hover:text-white">
+              <FaPhoneAlt /> 07867 374034
             </a>
             <a href="mailto:info@joroservices.org" className="flex items-center gap-2 hover:text-white">
               <FaEnvelope /> info@joroservices.org
