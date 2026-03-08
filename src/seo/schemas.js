@@ -13,7 +13,7 @@ export const organizationSchema = {
     'Joro Services Ltd provides digital marketing, web development, mobile app development, UI/UX design, cloud infrastructure, cybersecurity, and IT support services for businesses across the UK.',
   foundingDate: '2022-04-30',
   legalName: 'JORO SERVICES LTD',
-  telephone: '+447345019824',
+  telephone: '+447867374034',
   email: 'info@joroservices.org',
   address: {
     '@type': 'PostalAddress',
@@ -66,7 +66,7 @@ export const organizationSchema = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+447345019824',
+      telephone: '+447867374034',
       contactType: 'customer service',
       email: 'info@joroservices.org',
       areaServed: 'GB',
@@ -83,7 +83,7 @@ export const localBusinessSchema = {
   name: 'Joro Services Ltd',
   image: `${BASE_URL}/Joro.svg`,
   url: BASE_URL,
-  telephone: '+447345019824',
+  telephone: '+447867374034',
   email: 'info@joroservices.org',
   description:
     'Professional digital marketing, web development, IT support, cybersecurity, and cloud solutions provider serving Aldershot, Hampshire, and businesses across the UK.',

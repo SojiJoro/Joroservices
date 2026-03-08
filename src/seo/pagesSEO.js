@@ -29,7 +29,7 @@ const pagesSEO = {
   '/getintouch': {
     title: 'Contact Joro Services | Free Consultation | Aldershot, Hampshire',
     description:
-      'Get in touch with Joro Services for a free consultation on web development, digital marketing, IT support, or any digital project. Based in Aldershot, Hampshire, serving clients UK-wide. Call 07345 019824.',
+      'Get in touch with Joro Services for a free consultation on web development, digital marketing, IT support, or any digital project. Based in Aldershot, Hampshire, serving clients UK-wide. Call 07867 374034.',
     keywords:
       'contact Joro Services, free consultation Aldershot, digital agency contact Hampshire, web developer contact, IT support enquiry, get a quote Aldershot',
   },

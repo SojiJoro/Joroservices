@@ -93,14 +93,14 @@ const Contact = () => {
                 </p>
                 <div className="mt-4 flex flex-col gap-3">
                   <a
-                    href="tel:+4407345019824"
+                    href="tel:+4407867374034"
                     className="inline-flex items-center gap-2 text-accent hover:text-accent-dark font-medium"
                   >
                     <FaPhoneAlt />
-                    07345 019824
+                    07867 374034
                   </a>
                   <a
-                    href="https://wa.me/447345019824"
+                    href="https://wa.me/447867374034"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium"
