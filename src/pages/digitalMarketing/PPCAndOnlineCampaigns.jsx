@@ -204,6 +204,19 @@ const faqData = [
   },
 ]
 
+const ppcFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 const PPCAndOnlineCampaigns = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
@@ -245,6 +258,7 @@ const PPCAndOnlineCampaigns = () => {
             { name: 'Digital Marketing', path: '/digital-marketing' },
             { name: 'PPC & Online Campaigns', path: '/digital-marketing/ppc-and-online-campaigns' },
           ]),
+          ppcFaqSchema,
         ]}
       />
       {/* Section 1: Hero */}

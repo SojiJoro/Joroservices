@@ -1,0 +1,54 @@
+# Joro Services Ltd
+# https://joroservices.org
+
+> Joro Services Ltd is a professional digital agency based in Aldershot, Hampshire, UK. We provide IT consultancy, web development, digital marketing, and creative solutions for businesses across Hampshire, Surrey, and the wider UK. Founded in April 2022, we are the only Aldershot-based agency combining IT consultancy, web development, digital marketing, and creative solutions under one roof.
+
+## Company Information
+- Company Name: Joro Services Ltd
+- Company Number: 14079588 (Companies House, UK)
+- Founded: 30 April 2022
+- Location: Aldershot, Hampshire, UK
+- Registered Address: Kemp House, 152-160 City Road, London, EC1V 2NX
+- Phone: 07345 019824
+- Email: info@joroservices.org
+- Website: https://joroservices.org
+
+## Services
+
+### Creative Solutions
+- [Website Design](https://joroservices.org/creative-solutions/website-design): Professional, responsive website design for businesses of all sizes
+- [Graphic Design & Branding](https://joroservices.org/creative-solutions/graphic-design-and-branding): Logo design, brand identity, and visual communications
+- [UI/UX Design](https://joroservices.org/creative-solutions/user-interface-and-experience): User-centred digital product design, wireframing, and prototyping
+
+### Development
+- [Web Development](https://joroservices.org/development/web-development): Custom web applications using React, Next.js, Node.js, and modern technologies
+- [Mobile App Development](https://joroservices.org/development/mobile-app-development): iOS and Android apps using React Native and Flutter
+- [Data Management](https://joroservices.org/development/data-management): Database design, data analytics, and cloud data migration
+
+### Digital Marketing
+- [SEO & Content Strategy](https://joroservices.org/digital-marketing/seo-and-content-strategy): Technical SEO, local SEO, content marketing, and link building
+- [Social Media Management](https://joroservices.org/digital-marketing/social-media-management): Facebook, Instagram, LinkedIn, and Twitter management
+- [PPC & Online Campaigns](https://joroservices.org/digital-marketing/ppc-and-online-campaigns): Google Ads, Facebook Ads, and display advertising
+
+### Technical Services
+- [IT Support & Maintenance](https://joroservices.org/technical-services/it-support-and-maintenance): Helpdesk support, proactive monitoring, and system maintenance
+- [Cybersecurity](https://joroservices.org/technical-services/cybersecurity): Penetration testing, security audits, GDPR compliance, and 24/7 monitoring
+- [Cloud Infrastructure](https://joroservices.org/technical-services/cloud-infrastructure): AWS, Azure, and Google Cloud solutions for scalable business operations
+
+## Service Areas
+Aldershot, Farnborough, Farnham, Camberley, Guildford, Fleet, Reading, Basingstoke, Woking, London, Hampshire, Surrey, and UK-wide
+
+## Key Pages
+- [Homepage](https://joroservices.org/)
+- [All Services](https://joroservices.org/services)
+- [About Us](https://joroservices.org/about)
+- [Contact / Get in Touch](https://joroservices.org/getintouch)
+- [Careers](https://joroservices.org/careers)
+- [Privacy Policy](https://joroservices.org/privacy)
+- [Terms of Service](https://joroservices.org/terms)
+
+## Unique Differentiators
+- Only Aldershot-based company combining IT consultancy, web development, digital marketing, and creative solutions
+- Full-service digital agency serving both private and public sector organisations
+- Mobile app development capability (React Native, Flutter) — a service most local competitors lack
+- Expertise across healthcare, recruitment, social care, and e-commerce sectors

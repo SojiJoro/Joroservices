@@ -1,5 +1,5 @@
-import React from 'react'
-import { FaHeadset, FaShieldAlt, FaClock, FaTools } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaHeadset, FaShieldAlt, FaClock, FaTools, FaPlus, FaMinus } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
@@ -54,7 +54,51 @@ const portfolio = [
   },
 ]
 
-const ItSupportAndMaintenance = () => (
+const faqData = [
+  {
+    question: 'What does managed IT support include?',
+    answer:
+      'Managed IT support from Joro Services includes 24/7 system monitoring, helpdesk support, security patching, software updates, backup management, and proactive maintenance. We act as your dedicated IT team, handling everything from day-to-day user issues to strategic infrastructure planning.',
+  },
+  {
+    question: 'How quickly do you respond to IT support requests?',
+    answer:
+      'We aim to respond to all support requests within 1 hour during business hours. Critical issues affecting business operations are prioritised and typically addressed within 15-30 minutes. We provide remote support for most issues and on-site visits when needed.',
+  },
+  {
+    question: 'Do you offer IT support for small businesses in Hampshire?',
+    answer:
+      'Yes, we specialise in IT support for small and medium-sized businesses across Hampshire, including Aldershot, Farnborough, Farnham, Camberley, and Guildford. Our flexible support plans are designed to scale with your business, whether you have 5 or 500 employees.',
+  },
+  {
+    question: 'Can you support remote and hybrid teams?',
+    answer:
+      'Absolutely. We set up and manage remote working infrastructure including VPN access, cloud-based collaboration tools, secure file sharing, and remote desktop solutions. We also provide remote helpdesk support so your team gets help wherever they are working.',
+  },
+  {
+    question: 'How much does IT support cost per month?',
+    answer:
+      'IT support costs depend on the number of users, devices, and level of service required. Our plans typically start from £30 per user per month for basic support, with comprehensive managed services from £50 per user per month. Contact us for a tailored quote based on your specific needs.',
+  },
+]
+
+const itFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
+const ItSupportAndMaintenance = () => {
+  const [openFaq, setOpenFaq] = useState(null)
+
+  return (
   <main className="bg-white text-black">
     <SEO
       {...pagesSEO['/technical-services/it-support-and-maintenance']}
@@ -70,6 +114,7 @@ const ItSupportAndMaintenance = () => (
           { name: 'Technical Services', path: '/technical-services' },
           { name: 'IT Support & Maintenance', path: '/technical-services/it-support-and-maintenance' },
         ]),
+        itFaqSchema,
       ]}
     />
     {/* Hero Section */}
@@ -126,10 +171,44 @@ const ItSupportAndMaintenance = () => (
       </div>
     </section>
 
+    {/* FAQ Section */}
+    <section className="py-16 lg:py-20 px-4 lg:px-20 bg-gray-50">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Frequently Asked Questions About IT Support
+        </h2>
+        <div className="space-y-4">
+          {faqData.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-lg bg-white"
+            >
+              <button
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                className="w-full flex justify-between items-center text-left p-5"
+              >
+                <span className="font-medium text-lg pr-4">{faq.question}</span>
+                {openFaq === index ? (
+                  <FaMinus className="text-accent-dark flex-shrink-0" />
+                ) : (
+                  <FaPlus className="text-accent-dark flex-shrink-0" />
+                )}
+              </button>
+              {openFaq === index && (
+                <div className="px-5 pb-5">
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* CTA Section */}
     <section className="bg-accent-dark text-white py-16 text-center">
       <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
-        Need Support That’s Always One Step Ahead?
+        Need Support That's Always One Step Ahead?
       </h2>
       <Link
         to="/getintouch"
@@ -141,6 +220,7 @@ const ItSupportAndMaintenance = () => (
 
     <Footer />
   </main>
-)
+  )
+}
 
 export default ItSupportAndMaintenance
