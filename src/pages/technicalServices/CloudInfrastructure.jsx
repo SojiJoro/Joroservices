@@ -410,7 +410,7 @@ const CloudInfrastructure = () => {
                 'You give us read-only access to your AWS account (we provide the IAM policy)',
                 'We run our audit (takes 48 hours)',
                 'You get a PDF report with findings and recommendations',
-                'If you want us to implement the changes, we'll quote it. If not, keep the report. It's yours.',
+                "If you want us to implement the changes, we'll quote it. If not, keep the report. It's yours.",
               ].map((step, i) => (
                 <div key={i} className="text-center">
                   <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent-dark text-white font-bold text-sm mb-3">
