@@ -292,10 +292,10 @@ const CloudInfrastructure = () => {
               </h3>
               <ul className="space-y-3">
                 {[
-                  'Your bill keeps climbing and you don't know why',
-                  'You set it up yourself (or a previous developer did) and it's a mess',
+                  "Your bill keeps climbing and you don't know why",
+                  "You set it up yourself (or a previous developer did) and it's a mess",
                   'You have no monitoring, no alerts, no idea if things are secure',
-                  'You need to scale but don't know if your architecture can handle it',
+                  "You need to scale but don't know if your architecture can handle it",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-700">
                     <span className="mt-1 text-accent-dark text-sm">&bull;</span>
@@ -314,8 +314,8 @@ const CloudInfrastructure = () => {
               <ul className="space-y-3">
                 {[
                   'Your hosting is slow, expensive, or unreliable',
-                  'You need to migrate but don't know where to start',
-                  'You've been quoted \u00a350k+ by big consultancies and need a realistic option',
+                  "You need to migrate but don't know where to start",
+                  "You've been quoted \u00a350k+ by big consultancies and need a realistic option",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-700">
                     <span className="mt-1 text-accent-dark text-sm">&bull;</span>
