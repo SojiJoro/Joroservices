@@ -123,9 +123,9 @@ const ItSupportAndMaintenance = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">IT Support Services</p>
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Reliable IT Support That Keeps You Online</h1>
+        <h1 className="text-3xl lg:text-4xl font-bold mb-6">IT Support & Maintenance in Aldershot, Hampshire</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-          Downtime costs money. Our proactive IT support and maintenance services keep your systems running smoothly, securely, and always up to date. From on-prem setups to remote teams, we've got your back.
+          Downtime costs money. We provide proactive IT support and maintenance for businesses in Aldershot, Farnborough, Farnham, Fleet, Camberley, Guildford, and across Hampshire and Surrey. Whether you're running on-prem kit or managing remote teams, we keep your systems running properly, patched, and looked after.
         </p>
         <Link
           to="/getintouch"
@@ -202,6 +202,40 @@ const ItSupportAndMaintenance = () => {
               )}
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Why Hampshire Businesses Trust Our IT Support */}
+    <section className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-6">
+          Why Hampshire Businesses Trust Our IT Support
+        </h2>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Most IT support companies sell you a contract and then wait for things to break. We work differently. We monitor your systems, apply patches before they become urgent, and actually pick up the phone when you ring. Businesses across Aldershot, Farnborough, and the wider Hampshire area rely on us because we treat their IT as if it were our own.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            We understand the challenges local businesses face: tight budgets, small teams wearing multiple hats, and the pressure to keep everything running without a dedicated IT department. That is exactly the gap we fill. Whether you are a professional services firm in Fleet, a care provider in Camberley, or a growing business in Guildford, we give you the IT support you need without the overhead of hiring in-house.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Our team is local, responsive, and straightforward. No confusing jargon in reports, no upselling you things you do not need. Just reliable IT support that keeps your business running.
+          </p>
+          <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
+            <h3 className="text-xl font-semibold mb-4">Related Services</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <Link to="/technical-services/cybersecurity" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                <ArrowRight className="w-4 h-4" /> Cybersecurity
+              </Link>
+              <Link to="/technical-services/cloud-infrastructure" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                <ArrowRight className="w-4 h-4" /> Cloud Infrastructure
+              </Link>
+              <Link to="/development/data-management" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                <ArrowRight className="w-4 h-4" /> Data Management
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>

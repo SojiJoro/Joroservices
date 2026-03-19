@@ -63,12 +63,12 @@ const Homepage = () => (
             Trusted by 20+ businesses across the UK
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
-            Your Technology Partner
+            Your Local Tech Partner
             <br />
-            <span className="text-accent">for Lasting Growth</span>
+            <span className="text-accent">in Aldershot, Hampshire</span>
           </h1>
           <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
-            We design, build, and look after the tech that keeps your business running. Cloud, security, web apps, marketing. Everything in one place.
+            Based in Aldershot, covering the full stack from web design to cloud infrastructure. We're the only local agency that handles your website, IT support, cybersecurity, and marketing under one roof. No juggling suppliers. One team, one bill.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-3">
             <Link

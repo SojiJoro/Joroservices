@@ -17,45 +17,22 @@ export const organizationSchema = {
   email: 'info@joroservices.org',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Kemp House, 152-160 City Road',
-    addressLocality: 'London',
-    addressRegion: 'England',
-    postalCode: 'EC1V 2NX',
+    addressLocality: 'Aldershot',
+    addressRegion: 'Hampshire',
     addressCountry: 'GB',
   },
   areaServed: [
-    {
-      '@type': 'City',
-      name: 'Aldershot',
-      containedInPlace: {
-        '@type': 'AdministrativeArea',
-        name: 'Hampshire',
-      },
-    },
-    {
-      '@type': 'City',
-      name: 'Farnborough',
-    },
-    {
-      '@type': 'City',
-      name: 'Farnham',
-    },
-    {
-      '@type': 'City',
-      name: 'Camberley',
-    },
-    {
-      '@type': 'City',
-      name: 'Guildford',
-    },
-    {
-      '@type': 'City',
-      name: 'London',
-    },
-    {
-      '@type': 'Country',
-      name: 'United Kingdom',
-    },
+    { '@type': 'City', name: 'Aldershot' },
+    { '@type': 'City', name: 'Farnborough' },
+    { '@type': 'City', name: 'Farnham' },
+    { '@type': 'City', name: 'Fleet' },
+    { '@type': 'City', name: 'Camberley' },
+    { '@type': 'City', name: 'Guildford' },
+    { '@type': 'City', name: 'Basingstoke' },
+    { '@type': 'City', name: 'Woking' },
+    { '@type': 'AdministrativeArea', name: 'Surrey' },
+    { '@type': 'AdministrativeArea', name: 'Hampshire' },
+    { '@type': 'Country', name: 'United Kingdom' },
   ],
   sameAs: [
     'https://www.facebook.com/Joroservices',
@@ -86,14 +63,12 @@ export const localBusinessSchema = {
   telephone: '+447867374034',
   email: 'info@joroservices.org',
   description:
-    'Professional digital marketing, web development, IT support, cybersecurity, and cloud solutions provider serving Aldershot, Hampshire, and businesses across the UK.',
+    'Full-service digital agency in Aldershot, Hampshire. Web design, IT support, cybersecurity, cloud infrastructure, and digital marketing for local businesses.',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Kemp House, 152-160 City Road',
-    addressLocality: 'London',
-    addressRegion: 'England',
-    postalCode: 'EC1V 2NX',
+    addressLocality: 'Aldershot',
+    addressRegion: 'Hampshire',
     addressCountry: 'GB',
   },
   geo: {
@@ -105,16 +80,13 @@ export const localBusinessSchema = {
     { '@type': 'City', name: 'Aldershot' },
     { '@type': 'City', name: 'Farnborough' },
     { '@type': 'City', name: 'Farnham' },
+    { '@type': 'City', name: 'Fleet' },
     { '@type': 'City', name: 'Camberley' },
     { '@type': 'City', name: 'Guildford' },
-    { '@type': 'City', name: 'Fleet' },
-    { '@type': 'City', name: 'Reading' },
     { '@type': 'City', name: 'Basingstoke' },
     { '@type': 'City', name: 'Woking' },
-    { '@type': 'City', name: 'London' },
-    { '@type': 'AdministrativeArea', name: 'Hampshire' },
     { '@type': 'AdministrativeArea', name: 'Surrey' },
-    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'AdministrativeArea', name: 'Hampshire' },
   ],
   openingHoursSpecification: [
     {
@@ -134,42 +106,18 @@ export const localBusinessSchema = {
     '@type': 'OfferCatalog',
     name: 'Digital Services',
     itemListElement: [
-      {
-        '@type': 'OfferCatalog',
-        name: 'Creative Solutions',
-        itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Graphic Design and Branding' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX Design' } },
-        ],
-      },
-      {
-        '@type': 'OfferCatalog',
-        name: 'Development',
-        itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Development' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile App Development' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Data Management' } },
-        ],
-      },
-      {
-        '@type': 'OfferCatalog',
-        name: 'Digital Marketing',
-        itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO and Content Strategy' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Management' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPC and Online Campaigns' } },
-        ],
-      },
-      {
-        '@type': 'OfferCatalog',
-        name: 'Technical Services',
-        itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'IT Support and Maintenance' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cybersecurity' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cloud Infrastructure' } },
-        ],
-      },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Graphic Design and Branding' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX Design' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile App Development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Data Management' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO and Content Strategy' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Management' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPC and Online Campaigns' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'IT Support and Maintenance' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cybersecurity' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cloud Infrastructure' } },
     ],
   },
 };
@@ -185,33 +133,33 @@ export const websiteSchema = {
   inLanguage: 'en-GB',
 };
 
-// FAQ schema - from homepage FAQ data
+// FAQ schema - homepage
 export const homepageFaqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What digital marketing services do you offer?',
+      name: 'What services does Joro Services offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We specialise in SEO, PPC, social media management, email marketing, and content strategy. Each campaign is tailored to meet your unique business goals.',
+        text: 'We offer web design, web development, mobile app development, graphic design and branding, UI/UX design, SEO, social media management, PPC advertising, IT support, cybersecurity, cloud infrastructure, and data management. All from one team based in Aldershot, Hampshire.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How do you measure campaign success?',
+      name: 'Where are you based and which areas do you cover?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We track key metrics such as traffic growth, conversion rates, engagement levels, and ROI using industry-leading analytics tools to ensure transparent reporting.',
+        text: 'We are based in Aldershot, Hampshire. We serve businesses across Aldershot, Farnborough, Farnham, Fleet, Camberley, Guildford, Basingstoke, Woking, and the wider Hampshire and Surrey area. We also work with clients across the UK.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can you work with our in-house team?',
+      name: 'How is Joro Services different from other agencies?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. We collaborate seamlessly with your internal teams, offering strategic guidance, training, and full support to amplify your existing efforts.',
+        text: 'We combine technical infrastructure expertise with creative and marketing services. Most web agencies cannot fix server performance issues. Most IT companies do not do marketing. We do both, which means your website is fast, secure, and gets found on Google.',
       },
     },
     {
@@ -219,15 +167,15 @@ export const homepageFaqSchema = {
       name: 'What is your pricing model?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We offer both project-based and retainer pricing, depending on the scope and duration of your requirements. Contact us for a custom quote.',
+        text: 'We offer both project-based and monthly retainer pricing. Web design starts from £1,500, IT support from £30 per user per month, and SEO from £500 per month. Every quote is fixed price with no hidden fees. Contact us for a custom quote.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How long until we see results?',
+      name: 'Do you offer free consultations?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'While paid campaigns can yield quick wins, organic strategies like SEO typically take 3-6 months to fully mature. We set realistic timelines and milestones from the start.',
+        text: 'Yes. We offer free consultations, free SEO audits, free security health checks, and free AWS cost audits. No obligation, no sales pressure. Just an honest conversation about what you need.',
       },
     },
   ],
@@ -259,7 +207,12 @@ export function serviceSchema({ name, description, url, category, areaServed }) 
     areaServed: areaServed || [
       { '@type': 'City', name: 'Aldershot' },
       { '@type': 'City', name: 'Farnborough' },
-      { '@type': 'City', name: 'London' },
+      { '@type': 'City', name: 'Farnham' },
+      { '@type': 'City', name: 'Fleet' },
+      { '@type': 'City', name: 'Camberley' },
+      { '@type': 'City', name: 'Guildford' },
+      { '@type': 'City', name: 'Basingstoke' },
+      { '@type': 'City', name: 'Woking' },
       { '@type': 'AdministrativeArea', name: 'Hampshire' },
       { '@type': 'AdministrativeArea', name: 'Surrey' },
       { '@type': 'Country', name: 'United Kingdom' },
@@ -287,5 +240,25 @@ export function webPageSchema({ name, description, url }) {
     isPartOf: { '@id': `${BASE_URL}/#website` },
     about: { '@id': `${BASE_URL}/#organization` },
     inLanguage: 'en-GB',
+  };
+}
+
+// Location-specific LocalBusiness schema helper
+export function locationBusinessSchema({ town, county = 'Hampshire' }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Joro Services Ltd',
+    url: BASE_URL,
+    telephone: '+447867374034',
+    email: 'info@joroservices.org',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: town,
+      addressRegion: county,
+      addressCountry: 'GB',
+    },
+    areaServed: { '@type': 'City', name: town },
+    priceRange: '$$',
   };
 }

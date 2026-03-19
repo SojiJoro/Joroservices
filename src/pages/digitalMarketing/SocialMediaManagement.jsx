@@ -244,13 +244,15 @@ const SocialMediaManagement = () => {
             Social Media Management
           </p>
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">
-            Social Media That Actually Grows Your Business
+            Social Media Management in Aldershot, Hampshire
           </h1>
           <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
-            You don't need to go viral. You need consistent, professional
-            social media that builds trust, attracts customers, and keeps your
-            brand visible. Our social media specialists handle everything:
-            strategy, content creation, scheduling, and reporting.
+            We manage social media for businesses in Aldershot, Farnborough,
+            Farnham, Fleet, Camberley, Guildford, and across Hampshire. You
+            don't need to go viral — you need consistent, professional content
+            that builds trust, attracts customers, and keeps your brand visible.
+            Our team handles strategy, content creation, scheduling, and
+            reporting, so you can focus on running your business.
           </p>
           <Link
             to="/getintouch"
@@ -450,6 +452,62 @@ const SocialMediaManagement = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Social Media Matters */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8">
+              Why Social Media Matters for Hampshire Businesses
+            </h2>
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                Your customers in Aldershot, Farnborough, and across Hampshire are
+                on social media every day. If your business isn't showing up in
+                their feeds, someone else's is.
+              </p>
+              <p>
+                For local businesses, social media does something a website alone
+                can't — it builds familiarity. When someone in Fleet or Camberley
+                sees your posts regularly, you become the obvious choice when they
+                need what you offer. That's not about follower counts or going
+                viral. It's about showing up consistently in your local community.
+              </p>
+              <p>
+                We're based in Hampshire, so we understand the local market. We know
+                what resonates with audiences in towns like Farnham and Guildford,
+                and we create content that feels genuine rather than generic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+            Related Services
+          </h2>
+          <p className="text-center text-gray-600 mb-10">
+            Social media works best alongside other marketing channels. These services pair well with your social strategy.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link to="/digital-marketing/seo-and-content-strategy" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">SEO & Content Strategy</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Social media drives traffic, but SEO makes sure people find you when they search. The two work hand in hand.</p>
+            </Link>
+            <Link to="/digital-marketing/ppc-and-online-campaigns" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">PPC & Online Campaigns</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Combine organic social with paid campaigns on Meta and LinkedIn to reach more of your target audience.</p>
+            </Link>
+            <Link to="/creative-solutions/graphic-design-and-branding" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">Graphic Design & Branding</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Strong branding makes your social content instantly recognisable. We can create or refine your visual identity.</p>
+            </Link>
           </div>
         </div>
       </section>

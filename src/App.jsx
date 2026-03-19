@@ -47,6 +47,15 @@ import Camberley from "./pages/locations/Camberley";
 import Hampshire from "./pages/locations/Hampshire";
 import Surrey from "./pages/locations/Surrey";
 
+// Service-Location Pages
+import ItSupportAldershot from "./pages/locations/ItSupportAldershot";
+import WebDesignAldershot from "./pages/locations/WebDesignAldershot";
+import ItSupportFarnham from "./pages/locations/ItSupportFarnham";
+import WebDesignFarnham from "./pages/locations/WebDesignFarnham";
+import ItSupportFleet from "./pages/locations/ItSupportFleet";
+import ItSupportCamberley from "./pages/locations/ItSupportCamberley";
+import WebDesignGuildford from "./pages/locations/WebDesignGuildford";
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -123,6 +132,15 @@ function App() {
           <Route path="/locations/camberley" element={<Camberley />} />
           <Route path="/locations/hampshire" element={<Hampshire />} />
           <Route path="/locations/surrey" element={<Surrey />} />
+
+          {/* Service-Location Pages */}
+          <Route path="/it-support-aldershot" element={<ItSupportAldershot />} />
+          <Route path="/web-design-aldershot" element={<WebDesignAldershot />} />
+          <Route path="/it-support-farnham" element={<ItSupportFarnham />} />
+          <Route path="/web-design-farnham" element={<WebDesignFarnham />} />
+          <Route path="/it-support-fleet" element={<ItSupportFleet />} />
+          <Route path="/it-support-camberley" element={<ItSupportCamberley />} />
+          <Route path="/web-design-guildford" element={<WebDesignGuildford />} />
 
           {/* Fallback */}
           <Route path="*" element={<UnderDevelopment />} />

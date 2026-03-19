@@ -238,15 +238,17 @@ const Cybersecurity = () => {
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Cybersecurity
             </p>
-            <h1 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-              Most SMBs Don't Get Hacked by Geniuses.
-              They Get Hacked by Basics.
+            <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+              Cybersecurity in Aldershot, Hampshire
             </h1>
+            <p className="text-xl text-white/90 font-semibold mb-6">
+              Most SMBs Don't Get Hacked by Geniuses. They Get Hacked by Basics.
+            </p>
             <p className="text-lg text-white/80 leading-relaxed mb-8">
               Weak passwords, unpatched systems, no MFA, admin accounts
-              everywhere. These are the real threats to your business. We fix
+              everywhere. These are the real threats facing businesses in Aldershot, Farnborough, Farnham, Fleet, Camberley, Guildford, and across Hampshire and Surrey. We fix
               the basics first, then build from there. Practical cybersecurity
-              for small businesses, not enterprise theatre.
+              for local businesses, not enterprise theatre.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -500,6 +502,40 @@ const Cybersecurity = () => {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Hampshire Businesses Need Proper Security */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-6">
+            Why Hampshire Businesses Need Proper Security
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Cyberattacks do not just happen to big companies. Small businesses across Aldershot, Farnborough, and the wider Hampshire area are targeted every day because attackers know they often lack basic protections. A single phishing email or ransomware incident can shut down operations for days, damage your reputation, and cost thousands to recover from.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Many of the businesses we work with in Fleet, Camberley, and Guildford assumed they were too small to be a target. They were not. The good news is that getting properly protected does not require a massive budget or a dedicated security team. It requires someone who knows what to do and actually does it.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              We are based locally and we work with businesses across Hampshire and Surrey. We speak plainly, we prioritise what matters most, and we get the work done without overcomplicating things.
+            </p>
+            <div className="bg-white rounded-2xl p-7 border border-gray-100">
+              <h3 className="text-xl font-semibold mb-4">Related Services</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <Link to="/technical-services/it-support-and-maintenance" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                  <ArrowRight className="w-4 h-4" /> IT Support & Maintenance
+                </Link>
+                <Link to="/technical-services/cloud-infrastructure" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                  <ArrowRight className="w-4 h-4" /> Cloud Infrastructure
+                </Link>
+                <Link to="/development/data-management" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                  <ArrowRight className="w-4 h-4" /> Data Management
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

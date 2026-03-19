@@ -123,9 +123,9 @@ const MobileAppDevelopment = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Mobile App Development</p>
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Apps That Work Everywhere, Instantly</h1>
+        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Mobile App Development in Aldershot, Hampshire</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-          We design and build mobile apps that feel native and run fast. Whether it's Flutter, React Native, or full native, we build apps that people actually enjoy using and businesses can rely on.
+          Based in Aldershot, we design and build mobile apps for businesses across Hampshire, Surrey, and beyond — from startups in Farnborough and Fleet to established companies in Camberley and Guildford. Whether it's Flutter, React Native, or full native, we build apps that people actually enjoy using and businesses can rely on.
         </p>
         <Link
           to="/getintouch"
@@ -205,6 +205,58 @@ const MobileAppDevelopment = () => {
               )}
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Why Hampshire Businesses Choose Us */}
+    <section className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-6">
+          Why Hampshire Businesses Choose Us
+        </h2>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Mobile app development can feel like a big investment, especially for small and mid-sized businesses. That's why it helps to work with a team that's actually nearby. We're based in Aldershot and work with companies across Farnborough, Farnham, Fleet, Camberley, and the wider Hampshire and Surrey area.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Being local means we can sit down with you, understand how your business works, and build an app that fits — not just something that looks good in a demo. We've built apps for healthcare providers, recruitment firms, and service businesses in this area, so we understand the practical needs that come up.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            After launch, we handle updates, bug fixes, and new features. You're not left with an app and no one to maintain it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Related Services */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
+          Related Services
+        </h2>
+        <p className="text-gray-600 text-center mb-12">
+          Mobile apps often work best alongside these services.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Link to="/development/web-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+            <h3 className="text-xl font-semibold text-accent mb-2">Web Development</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Most apps need a web counterpart. We build web applications and websites using React and Next.js.
+            </p>
+          </Link>
+          <Link to="/creative-solutions/user-interface-and-experience" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+            <h3 className="text-xl font-semibold text-accent mb-2">UI/UX Design</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Good apps start with good design. We handle user research, wireframes, and interface design before writing any code.
+            </p>
+          </Link>
+          <Link to="/technical-services/cloud-infrastructure" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+            <h3 className="text-xl font-semibold text-accent mb-2">Cloud Infrastructure</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Your app needs a backend. We set up and manage cloud infrastructure on AWS so your app stays fast and reliable.
+            </p>
+          </Link>
         </div>
       </div>
     </section>

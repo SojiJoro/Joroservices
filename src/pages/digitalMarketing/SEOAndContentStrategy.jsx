@@ -212,13 +212,15 @@ const SEOAndContentStrategy = () => {
             SEO & Content Strategy
           </p>
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">
-            Get Found on Google. No Guesswork.
+            SEO & Content Strategy in Aldershot, Hampshire
           </h1>
           <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
-            You built a great business. Now let people find it. Our SEO
-            specialists handle keyword research, content strategy, technical
-            optimisation, and ongoing performance tracking, so you show up
-            when your customers are searching.
+            We help businesses across Aldershot, Farnborough, Farnham, Fleet,
+            Camberley, Guildford, and the wider Hampshire area get found on
+            Google. Our SEO specialists handle keyword research, content
+            strategy, technical optimisation, and ongoing performance tracking
+            — so when your customers are searching, they find you, not your
+            competitors.
           </p>
           <Link
             to="/getintouch"
@@ -410,6 +412,67 @@ const SEOAndContentStrategy = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Local SEO Matters */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8">
+              Why Local SEO Matters for Hampshire Businesses
+            </h2>
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                Most people searching for services in Aldershot, Farnborough, or
+                anywhere in Hampshire start with Google. If your business doesn't
+                appear in those results, you're handing customers to whoever does.
+              </p>
+              <p>
+                Local SEO is particularly important for businesses serving specific
+                areas. Whether you're a tradesperson covering Fleet and Camberley, a
+                professional services firm in Farnham, or a retailer in Guildford,
+                your potential customers are searching with local intent — "near me"
+                searches, town names, and service-plus-location queries.
+              </p>
+              <p>
+                We understand the Hampshire market because we're based here. We know
+                which directories matter locally, how to optimise your Google Business
+                Profile for the areas you serve, and how to create content that ranks
+                for the searches your customers are actually making.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+            Related Services
+          </h2>
+          <p className="text-center text-gray-600 mb-10">
+            SEO works best as part of a wider digital strategy. These services complement your organic search efforts.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link to="/development/web-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">Web Development</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">A fast, well-built website is the foundation of good SEO. We build sites that Google and your customers both appreciate.</p>
+            </Link>
+            <Link to="/digital-marketing/social-media-management" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">Social Media Management</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Social signals support your SEO efforts. Consistent social media activity drives traffic and builds brand awareness.</p>
+            </Link>
+            <Link to="/digital-marketing/ppc-and-online-campaigns" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">PPC & Online Campaigns</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Need leads while your SEO builds momentum? Paid ads deliver immediate visibility alongside your organic strategy.</p>
+            </Link>
+            <Link to="/creative-solutions/website-design" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">Website Design</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Great SEO brings visitors. Great design converts them. We design sites that look good and perform well in search.</p>
+            </Link>
           </div>
         </div>
       </section>

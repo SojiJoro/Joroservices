@@ -264,13 +264,10 @@ const DataManagement = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Data Management</p>
           <h1 className="text-3xl lg:text-4xl font-bold mb-6">
-            Your Data Is Your Business. Let's Make Sure It's Safe, Organised, and Useful.
+            Data Management in Aldershot, Hampshire
           </h1>
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-            From database administration and automated backups to analytics
-            dashboards that show you what's actually happening in your business.
-            We help SMBs get control of their data. Built on real cloud
-            infrastructure experience and a Master's in Data Analytics.
+            We help businesses in Aldershot, Farnborough, Farnham, and across Hampshire and Surrey get their data under control. From database administration and automated backups to analytics dashboards that show you what's actually happening in your business — we help SMBs make their data safe, organised, and useful. Built on real cloud infrastructure experience and a Master's in Data Analytics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
@@ -449,6 +446,58 @@ const DataManagement = () => {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Hampshire Businesses Choose Us */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-6">
+            Why Hampshire Businesses Choose Us
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Most small businesses in Aldershot, Fleet, Camberley, and the surrounding area don't have a dedicated data team — and they shouldn't need one. But that doesn't mean data management can be ignored. Whether it's customer records in spreadsheets, a database that's slowing down, or reports that take hours to pull together, these problems cost time and money.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              We're based locally and work with businesses across Hampshire and Surrey who need practical help with their data. Not a big consultancy engagement — just someone who knows what they're doing, can look at what you've got, and sort it out properly.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              We've helped local businesses migrate from messy spreadsheets to proper databases, set up dashboards that actually get used, and put backup systems in place that they can trust. If your data is a headache, we can fix that.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
+            Related Services
+          </h2>
+          <p className="text-gray-600 text-center mb-12">
+            Data management often goes hand-in-hand with these services.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link to="/technical-services/cloud-infrastructure" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+              <h3 className="text-xl font-semibold text-accent mb-2">Cloud Infrastructure</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Your data lives on infrastructure. We set up and manage AWS environments so your databases and storage are properly configured and cost-effective.
+              </p>
+            </Link>
+            <Link to="/technical-services/cybersecurity" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+              <h3 className="text-xl font-semibold text-accent mb-2">Cybersecurity</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Keeping your data safe goes beyond backups. We help with access controls, encryption, and security audits to protect your business information.
+              </p>
+            </Link>
+            <Link to="/technical-services/it-support-and-maintenance" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+              <h3 className="text-xl font-semibold text-accent mb-2">IT Support</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Need ongoing technical support for your systems? We offer IT support and maintenance for businesses that want reliable help without a full-time hire.
+              </p>
+            </Link>
           </div>
         </div>
       </section>
