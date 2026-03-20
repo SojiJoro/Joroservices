@@ -86,19 +86,16 @@ const serviceCards = [
 const portfolio = [
   {
     name: 'Healthcare IT Support Contract',
-    image: '/images/it-healthcare.jpg',
     description:
       'Provided full support for care home IT infrastructure, including user account management, PC refreshes, and printer maintenance.',
   },
   {
     name: 'Remote Staff Support & Automation',
-    image: '/images/it-remote.jpg',
     description:
       'Enabled a distributed team with VPN setup, Slack integration, and zero-downtime deployment of security patches.',
   },
   {
     name: 'Infrastructure Uptime Improvement',
-    image: '/images/it-uptime.jpg',
     description:
       'Achieved 99.98% uptime for a financial services firm by implementing load balancing, proactive monitoring, and automated backups.',
   },
@@ -314,7 +311,6 @@ const ItSupportAndMaintenance = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolio.map((item, i) => (
             <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
-              <img src={item.image} alt={item.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{item.description}</p>
