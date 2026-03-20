@@ -480,6 +480,31 @@ const SEOAndContentStrategy = () => {
         </div>
       </section>
 
+      {/* Local Service Areas */}
+      <section className="py-16 lg:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
+            SEO Services Across Hampshire &amp; Surrey
+          </h2>
+          <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {[
+              { label: 'Aldershot', path: '/locations/aldershot' },
+              { label: 'Farnborough', path: '/locations/farnborough' },
+              { label: 'Farnham', path: '/it-support-farnham' },
+              { label: 'Fleet', path: '/it-support-fleet' },
+              { label: 'Camberley', path: '/locations/camberley' },
+              { label: 'Guildford', path: '/locations/guildford' },
+              { label: 'Hampshire', path: '/locations/hampshire' },
+              { label: 'Surrey', path: '/locations/surrey' },
+            ].map((area, i) => (
+              <Link key={i} to={area.path} className="text-center p-3 bg-white rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-sm transition-all">
+                <span className="text-sm font-medium text-gray-700 hover:text-accent">{area.label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
