@@ -5,7 +5,8 @@ import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SEO from "../component/SEO";
 import pagesSEO from "../seo/pagesSEO";
-import { organizationSchema, breadcrumbSchema } from "../seo/schemas";
+import { organizationSchema, localBusinessSchema, breadcrumbSchema } from "../seo/schemas";
+import Breadcrumb from "../component/Breadcrumb";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -71,8 +72,10 @@ const Contact = () => {
     <main className="bg-gray-50 min-h-screen text-gray-900">
       <SEO
         {...pagesSEO['/getintouch']}
+        dateModified="2026-03-20"
         jsonLd={[
           organizationSchema,
+          localBusinessSchema,
           breadcrumbSchema([
             { name: 'Home', path: '/' },
             { name: 'Contact', path: '/getintouch' },
@@ -83,6 +86,10 @@ const Contact = () => {
       {/* Hero */}
       <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[
+            { name: 'Home', path: '/' },
+            { name: 'Contact' },
+          ]} />
           <div className="max-w-2xl">
             <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Contact</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">Get in Touch</h1>

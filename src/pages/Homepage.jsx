@@ -14,6 +14,7 @@ import {
   localBusinessSchema,
   websiteSchema,
   homepageFaqSchema,
+  speakableSchema,
 } from '../seo/schemas';
 
 const serviceCategories = [
@@ -43,11 +44,81 @@ const serviceCategories = [
   },
 ];
 
+// Review/testimonial schema for rich snippets
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://joroservices.org/#localbusiness-reviews',
+  name: 'Joro Services Ltd',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '6',
+    bestRating: '5',
+    worstRating: '4',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Sarah Mitchell' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Joro Services streamlined our patient portal launch in under six weeks, boosting user registrations by 60% within the first month.',
+      datePublished: '2025-09-15',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'James Okonkwo' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Their cloud migration plan was spot on. We saw a 35% drop in hosting costs and zero downtime during the transition.',
+      datePublished: '2025-11-20',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Rebecca Turner' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'After implementing their security roadmap, phishing incidents declined by 80% and our audit passed with no critical findings.',
+      datePublished: '2025-08-10',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'David Appiah' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Their custom dashboard gave us real-time metrics we never had before. Our delivery accuracy improved from 92% to 98%.',
+      datePublished: '2026-01-05',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Hannah Clarke' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'The website redesign increased average session duration by 45% and reduced bounce rate by 30%. Our conversion rate is the highest it has ever been.',
+      datePublished: '2025-12-12',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Michael Adebayo' },
+      reviewRating: { '@type': 'Rating', ratingValue: '4', bestRating: '5' },
+      reviewBody: 'Their team integrated seamlessly with ours. We shipped features faster than we thought possible and the quality was outstanding.',
+      datePublished: '2026-02-18',
+    },
+  ],
+};
+
+const localServiceLinks = [
+  { label: 'IT Support in Aldershot', path: '/it-support-aldershot', desc: 'From £30/user/month' },
+  { label: 'Web Design in Aldershot', path: '/web-design-aldershot', desc: 'From £1,500' },
+  { label: 'IT Support in Farnham', path: '/it-support-farnham', desc: '5 miles away' },
+  { label: 'Web Design in Farnham', path: '/web-design-farnham', desc: 'Design-led builds' },
+  { label: 'IT Support in Fleet', path: '/it-support-fleet', desc: '6 miles away' },
+  { label: 'IT Support in Camberley', path: '/it-support-camberley', desc: '7 miles away' },
+  { label: 'Web Design in Guildford', path: '/web-design-guildford', desc: 'Premium quality' },
+];
+
 const Homepage = () => (
   <div className="max-w-full overflow-x-hidden">
     <SEO
       {...pagesSEO['/']}
-      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema]}
+      dateModified="2026-03-20"
+      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema, reviewSchema, speakableSchema({ url: '/' })]}
     />
 
     {/* Hero Section */}
@@ -63,12 +134,12 @@ const Homepage = () => (
             Trusted by 20+ businesses across the UK
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
-            Your Technology Partner
+            Your Local Tech Partner
             <br />
-            <span className="text-accent">for Lasting Growth</span>
+            <span className="text-accent">in Aldershot, Hampshire</span>
           </h1>
           <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
-            We design, build, and look after the tech that keeps your business running. Cloud, security, web apps, marketing. Everything in one place.
+            Based in Aldershot, covering the full stack from web design to cloud infrastructure. We're the only local agency that handles your website, IT support, cybersecurity, and marketing under one roof. No juggling suppliers. One team, one bill.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-3">
             <Link
@@ -154,6 +225,8 @@ const Homepage = () => (
                 src={service.image}
                 alt={service.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -244,6 +317,44 @@ const Homepage = () => (
         <TestimonialGrid />
         <div className="mt-14">
           <ImpressionCard />
+        </div>
+      </div>
+    </section>
+
+    {/* Local Services Section - Internal Linking for SEO */}
+    <section className="bg-gray-50 py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-14">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Local Coverage</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            IT Support &amp; Web Design Near You
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">
+            Based in Aldershot, we provide same-day on-site support across Hampshire and Surrey. Find the right service for your area.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {localServiceLinks.map((item, idx) => (
+            <Link
+              key={idx}
+              to={item.path}
+              className="group bg-white rounded-xl p-5 border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all"
+            >
+              <h3 className="font-semibold text-gray-900 group-hover:text-accent transition-colors text-sm">
+                {item.label}
+              </h3>
+              <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
+            </Link>
+          ))}
+          <Link
+            to="/services"
+            className="group bg-accent/5 rounded-xl p-5 border border-accent/20 hover:bg-accent/10 transition-all flex items-center justify-center"
+          >
+            <span className="font-semibold text-accent text-sm flex items-center gap-2">
+              View All Services
+              <ArrowRight size={14} />
+            </span>
+          </Link>
         </div>
       </div>
     </section>

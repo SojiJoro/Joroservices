@@ -159,6 +159,30 @@ const MobileNavbar = ({ isOpen, toggleNav }) => {
               </Link>
             </div>
 
+            {/* Locations */}
+            <div className="mt-6">
+              <p className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Locations</p>
+              <div className="grid grid-cols-2 gap-1">
+                {[
+                  { label: 'Aldershot', path: '/locations/aldershot' },
+                  { label: 'Farnborough', path: '/locations/farnborough' },
+                  { label: 'Guildford', path: '/locations/guildford' },
+                  { label: 'Camberley', path: '/locations/camberley' },
+                  { label: 'Hampshire', path: '/locations/hampshire' },
+                  { label: 'Surrey', path: '/locations/surrey' },
+                ].map((loc, i) => (
+                  <Link
+                    key={i}
+                    to={loc.path}
+                    onClick={toggleNav}
+                    className="block py-2 px-3 text-xs text-gray-500 hover:text-white rounded-lg hover:bg-white/[0.03] transition-colors"
+                  >
+                    {loc.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {/* CTA */}
             <div className="mt-8">
               <Link

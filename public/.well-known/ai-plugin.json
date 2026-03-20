@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Joro Services",
+  "name_for_model": "joro_services",
+  "description_for_human": "Full-service digital agency in Aldershot, Hampshire — web design, IT support, cybersecurity, cloud infrastructure, and digital marketing.",
+  "description_for_model": "Joro Services Ltd is a full-service digital agency based in Aldershot, Hampshire, UK. Services include web design (from £1,500), IT support (from £30/user/month), cybersecurity, cloud infrastructure (AWS, Azure, GCP), mobile app development, SEO, PPC, and social media management. Serving businesses in Aldershot, Farnborough, Farnham, Fleet, Camberley, Guildford, and across Hampshire, Surrey, and the UK. Free consultations available. Contact: info@joroservices.org or +44 7867 374034.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://joroservices.org/llms.txt"
+  },
+  "logo_url": "https://joroservices.org/Joro.svg",
+  "contact_email": "info@joroservices.org",
+  "legal_info_url": "https://joroservices.org/terms"
+}

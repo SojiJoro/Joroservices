@@ -6,6 +6,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -106,6 +107,7 @@ const WebDevelopment = () => {
   <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/development/web-development']}
+      dateModified="2026-03-20"
       jsonLd={[
         serviceSchema({
           name: 'Web Development',
@@ -126,9 +128,10 @@ const WebDevelopment = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Web Development</p>
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Modern Web Apps Built for Speed and Growth</h1>
+        <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Development', path: '/development' }, { name: 'Web Development' }]} />
+        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Web Development in Aldershot, Hampshire</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-          From marketing sites to full web applications, we build responsive, search-optimised products using React and Next.js. Clean code, fast loading, and easy to manage.
+          We build websites and web applications for businesses in Aldershot, Farnborough, Guildford, and across Hampshire and Surrey. From marketing sites to full web applications, everything is built with React and Next.js — responsive, search-optimised, fast-loading, and straightforward to manage.
         </p>
         <Link
           to="/getintouch"
@@ -170,7 +173,7 @@ const WebDevelopment = () => {
               rel="noopener noreferrer"
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition block"
             >
-              <img src={site.image} alt={site.name} className="h-48 w-full object-cover" />
+              <img src={site.image} alt={site.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{site.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{site.description}</p>
@@ -211,6 +214,58 @@ const WebDevelopment = () => {
               )}
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Why Hampshire Businesses Choose Us */}
+    <section className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-6">
+          Why Hampshire Businesses Choose Us
+        </h2>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-gray-600 leading-relaxed mb-4">
+            We're based in Aldershot and work with businesses across Hampshire and Surrey — from sole traders in Farnham to growing companies in Fleet and Camberley. That means we're local enough to meet face-to-face when it matters, and we understand the kinds of challenges that small and mid-sized businesses in this area actually deal with.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            A lot of agencies will sell you a template site and call it custom. We don't do that. Every website we build is coded from scratch or carefully configured to fit your business properly. You get a site that loads quickly, ranks well on Google, and doesn't fall apart the moment you try to update something.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            We also stick around after launch. If something breaks or you need changes, you're not chasing an agency three counties away — you're talking to the same team that built it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Related Services */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
+          Related Services
+        </h2>
+        <p className="text-gray-600 text-center mb-12">
+          Web development often goes hand-in-hand with these services.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Link to="/creative-solutions/website-design" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+            <h3 className="text-xl font-semibold text-accent mb-2">Website Design</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Need the design sorted before development? We handle UI and visual design so your site looks as good as it performs.
+            </p>
+          </Link>
+          <Link to="/development/mobile-app-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+            <h3 className="text-xl font-semibold text-accent mb-2">Mobile App Development</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              If your business needs a mobile app alongside your website, we build cross-platform apps using React Native and Flutter.
+            </p>
+          </Link>
+          <Link to="/digital-marketing/seo-and-content-strategy" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
+            <h3 className="text-xl font-semibold text-accent mb-2">SEO & Content Strategy</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              A great website needs to be found. We offer ongoing SEO and content work to help your site rank for the right terms.
+            </p>
+          </Link>
         </div>
       </div>
     </section>

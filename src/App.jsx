@@ -1,51 +1,60 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./component/navbar";
-import Homepage from "./pages/Homepage";
-import UnderDevelopment from "./pages/under-development";
 import CookieConsent from "./component/CookieConsent";
 import { FaArrowUp } from "react-icons/fa6";
 
 // Main Pages
-import DigitalMarketing from "./pages/digitalMarketing";
-import Development from "./pages/development";
-import Careers from "./pages/career";
-import CreativeSolution from "./pages/creativeSolutions";
-import TechnicalServices from "./pages/technicalServices";
-import Services from "./pages/services";
-import Contact from "./pages/contact";
-import About from "./pages/About";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import ServiceDetail from "./pages/ServiceDetail";
+const Homepage = lazy(() => import("./pages/Homepage"));
+const UnderDevelopment = lazy(() => import("./pages/under-development"));
+const DigitalMarketing = lazy(() => import("./pages/digitalMarketing"));
+const Development = lazy(() => import("./pages/development"));
+const Careers = lazy(() => import("./pages/career"));
+const CreativeSolution = lazy(() => import("./pages/creativeSolutions"));
+const TechnicalServices = lazy(() => import("./pages/technicalServices"));
+const Services = lazy(() => import("./pages/services"));
+const Contact = lazy(() => import("./pages/contact"));
+const About = lazy(() => import("./pages/About"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
 
 // Creative Solutions Subpages (slug-aligned)
-import WebsiteDesign from "./pages/creativeSolutions/WebsiteDesign";
-import GraphicDesignAndBranding from "./pages/creativeSolutions/GraphicDesignAndBranding";
-import UserInterfaceAndExperience from "./pages/creativeSolutions/UserInterfaceAndExperience";
+const WebsiteDesign = lazy(() => import("./pages/creativeSolutions/WebsiteDesign"));
+const GraphicDesignAndBranding = lazy(() => import("./pages/creativeSolutions/GraphicDesignAndBranding"));
+const UserInterfaceAndExperience = lazy(() => import("./pages/creativeSolutions/UserInterfaceAndExperience"));
 
 // Development Subpages
-import WebDevelopment from "./pages/development/WebDevelopment";
-import MobileAppDevelopment from "./pages/development/MobileAppDevelopment";
-import DataManagement from "./pages/development/DataManagement";
+const WebDevelopment = lazy(() => import("./pages/development/WebDevelopment"));
+const MobileAppDevelopment = lazy(() => import("./pages/development/MobileAppDevelopment"));
+const DataManagement = lazy(() => import("./pages/development/DataManagement"));
 
 // Digital Marketing Subpages
-import SEOAndContentStrategy from "./pages/digitalMarketing/SEOAndContentStrategy";
-import SocialMediaManagement from "./pages/digitalMarketing/SocialMediaManagement";
-import PPCAndOnlineCampaigns from "./pages/digitalMarketing/PPCAndOnlineCampaigns";
+const SEOAndContentStrategy = lazy(() => import("./pages/digitalMarketing/SEOAndContentStrategy"));
+const SocialMediaManagement = lazy(() => import("./pages/digitalMarketing/SocialMediaManagement"));
+const PPCAndOnlineCampaigns = lazy(() => import("./pages/digitalMarketing/PPCAndOnlineCampaigns"));
 
 // Technical Services Subpages
-import ItSupportAndMaintenance from "./pages/technicalServices/ItSupportAndMaintenance";
-import Cybersecurity from "./pages/technicalServices/Cybersecurity";
-import CloudInfrastructure from "./pages/technicalServices/CloudInfrastructure";
+const ItSupportAndMaintenance = lazy(() => import("./pages/technicalServices/ItSupportAndMaintenance"));
+const Cybersecurity = lazy(() => import("./pages/technicalServices/Cybersecurity"));
+const CloudInfrastructure = lazy(() => import("./pages/technicalServices/CloudInfrastructure"));
 
 // Location Pages
-import Aldershot from "./pages/locations/Aldershot";
-import Farnborough from "./pages/locations/Farnborough";
-import Guildford from "./pages/locations/Guildford";
-import Camberley from "./pages/locations/Camberley";
-import Hampshire from "./pages/locations/Hampshire";
-import Surrey from "./pages/locations/Surrey";
+const Aldershot = lazy(() => import("./pages/locations/Aldershot"));
+const Farnborough = lazy(() => import("./pages/locations/Farnborough"));
+const Guildford = lazy(() => import("./pages/locations/Guildford"));
+const Camberley = lazy(() => import("./pages/locations/Camberley"));
+const Hampshire = lazy(() => import("./pages/locations/Hampshire"));
+const Surrey = lazy(() => import("./pages/locations/Surrey"));
+
+// Service-Location Pages
+const ItSupportAldershot = lazy(() => import("./pages/locations/ItSupportAldershot"));
+const WebDesignAldershot = lazy(() => import("./pages/locations/WebDesignAldershot"));
+const ItSupportFarnham = lazy(() => import("./pages/locations/ItSupportFarnham"));
+const WebDesignFarnham = lazy(() => import("./pages/locations/WebDesignFarnham"));
+const ItSupportFleet = lazy(() => import("./pages/locations/ItSupportFleet"));
+const ItSupportCamberley = lazy(() => import("./pages/locations/ItSupportCamberley"));
+const WebDesignGuildford = lazy(() => import("./pages/locations/WebDesignGuildford"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -81,52 +90,69 @@ function App() {
         )}
 
         <Navbar />
-        <Routes>
-          {/* Main Pages */}
-          <Route path="/" element={<Homepage />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/development" element={<Development />} />
-          <Route path="/digital-marketing" element={<DigitalMarketing />} />
-          <Route path="/creative-solutions" element={<CreativeSolution />} />
-          <Route path="/technical-services" element={<TechnicalServices />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/getintouch" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/services/:id" element={<ServiceDetail />} />
+        <Suspense
+          fallback={
+            <div className="min-h-screen bg-[#0a1628] flex items-center justify-center">
+              <div className="w-8 h-8 border-2 border-[#14b8a6] border-t-transparent rounded-full animate-spin" />
+            </div>
+          }
+        >
+          <Routes>
+            {/* Main Pages */}
+            <Route path="/" element={<Homepage />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/development" element={<Development />} />
+            <Route path="/digital-marketing" element={<DigitalMarketing />} />
+            <Route path="/creative-solutions" element={<CreativeSolution />} />
+            <Route path="/technical-services" element={<TechnicalServices />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/getintouch" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/services/:id" element={<ServiceDetail />} />
 
-          {/* Creative Solutions Subpages */}
-          <Route path="/creative-solutions/website-design" element={<WebsiteDesign />} />
-          <Route path="/creative-solutions/graphic-design-and-branding" element={<GraphicDesignAndBranding />} />
-          <Route path="/creative-solutions/user-interface-and-experience" element={<UserInterfaceAndExperience />} />
+            {/* Creative Solutions Subpages */}
+            <Route path="/creative-solutions/website-design" element={<WebsiteDesign />} />
+            <Route path="/creative-solutions/graphic-design-and-branding" element={<GraphicDesignAndBranding />} />
+            <Route path="/creative-solutions/user-interface-and-experience" element={<UserInterfaceAndExperience />} />
 
-          {/* Development Subpages */}
-          <Route path="/development/web-development" element={<WebDevelopment />} />
-          <Route path="/development/mobile-app-development" element={<MobileAppDevelopment />} />
-          <Route path="/development/data-management" element={<DataManagement />} />
+            {/* Development Subpages */}
+            <Route path="/development/web-development" element={<WebDevelopment />} />
+            <Route path="/development/mobile-app-development" element={<MobileAppDevelopment />} />
+            <Route path="/development/data-management" element={<DataManagement />} />
 
-          {/* Digital Marketing Subpages */}
-          <Route path="/digital-marketing/seo-and-content-strategy" element={<SEOAndContentStrategy />} />
-          <Route path="/digital-marketing/social-media-management" element={<SocialMediaManagement />} />
-          <Route path="/digital-marketing/ppc-and-online-campaigns" element={<PPCAndOnlineCampaigns />} />
+            {/* Digital Marketing Subpages */}
+            <Route path="/digital-marketing/seo-and-content-strategy" element={<SEOAndContentStrategy />} />
+            <Route path="/digital-marketing/social-media-management" element={<SocialMediaManagement />} />
+            <Route path="/digital-marketing/ppc-and-online-campaigns" element={<PPCAndOnlineCampaigns />} />
 
-          {/* Technical Services Subpages */}
-          <Route path="/technical-services/it-support-and-maintenance" element={<ItSupportAndMaintenance />} />
-          <Route path="/technical-services/cybersecurity" element={<Cybersecurity />} />
-          <Route path="/technical-services/cloud-infrastructure" element={<CloudInfrastructure />} />
+            {/* Technical Services Subpages */}
+            <Route path="/technical-services/it-support-and-maintenance" element={<ItSupportAndMaintenance />} />
+            <Route path="/technical-services/cybersecurity" element={<Cybersecurity />} />
+            <Route path="/technical-services/cloud-infrastructure" element={<CloudInfrastructure />} />
 
-          {/* Location Pages */}
-          <Route path="/locations/aldershot" element={<Aldershot />} />
-          <Route path="/locations/farnborough" element={<Farnborough />} />
-          <Route path="/locations/guildford" element={<Guildford />} />
-          <Route path="/locations/camberley" element={<Camberley />} />
-          <Route path="/locations/hampshire" element={<Hampshire />} />
-          <Route path="/locations/surrey" element={<Surrey />} />
+            {/* Location Pages */}
+            <Route path="/locations/aldershot" element={<Aldershot />} />
+            <Route path="/locations/farnborough" element={<Farnborough />} />
+            <Route path="/locations/guildford" element={<Guildford />} />
+            <Route path="/locations/camberley" element={<Camberley />} />
+            <Route path="/locations/hampshire" element={<Hampshire />} />
+            <Route path="/locations/surrey" element={<Surrey />} />
 
-          {/* Fallback */}
-          <Route path="*" element={<UnderDevelopment />} />
-        </Routes>
+            {/* Service-Location Pages */}
+            <Route path="/it-support-aldershot" element={<ItSupportAldershot />} />
+            <Route path="/web-design-aldershot" element={<WebDesignAldershot />} />
+            <Route path="/it-support-farnham" element={<ItSupportFarnham />} />
+            <Route path="/web-design-farnham" element={<WebDesignFarnham />} />
+            <Route path="/it-support-fleet" element={<ItSupportFleet />} />
+            <Route path="/it-support-camberley" element={<ItSupportCamberley />} />
+            <Route path="/web-design-guildford" element={<WebDesignGuildford />} />
+
+            {/* Fallback */}
+            <Route path="*" element={<UnderDevelopment />} />
+          </Routes>
+        </Suspense>
 
         <CookieConsent />
       </div>

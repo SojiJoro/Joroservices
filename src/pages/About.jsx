@@ -6,6 +6,7 @@ import Footer from '../component/Footer';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
 import { organizationSchema, breadcrumbSchema } from '../seo/schemas';
+import Breadcrumb from '../component/Breadcrumb';
 
 const values = [
   {
@@ -38,6 +39,7 @@ const About = () => {
     <main className="bg-white text-gray-900 min-h-screen">
       <SEO
         {...pagesSEO['/about']}
+        dateModified="2026-03-20"
         jsonLd={[
           organizationSchema,
           breadcrumbSchema([
@@ -50,6 +52,10 @@ const About = () => {
       {/* Hero */}
       <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[
+            { name: 'Home', path: '/' },
+            { name: 'About' },
+          ]} />
           <div className="max-w-3xl">
             <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">About Us</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">About Joro Services</h1>

@@ -3,29 +3,29 @@ import { ChevronDown } from 'lucide-react';
 
 const faqData = [
   {
-    question: 'What digital marketing services do you offer?',
+    question: 'What services does Joro Services offer?',
     answer:
-      'We cover SEO, PPC advertising, social media management, email marketing, and content strategy. We build each campaign around what your business actually needs.',
+      'We offer web design, web development, mobile app development, graphic design and branding, UI/UX design, SEO, social media management, PPC advertising, IT support, cybersecurity, cloud infrastructure, and data management. All from one team based in Aldershot, Hampshire.',
   },
   {
-    question: 'How do you measure campaign success?',
+    question: 'Where are you based and which areas do you cover?',
     answer:
-      'We look at traffic growth, conversion rates, engagement, and return on investment. You get regular reports so you can see exactly what is working.',
+      'We are based in Aldershot, Hampshire. We serve businesses across Aldershot, Farnborough, Farnham, Fleet, Camberley, Guildford, Basingstoke, Woking, and the wider Hampshire and Surrey area. We also work with clients across the UK.',
   },
   {
-    question: 'Can you work with our in-house team?',
+    question: 'How is Joro Services different from other agencies?',
     answer:
-      'Yes, we do this all the time. We can work alongside your team, help with strategy, offer training, and fill in the gaps where you need extra support.',
+      'We combine technical infrastructure expertise with creative and marketing services. Most web agencies can\'t fix server performance issues. Most IT companies don\'t do marketing. We do both, which means your website is fast, secure, and gets found on Google.',
   },
   {
     question: 'What is your pricing model?',
     answer:
-      'We offer both project-based and retainer pricing, depending on the scope and duration of your requirements. Contact us for a custom quote.',
+      'We offer both project-based and monthly retainer pricing. Web design starts from £1,500, IT support from £30 per user per month, and SEO from £500 per month. Every quote is fixed price with no hidden fees. Contact us for a custom quote.',
   },
   {
-    question: 'How long until we see results?',
+    question: 'Do you offer free consultations?',
     answer:
-      'Paid campaigns like Google Ads can bring results quickly. SEO takes longer, usually 3 to 6 months before you see real traction. We will be upfront about timelines from the start.',
+      'Yes. We offer free consultations, free SEO audits, free security health checks, and free AWS cost audits. No obligation, no sales pressure. Just an honest conversation about what your business needs.',
   },
 ];
 

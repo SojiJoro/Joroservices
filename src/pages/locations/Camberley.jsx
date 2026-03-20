@@ -3,7 +3,8 @@ import { CheckCircle, ChevronDown, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import { serviceSchema, breadcrumbSchema, locationBusinessSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -98,6 +99,7 @@ const Camberley = () => {
         title="Web Development, IT Support & Digital Marketing in Camberley | Joro Services"
         description="Joro Services provides expert web development, SEO, IT support, cybersecurity, and cloud solutions to businesses in Camberley and Surrey Heath. Trusted by professional services firms and local businesses. Free consultation available."
         keywords="web development Camberley, IT support Camberley, digital marketing Camberley, SEO Camberley, web design Camberley, cybersecurity Camberley, mobile app development Camberley, cloud services Camberley, IT consultancy Camberley, digital agency Surrey Heath"
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Digital Services in Camberley',
@@ -110,6 +112,7 @@ const Camberley = () => {
             { name: 'Locations', path: '/locations/camberley' },
             { name: 'Camberley', path: '/locations/camberley' },
           ]),
+          locationBusinessSchema({ town: 'Camberley', county: 'Surrey', lat: 51.3367, lng: -0.7433 }),
           camberleyFaqSchema,
         ]}
       />
@@ -117,6 +120,7 @@ const Camberley = () => {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Locations', path: '/locations/camberley' }, { name: 'Camberley' }]} />
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-5 h-5 text-accent-dark" />
             <span className="text-accent font-semibold text-sm uppercase tracking-widest">Camberley, Surrey</span>

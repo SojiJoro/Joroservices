@@ -20,6 +20,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
@@ -215,6 +216,7 @@ const CloudInfrastructure = () => {
     <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/technical-services/cloud-infrastructure']}
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Cloud Infrastructure',
@@ -236,12 +238,15 @@ const CloudInfrastructure = () => {
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
             AWS Cloud Services
           </p>
-          <h1 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-            Stop Overpaying for Cloud.
-            <br className="hidden sm:block" /> Start Getting It Right.
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Technical Services', path: '/technical-services' }, { name: 'Cloud Infrastructure' }]} />
+          <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+            Cloud Infrastructure in Aldershot, Hampshire
           </h1>
+          <p className="text-xl text-white/90 font-semibold mb-6">
+            Stop Overpaying for Cloud. Start Getting It Right.
+          </p>
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl mb-8">
-            We help SMBs build, migrate, and optimise their AWS infrastructure.
+            We help businesses in Aldershot, Farnborough, Farnham, Fleet, Camberley, Guildford, and across Hampshire and Surrey build, migrate, and optimise their AWS infrastructure.
             Cut costs, improve security, and keep things running without
             overpaying. Led by an AWS Solutions Architect who manages cloud
             infrastructure for financial services firms daily.
@@ -564,6 +569,40 @@ const CloudInfrastructure = () => {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Hampshire Businesses Choose Our Cloud Services */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-6">
+            Why Hampshire Businesses Choose Our Cloud Services
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Cloud infrastructure should not be something you lose sleep over. But for many businesses across Aldershot, Farnborough, and the wider Hampshire area, it is exactly that. Bills that climb without explanation, setups cobbled together by a previous developer, and no clear picture of whether things are actually secure.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              We work with businesses in Fleet, Camberley, Guildford, and across Surrey and Hampshire who need their cloud done properly without paying enterprise prices. We are AWS certified, we know what good looks like, and we are honest about what you actually need versus what you could do without.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Being local means we are easy to get hold of. We can meet face to face when it matters, and we genuinely care about the businesses in our area getting a fair deal on their infrastructure.
+            </p>
+            <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
+              <h3 className="text-xl font-semibold mb-4">Related Services</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <Link to="/technical-services/it-support-and-maintenance" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                  <ArrowRight className="w-4 h-4" /> IT Support & Maintenance
+                </Link>
+                <Link to="/technical-services/cybersecurity" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                  <ArrowRight className="w-4 h-4" /> Cybersecurity
+                </Link>
+                <Link to="/development/web-development" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
+                  <ArrowRight className="w-4 h-4" /> Web Development
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -15,6 +15,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const painPoints = [
   'You\'ve tried Google Ads and wasted hundreds with nothing to show',
@@ -225,6 +226,7 @@ const PPCAndOnlineCampaigns = () => {
     <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/digital-marketing/ppc-and-online-campaigns']}
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'PPC and Online Campaigns',
@@ -245,15 +247,17 @@ const PPCAndOnlineCampaigns = () => {
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">PPC & Online Campaigns</p>
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Digital Marketing', path: '/digital-marketing' }, { name: 'PPC & Online Campaigns' }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-6">
-            Paid Ads That Pay for Themselves
+            PPC & Online Campaigns in Aldershot, Hampshire
           </h1>
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-            Google Ads, LinkedIn Ads, Meta Ads. Done right, paid advertising
-            is the fastest way to get qualified leads. Done wrong, it's the
-            fastest way to burn money. Our PPC specialists manage your
-            campaigns with full transparency, clear reporting, and a focus on
-            ROI, not vanity clicks.
+            We run paid ad campaigns for businesses in Aldershot, Farnborough,
+            Farnham, Fleet, Camberley, Guildford, and across Hampshire. Google
+            Ads, LinkedIn Ads, Meta Ads — done right, paid advertising is the
+            fastest way to get qualified leads. Done wrong, it's the fastest
+            way to burn money. Our PPC specialists manage your campaigns with
+            full transparency, clear reporting, and a focus on actual returns.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
@@ -464,6 +468,64 @@ const PPCAndOnlineCampaigns = () => {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why PPC Works */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8">
+              Why PPC Works for Hampshire Businesses
+            </h2>
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                When someone in Aldershot, Farnborough, or Farnham searches for a
+                service you offer, a well-placed ad puts you right at the top of the
+                results. Unlike SEO, which builds over months, PPC delivers
+                visibility from day one.
+              </p>
+              <p>
+                For local businesses across Hampshire, that's particularly valuable.
+                You can target specific towns — Fleet, Camberley, Guildford — and
+                only pay when someone actually clicks. No wasted spend on people
+                outside your service area, no paying for impressions that don't
+                convert.
+              </p>
+              <p>
+                We manage campaigns for businesses across the county, and we know
+                what works in this market. Local competition, typical cost-per-click
+                rates, seasonal patterns — we factor all of that into your campaign
+                strategy so your budget goes further.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+            Related Services
+          </h2>
+          <p className="text-center text-gray-600 mb-10">
+            PPC is most effective as part of a broader strategy. These services work well alongside paid campaigns.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link to="/digital-marketing/seo-and-content-strategy" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">SEO & Content Strategy</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">PPC gets you immediate traffic. SEO builds long-term organic visibility. Together, they cover both short and long-term growth.</p>
+            </Link>
+            <Link to="/digital-marketing/social-media-management" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">Social Media Management</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Organic social media builds brand awareness, which improves your ad performance. People are more likely to click ads from brands they recognise.</p>
+            </Link>
+            <Link to="/development/web-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+              <h3 className="text-lg font-bold mb-2">Web Development</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Ads drive traffic, but your website converts it. A fast, well-built site means better Quality Scores and lower cost per click.</p>
+            </Link>
           </div>
         </div>
       </section>
