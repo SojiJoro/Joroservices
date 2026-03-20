@@ -6,6 +6,7 @@ import { ServiceList } from './serviceData';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
 import { organizationSchema, breadcrumbSchema } from '../seo/schemas';
+import Breadcrumb from '../component/Breadcrumb';
 
 const categories = [
   { icon: Palette, title: 'Creative Solutions', desc: 'Design, branding, and UI/UX', path: '/creative-solutions' },
@@ -30,6 +31,10 @@ const Services = () => (
     {/* Hero */}
     <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumb items={[
+          { name: 'Home', path: '/' },
+          { name: 'Services' },
+        ]} />
         <div className="max-w-3xl">
           <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Our Expertise</p>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
@@ -100,6 +105,39 @@ const Services = () => (
               </div>
             </Link>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Find Us Locally */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Local Services</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Find Us Near You</h2>
+        </div>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { label: 'IT Support in Aldershot', path: '/it-support-aldershot', desc: 'From £30/user/month' },
+            { label: 'Web Design in Aldershot', path: '/web-design-aldershot', desc: 'From £1,500' },
+            { label: 'IT Support in Farnham', path: '/it-support-farnham', desc: '5 miles away' },
+            { label: 'Web Design in Farnham', path: '/web-design-farnham', desc: 'Design-led builds' },
+            { label: 'IT Support in Fleet', path: '/it-support-fleet', desc: '6 miles away' },
+            { label: 'IT Support in Camberley', path: '/it-support-camberley', desc: '7 miles away' },
+            { label: 'Web Design in Guildford', path: '/web-design-guildford', desc: 'Surrey businesses' },
+          ].map((item, i) => (
+            <Link key={i} to={item.path} className="group p-5 bg-white rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 group-hover:text-accent transition-colors text-sm">{item.label}</h3>
+              <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <p className="text-sm text-gray-500">
+            We serve businesses across{' '}
+            <Link to="/locations/hampshire" className="text-accent hover:text-accent-dark">Hampshire</Link>,{' '}
+            <Link to="/locations/surrey" className="text-accent hover:text-accent-dark">Surrey</Link>, and the wider UK.
+          </p>
         </div>
       </div>
     </section>

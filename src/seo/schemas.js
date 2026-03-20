@@ -454,6 +454,22 @@ export function offerSchema({ name, price, priceCurrency = 'GBP', unit, descript
   };
 }
 
+// Video schema helper for video content
+export function videoSchema({ name, description, thumbnailUrl, contentUrl, uploadDate = '2026-03-20', duration }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl: thumbnailUrl.startsWith('http') ? thumbnailUrl : `${BASE_URL}${thumbnailUrl}`,
+    contentUrl: contentUrl.startsWith('http') ? contentUrl : `${BASE_URL}${contentUrl}`,
+    uploadDate,
+    publisher: { '@id': `${BASE_URL}/#organization` },
+  };
+  if (duration) schema.duration = duration;
+  return schema;
+}
+
 // How-To schema helper for process/methodology pages
 export function howToSchema({ name, description, steps }) {
   return {

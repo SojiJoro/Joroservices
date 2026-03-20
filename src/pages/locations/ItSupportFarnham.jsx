@@ -180,6 +180,31 @@ const ItSupportFarnham = () => {
         </div>
       </section>
 
+      {/* Related Services Nearby */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
+            Our Services in Nearby Towns
+          </h2>
+          <p className="text-center text-gray-600 mb-10">We also provide IT support and web design across Hampshire and Surrey.</p>
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { label: 'IT Support in Aldershot', path: '/it-support-aldershot', desc: 'Same-day on-site visits from £30/user/month' },
+              { label: 'IT Support in Fleet', path: '/it-support-fleet', desc: 'Cloud migration and remote working support' },
+              { label: 'IT Support in Camberley', path: '/it-support-camberley', desc: 'Proactive IT for Watchmoor Park and Surrey Heath' },
+              { label: 'Web Design in Farnham', path: '/web-design-farnham', desc: 'Design-led websites for Farnham\'s creative businesses' },
+              { label: 'Web Design in Aldershot', path: '/web-design-aldershot', desc: 'Custom websites from £1,500, mobile-first' },
+              { label: 'Web Design in Guildford', path: '/web-design-guildford', desc: 'London quality at lower cost for Surrey businesses' },
+            ].map((item, i) => (
+              <Link key={i} to={item.path} className="group p-5 bg-white rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 group-hover:text-accent transition-colors">{item.label}</h3>
+                <p className="text-sm text-gray-500 mt-1">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
