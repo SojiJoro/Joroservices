@@ -1,5 +1,13 @@
 import React, { useState } from 'react'
-import { FaMobileAlt, FaSearch, FaCogs, FaServer, FaPlus, FaMinus } from 'react-icons/fa'
+import {
+  FaMobileAlt,
+  FaSearch,
+  FaCogs,
+  FaServer,
+  FaPlus,
+  FaMinus,
+  FaCheckCircle,
+} from 'react-icons/fa'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
@@ -8,30 +16,70 @@ import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 import Breadcrumb from '../../component/Breadcrumb'
 
-const services = [
+const painPoints = [
+  'Your website looks outdated and doesn\'t reflect your business anymore',
+  'Your site is slow, clunky, or doesn\'t work properly on mobile',
+  'You paid someone to build it years ago and now nobody can update it',
+  'You need a website but don\'t know where to start or who to trust',
+  'Your current site isn\'t bringing in any leads or enquiries',
+]
+
+const serviceCards = [
   {
     icon: FaMobileAlt,
-    title: 'Responsive Design',
+    title: 'Looks Great on Every Device',
+    label: 'Responsive Design',
     description:
       'We build mobile-first layouts that look great on every screen size and device, optimised for performance and accessibility.',
+    items: [
+      'Mobile-first layouts',
+      'Cross-browser testing',
+      'Touch-friendly navigation',
+      'Accessibility compliance',
+      'Responsive images and media',
+    ],
   },
   {
     icon: FaSearch,
-    title: 'SEO & Performance Tuning',
+    title: 'Built to Be Found on Google',
+    label: 'SEO & Performance Tuning',
     description:
       'From semantic HTML to lazy loading, we code with visibility in mind. Your site loads fast and ranks higher in search results.',
+    items: [
+      'Semantic HTML structure',
+      'Meta tags and structured data',
+      'Lazy loading and image optimisation',
+      'Core Web Vitals improvements',
+      'Google Search Console setup',
+    ],
   },
   {
     icon: FaCogs,
-    title: 'Custom Integrations',
+    title: 'Update Your Own Content Without Calling Us',
+    label: 'Custom Integrations',
     description:
       'Need a CMS? We integrate platforms like WordPress, Sanity, or Strapi to give you full control over your content.',
+    items: [
+      'WordPress custom themes',
+      'Headless CMS integration',
+      'Contact forms and lead capture',
+      'Third-party API connections',
+      'Analytics and tracking setup',
+    ],
   },
   {
     icon: FaServer,
-    title: 'Built to Grow',
+    title: 'Won\'t Fall Apart as You Grow',
+    label: 'Built to Grow',
     description:
       'We use modern patterns with frameworks like Next.js, so your app is easy to maintain and ready for what comes next.',
+    items: [
+      'React and Next.js architecture',
+      'Component-based development',
+      'Clean, documented codebase',
+      'Easy to extend and maintain',
+      'Performance monitoring',
+    ],
   },
 ]
 
@@ -56,6 +104,58 @@ const portfolio = [
     description:
       'A clean and professional recruitment portal with blog pages, service filters, and job application forms.',
     url: 'https://pathsyncrecruitment.com',
+  },
+]
+
+const pricingTiers = [
+  {
+    name: 'Free Consultation',
+    price: 'Free',
+    features: [
+      'Review of your current website (if you have one)',
+      'Discussion of your goals and requirements',
+      'Ballpark estimate and recommended approach',
+      'No obligation',
+    ],
+    bestFor: 'Understanding what you need and what it\'ll cost',
+    isFree: true,
+  },
+  {
+    name: 'Brochure Website',
+    price: 'From \u00a31,500',
+    features: [
+      'Up to 8 pages',
+      'Mobile-first responsive design',
+      'On-page SEO setup',
+      'Contact forms',
+      'CMS for content updates',
+    ],
+    bestFor: 'Businesses that need a professional online presence',
+  },
+  {
+    name: 'Business Website',
+    price: 'From \u00a35,000',
+    features: [
+      'Everything in Brochure, plus:',
+      'Custom functionality',
+      'Blog or content section',
+      'Third-party integrations',
+      'Advanced SEO and analytics',
+    ],
+    bestFor: 'Businesses ready for a site that actively generates leads',
+    highlighted: true,
+  },
+  {
+    name: 'Web Application',
+    price: 'From \u00a310,000',
+    features: [
+      'Everything in Business, plus:',
+      'User authentication and dashboards',
+      'Database integration',
+      'Custom backend logic',
+      'API development',
+    ],
+    bestFor: 'Businesses needing custom software solutions',
   },
 ]
 
@@ -129,33 +229,82 @@ const WebDevelopment = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Web Development</p>
         <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Development', path: '/development' }, { name: 'Web Development' }]} />
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Web Development in Aldershot, Hampshire</h1>
-        <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
+        <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">Web Development in Aldershot, Hampshire</h1>
+        <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
           We build websites and web applications for businesses in Aldershot, Farnborough, Guildford, and across Hampshire and Surrey. From marketing sites to full web applications, everything is built with React and Next.js — responsive, search-optimised, fast-loading, and straightforward to manage.
         </p>
         <Link
           to="/getintouch"
-          className="mt-8 inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
           Request a Free Quote <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>
 
-    {/* Services Section */}
+    {/* Pain Points */}
     <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Expertise</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">What We Do</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((s, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-7">
-              <s.icon className="text-4xl text-accent mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">{s.description}</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Sound Familiar?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {painPoints.map((point, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 bg-white rounded-2xl border border-gray-100 p-7"
+            >
+              <span className="text-red-400 mt-1 text-lg">"</span>
+              <p className="text-gray-600 leading-relaxed italic">{point}</p>
             </div>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* Service Cards */}
+    <section id="services" className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What We Do</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {serviceCards.map((card, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition"
+            >
+              <card.icon className="text-3xl text-accent mb-4" />
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-1">
+                {card.label}
+              </p>
+              <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm mb-4">{card.description}</p>
+              <ul className="space-y-2">
+                {card.items.map((item, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Differentiator */}
+    <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-6 max-w-3xl mx-auto">
+          Design + Development + Infrastructure Under One Roof
+        </h2>
+        <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
+          A lot of agencies will sell you a template site and call it custom. We don't do that. Every website we build is coded from scratch or carefully configured to fit your business properly. You get a site that loads quickly, ranks well on Google, and doesn't fall apart the moment you try to update something. And because we handle hosting and infrastructure too, your site stays fast and secure long after launch.
+        </p>
       </div>
     </section>
 
@@ -184,17 +333,78 @@ const WebDevelopment = () => {
       </div>
     </section>
 
+    {/* Pricing */}
+    <section id="pricing" className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Pricing</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+          Transparent Pricing
+        </h2>
+        <p className="text-center text-gray-600 leading-relaxed mb-12">
+          Clear pricing. No hidden fees. No hourly billing surprises.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {pricingTiers.map((tier, i) => (
+            <div
+              key={i}
+              className={`rounded-2xl p-7 border ${
+                tier.highlighted
+                  ? 'border-accent shadow-lg relative'
+                  : tier.isFree
+                  ? 'border-accent/30 bg-accent/5'
+                  : 'border-gray-100'
+              }`}
+            >
+              {tier.highlighted && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  Most Popular
+                </div>
+              )}
+              <h3 className="text-lg font-bold mb-1">{tier.name}</h3>
+              <div className="text-xl font-bold text-accent mb-4">
+                {tier.price}
+              </div>
+              <ul className="space-y-2 mb-6">
+                {tier.features.map((feature, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-gray-500 italic mb-4">
+                Best for: "{tier.bestFor}"
+              </p>
+              <Link
+                to="/getintouch"
+                className={`inline-block w-full text-center px-4 py-2.5 font-semibold rounded-xl transition text-sm ${
+                  tier.highlighted
+                    ? 'bg-accent text-white hover:bg-accent-dark'
+                    : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
+                }`}
+              >
+                {tier.isFree ? 'Book Free Consultation' : 'Get Started'}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* FAQ Section */}
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section className="py-20 lg:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
-          Frequently Asked Questions About Web Development
+          Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl border border-gray-100"
+              className="border border-gray-100 rounded-2xl bg-white"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -219,49 +429,51 @@ const WebDevelopment = () => {
     </section>
 
     {/* Why Hampshire Businesses Choose Us */}
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-6">
-          Why Hampshire Businesses Choose Us
-        </h2>
         <div className="max-w-3xl mx-auto">
-          <p className="text-gray-600 leading-relaxed mb-4">
-            We're based in Aldershot and work with businesses across Hampshire and Surrey — from sole traders in Farnham to growing companies in Fleet and Camberley. That means we're local enough to meet face-to-face when it matters, and we understand the kinds of challenges that small and mid-sized businesses in this area actually deal with.
-          </p>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            A lot of agencies will sell you a template site and call it custom. We don't do that. Every website we build is coded from scratch or carefully configured to fit your business properly. You get a site that loads quickly, ranks well on Google, and doesn't fall apart the moment you try to update something.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            We also stick around after launch. If something breaks or you need changes, you're not chasing an agency three counties away — you're talking to the same team that built it.
-          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8">
+            Why Hampshire Businesses Choose Us
+          </h2>
+          <div className="space-y-4 text-gray-600 leading-relaxed">
+            <p>
+              We're based in Aldershot and work with businesses across Hampshire and Surrey — from sole traders in Farnham to growing companies in Fleet and Camberley. That means we're local enough to meet face-to-face when it matters, and we understand the kinds of challenges that small and mid-sized businesses in this area actually deal with.
+            </p>
+            <p>
+              A lot of agencies will sell you a template site and call it custom. We don't do that. Every website we build is coded from scratch or carefully configured to fit your business properly. You get a site that loads quickly, ranks well on Google, and doesn't fall apart the moment you try to update something.
+            </p>
+            <p>
+              We also stick around after launch. If something breaks or you need changes, you're not chasing an agency three counties away — you're talking to the same team that built it.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     {/* Related Services */}
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
           Related Services
         </h2>
-        <p className="text-gray-600 text-center mb-12">
+        <p className="text-center text-gray-600 mb-10">
           Web development often goes hand-in-hand with these services.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Link to="/creative-solutions/website-design" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
-            <h3 className="text-xl font-semibold text-accent mb-2">Website Design</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Link to="/creative-solutions/website-design" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Website Design</h3>
             <p className="text-gray-600 text-sm leading-relaxed">
               Need the design sorted before development? We handle UI and visual design so your site looks as good as it performs.
             </p>
           </Link>
-          <Link to="/development/mobile-app-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
-            <h3 className="text-xl font-semibold text-accent mb-2">Mobile App Development</h3>
+          <Link to="/development/mobile-app-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Mobile App Development</h3>
             <p className="text-gray-600 text-sm leading-relaxed">
               If your business needs a mobile app alongside your website, we build cross-platform apps using React Native and Flutter.
             </p>
           </Link>
-          <Link to="/digital-marketing/seo-and-content-strategy" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition block">
-            <h3 className="text-xl font-semibold text-accent mb-2">SEO & Content Strategy</h3>
+          <Link to="/digital-marketing/seo-and-content-strategy" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">SEO & Content Strategy</h3>
             <p className="text-gray-600 text-sm leading-relaxed">
               A great website needs to be found. We offer ongoing SEO and content work to help your site rank for the right terms.
             </p>
@@ -271,16 +483,19 @@ const WebDevelopment = () => {
     </section>
 
     {/* CTA */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-          Ready to Launch Your Website or App?
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+          Your Website Should Be Your Best Salesperson. Is It?
         </h2>
+        <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
+          Start with a free consultation. We'll look at what you've got, talk about what you need, and give you an honest recommendation.
+        </p>
         <Link
           to="/getintouch"
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Let's Build Something <ArrowRight className="w-4 h-4" />
+          Get Your Free Consultation <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>

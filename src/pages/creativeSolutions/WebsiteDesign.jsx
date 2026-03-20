@@ -1,5 +1,13 @@
 import React, { useState } from 'react'
-import { FaCode, FaMobileAlt, FaRocket, FaPaintBrush, FaPlus, FaMinus } from 'react-icons/fa'
+import {
+  FaCode,
+  FaMobileAlt,
+  FaRocket,
+  FaPaintBrush,
+  FaPlus,
+  FaMinus,
+  FaCheckCircle,
+} from 'react-icons/fa'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
@@ -8,30 +16,70 @@ import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 import Breadcrumb from '../../component/Breadcrumb'
 
-const services = [
+const painPoints = [
+  'Your website looks like it was built in 2015 and it\'s putting customers off',
+  'You\'re embarrassed to send people to your website',
+  'Your site doesn\'t work properly on phones and you\'re losing visitors',
+  'You paid for a template site and it looks exactly like everyone else\'s',
+  'You need a website but every agency quote feels like guesswork',
+]
+
+const serviceCards = [
   {
     icon: FaPaintBrush,
-    title: 'Custom UI/UX Design',
+    title: 'A Design That Actually Fits Your Business',
+    label: 'Custom UI/UX Design',
     description:
       'We design interfaces that look great and work well for your audience. From early sketches to finished designs, we make sure visitors can find what they need and take action.',
+    items: [
+      'Custom layout and visual design',
+      'User flow mapping',
+      'Wireframes and mockups',
+      'Brand-aligned colour and typography',
+      'Conversion-focused page structure',
+    ],
   },
   {
     icon: FaMobileAlt,
-    title: 'Mobile-First Development',
+    title: 'Looks Perfect on Every Screen',
+    label: 'Mobile-First Development',
     description:
       'Our websites look and work great on any screen size. Whether someone visits from a phone, tablet, or desktop, everything just works.',
+    items: [
+      'Mobile-first responsive design',
+      'Touch-friendly navigation',
+      'Cross-device testing',
+      'Optimised images for all screens',
+      'Fast loading on mobile networks',
+    ],
   },
   {
     icon: FaCode,
-    title: 'Full-Stack Engineering',
+    title: 'Properly Built, Not Bodged Together',
+    label: 'Full-Stack Engineering',
     description:
       'We build both the front and back end of websites and web apps. We use modern tools to make sure everything runs fast, stays secure, and is easy to update.',
+    items: [
+      'React and Next.js development',
+      'Custom WordPress themes',
+      'Backend API integration',
+      'Secure, clean codebase',
+      'CMS for easy content updates',
+    ],
   },
   {
     icon: FaRocket,
-    title: 'Performance & SEO',
+    title: 'Fast to Load, Easy to Find',
+    label: 'Performance & SEO',
     description:
       'We make every site fast and easy to find on Google. That means clean code, compressed images, smart keyword use, and proper technical SEO.',
+    items: [
+      'Core Web Vitals optimisation',
+      'On-page SEO setup',
+      'Structured data and meta tags',
+      'Image compression and lazy loading',
+      'Google Analytics and Search Console',
+    ],
   },
 ]
 
@@ -56,6 +104,58 @@ const portfolio = [
     url: 'https://save-the-men.com',
     description:
       'A platform to help men going through abuse.',
+  },
+]
+
+const pricingTiers = [
+  {
+    name: 'Free Consultation',
+    price: 'Free',
+    features: [
+      'Review of your current site (if you have one)',
+      'Discussion of goals and requirements',
+      'Recommended approach and ballpark cost',
+      'No obligation',
+    ],
+    bestFor: 'Understanding what you need before committing',
+    isFree: true,
+  },
+  {
+    name: 'Starter',
+    price: 'From \u00a31,500',
+    features: [
+      'Up to 5 pages',
+      'Custom responsive design',
+      'Contact forms',
+      'Basic SEO setup',
+      'CMS for content updates',
+    ],
+    bestFor: 'Small businesses that need a clean, professional site',
+  },
+  {
+    name: 'Professional',
+    price: 'From \u00a34,000',
+    features: [
+      'Everything in Starter, plus:',
+      'Up to 12 pages',
+      'Blog or news section',
+      'Advanced SEO and analytics',
+      'Third-party integrations',
+    ],
+    bestFor: 'Businesses that want a site that actively generates leads',
+    highlighted: true,
+  },
+  {
+    name: 'E-Commerce / Custom',
+    price: 'From \u00a38,000',
+    features: [
+      'Everything in Professional, plus:',
+      'Online store or booking system',
+      'Payment integration',
+      'Custom functionality',
+      'User accounts and dashboards',
+    ],
+    bestFor: 'Businesses selling online or needing complex features',
   },
 ]
 
@@ -124,33 +224,82 @@ const WebsiteDesign = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Web Design</p>
         <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Creative Solutions', path: '/creative-solutions' }, { name: 'Website Design' }]} />
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">Website Design in Aldershot, Hampshire</h1>
-        <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
+        <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">Website Design in Aldershot, Hampshire</h1>
+        <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
           We design websites for businesses in Aldershot, Farnborough, Camberley, Guildford, and across Hampshire. Whether you're starting from scratch or need a redesign, we'll build you a site that loads fast, ranks well on Google, and actually brings in customers. No templates. No filler pages. Just a site that does its job.
         </p>
         <Link
           to="/getintouch"
-          className="mt-8 inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
           Start Your Project <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>
 
-    {/* Core Services */}
+    {/* Pain Points */}
     <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">What We Do</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Our Capabilities</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((s, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-7">
-              <s.icon className="text-4xl text-accent mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">{s.description}</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Sound Familiar?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {painPoints.map((point, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 bg-white rounded-2xl border border-gray-100 p-7"
+            >
+              <span className="text-red-400 mt-1 text-lg">"</span>
+              <p className="text-gray-600 leading-relaxed italic">{point}</p>
             </div>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* Service Cards */}
+    <section id="services" className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What We Do</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {serviceCards.map((card, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition"
+            >
+              <card.icon className="text-3xl text-accent mb-4" />
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-1">
+                {card.label}
+              </p>
+              <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm mb-4">{card.description}</p>
+              <ul className="space-y-2">
+                {card.items.map((item, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Differentiator */}
+    <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-6 max-w-3xl mx-auto">
+          Design + Development + SEO From One Team
+        </h2>
+        <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
+          Most design agencies hand you a pretty mockup and leave you to figure out the rest. We don't. We design it, build it, optimise it for Google, and host it. You get one team, one point of contact, and a website that actually works for your business — not just one that looks good in a portfolio.
+        </p>
       </div>
     </section>
 
@@ -179,23 +328,63 @@ const WebsiteDesign = () => {
       </div>
     </section>
 
-    {/* Related Services */}
-    <section className="py-20 lg:py-28 bg-gray-50">
+    {/* Pricing */}
+    <section id="pricing" className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">Related Services</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <Link to="/creative-solutions/graphic-design-and-branding" className="block bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-accent mb-2">Graphic Design & Branding</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">Need a logo or brand identity to go with your new site? We can help with that too.</p>
-          </Link>
-          <Link to="/development/web-development" className="block bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-accent mb-2">Web Development</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">For complex web apps and custom functionality beyond standard website design.</p>
-          </Link>
-          <Link to="/digital-marketing/seo-and-content-strategy" className="block bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-accent mb-2">SEO & Content Strategy</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">Get your new website found on Google with ongoing SEO and content work.</p>
-          </Link>
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Pricing</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+          Transparent Pricing
+        </h2>
+        <p className="text-center text-gray-600 leading-relaxed mb-12">
+          Clear quotes upfront. No surprise invoices.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {pricingTiers.map((tier, i) => (
+            <div
+              key={i}
+              className={`rounded-2xl p-7 border ${
+                tier.highlighted
+                  ? 'border-accent shadow-lg relative'
+                  : tier.isFree
+                  ? 'border-accent/30 bg-accent/5'
+                  : 'border-gray-100'
+              }`}
+            >
+              {tier.highlighted && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  Most Popular
+                </div>
+              )}
+              <h3 className="text-lg font-bold mb-1">{tier.name}</h3>
+              <div className="text-xl font-bold text-accent mb-4">
+                {tier.price}
+              </div>
+              <ul className="space-y-2 mb-6">
+                {tier.features.map((feature, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-gray-500 italic mb-4">
+                Best for: "{tier.bestFor}"
+              </p>
+              <Link
+                to="/getintouch"
+                className={`inline-block w-full text-center px-4 py-2.5 font-semibold rounded-xl transition text-sm ${
+                  tier.highlighted
+                    ? 'bg-accent text-white hover:bg-accent-dark'
+                    : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
+                }`}
+              >
+                {tier.isFree ? 'Book Free Consultation' : 'Get Started'}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -203,14 +392,14 @@ const WebsiteDesign = () => {
     {/* FAQ Section */}
     <section className="py-20 lg:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
-          Frequently Asked Questions About Website Design
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl border border-gray-100"
+              className="border border-gray-100 rounded-2xl bg-white"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -236,18 +425,48 @@ const WebsiteDesign = () => {
 
     {/* Why Local Businesses Choose Us */}
     <section className="py-20 lg:py-28 bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8">Why Local Businesses Choose Us</h2>
-        <div className="prose prose-lg text-gray-600 mx-auto">
-          <p>
-            We're based in Aldershot and most of our clients are within a short drive. That matters because we can meet face to face, understand your local market, and build a site that speaks to the people you actually serve.
-          </p>
-          <p>
-            Businesses in Farnborough, Farnham, Fleet, Camberley, and Guildford come to us because we keep things straightforward. No long contracts. No jargon-filled proposals. Just honest conversations about what your website needs to do and a clear plan to get it done.
-          </p>
-          <p>
-            We've built sites for healthcare providers, recruitment agencies, charities, and small businesses across Hampshire. Every project gets the same level of attention, whether it's a five-page brochure site or a full web application.
-          </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8">
+            Why Local Businesses Choose Us
+          </h2>
+          <div className="space-y-4 text-gray-600 leading-relaxed">
+            <p>
+              We're based in Aldershot and most of our clients are within a short drive. That matters because we can meet face to face, understand your local market, and build a site that speaks to the people you actually serve.
+            </p>
+            <p>
+              Businesses in Farnborough, Farnham, Fleet, Camberley, and Guildford come to us because we keep things straightforward. No long contracts. No jargon-filled proposals. Just honest conversations about what your website needs to do and a clear plan to get it done.
+            </p>
+            <p>
+              We've built sites for healthcare providers, recruitment agencies, charities, and small businesses across Hampshire. Every project gets the same level of attention, whether it's a five-page brochure site or a full web application.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Related Services */}
+    <section className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+          Related Services
+        </h2>
+        <p className="text-center text-gray-600 mb-10">
+          Website design works best alongside these services.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Link to="/creative-solutions/graphic-design-and-branding" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Graphic Design & Branding</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Need a logo or brand identity to go with your new site? We can help with that too.</p>
+          </Link>
+          <Link to="/development/web-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Web Development</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">For complex web apps and custom functionality beyond standard website design.</p>
+          </Link>
+          <Link to="/digital-marketing/seo-and-content-strategy" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">SEO & Content Strategy</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Get your new website found on Google with ongoing SEO and content work.</p>
+          </Link>
         </div>
       </div>
     </section>
@@ -278,16 +497,19 @@ const WebsiteDesign = () => {
     </section>
 
     {/* CTA */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-          Ready to Get Your Website Built?
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+          Your Website Should Work as Hard as You Do.
         </h2>
+        <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
+          Start with a free consultation. We'll talk about what your website needs to do and give you an honest plan to get there.
+        </p>
         <Link
           to="/getintouch"
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Get in Touch <ArrowRight className="w-4 h-4" />
+          Get Your Free Consultation <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>
