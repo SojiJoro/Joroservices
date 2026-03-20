@@ -15,6 +15,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const painPoints = [
   'You\'ve tried Google Ads and wasted hundreds with nothing to show',
@@ -225,6 +226,7 @@ const PPCAndOnlineCampaigns = () => {
     <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/digital-marketing/ppc-and-online-campaigns']}
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'PPC and Online Campaigns',
@@ -245,6 +247,7 @@ const PPCAndOnlineCampaigns = () => {
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">PPC & Online Campaigns</p>
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Digital Marketing', path: '/digital-marketing' }, { name: 'PPC & Online Campaigns' }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-6">
             PPC & Online Campaigns in Aldershot, Hampshire
           </h1>

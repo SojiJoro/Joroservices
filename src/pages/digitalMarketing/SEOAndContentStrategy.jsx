@@ -14,6 +14,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const painPoints = [
   'You have a website but it\'s invisible on Google',
@@ -189,6 +190,7 @@ const SEOAndContentStrategy = () => {
     <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/digital-marketing/seo-and-content-strategy']}
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'SEO and Content Strategy',
@@ -211,6 +213,7 @@ const SEOAndContentStrategy = () => {
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
             SEO & Content Strategy
           </p>
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Digital Marketing', path: '/digital-marketing' }, { name: 'SEO & Content Strategy' }]} />
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">
             SEO & Content Strategy in Aldershot, Hampshire
           </h1>

@@ -71,7 +71,7 @@ const DevServices = () => {
             >
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="lg:w-1/2">
-                  <img src={serv.image} alt={serv.title} className="w-full h-auto" />
+                  <img src={serv.image} alt={serv.title} className="w-full h-auto" loading="lazy" decoding="async" />
                 </div>
                 <div className="lg:w-1/2 flex flex-col justify-center p-6">
                   <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-2">

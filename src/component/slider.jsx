@@ -57,7 +57,7 @@ const LogoSlider = () => {
       <Slider {...settings} className="w-[100vw] bg-none  pt-2 mx-auto">
         {logos.map((logo, index) => (
           <div key={index} className="flex justify-center rounded-full">
-            <img src={logo} alt={`Logo ${index}`} className="h-20 rounded-lg" />
+            <img src={logo} alt={`Logo ${index}`} className="h-20 rounded-lg" loading="lazy" decoding="async" />
           </div>
         ))}
       </Slider>

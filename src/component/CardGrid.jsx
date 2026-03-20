@@ -22,6 +22,8 @@ const CardGrid = () => {
             className="w-full h-48 object-cover"
             src={card.img}
             alt={card.location}
+            loading="lazy"
+            decoding="async"
           />
           <div className="p-6">
             <h5 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">

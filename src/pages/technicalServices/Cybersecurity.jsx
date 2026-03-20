@@ -18,6 +18,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const serviceCards = [
   {
@@ -216,6 +217,7 @@ const Cybersecurity = () => {
     <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/technical-services/cybersecurity']}
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Cybersecurity',
@@ -238,6 +240,7 @@ const Cybersecurity = () => {
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Cybersecurity
             </p>
+            <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Technical Services', path: '/technical-services' }, { name: 'Cybersecurity' }]} />
             <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
               Cybersecurity in Aldershot, Hampshire
             </h1>
@@ -536,6 +539,31 @@ const Cybersecurity = () => {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local Service Areas */}
+      <section className="py-16 lg:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
+            Cybersecurity Across Hampshire &amp; Surrey
+          </h2>
+          <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {[
+              { label: 'Aldershot', path: '/locations/aldershot' },
+              { label: 'Farnborough', path: '/locations/farnborough' },
+              { label: 'Farnham', path: '/it-support-farnham' },
+              { label: 'Fleet', path: '/it-support-fleet' },
+              { label: 'Camberley', path: '/locations/camberley' },
+              { label: 'Guildford', path: '/locations/guildford' },
+              { label: 'Hampshire', path: '/locations/hampshire' },
+              { label: 'Surrey', path: '/locations/surrey' },
+            ].map((area, i) => (
+              <Link key={i} to={area.path} className="text-center p-3 bg-white rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-sm transition-all">
+                <span className="text-sm font-medium text-gray-700 hover:text-accent">{area.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

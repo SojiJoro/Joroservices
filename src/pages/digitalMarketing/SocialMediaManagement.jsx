@@ -18,6 +18,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const painPoints = [
   'You haven\'t posted in 3 months and your profiles look abandoned',
@@ -221,6 +222,7 @@ const SocialMediaManagement = () => {
     <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/digital-marketing/social-media-management']}
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Social Media Management',
@@ -243,6 +245,7 @@ const SocialMediaManagement = () => {
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
             Social Media Management
           </p>
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Digital Marketing', path: '/digital-marketing' }, { name: 'Social Media Management' }]} />
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">
             Social Media Management in Aldershot, Hampshire
           </h1>

@@ -69,6 +69,8 @@ export default function Slider() {
                   src={slide.image}
                   alt=""
                   className="fixed top-0 h-full w-full"
+                  loading="eager"
+                  decoding="async"
                 />
                 <div className="content absolute mx-auto w-1/2 md:px-8 px-4 py-4">
                   <h2 className="text-sm md:text-base  w-fit bg-gradient-to-r from-[#559297] to-[#7ba949] px-2 py-1 rounded  uppercase">

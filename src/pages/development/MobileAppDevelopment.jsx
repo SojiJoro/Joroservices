@@ -6,6 +6,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -103,6 +104,7 @@ const MobileAppDevelopment = () => {
   <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/development/mobile-app-development']}
+      dateModified="2026-03-20"
       jsonLd={[
         serviceSchema({
           name: 'Mobile App Development',
@@ -123,6 +125,7 @@ const MobileAppDevelopment = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Mobile App Development</p>
+        <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Development', path: '/development' }, { name: 'Mobile App Development' }]} />
         <h1 className="text-3xl lg:text-4xl font-bold mb-6">Mobile App Development in Aldershot, Hampshire</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
           Based in Aldershot, we design and build mobile apps for businesses across Hampshire, Surrey, and beyond — from startups in Farnborough and Fleet to established companies in Camberley and Guildford. Whether it's Flutter, React Native, or full native, we build apps that people actually enjoy using and businesses can rely on.
@@ -164,7 +167,7 @@ const MobileAppDevelopment = () => {
               key={i}
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
             >
-              <img src={app.image} alt={app.name} className="h-48 w-full object-cover" />
+              <img src={app.image} alt={app.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{app.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{app.description}</p>

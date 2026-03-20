@@ -3,7 +3,8 @@ import { CheckCircle, ChevronDown, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import { serviceSchema, breadcrumbSchema, locationBusinessSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -98,6 +99,7 @@ const Farnborough = () => {
         title="Web Development, IT Support & Digital Marketing in Farnborough | Joro Services"
         description="Joro Services provides web development, SEO, IT support, cybersecurity, and cloud solutions to businesses in Farnborough. Serving the defence, aerospace, and tech sectors near Farnborough Airport. Free consultation available."
         keywords="web development Farnborough, IT support Farnborough, digital marketing Farnborough, SEO Farnborough, web design Farnborough, cybersecurity Farnborough, mobile app development Farnborough, cloud services Farnborough, IT consultancy Farnborough"
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Digital Services in Farnborough',
@@ -110,6 +112,7 @@ const Farnborough = () => {
             { name: 'Locations', path: '/locations/farnborough' },
             { name: 'Farnborough', path: '/locations/farnborough' },
           ]),
+          locationBusinessSchema({ town: 'Farnborough', county: 'Hampshire', lat: 51.2900, lng: -0.7557 }),
           farnboroughFaqSchema,
         ]}
       />
@@ -117,6 +120,7 @@ const Farnborough = () => {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Locations', path: '/locations/farnborough' }, { name: 'Farnborough' }]} />
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-5 h-5 text-accent-dark" />
             <span className="text-accent font-semibold text-sm uppercase tracking-widest">Farnborough, Hampshire</span>

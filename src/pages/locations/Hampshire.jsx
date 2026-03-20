@@ -3,7 +3,8 @@ import { CheckCircle, ChevronDown, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import { serviceSchema, breadcrumbSchema, locationBusinessSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -90,6 +91,7 @@ const Hampshire = () => {
         title="Web Development, IT Support & Digital Marketing in Hampshire | Joro Services"
         description="Joro Services delivers expert web development, IT support, SEO, cybersecurity, and digital marketing to businesses across Hampshire. Based in Aldershot, serving the entire county. Free consultation available."
         keywords="web development Hampshire, IT support Hampshire, digital marketing Hampshire, SEO Hampshire, web design Hampshire, cybersecurity Hampshire, IT services Hampshire, digital agency Hampshire, IT consultancy Hampshire"
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Digital Services in Hampshire',
@@ -102,6 +104,7 @@ const Hampshire = () => {
             { name: 'Locations', path: '/locations/hampshire' },
             { name: 'Hampshire', path: '/locations/hampshire' },
           ]),
+          locationBusinessSchema({ town: 'Hampshire', county: 'Hampshire' }),
           hampshireFaqSchema,
         ]}
       />
@@ -109,6 +112,7 @@ const Hampshire = () => {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Locations', path: '/locations/hampshire' }, { name: 'Hampshire' }]} />
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-5 h-5 text-accent-dark" />
             <span className="text-accent font-semibold text-sm uppercase tracking-widest">Hampshire, UK</span>

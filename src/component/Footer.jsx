@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           {/* Brand & About */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
             <Link to="/" className="text-2xl font-bold tracking-tight">
               Joro<span className="text-accent-light">Services</span>
             </Link>
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <nav className="lg:col-span-5 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <nav className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm">
                 Services
@@ -84,6 +84,27 @@ const Footer = () => {
                 <li><Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
+            <div>
+              <h3 className="text-white font-semibold mb-4 text-sm">Locations</h3>
+              <ul className="space-y-2.5 text-gray-400 text-sm">
+                <li><Link to="/locations/aldershot" className="hover:text-white transition-colors">Aldershot</Link></li>
+                <li><Link to="/locations/farnborough" className="hover:text-white transition-colors">Farnborough</Link></li>
+                <li><Link to="/locations/guildford" className="hover:text-white transition-colors">Guildford</Link></li>
+                <li><Link to="/locations/camberley" className="hover:text-white transition-colors">Camberley</Link></li>
+                <li><Link to="/locations/hampshire" className="hover:text-white transition-colors">Hampshire</Link></li>
+                <li><Link to="/locations/surrey" className="hover:text-white transition-colors">Surrey</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-white font-semibold mb-4 text-sm">Popular Services</h3>
+              <ul className="space-y-2.5 text-gray-400 text-sm">
+                <li><Link to="/it-support-aldershot" className="hover:text-white transition-colors">IT Support Aldershot</Link></li>
+                <li><Link to="/web-design-aldershot" className="hover:text-white transition-colors">Web Design Aldershot</Link></li>
+                <li><Link to="/web-design-guildford" className="hover:text-white transition-colors">Web Design Guildford</Link></li>
+                <li><Link to="/it-support-camberley" className="hover:text-white transition-colors">IT Support Camberley</Link></li>
+                <li><Link to="/it-support-farnham" className="hover:text-white transition-colors">IT Support Farnham</Link></li>
+              </ul>
+            </div>
           </nav>
 
           {/* Newsletter */}
@@ -112,7 +133,8 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Joro Services Ltd. All rights reserved. | Company registered in England & Wales.
+          <p>&copy; {new Date().getFullYear()} Joro Services Ltd. All rights reserved.</p>
+          <p className="mt-1">Company No. 14079588 | Registered in England &amp; Wales | Aldershot, Hampshire, UK</p>
         </div>
       </div>
     </footer>

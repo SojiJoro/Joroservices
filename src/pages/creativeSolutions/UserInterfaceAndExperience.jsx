@@ -156,7 +156,7 @@ const UXUIExperience = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolio.map((item, i) => (
             <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
-              <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
+              <img src={item.image} alt={item.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{item.description}</p>

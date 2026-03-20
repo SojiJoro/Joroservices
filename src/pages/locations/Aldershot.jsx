@@ -3,7 +3,8 @@ import { CheckCircle, ChevronDown, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import { serviceSchema, breadcrumbSchema, locationBusinessSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -98,6 +99,7 @@ const Aldershot = () => {
         title="Web Development, IT Support & Digital Marketing in Aldershot | Joro Services"
         description="Joro Services is Aldershot's only full-service digital agency. We provide web development, SEO, IT support, cybersecurity, mobile app development, and cloud solutions for local businesses. Free consultation available."
         keywords="web development Aldershot, IT support Aldershot, digital marketing Aldershot, SEO Aldershot, web design Aldershot, cybersecurity Aldershot, mobile app development Aldershot, cloud services Aldershot, IT consultancy Aldershot"
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Digital Services in Aldershot',
@@ -108,8 +110,9 @@ const Aldershot = () => {
           breadcrumbSchema([
             { name: 'Home', path: '/' },
             { name: 'Locations', path: '/locations/aldershot' },
-            { name: 'Aldershot', path: '/locations/aldershot' },
+            { name: 'Aldershot' },
           ]),
+          locationBusinessSchema({ town: 'Aldershot', county: 'Hampshire', lat: 51.2483, lng: -0.7589 }),
           aldershotFaqSchema,
         ]}
       />
@@ -117,6 +120,11 @@ const Aldershot = () => {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[
+            { name: 'Home', path: '/' },
+            { name: 'Locations', path: '/locations/aldershot' },
+            { name: 'Aldershot' },
+          ]} />
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-5 h-5 text-accent-dark" />
             <span className="text-accent font-semibold text-sm uppercase tracking-widest">Aldershot, Hampshire</span>
@@ -258,6 +266,38 @@ const Aldershot = () => {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service-Specific Pages for Aldershot */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
+            Explore Our Aldershot Services
+          </h2>
+          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+            Detailed pages for our most popular services in Aldershot and nearby towns.
+          </p>
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { label: 'IT Support in Aldershot', path: '/it-support-aldershot', desc: 'Managed IT from £30/user/month with same-day on-site visits' },
+              { label: 'Web Design in Aldershot', path: '/web-design-aldershot', desc: 'Custom websites from £1,500, mobile-first, no templates' },
+              { label: 'IT Support in Farnham', path: '/it-support-farnham', desc: 'Professional services and hospitality IT, 5 miles away' },
+              { label: 'Web Design in Farnham', path: '/web-design-farnham', desc: 'Design-led websites for Farnham\'s creative businesses' },
+              { label: 'IT Support in Fleet', path: '/it-support-fleet', desc: 'Cloud migration and remote working support, 6 miles away' },
+              { label: 'IT Support in Camberley', path: '/it-support-camberley', desc: 'Proactive IT for Watchmoor Park and Surrey Heath' },
+              { label: 'Web Design in Guildford', path: '/web-design-guildford', desc: 'London quality at lower cost for Surrey businesses' },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                to={item.path}
+                className="group p-5 bg-white rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all"
+              >
+                <h3 className="font-bold text-gray-900 group-hover:text-accent transition-colors">{item.label}</h3>
+                <p className="text-sm text-gray-500 mt-1">{item.desc}</p>
+              </Link>
             ))}
           </div>
         </div>

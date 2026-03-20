@@ -20,6 +20,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
@@ -215,6 +216,7 @@ const CloudInfrastructure = () => {
     <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/technical-services/cloud-infrastructure']}
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Cloud Infrastructure',
@@ -236,6 +238,7 @@ const CloudInfrastructure = () => {
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
             AWS Cloud Services
           </p>
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Technical Services', path: '/technical-services' }, { name: 'Cloud Infrastructure' }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
             Cloud Infrastructure in Aldershot, Hampshire
           </h1>

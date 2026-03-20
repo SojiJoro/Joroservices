@@ -3,7 +3,8 @@ import { CheckCircle, ChevronDown, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import { serviceSchema, breadcrumbSchema, locationBusinessSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -98,6 +99,7 @@ const Guildford = () => {
         title="Web Development, IT Support & Digital Marketing in Guildford | Joro Services"
         description="Joro Services provides web development, SEO, IT support, cybersecurity, and cloud solutions to businesses in Guildford, Surrey. Serving professional services, gaming studios, and the University of Surrey community. Free consultation available."
         keywords="web development Guildford, IT support Guildford, digital marketing Guildford, SEO Guildford, web design Guildford, cybersecurity Guildford, mobile app development Guildford, cloud services Guildford, IT consultancy Guildford"
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Digital Services in Guildford',
@@ -110,6 +112,7 @@ const Guildford = () => {
             { name: 'Locations', path: '/locations/guildford' },
             { name: 'Guildford', path: '/locations/guildford' },
           ]),
+          locationBusinessSchema({ town: 'Guildford', county: 'Surrey', lat: 51.2362, lng: -0.5704 }),
           guildfordFaqSchema,
         ]}
       />
@@ -117,6 +120,7 @@ const Guildford = () => {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Locations', path: '/locations/guildford' }, { name: 'Guildford' }]} />
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-5 h-5 text-accent-dark" />
             <span className="text-accent font-semibold text-sm uppercase tracking-widest">Guildford, Surrey</span>

@@ -6,6 +6,7 @@ import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -103,6 +104,7 @@ const ItSupportAndMaintenance = () => {
   <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/technical-services/it-support-and-maintenance']}
+      dateModified="2026-03-20"
       jsonLd={[
         serviceSchema({
           name: 'IT Support and Maintenance',
@@ -123,6 +125,7 @@ const ItSupportAndMaintenance = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">IT Support Services</p>
+        <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Technical Services', path: '/technical-services' }, { name: 'IT Support & Maintenance' }]} />
         <h1 className="text-3xl lg:text-4xl font-bold mb-6">IT Support & Maintenance in Aldershot, Hampshire</h1>
         <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
           Downtime costs money. We provide proactive IT support and maintenance for businesses in Aldershot, Farnborough, Farnham, Fleet, Camberley, Guildford, and across Hampshire and Surrey. Whether you're running on-prem kit or managing remote teams, we keep your systems running properly, patched, and looked after.
@@ -161,7 +164,7 @@ const ItSupportAndMaintenance = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolio.map((item, i) => (
             <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
-              <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
+              <img src={item.image} alt={item.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{item.description}</p>
@@ -236,6 +239,31 @@ const ItSupportAndMaintenance = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Local Service Areas */}
+    <section className="py-16 lg:py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
+          IT Support Across Hampshire &amp; Surrey
+        </h2>
+        <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {[
+            { label: 'Aldershot', path: '/it-support-aldershot' },
+            { label: 'Farnborough', path: '/locations/farnborough' },
+            { label: 'Farnham', path: '/it-support-farnham' },
+            { label: 'Fleet', path: '/it-support-fleet' },
+            { label: 'Camberley', path: '/it-support-camberley' },
+            { label: 'Guildford', path: '/locations/guildford' },
+            { label: 'Hampshire', path: '/locations/hampshire' },
+            { label: 'Surrey', path: '/locations/surrey' },
+          ].map((area, i) => (
+            <Link key={i} to={area.path} className="text-center p-3 bg-white rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-sm transition-all">
+              <span className="text-sm font-medium text-gray-700 hover:text-accent">{area.label}</span>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

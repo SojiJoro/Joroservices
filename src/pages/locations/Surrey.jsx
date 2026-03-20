@@ -3,7 +3,8 @@ import { CheckCircle, ChevronDown, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import { serviceSchema, breadcrumbSchema, locationBusinessSchema } from '../../seo/schemas'
+import Breadcrumb from '../../component/Breadcrumb'
 
 const services = [
   {
@@ -93,6 +94,7 @@ const Surrey = () => {
         title="Web Development, IT Support & Digital Marketing in Surrey | Joro Services"
         description="Joro Services delivers expert web development, IT support, SEO, cybersecurity, and digital marketing to businesses across Surrey. From Guildford to Woking, Camberley to Epsom. Free consultation available."
         keywords="web development Surrey, IT support Surrey, digital marketing Surrey, SEO Surrey, web design Surrey, cybersecurity Surrey, IT services Surrey, digital agency Surrey, IT consultancy Surrey, cloud services Surrey"
+        dateModified="2026-03-20"
         jsonLd={[
           serviceSchema({
             name: 'Digital Services in Surrey',
@@ -105,6 +107,7 @@ const Surrey = () => {
             { name: 'Locations', path: '/locations/surrey' },
             { name: 'Surrey', path: '/locations/surrey' },
           ]),
+          locationBusinessSchema({ town: 'Surrey', county: 'Surrey' }),
           surreyFaqSchema,
         ]}
       />
@@ -112,6 +115,7 @@ const Surrey = () => {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Locations', path: '/locations/surrey' }, { name: 'Surrey' }]} />
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-5 h-5 text-accent-dark" />
             <span className="text-accent font-semibold text-sm uppercase tracking-widest">Surrey, UK</span>

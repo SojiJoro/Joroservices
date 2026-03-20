@@ -70,6 +70,8 @@ const ServiceDetail = () => {
                 src={service.image}
                 alt={service.title}
                 className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>
@@ -137,6 +139,8 @@ const ServiceDetail = () => {
                       src={s.image}
                       alt={s.title}
                       className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="p-6">

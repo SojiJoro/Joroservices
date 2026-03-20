@@ -159,7 +159,7 @@ const GraphicBranding = () => {
               key={i}
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
             >
-              <img src={project.image} alt={project.name} className="h-48 w-full object-cover" />
+              <img src={project.image} alt={project.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{project.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{project.description}</p>
