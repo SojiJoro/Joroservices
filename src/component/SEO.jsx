@@ -6,6 +6,7 @@ const BASE_URL = 'https://joroservices.org';
 /**
  * SEO component that manages document head meta tags and JSON-LD structured data.
  * Compatible with React 19 (no react-helmet dependency).
+ * Enhanced for GEO (Generative Engine Optimisation) and AI search visibility.
  */
 export default function SEO({
   title,
@@ -16,6 +17,8 @@ export default function SEO({
   ogImage = '/Joro.svg',
   jsonLd,
   noIndex = false,
+  dateModified,
+  speakable = false,
 }) {
   const { pathname } = useLocation();
   const canonical = `${BASE_URL}${canonicalPath || pathname}`;
@@ -35,19 +38,42 @@ export default function SEO({
       el.setAttribute('content', content);
     };
 
+    // Helper to set or create a link tag
+    const setLink = (rel, href, attrs = {}) => {
+      const selector = Object.entries(attrs)
+        .map(([k, v]) => `[${k}="${v}"]`)
+        .join('');
+      let el = document.querySelector(`link[rel="${rel}"]${selector}`);
+      if (!el) {
+        el = document.createElement('link');
+        el.setAttribute('rel', rel);
+        Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+        document.head.appendChild(el);
+      }
+      el.setAttribute('href', href);
+    };
+
     // Standard meta tags
     setMeta('name', 'description', description);
     if (keywords) setMeta('name', 'keywords', keywords);
-    if (noIndex) setMeta('name', 'robots', 'noindex, nofollow');
+    if (noIndex) {
+      setMeta('name', 'robots', 'noindex, nofollow');
+    } else {
+      setMeta('name', 'robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+    }
+
+    // Date modified (for freshness signals)
+    if (dateModified) {
+      setMeta('name', 'article:modified_time', dateModified);
+    }
 
     // Canonical link
-    let link = document.querySelector('link[rel="canonical"]');
-    if (!link) {
-      link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      document.head.appendChild(link);
-    }
-    link.setAttribute('href', canonical);
+    setLink('canonical', canonical);
+
+    // Hreflang links
+    setLink('alternate', canonical, { hreflang: 'en-GB' });
+    setLink('alternate', canonical, { hreflang: 'en' });
+    setLink('alternate', canonical, { hreflang: 'x-default' });
 
     // Open Graph
     setMeta('property', 'og:title', title);
@@ -55,15 +81,18 @@ export default function SEO({
     setMeta('property', 'og:type', ogType);
     setMeta('property', 'og:url', canonical);
     setMeta('property', 'og:image', ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage}`);
+    setMeta('property', 'og:image:alt', `${title} - Joro Services`);
     setMeta('property', 'og:site_name', 'Joro Services');
     setMeta('property', 'og:locale', 'en_GB');
 
     // Twitter Card
     setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:site', '@Joroservices');
+    setMeta('name', 'twitter:creator', '@Joroservices');
     setMeta('name', 'twitter:title', title);
     setMeta('name', 'twitter:description', description);
     setMeta('name', 'twitter:image', ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage}`);
+    setMeta('name', 'twitter:image:alt', `${title} - Joro Services`);
 
     // Geo meta tags for local SEO
     setMeta('name', 'geo.region', 'GB-HAM');
@@ -90,7 +119,7 @@ export default function SEO({
     return () => {
       document.querySelectorAll('script[data-seo-jsonld]').forEach(el => el.remove());
     };
-  }, [title, description, keywords, canonical, ogType, ogImage, jsonLd, noIndex]);
+  }, [title, description, keywords, canonical, ogType, ogImage, jsonLd, noIndex, dateModified, speakable]);
 
   return null;
 }

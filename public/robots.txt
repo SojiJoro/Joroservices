@@ -1,5 +1,6 @@
 # Robots.txt for joroservices.org
 # https://joroservices.org
+# Last updated: 2026-03-20
 
 User-agent: *
 Allow: /
@@ -16,12 +17,17 @@ User-agent: Googlebot
 Allow: /
 Disallow: /api/
 
-# Bing-specific (powers ChatGPT web search)
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing-specific (powers ChatGPT web search and Copilot)
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
 
-# AI Crawlers - explicitly allowed for GEO visibility
+# AI Crawlers - explicitly allowed for GEO (Generative Engine Optimisation) visibility
+
+# OpenAI
 User-agent: GPTBot
 Allow: /
 Disallow: /api/
@@ -30,15 +36,35 @@ User-agent: ChatGPT-User
 Allow: /
 Disallow: /api/
 
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+# Anthropic
 User-agent: ClaudeBot
 Allow: /
 Disallow: /api/
 
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 Disallow: /api/
 
+# Google AI (Gemini, AI Overviews)
 User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+
+User-agent: GoogleOther
+Allow: /
+Disallow: /api/
+
+# Apple (Siri, Apple Intelligence)
+User-agent: Applebot
 Allow: /
 Disallow: /api/
 
@@ -46,6 +72,75 @@ User-agent: Applebot-Extended
 Allow: /
 Disallow: /api/
 
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+Disallow: /api/
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /api/
+
+# Cohere
 User-agent: cohere-ai
 Allow: /
 Disallow: /api/
+
+# Amazon / Alexa
+User-agent: Amazonbot
+Allow: /
+Disallow: /api/
+
+# Microsoft Copilot
+User-agent: CopilotBot
+Allow: /
+Disallow: /api/
+
+# You.com
+User-agent: YouBot
+Allow: /
+Disallow: /api/
+
+# Brave Search
+User-agent: BraveBot
+Allow: /
+Disallow: /api/
+
+# Common Crawl (used to train many AI models)
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Disallow: /api/
+
+# Semrush (SEO tools)
+User-agent: SemrushBot
+Allow: /
+Disallow: /api/
+
+# Ahrefs (SEO tools)
+User-agent: AhrefsBot
+Allow: /
+Disallow: /api/
+
+# Mojeek
+User-agent: MojeekBot
+Allow: /
+Disallow: /api/
+
+# Bytespider (ByteDance / TikTok)
+User-agent: Bytespider
+Allow: /
+Disallow: /api/
+
+# AI content files
+# llms.txt: https://joroservices.org/llms.txt
+# llms-full.txt: https://joroservices.org/llms-full.txt

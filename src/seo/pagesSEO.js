@@ -166,6 +166,101 @@ const pagesSEO = {
       'Terms of service for Joro Services Ltd. Conditions governing our web development, IT support, and digital marketing services.',
     keywords: 'terms of service, Joro Services terms, service agreement, terms and conditions',
   },
+
+  // General Location Pages
+  '/locations/aldershot': {
+    title: 'Web Development, IT Support & Digital Marketing in Aldershot | Joro Services',
+    description:
+      'Aldershot\'s only full-service digital agency. Web design, IT support, cybersecurity, mobile apps, and cloud solutions for local businesses. Free consultation.',
+    keywords:
+      'digital agency Aldershot, web development Aldershot, IT support Aldershot, web design Aldershot, SEO Aldershot, cybersecurity Aldershot, cloud services Aldershot, digital marketing Aldershot, IT company Aldershot, managed IT services Aldershot',
+  },
+  '/locations/farnborough': {
+    title: 'Web Development, IT Support & Digital Marketing in Farnborough | Joro Services',
+    description:
+      'Web development, IT support, SEO, and digital marketing for Farnborough businesses. Based 3 miles away in Aldershot. Free consultation available.',
+    keywords:
+      'digital agency Farnborough, web development Farnborough, IT support Farnborough, web design Farnborough, SEO Farnborough, cybersecurity Farnborough, digital marketing Farnborough, IT company Farnborough, managed services Farnborough',
+  },
+  '/locations/guildford': {
+    title: 'Web Development, IT Support & Digital Marketing in Guildford | Joro Services',
+    description:
+      'Professional web development, IT support, digital marketing, and cybersecurity for Guildford businesses. Local expertise from Joro Services.',
+    keywords:
+      'digital agency Guildford, web development Guildford, IT support Guildford, web design Guildford, SEO Guildford, cybersecurity Guildford, digital marketing Guildford, IT company Guildford Surrey',
+  },
+  '/locations/camberley': {
+    title: 'Web Development, IT Support & Digital Marketing in Camberley | Joro Services',
+    description:
+      'Web development, IT support, SEO, and digital marketing for Camberley businesses. Full-service digital solutions in Surrey Heath.',
+    keywords:
+      'digital agency Camberley, web development Camberley, IT support Camberley, web design Camberley, SEO Camberley, digital marketing Camberley, IT company Camberley Surrey Heath',
+  },
+  '/locations/hampshire': {
+    title: 'Web Development, IT Support & Digital Marketing in Hampshire | Joro Services',
+    description:
+      'Expert web development, IT support, SEO, cybersecurity, and digital marketing for businesses across Hampshire. Based in Aldershot, serving the county.',
+    keywords:
+      'digital agency Hampshire, web development Hampshire, IT support Hampshire, web design Hampshire, SEO Hampshire, cybersecurity Hampshire, digital marketing Hampshire, IT company Hampshire, managed IT services Hampshire',
+  },
+  '/locations/surrey': {
+    title: 'Web Development, IT Support & Digital Marketing in Surrey | Joro Services',
+    description:
+      'Full-service digital agency serving Surrey businesses. Web development, IT support, SEO, cybersecurity, and cloud solutions from Guildford to Camberley.',
+    keywords:
+      'digital agency Surrey, web development Surrey, IT support Surrey, web design Surrey, SEO Surrey, cybersecurity Surrey, digital marketing Surrey, IT company Surrey, managed IT services Surrey',
+  },
+
+  // Service-Location Pages
+  '/it-support-aldershot': {
+    title: 'IT Support in Aldershot, Hampshire | From £30/User/Month | Joro Services',
+    description:
+      'Managed IT support for Aldershot businesses. Same-day on-site visits, 24/7 monitoring, Microsoft 365 support, and helpdesk. From £30 per user per month.',
+    keywords:
+      'IT support Aldershot, managed IT services Aldershot, IT company Aldershot, computer support Aldershot, IT helpdesk Aldershot, Microsoft 365 support Aldershot, IT maintenance Aldershot, IT support near me Aldershot, business IT support Hampshire',
+  },
+  '/web-design-aldershot': {
+    title: 'Web Design in Aldershot, Hampshire | From £1,500 | Joro Services',
+    description:
+      'Custom website design for Aldershot businesses. Mobile-first, no templates, sub-2-second load times. Fixed pricing from £1,500. Free consultation.',
+    keywords:
+      'web design Aldershot, website design Aldershot, web designer Aldershot, affordable web design Aldershot, business website Aldershot, responsive web design Hampshire, website designer near me Aldershot',
+  },
+  '/it-support-farnham': {
+    title: 'IT Support in Farnham, Surrey | Joro Services',
+    description:
+      'IT support for Farnham businesses. Compliance-ready for professional services, EPOS systems for hospitality. 5 miles from our Aldershot base.',
+    keywords:
+      'IT support Farnham, managed IT services Farnham, IT company Farnham, computer support Farnham Surrey, IT helpdesk Farnham, business IT support Farnham, IT support near me Farnham',
+  },
+  '/web-design-farnham': {
+    title: 'Web Design in Farnham, Surrey | Joro Services',
+    description:
+      'Design-led website creation for Farnham businesses. In-person meetings, e-commerce for boutiques, and mobile-first builds. Based 5 miles away.',
+    keywords:
+      'web design Farnham, website design Farnham, web designer Farnham, affordable web design Farnham Surrey, business website Farnham, website designer near me Farnham',
+  },
+  '/it-support-fleet': {
+    title: 'IT Support in Fleet, Hampshire | Joro Services',
+    description:
+      'IT support for Fleet businesses outpacing their current IT. Remote working support, hardware procurement, and cloud migration. 6 miles from Aldershot.',
+    keywords:
+      'IT support Fleet, managed IT services Fleet, IT company Fleet Hampshire, computer support Fleet, IT helpdesk Fleet, business IT support Fleet, cloud migration Fleet',
+  },
+  '/it-support-camberley': {
+    title: 'IT Support in Camberley, Surrey | Joro Services',
+    description:
+      'Proactive IT support for Camberley businesses. Watchmoor Park, Frimley, and Sandhurst covered. Documented IT profiles per client. 7 miles from base.',
+    keywords:
+      'IT support Camberley, managed IT services Camberley, IT company Camberley Surrey, computer support Camberley, IT helpdesk Camberley, business IT support Camberley Surrey Heath',
+  },
+  '/web-design-guildford': {
+    title: 'Web Design in Guildford, Surrey | Joro Services',
+    description:
+      'Professional web design for Guildford businesses. Same quality as London agencies with lower overheads. Competitive pricing for professional services.',
+    keywords:
+      'web design Guildford, website design Guildford, web designer Guildford, affordable web design Guildford Surrey, business website Guildford, website designer near me Guildford',
+  },
 };
 
 export default pagesSEO;
