@@ -1,5 +1,13 @@
 import React, { useState } from 'react'
-import { FaUserCheck, FaDraftingCompass, FaMicroscope, FaLaptopCode, FaPlus, FaMinus } from 'react-icons/fa'
+import {
+  FaUserCheck,
+  FaDraftingCompass,
+  FaMicroscope,
+  FaLaptopCode,
+  FaPlus,
+  FaMinus,
+  FaCheckCircle,
+} from 'react-icons/fa'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
@@ -7,30 +15,70 @@ import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
-const services = [
+const painPoints = [
+  'Your website or app looks fine but nobody seems to complete the forms or checkout',
+  'Customers keep asking how to do things that should be obvious',
+  'Your bounce rate is high and you don\'t know why people leave',
+  'Your app was built by developers without any design input and it shows',
+  'You\'re losing customers to competitors with a better online experience',
+]
+
+const serviceCards = [
   {
     icon: FaUserCheck,
-    title: 'User Research & Personas',
+    title: 'Know What Your Users Actually Need',
+    label: 'User Research & Personas',
     description:
       'We talk to your users, run surveys, and dig into analytics to figure out what they actually need. Then we use that to guide every design choice.',
+    items: [
+      'User interviews and surveys',
+      'Analytics review',
+      'Persona development',
+      'Journey mapping',
+      'Competitor UX analysis',
+    ],
   },
   {
     icon: FaDraftingCompass,
-    title: 'Wireframing & Prototyping',
+    title: 'See It Before You Build It',
+    label: 'Wireframing & Prototyping',
     description:
       'We sketch out how everything works and build clickable prototypes so you can see it and give feedback before any real development starts.',
+    items: [
+      'Low and high-fidelity wireframes',
+      'Clickable prototypes',
+      'User flow diagrams',
+      'Interactive demos',
+      'Stakeholder review sessions',
+    ],
   },
   {
     icon: FaMicroscope,
-    title: 'Usability Testing',
+    title: 'Test Early, Fix Before Launch',
+    label: 'Usability Testing',
     description:
       'We test early and often, using A/B tests, heatmaps, and real user sessions to validate designs and improve usability.',
+    items: [
+      'A/B testing',
+      'Heatmap analysis',
+      'Session recordings',
+      'Real user testing sessions',
+      'Conversion rate analysis',
+    ],
   },
   {
     icon: FaLaptopCode,
-    title: 'Design-to-Development Handoff',
+    title: 'Clean Handoff, Built Right First Time',
+    label: 'Design-to-Development Handoff',
     description:
       'We hand off clean, detailed designs with all the assets and notes your developers need to build it right the first time.',
+    items: [
+      'Figma design files',
+      'Component specifications',
+      'Asset exports',
+      'Developer documentation',
+      'Design system setup',
+    ],
   },
 ]
 
@@ -52,6 +100,57 @@ const portfolio = [
     image: '/images/ux-jobapp.jpg',
     description:
       'A job search app with swipeable cards, saved jobs, and quick-apply. Designed so you can do everything with one thumb.',
+  },
+]
+
+const pricingTiers = [
+  {
+    name: 'UX Audit',
+    price: 'Free',
+    features: [
+      'Review of your current site or app',
+      'Top usability issues identified',
+      'Quick-win recommendations',
+      'No obligation',
+    ],
+    bestFor: 'Understanding what\'s stopping your users from converting',
+    isFree: true,
+  },
+  {
+    name: 'UX Review & Recommendations',
+    price: 'From \u00a3750',
+    features: [
+      'Full usability audit',
+      'Heatmap and analytics review',
+      'Detailed report with prioritised fixes',
+      '1-hour walkthrough call',
+    ],
+    bestFor: 'Businesses with an existing product that needs improvement',
+  },
+  {
+    name: 'Full UX/UI Design',
+    price: 'From \u00a33,000',
+    features: [
+      'Everything in UX Review, plus:',
+      'User research and personas',
+      'Wireframes and prototypes',
+      'Full visual design',
+      'Developer handoff files',
+    ],
+    bestFor: 'New products or major redesigns',
+    highlighted: true,
+  },
+  {
+    name: 'Ongoing UX Support',
+    price: 'From \u00a3500/month',
+    features: [
+      'Dedicated design hours each month',
+      'Continuous testing and iteration',
+      'New feature design',
+      'Design system maintenance',
+      'Priority turnaround',
+    ],
+    bestFor: 'Products that need continuous UX improvement',
   },
 ]
 
@@ -118,37 +217,86 @@ const UXUIExperience = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">UI/UX Design</p>
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">UI/UX Design in Aldershot, Hampshire</h1>
-        <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
+        <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">UI/UX Design in Aldershot, Hampshire</h1>
+        <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
           We design digital products for businesses in Aldershot, Farnborough, Fleet, Guildford, and across Hampshire. Every screen, every interaction, every step of the user journey gets proper attention. We design around how real people use things, not how we think they should.
         </p>
         <Link
           to="/getintouch"
-          className="mt-8 inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Book a UX Consultation <ArrowRight className="w-4 h-4" />
+          Book a Free UX Audit <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>
 
-    {/* UX/UI Services Section */}
+    {/* Pain Points */}
     <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">What We Offer</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((s, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-7">
-              <s.icon className="text-4xl text-accent mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">{s.description}</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Sound Familiar?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {painPoints.map((point, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 bg-white rounded-2xl border border-gray-100 p-7"
+            >
+              <span className="text-red-400 mt-1 text-lg">"</span>
+              <p className="text-gray-600 leading-relaxed italic">{point}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    {/* UX Case Studies / Projects */}
+    {/* Service Cards */}
+    <section id="services" className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What We Do</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {serviceCards.map((card, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition"
+            >
+              <card.icon className="text-3xl text-accent mb-4" />
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-1">
+                {card.label}
+              </p>
+              <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm mb-4">{card.description}</p>
+              <ul className="space-y-2">
+                {card.items.map((item, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Differentiator */}
+    <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-6 max-w-3xl mx-auto">
+          Research + Design + Development Under One Roof
+        </h2>
+        <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
+          Good UX isn't just for big tech companies. We keep the process simple. You'll get wireframes and prototypes you can click through and give feedback on before any code gets written. That means fewer surprises, fewer revisions, and a better end result. And because we handle development too, your designs get built exactly as intended.
+        </p>
+      </div>
+    </section>
+
+    {/* Portfolio / Case Studies */}
     <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Case Studies</p>
@@ -167,23 +315,63 @@ const UXUIExperience = () => {
       </div>
     </section>
 
-    {/* Related Services */}
-    <section className="py-20 lg:py-28 bg-gray-50">
+    {/* Pricing */}
+    <section id="pricing" className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">Related Services</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <Link to="/creative-solutions/website-design" className="block bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-accent mb-2">Website Design</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">Full website design services, from layout to launch.</p>
-          </Link>
-          <Link to="/development/web-development" className="block bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-accent mb-2">Web Development</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">Custom web apps and sites built with React, Next.js, and modern tools.</p>
-          </Link>
-          <Link to="/development/mobile-app-development" className="block bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-accent mb-2">Mobile App Development</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">Native and cross-platform apps with UX design built in from the start.</p>
-          </Link>
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Pricing</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+          Transparent Pricing
+        </h2>
+        <p className="text-center text-gray-600 leading-relaxed mb-12">
+          Clear pricing based on what you need. No vague day rates.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {pricingTiers.map((tier, i) => (
+            <div
+              key={i}
+              className={`rounded-2xl p-7 border ${
+                tier.highlighted
+                  ? 'border-accent shadow-lg relative'
+                  : tier.isFree
+                  ? 'border-accent/30 bg-accent/5'
+                  : 'border-gray-100'
+              }`}
+            >
+              {tier.highlighted && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  Most Popular
+                </div>
+              )}
+              <h3 className="text-lg font-bold mb-1">{tier.name}</h3>
+              <div className="text-xl font-bold text-accent mb-4">
+                {tier.price}
+              </div>
+              <ul className="space-y-2 mb-6">
+                {tier.features.map((feature, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-gray-500 italic mb-4">
+                Best for: "{tier.bestFor}"
+              </p>
+              <Link
+                to="/getintouch"
+                className={`inline-block w-full text-center px-4 py-2.5 font-semibold rounded-xl transition text-sm ${
+                  tier.highlighted
+                    ? 'bg-accent text-white hover:bg-accent-dark'
+                    : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
+                }`}
+              >
+                {tier.isFree ? 'Get Free Audit' : 'Get Started'}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -191,14 +379,14 @@ const UXUIExperience = () => {
     {/* FAQ Section */}
     <section className="py-20 lg:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
-          Frequently Asked Questions About UI/UX Design
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl border border-gray-100"
+              className="border border-gray-100 rounded-2xl bg-white"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -224,33 +412,66 @@ const UXUIExperience = () => {
 
     {/* Why Local Businesses Choose Us */}
     <section className="py-20 lg:py-28 bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8">Why Local Businesses Choose Us</h2>
-        <div className="prose prose-lg text-gray-600 mx-auto">
-          <p>
-            Good UX isn't just for big tech companies. Local businesses in Aldershot, Farnborough, Camberley, and Guildford benefit just as much from well-designed digital products. If your customers are booking appointments, filling in forms, or buying online, the experience matters.
-          </p>
-          <p>
-            We're based in Aldershot, so we understand the local market. We've worked with Hampshire businesses across healthcare, recruitment, and professional services, designing interfaces that their customers actually enjoy using.
-          </p>
-          <p>
-            We keep the process simple. You'll get wireframes and prototypes you can click through and give feedback on before any code gets written. That means fewer surprises, fewer revisions, and a better end result.
-          </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8">
+            Why Local Businesses Choose Us
+          </h2>
+          <div className="space-y-4 text-gray-600 leading-relaxed">
+            <p>
+              Good UX isn't just for big tech companies. Local businesses in Aldershot, Farnborough, Camberley, and Guildford benefit just as much from well-designed digital products. If your customers are booking appointments, filling in forms, or buying online, the experience matters.
+            </p>
+            <p>
+              We're based in Aldershot, so we understand the local market. We've worked with Hampshire businesses across healthcare, recruitment, and professional services, designing interfaces that their customers actually enjoy using.
+            </p>
+            <p>
+              We keep the process simple. You'll get wireframes and prototypes you can click through and give feedback on before any code gets written. That means fewer surprises, fewer revisions, and a better end result.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Related Services */}
+    <section className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+          Related Services
+        </h2>
+        <p className="text-center text-gray-600 mb-10">
+          UI/UX design works best alongside these services.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Link to="/creative-solutions/website-design" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Website Design</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Full website design services, from layout to launch.</p>
+          </Link>
+          <Link to="/development/web-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Web Development</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Custom web apps and sites built with React, Next.js, and modern tools.</p>
+          </Link>
+          <Link to="/development/mobile-app-development" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Mobile App Development</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Native and cross-platform apps with UX design built in from the start.</p>
+          </Link>
         </div>
       </div>
     </section>
 
     {/* CTA Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-          Ready to Make Your Product Easier to Use?
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+          Your Users Are Struggling. Let's Fix That.
         </h2>
+        <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
+          Start with a free UX audit. We'll show you where users are dropping off and what to fix first.
+        </p>
         <Link
           to="/getintouch"
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Get in Touch <ArrowRight className="w-4 h-4" />
+          Get Your Free UX Audit <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>

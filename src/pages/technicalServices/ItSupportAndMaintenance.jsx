@@ -1,5 +1,13 @@
 import React, { useState } from 'react'
-import { FaHeadset, FaShieldAlt, FaClock, FaTools, FaPlus, FaMinus } from 'react-icons/fa'
+import {
+  FaHeadset,
+  FaShieldAlt,
+  FaClock,
+  FaTools,
+  FaPlus,
+  FaMinus,
+  FaCheckCircle,
+} from 'react-icons/fa'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
@@ -8,30 +16,70 @@ import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 import Breadcrumb from '../../component/Breadcrumb'
 
-const services = [
+const painPoints = [
+  'Your IT only gets attention when something breaks',
+  'You\'re paying someone who takes days to respond to a simple issue',
+  'Your team wastes hours on tech problems instead of doing their actual jobs',
+  'You have no idea if your systems are secure or properly backed up',
+  'You need IT support but can\'t justify hiring someone full-time',
+]
+
+const serviceCards = [
   {
     icon: FaClock,
-    title: '24/7 Monitoring & Response',
+    title: 'We Catch Problems Before You Even Notice',
+    label: '24/7 Monitoring & Response',
     description:
       'We proactively monitor your servers, workstations, and cloud environments around the clock, resolving issues before they escalate.',
+    items: [
+      'Server and workstation monitoring',
+      'Cloud environment monitoring',
+      'Automated alerting',
+      'Proactive issue resolution',
+      'Uptime reporting',
+    ],
   },
   {
     icon: FaShieldAlt,
-    title: 'Security Patching & Updates',
+    title: 'Always Patched, Always Protected',
+    label: 'Security Patching & Updates',
     description:
       'We keep your systems secure and up to date with automated patch cycles, antivirus updates, and vulnerability scans.',
+    items: [
+      'Automated OS patching',
+      'Application updates',
+      'Antivirus management',
+      'Vulnerability scanning',
+      'Compliance reporting',
+    ],
   },
   {
     icon: FaTools,
-    title: 'Infrastructure Maintenance',
+    title: 'Everything Running, Nothing Forgotten',
+    label: 'Infrastructure Maintenance',
     description:
       'From on-premise hardware to cloud servers, we maintain your IT environment for uptime, performance, and future scaling.',
+    items: [
+      'Hardware health monitoring',
+      'Cloud server maintenance',
+      'Backup verification',
+      'Performance optimisation',
+      'Capacity planning',
+    ],
   },
   {
     icon: FaHeadset,
-    title: 'Helpdesk & Remote Support',
+    title: 'Call Us, We\'ll Actually Answer',
+    label: 'Helpdesk & Remote Support',
     description:
       'Our team resolves user issues quickly through remote access, live chat, or on-site visits. No ticket is too small or too technical.',
+    items: [
+      'Remote support',
+      'On-site visits when needed',
+      'User account management',
+      'Software troubleshooting',
+      'New starter and leaver setup',
+    ],
   },
 ]
 
@@ -53,6 +101,59 @@ const portfolio = [
     image: '/images/it-uptime.jpg',
     description:
       'Achieved 99.98% uptime for a financial services firm by implementing load balancing, proactive monitoring, and automated backups.',
+  },
+]
+
+const pricingTiers = [
+  {
+    name: 'IT Health Check',
+    price: 'Free',
+    features: [
+      'Review of your current IT setup',
+      'Security and backup assessment',
+      'Top recommendations',
+      'No obligation',
+    ],
+    bestFor: 'Understanding where your IT stands right now',
+    isFree: true,
+  },
+  {
+    name: 'Essential Support',
+    price: 'From \u00a330/user/month',
+    features: [
+      'Remote helpdesk support',
+      'Basic monitoring',
+      'Security patching',
+      'Email support',
+      'Business hours coverage',
+    ],
+    bestFor: 'Small businesses that need reliable basic support',
+  },
+  {
+    name: 'Managed IT',
+    price: 'From \u00a350/user/month',
+    features: [
+      'Everything in Essential, plus:',
+      '24/7 monitoring and alerting',
+      'Backup management and testing',
+      'On-site support when needed',
+      'Monthly IT health report',
+      'Quarterly review meetings',
+    ],
+    bestFor: 'Businesses that want their IT fully managed',
+    highlighted: true,
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    features: [
+      'Everything in Managed, plus:',
+      'Dedicated account manager',
+      'Infrastructure planning',
+      'Compliance support',
+      'Priority response SLAs',
+    ],
+    bestFor: 'Larger businesses with complex IT needs',
   },
 ]
 
@@ -126,33 +227,82 @@ const ItSupportAndMaintenance = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">IT Support Services</p>
         <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Technical Services', path: '/technical-services' }, { name: 'IT Support & Maintenance' }]} />
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">IT Support & Maintenance in Aldershot, Hampshire</h1>
-        <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
+        <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">IT Support & Maintenance in Aldershot, Hampshire</h1>
+        <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
           Downtime costs money. We provide proactive IT support and maintenance for businesses in Aldershot, Farnborough, Farnham, Fleet, Camberley, Guildford, and across Hampshire and Surrey. Whether you're running on-prem kit or managing remote teams, we keep your systems running properly, patched, and looked after.
         </p>
         <Link
           to="/getintouch"
-          className="mt-8 inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Get Support Now <ArrowRight className="w-4 h-4" />
+          Get a Free IT Health Check <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>
 
-    {/* Services Section */}
+    {/* Pain Points */}
     <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">What We Cover</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((s, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-7">
-              <s.icon className="text-4xl text-accent mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">{s.description}</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Sound Familiar?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {painPoints.map((point, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 bg-white rounded-2xl border border-gray-100 p-7"
+            >
+              <span className="text-red-400 mt-1 text-lg">"</span>
+              <p className="text-gray-600 leading-relaxed italic">{point}</p>
             </div>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* Service Cards */}
+    <section id="services" className="py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What We Cover</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {serviceCards.map((card, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition"
+            >
+              <card.icon className="text-3xl text-accent mb-4" />
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-1">
+                {card.label}
+              </p>
+              <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm mb-4">{card.description}</p>
+              <ul className="space-y-2">
+                {card.items.map((item, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Differentiator */}
+    <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-6 max-w-3xl mx-auto">
+          IT Support + Cybersecurity + Cloud Under One Roof
+        </h2>
+        <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
+          Most IT support companies sell you a contract and then wait for things to break. We work differently. We monitor your systems, apply patches before they become urgent, and actually pick up the phone when you ring. And because we handle cybersecurity and cloud infrastructure too, you get complete coverage from one team that knows your business inside out.
+        </p>
       </div>
     </section>
 
@@ -175,17 +325,78 @@ const ItSupportAndMaintenance = () => {
       </div>
     </section>
 
+    {/* Pricing */}
+    <section id="pricing" className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Pricing</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+          Transparent Pricing
+        </h2>
+        <p className="text-center text-gray-600 leading-relaxed mb-12">
+          Per-user pricing. No hidden fees. Scale up or down as your team changes.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {pricingTiers.map((tier, i) => (
+            <div
+              key={i}
+              className={`rounded-2xl p-7 border ${
+                tier.highlighted
+                  ? 'border-accent shadow-lg relative'
+                  : tier.isFree
+                  ? 'border-accent/30 bg-accent/5'
+                  : 'border-gray-100'
+              }`}
+            >
+              {tier.highlighted && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  Most Popular
+                </div>
+              )}
+              <h3 className="text-lg font-bold mb-1">{tier.name}</h3>
+              <div className="text-xl font-bold text-accent mb-4">
+                {tier.price}
+              </div>
+              <ul className="space-y-2 mb-6">
+                {tier.features.map((feature, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-gray-500 italic mb-4">
+                Best for: "{tier.bestFor}"
+              </p>
+              <Link
+                to="/getintouch"
+                className={`inline-block w-full text-center px-4 py-2.5 font-semibold rounded-xl transition text-sm ${
+                  tier.highlighted
+                    ? 'bg-accent text-white hover:bg-accent-dark'
+                    : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
+                }`}
+              >
+                {tier.isFree ? 'Get Free Health Check' : 'Get Started'}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* FAQ Section */}
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section className="py-20 lg:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-10">
-          Frequently Asked Questions About IT Support
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10">
+          Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl border border-gray-100"
+              className="border border-gray-100 rounded-2xl bg-white"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -210,35 +421,49 @@ const ItSupportAndMaintenance = () => {
     </section>
 
     {/* Why Hampshire Businesses Trust Our IT Support */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8">
+            Why Hampshire Businesses Trust Our IT Support
+          </h2>
+          <div className="space-y-4 text-gray-600 leading-relaxed">
+            <p>
+              Most IT support companies sell you a contract and then wait for things to break. We work differently. We monitor your systems, apply patches before they become urgent, and actually pick up the phone when you ring. Businesses across Aldershot, Farnborough, and the wider Hampshire area rely on us because we treat their IT as if it were our own.
+            </p>
+            <p>
+              We understand the challenges local businesses face: tight budgets, small teams wearing multiple hats, and the pressure to keep everything running without a dedicated IT department. That is exactly the gap we fill. Whether you are a professional services firm in Fleet, a care provider in Camberley, or a growing business in Guildford, we give you the IT support you need without the overhead of hiring in-house.
+            </p>
+            <p>
+              Our team is local, responsive, and straightforward. No confusing jargon in reports, no upselling you things you do not need. Just reliable IT support that keeps your business running.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Related Services */}
     <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-6">
-          Why Hampshire Businesses Trust Our IT Support
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
+          Related Services
         </h2>
-        <div className="max-w-3xl mx-auto">
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Most IT support companies sell you a contract and then wait for things to break. We work differently. We monitor your systems, apply patches before they become urgent, and actually pick up the phone when you ring. Businesses across Aldershot, Farnborough, and the wider Hampshire area rely on us because we treat their IT as if it were our own.
-          </p>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            We understand the challenges local businesses face: tight budgets, small teams wearing multiple hats, and the pressure to keep everything running without a dedicated IT department. That is exactly the gap we fill. Whether you are a professional services firm in Fleet, a care provider in Camberley, or a growing business in Guildford, we give you the IT support you need without the overhead of hiring in-house.
-          </p>
-          <p className="text-gray-600 leading-relaxed mb-8">
-            Our team is local, responsive, and straightforward. No confusing jargon in reports, no upselling you things you do not need. Just reliable IT support that keeps your business running.
-          </p>
-          <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
-            <h3 className="text-xl font-semibold mb-4">Related Services</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <Link to="/technical-services/cybersecurity" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                <ArrowRight className="w-4 h-4" /> Cybersecurity
-              </Link>
-              <Link to="/technical-services/cloud-infrastructure" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                <ArrowRight className="w-4 h-4" /> Cloud Infrastructure
-              </Link>
-              <Link to="/development/data-management" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                <ArrowRight className="w-4 h-4" /> Data Management
-              </Link>
-            </div>
-          </div>
+        <p className="text-center text-gray-600 mb-10">
+          IT support works best alongside these services.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Link to="/technical-services/cybersecurity" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Cybersecurity</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Protect your business from phishing, ransomware, and data breaches with proper security measures.</p>
+          </Link>
+          <Link to="/technical-services/cloud-infrastructure" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Cloud Infrastructure</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Move to the cloud or optimise your existing AWS setup. We handle the infrastructure so you don't have to.</p>
+          </Link>
+          <Link to="/development/data-management" className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition block">
+            <h3 className="text-lg font-bold mb-2">Data Management</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Get your databases, backups, and reporting sorted. We help you make your data safe and useful.</p>
+          </Link>
         </div>
       </div>
     </section>
@@ -269,16 +494,19 @@ const ItSupportAndMaintenance = () => {
     </section>
 
     {/* CTA Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-          Need Support That's Always One Step Ahead?
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+          Your IT Should Just Work. Let Us Make Sure It Does.
         </h2>
+        <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
+          Start with a free IT health check. We'll review your setup and tell you exactly what needs attention — no sales pitch, just honest advice.
+        </p>
         <Link
           to="/getintouch"
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
         >
-          Contact the Team <ArrowRight className="w-4 h-4" />
+          Get Your Free IT Health Check <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>
