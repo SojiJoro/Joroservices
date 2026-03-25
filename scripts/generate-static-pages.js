@@ -170,6 +170,101 @@ const pagesSEO = {
 
 const BASE_URL = 'https://joroservices.org';
 
+// Navigation links for noscript fallback content
+const NAV_LINKS = [
+  { href: '/', text: 'Home' },
+  { href: '/services', text: 'Services' },
+  { href: '/about', text: 'About' },
+  { href: '/getintouch', text: 'Contact' },
+  { href: '/careers', text: 'Careers' },
+];
+
+const SERVICE_LINKS = [
+  { href: '/creative-solutions', text: 'Creative Solutions' },
+  { href: '/development', text: 'Development' },
+  { href: '/digital-marketing', text: 'Digital Marketing' },
+  { href: '/technical-services', text: 'Technical Services' },
+];
+
+const LOCATION_LINKS = [
+  { href: '/locations/aldershot', text: 'Aldershot' },
+  { href: '/locations/farnborough', text: 'Farnborough' },
+  { href: '/locations/guildford', text: 'Guildford' },
+  { href: '/locations/camberley', text: 'Camberley' },
+  { href: '/locations/hampshire', text: 'Hampshire' },
+  { href: '/locations/surrey', text: 'Surrey' },
+];
+
+/**
+ * Build breadcrumb trail for a route.
+ */
+function buildBreadcrumbs(route) {
+  const parts = route.split('/').filter(Boolean);
+  const crumbs = [{ href: '/', text: 'Home' }];
+  let path = '';
+  for (const part of parts) {
+    path += '/' + part;
+    const label = part
+      .split('-')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+    crumbs.push({ href: path, text: label });
+  }
+  return crumbs;
+}
+
+/**
+ * Generate route-specific noscript HTML so crawlers see unique content per page.
+ */
+function generateNoscript(route, seo) {
+  const breadcrumbs = buildBreadcrumbs(route);
+  const breadcrumbHtml = breadcrumbs
+    .map((c, i) => i < breadcrumbs.length - 1
+      ? `<a href="${c.href}">${c.text}</a>`
+      : `<span>${c.text}</span>`)
+    .join(' &gt; ');
+
+  const navHtml = NAV_LINKS
+    .map(l => `<a href="${l.href}">${l.text}</a>`)
+    .join(' | ');
+
+  const serviceLinksHtml = SERVICE_LINKS
+    .map(l => `<li><a href="${l.href}">${l.text}</a></li>`)
+    .join('\n          ');
+
+  const locationLinksHtml = LOCATION_LINKS
+    .map(l => `<li><a href="${l.href}">${l.text}</a></li>`)
+    .join('\n          ');
+
+  // Escape ampersands in title for valid HTML
+  const safeTitle = seo.title.replace(/&/g, '&amp;');
+
+  return `
+    <noscript>
+      <div>
+        <nav>${breadcrumbHtml}</nav>
+        <h1>${safeTitle}</h1>
+        <p>${seo.description}</p>
+
+        <h2>Our Services</h2>
+        <ul>
+          ${serviceLinksHtml}
+        </ul>
+
+        <h2>Locations We Serve</h2>
+        <ul>
+          ${locationLinksHtml}
+        </ul>
+
+        <h2>Contact Us</h2>
+        <p>Phone: +44 7867 374034 | Email: info@joroservices.org</p>
+        <p><a href="/getintouch">Get a Free Consultation</a></p>
+
+        <nav>${navHtml}</nav>
+      </div>
+    </noscript>`;
+}
+
 function generatePage(route, seo, templateHtml) {
   let html = templateHtml;
 
@@ -227,6 +322,12 @@ function generatePage(route, seo, templateHtml) {
   html = html.replace(
     /<meta name="twitter:description" content="[^"]*"/,
     `<meta name="twitter:description" content="${seo.description}"`
+  );
+
+  // Replace noscript content with route-specific fallback
+  html = html.replace(
+    /<noscript>[\s\S]*?<\/noscript>/,
+    generateNoscript(route, seo)
   );
 
   return html;
