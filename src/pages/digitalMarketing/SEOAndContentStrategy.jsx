@@ -190,7 +190,7 @@ const SEOAndContentStrategy = () => {
     <main className="bg-white text-gray-900">
       <SEO
         {...pagesSEO['/digital-marketing/seo-and-content-strategy']}
-        dateModified="2026-03-20"
+        dateModified="2026-04-08"
         jsonLd={[
           serviceSchema({
             name: 'SEO and Content Strategy',

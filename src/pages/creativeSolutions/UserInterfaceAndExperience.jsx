@@ -12,6 +12,7 @@ import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
+import Breadcrumb from '../../component/Breadcrumb'
 import pagesSEO from '../../seo/pagesSEO'
 import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
 
@@ -197,6 +198,7 @@ const UXUIExperience = () => {
   <main className="bg-white text-gray-900">
     <SEO
       {...pagesSEO['/creative-solutions/user-interface-and-experience']}
+      dateModified="2026-04-08"
       jsonLd={[
         serviceSchema({
           name: 'UI/UX Design',
@@ -217,6 +219,7 @@ const UXUIExperience = () => {
     <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">UI/UX Design</p>
+        <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Creative Solutions', path: '/creative-solutions' }, { name: 'UI/UX Design' }]} />
         <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">UI/UX Design in Aldershot, Hampshire</h1>
         <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
           We design digital products for businesses in Aldershot, Farnborough, Fleet, Guildford, and across Hampshire. Every screen, every interaction, every step of the user journey gets proper attention. We design around how real people use things, not how we think they should.
