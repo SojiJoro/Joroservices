@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 import Footer from '../../component/Footer'
 import SEO from '../../component/SEO'
 import pagesSEO from '../../seo/pagesSEO'
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas'
+import { serviceSchema, breadcrumbSchema, mobileAppServiceSchema } from '../../seo/schemas'
 import Breadcrumb from '../../component/Breadcrumb'
 
 const painPoints = [
@@ -218,6 +218,7 @@ const MobileAppDevelopment = () => {
           { name: 'Mobile App Development', path: '/development/mobile-app-development' },
         ]),
         mobileFaqSchema,
+        mobileAppServiceSchema,
       ]}
     />
 

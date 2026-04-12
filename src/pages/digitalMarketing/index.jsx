@@ -6,7 +6,7 @@ import MarketingServices from '../../component/digitalMarketing/marketingService
 import Footer from '../../component/Footer';
 import SEO from '../../component/SEO';
 import pagesSEO from '../../seo/pagesSEO';
-import { serviceSchema, breadcrumbSchema } from '../../seo/schemas';
+import { serviceSchema, breadcrumbSchema, digitalMarketingServiceSchema } from '../../seo/schemas';
 
 const DigitalMarketing = () => (
   <div className="bg-white text-gray-900">
@@ -23,6 +23,7 @@ const DigitalMarketing = () => (
           { name: 'Home', path: '/' },
           { name: 'Digital Marketing', path: '/digital-marketing' },
         ]),
+        digitalMarketingServiceSchema,
       ]}
     />
     {/* Hero */}

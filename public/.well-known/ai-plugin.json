@@ -9,9 +9,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://joroservices.org/llms.txt"
+    "url": "https://www.joroservices.org/llms.txt"
   },
-  "logo_url": "https://joroservices.org/Joro.svg",
+  "logo_url": "https://www.joroservices.org/Joro.svg",
   "contact_email": "info@joroservices.org",
-  "legal_info_url": "https://joroservices.org/terms"
+  "legal_info_url": "https://www.joroservices.org/terms"
 }

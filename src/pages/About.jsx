@@ -5,7 +5,7 @@ import { ArrowRight, Palette, Code2, BarChart3, Shield, Award, ShieldCheck, File
 import Footer from '../component/Footer';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
-import { organizationSchema, breadcrumbSchema } from '../seo/schemas';
+import { organizationSchema, breadcrumbSchema, founderPersonSchema } from '../seo/schemas';
 import Breadcrumb from '../component/Breadcrumb';
 
 const values = [
@@ -46,6 +46,7 @@ const About = () => {
             { name: 'Home', path: '/' },
             { name: 'About', path: '/about' },
           ]),
+          founderPersonSchema,
         ]}
       />
 

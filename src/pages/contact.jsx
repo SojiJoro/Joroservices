@@ -5,7 +5,7 @@ import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SEO from "../component/SEO";
 import pagesSEO from "../seo/pagesSEO";
-import { organizationSchema, localBusinessSchema, breadcrumbSchema } from "../seo/schemas";
+import { organizationSchema, localBusinessSchema, breadcrumbSchema, contactPageSchema } from "../seo/schemas";
 import Breadcrumb from "../component/Breadcrumb";
 
 const Contact = () => {
@@ -80,6 +80,7 @@ const Contact = () => {
             { name: 'Home', path: '/' },
             { name: 'Contact', path: '/getintouch' },
           ]),
+          contactPageSchema,
         ]}
       />
 

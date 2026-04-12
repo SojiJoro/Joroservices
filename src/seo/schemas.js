@@ -1,4 +1,4 @@
-const BASE_URL = 'https://joroservices.org';
+const BASE_URL = 'https://www.joroservices.org';
 
 // Organization schema - global
 export const organizationSchema = {
@@ -482,6 +482,158 @@ export function howToSchema({ name, description, steps }) {
       position: index + 1,
       name: step.name,
       text: step.text,
+    })),
+  };
+}
+
+// Organization + LocalBusiness combined schema (Task 5)
+export const orgLocalBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['Organization', 'LocalBusiness'],
+  name: 'Joro Services',
+  url: BASE_URL,
+  description:
+    'UK IT services company offering web development, graphic design, DevOps, cloud engineering, and IT support for small and medium businesses.',
+  areaServed: ['United Kingdom', 'Hampshire', 'Surrey', 'Berkshire', 'London'],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Aldershot',
+    addressRegion: 'Hampshire',
+    addressCountry: 'GB',
+  },
+  serviceType: [
+    'Web Development',
+    'Mobile App Development',
+    'DevOps Engineering',
+    'Cloud Infrastructure',
+    'IT Support',
+    'Graphic Design',
+    'Digital Marketing',
+    'SEO',
+  ],
+  sameAs: [
+    'https://www.linkedin.com/company/joro-services',
+    'https://github.com/SojiJoro',
+  ],
+};
+
+// Service schema blocks for homepage and service pages (Task 5)
+export const webDevServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Web Development',
+  provider: { '@type': 'Organization', name: 'Joro Services', url: BASE_URL },
+  serviceType: 'Web Development',
+  description:
+    'Custom web development for UK small and medium businesses. Websites, web applications, and e-commerce platforms built with modern frameworks and optimised for search.',
+  areaServed: 'United Kingdom',
+  url: `${BASE_URL}/development`,
+};
+
+export const devopsServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'DevOps and Cloud Engineering',
+  provider: { '@type': 'Organization', name: 'Joro Services', url: BASE_URL },
+  serviceType: 'DevOps Engineering',
+  description:
+    'DevOps engineering and cloud infrastructure services for UK businesses. CI/CD pipelines, Terraform, Kubernetes, AWS and Azure setup, and ongoing managed support.',
+  areaServed: 'United Kingdom',
+  url: `${BASE_URL}/technical-services`,
+};
+
+export const graphicDesignServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Graphic Design',
+  provider: { '@type': 'Organization', name: 'Joro Services', url: BASE_URL },
+  serviceType: 'Graphic Design',
+  description:
+    'Brand identity, logo design, marketing materials, and visual assets for UK small businesses. Professional creative services from one team.',
+  areaServed: 'United Kingdom',
+  url: `${BASE_URL}/creative-solutions`,
+};
+
+export const digitalMarketingServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Digital Marketing',
+  provider: { '@type': 'Organization', name: 'Joro Services', url: BASE_URL },
+  serviceType: 'Digital Marketing',
+  description:
+    'SEO, content strategy, PPC, and social media management for UK businesses. Data-driven digital marketing that generates leads and grows your online presence.',
+  areaServed: 'United Kingdom',
+  url: `${BASE_URL}/digital-marketing`,
+};
+
+export const itSupportServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'IT Support',
+  provider: { '@type': 'Organization', name: 'Joro Services', url: BASE_URL },
+  serviceType: 'IT Support',
+  description:
+    'Managed IT support for UK businesses. Proactive monitoring, helpdesk, infrastructure management, Microsoft 365 support, and on-site visits.',
+  areaServed: 'United Kingdom',
+  url: `${BASE_URL}/technical-services`,
+};
+
+export const mobileAppServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Mobile App Development',
+  provider: { '@type': 'Organization', name: 'Joro Services', url: BASE_URL },
+  serviceType: 'Mobile App Development',
+  description:
+    'iOS and Android app development for UK businesses. Cross-platform apps built with React Native and Flutter, from MVP to full product.',
+  areaServed: 'United Kingdom',
+  url: `${BASE_URL}/development/mobile-app-development`,
+};
+
+// Person schema for founder (Task 5)
+export const founderPersonSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Adesoji Adegboyega',
+  jobTitle: 'Founder & IT Director',
+  worksFor: { '@type': 'Organization', name: 'Joro Services', url: BASE_URL },
+  url: `${BASE_URL}/about`,
+  sameAs: ['https://github.com/SojiJoro', 'https://twitter.com/favoredsinner'],
+  knowsAbout: [
+    'DevOps',
+    'Cloud Engineering',
+    'AWS',
+    'Azure',
+    'Terraform',
+    'Kubernetes',
+    'Web Development',
+    'Site Reliability Engineering',
+  ],
+};
+
+// ContactPage schema (Task 5)
+export const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Joro Services',
+  url: `${BASE_URL}/getintouch`,
+  description:
+    'Get in touch with Joro Services for web development, IT support, DevOps, cloud infrastructure, or graphic design.',
+  provider: { '@type': 'Organization', name: 'Joro Services' },
+};
+
+// FAQ schema helper for service pages (Task 7)
+export function faqPageSchema(faqs) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
     })),
   };
 }

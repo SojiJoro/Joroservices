@@ -47,6 +47,11 @@ const Camberley = lazy(() => import("./pages/locations/Camberley"));
 const Hampshire = lazy(() => import("./pages/locations/Hampshire"));
 const Surrey = lazy(() => import("./pages/locations/Surrey"));
 
+// New High-Value Service Pages
+const ItServicesCareProviders = lazy(() => import("./pages/ItServicesCareProviders"));
+const DevopsSmallBusiness = lazy(() => import("./pages/DevopsSmallBusiness"));
+const FractionalCTO = lazy(() => import("./pages/FractionalCTO"));
+
 // Service-Location Pages
 const ItSupportAldershot = lazy(() => import("./pages/locations/ItSupportAldershot"));
 const WebDesignAldershot = lazy(() => import("./pages/locations/WebDesignAldershot"));
@@ -139,6 +144,11 @@ function App() {
             <Route path="/locations/camberley" element={<Camberley />} />
             <Route path="/locations/hampshire" element={<Hampshire />} />
             <Route path="/locations/surrey" element={<Surrey />} />
+
+            {/* New High-Value Service Pages */}
+            <Route path="/it-services-care-providers" element={<ItServicesCareProviders />} />
+            <Route path="/devops-small-business" element={<DevopsSmallBusiness />} />
+            <Route path="/fractional-cto" element={<FractionalCTO />} />
 
             {/* Service-Location Pages */}
             <Route path="/it-support-aldershot" element={<ItSupportAldershot />} />

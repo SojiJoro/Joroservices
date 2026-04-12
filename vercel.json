@@ -118,15 +118,20 @@
       "has": [
         {
           "type": "host",
-          "value": "www.joroservices.org"
+          "value": "joroservices.org"
         }
       ],
-      "destination": "https://joroservices.org/:path*",
+      "destination": "https://www.joroservices.org/:path*",
       "permanent": true
     },
     {
       "source": "/index.html",
       "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
       "permanent": true
     }
   ],
