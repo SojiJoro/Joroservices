@@ -136,6 +136,74 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog / Insights -->
+  <url>
+    <loc>https://www.joroservices.org/insights</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/platform-engineering-vs-devops-vs-sre-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/how-we-cut-aws-costs-26-percent</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/internal-developer-platform-small-team-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/terraform-iac-teams-doing-it-wrong-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/devsecops-practical-guide-uk-startups-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/ai-website-builder-vs-web-designer-uk-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/uk-sme-cybersecurity-30-minute-fix-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/google-ai-overviews-local-seo-hampshire-surrey-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/website-downtime-it-support-guide-uk-smes-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joroservices.org/insights/free-aws-cost-audit-uk-small-business-findings-2026</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- New High-Value Service Pages -->
   <url>
     <loc>https://www.joroservices.org/it-services-care-providers</loc>
