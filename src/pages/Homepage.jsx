@@ -15,6 +15,14 @@ import {
   websiteSchema,
   homepageFaqSchema,
   speakableSchema,
+  orgLocalBusinessSchema,
+  webDevServiceSchema,
+  devopsServiceSchema,
+  graphicDesignServiceSchema,
+  digitalMarketingServiceSchema,
+  itSupportServiceSchema,
+  mobileAppServiceSchema,
+  founderPersonSchema,
 } from '../seo/schemas';
 
 const serviceCategories = [
@@ -48,7 +56,7 @@ const serviceCategories = [
 const reviewSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://joroservices.org/#localbusiness-reviews',
+  '@id': 'https://www.joroservices.org/#localbusiness-reviews',
   name: 'Joro Services Ltd',
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -118,7 +126,7 @@ const Homepage = () => (
     <SEO
       {...pagesSEO['/']}
       dateModified="2026-03-20"
-      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema, reviewSchema, speakableSchema({ url: '/' })]}
+      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema, reviewSchema, speakableSchema({ url: '/' }), orgLocalBusinessSchema, webDevServiceSchema, devopsServiceSchema, graphicDesignServiceSchema, digitalMarketingServiceSchema, itSupportServiceSchema, mobileAppServiceSchema, founderPersonSchema]}
     />
 
     {/* Hero Section */}
