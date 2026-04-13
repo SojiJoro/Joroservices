@@ -28,10 +28,10 @@ const values = [
 ];
 
 const serviceAreas = [
-  { icon: Palette, title: 'Creative Solutions', desc: 'Websites, branding, and UI/UX design that makes your business look as good as it is.', path: '/creative-solutions' },
-  { icon: Code2, title: 'Development', desc: 'Web and mobile apps built with modern tools that won\'t fall apart as you grow.', path: '/development' },
-  { icon: BarChart3, title: 'Digital Marketing', desc: 'SEO, PPC, social media, and content that actually brings in customers.', path: '/digital-marketing' },
-  { icon: Shield, title: 'Technical Services', desc: 'IT support, cybersecurity, and cloud setup you can count on.', path: '/technical-services' },
+  { icon: Palette, title: 'Website Design & Branding', desc: 'We design and build websites, create logos, and develop brand identities. Finished deliverables, not just concepts.', path: '/creative-solutions' },
+  { icon: Code2, title: 'Web & App Development', desc: 'We build web applications, mobile apps, and e-commerce stores. Production code, deployed and maintained.', path: '/development' },
+  { icon: BarChart3, title: 'SEO & Digital Marketing', desc: 'We run your SEO campaigns, manage your ad spend, and produce content. Monthly reports with real numbers.', path: '/digital-marketing' },
+  { icon: Shield, title: 'DevOps, Cloud & IT Support', desc: 'We set up and manage cloud infrastructure, CI/CD pipelines, monitoring, and day-to-day IT support.', path: '/technical-services' },
 ];
 
 const About = () => {
@@ -61,7 +61,7 @@ const About = () => {
             <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">About Us</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">About Joro Services</h1>
             <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
-              Big-company tech services at small-business prices. We are a UK-based team that helps businesses build, protect, and grow their online presence.
+              We are a UK IT services company. We build websites, develop apps, set up cloud infrastructure, provide IT support, and run digital marketing — for small and medium businesses who need real delivery, not just advice.
             </p>
           </div>
         </div>
@@ -72,17 +72,17 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Story</p>
-              <h2 className="text-3xl font-bold mb-8">Building technology that matters</h2>
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+              <h2 className="text-3xl font-bold mb-8">An IT services company, not a consultancy</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  We started Joro Services because we saw too many smaller businesses getting stuck with bad tech or paying over the odds for it. We wanted to give growing companies access to the same quality of work that the big firms get, without the big firm price tag.
+                  Joro Services exists because too many small businesses either can't find reliable IT providers or end up paying enterprise prices for basic work. We deliver the full range of IT services — web development, mobile apps, DevOps, cloud infrastructure, IT support, graphic design, and digital marketing — at prices that make sense for growing companies.
                 </p>
                 <p>
-                  We are based in London and our team covers everything from software development and cloud infrastructure to cybersecurity, digital marketing, and design. We work with clients in healthcare, recruitment, social care, and e-commerce, and we focus on doing work that actually makes a difference to their day-to-day.
+                  We are based in Aldershot, Hampshire, with a registered office in London. Our team builds websites, writes code, sets up AWS environments, manages Kubernetes clusters, designs logos, and runs SEO campaigns. We do the hands-on work. We do not just produce reports and recommendations.
                 </p>
                 <p>
-                  Whether we are building a patient portal for a healthcare provider, moving a recruitment platform to the cloud, or running a marketing campaign, we put the same care into every project.
+                  Our clients include healthcare providers, recruitment agencies, care organisations, and e-commerce businesses. We have built patient portals, migrated platforms to the cloud, set up CI/CD pipelines, and launched marketing campaigns. Every project is delivered by our team directly — no subcontracting.
                 </p>
               </div>
             </div>
@@ -152,8 +152,8 @@ const About = () => {
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Services</p>
-            <h2 className="text-3xl font-bold">What We Do</h2>
+            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</p>
+            <h2 className="text-3xl font-bold">Services We Deliver</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {serviceAreas.map((item, idx) => {
