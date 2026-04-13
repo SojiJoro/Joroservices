@@ -19,6 +19,10 @@ const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
 
+// Blog / Insights
+const InsightsIndex = lazy(() => import("./pages/insights/InsightsIndex"));
+const InsightPost = lazy(() => import("./pages/insights/InsightPost"));
+
 // Creative Solutions Subpages (slug-aligned)
 const WebsiteDesign = lazy(() => import("./pages/creativeSolutions/WebsiteDesign"));
 const GraphicDesignAndBranding = lazy(() => import("./pages/creativeSolutions/GraphicDesignAndBranding"));
@@ -116,6 +120,10 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/services/:id" element={<ServiceDetail />} />
+
+            {/* Blog / Insights */}
+            <Route path="/insights" element={<InsightsIndex />} />
+            <Route path="/insights/:slug" element={<InsightPost />} />
 
             {/* Creative Solutions Subpages */}
             <Route path="/creative-solutions/website-design" element={<WebsiteDesign />} />

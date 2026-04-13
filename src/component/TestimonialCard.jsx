@@ -18,7 +18,7 @@ const TestimonialCard = ({ data }) => {
       {name && (
         <div className="mt-5 pt-5 border-t border-white/10 flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent text-sm font-bold">
-            {name.split(' ').map(n => n[0]).join('')}
+            {role ? role.split(' ').map(n => n[0]).join('').slice(0, 2) : name.split(' ').map(n => n[0]).join('').slice(0, 2)}
           </div>
           <div>
             <p className="text-sm font-semibold text-white">{name}</p>

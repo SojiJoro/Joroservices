@@ -1,7 +1,11 @@
 import React from 'react';
-import { insightData } from '../data';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { blogPosts } from '../pages/insights/blogData';
 
 const InsightsSection = () => {
+  const latestPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+
   return (
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,46 +20,50 @@ const InsightsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {insightData.map((data, i) => (
-            <article
-              key={i}
-              className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+          {latestPosts.map((post) => (
+            <Link
+              key={post.slug}
+              to={`/insights/${post.slug}`}
+              className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex flex-col"
             >
-              <div className="overflow-hidden">
-                <img
-                  src={data.image}
-                  alt={data.title}
-                  className="h-52 w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div className="p-6">
-                {data.category && (
-                  <span className="inline-block bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                    {data.category}
-                  </span>
-                )}
-                <h3 className="text-lg font-bold text-gray-900 mb-3 leading-snug">
-                  {data.title}
+              <div className="p-6 flex flex-col flex-1">
+                <span className="inline-block bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4 self-start">
+                  {post.category}
+                </span>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 leading-snug group-hover:text-accent transition-colors">
+                  {post.title}
                 </h3>
-                {data.summary && (
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                    {data.summary}
-                  </p>
-                )}
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xs">
-                    {data.author.initials}
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
+                  {post.metaDescription}
+                </p>
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xs">
+                      JS
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">{post.author}</p>
+                      <p className="text-xs text-gray-500">
+                        {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900">{data.author.name}</p>
-                    <p className="text-xs text-gray-500">{data.date}</p>
-                  </div>
+                  <span className="text-accent text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Read <ArrowRight size={14} />
+                  </span>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            to="/insights"
+            className="inline-flex items-center gap-2 text-accent hover:text-accent-dark font-semibold text-sm transition-colors"
+          >
+            View all articles <ArrowRight size={14} />
+          </Link>
         </div>
       </div>
     </section>
