@@ -28,26 +28,26 @@ import {
 const serviceCategories = [
   {
     icon: Palette,
-    title: 'Creative Solutions',
-    desc: 'Website design, branding, and UI/UX that look great and actually get people to take action.',
+    title: 'Website Design & Branding',
+    desc: 'We design and build websites, logos, and brand identities. You get a finished product, not a mockup.',
     path: '/creative-solutions',
   },
   {
     icon: Code2,
-    title: 'Development',
-    desc: 'Web and mobile apps built with React, Next.js, and modern cloud tools. Made to grow with you.',
+    title: 'Web & Mobile App Development',
+    desc: 'We build web applications, mobile apps, and e-commerce stores with React, Next.js, and Flutter. Production-ready code.',
     path: '/development',
   },
   {
     icon: BarChart3,
-    title: 'Digital Marketing',
-    desc: 'SEO, PPC, and content that actually brings in leads and keeps your business growing.',
+    title: 'SEO & Digital Marketing',
+    desc: 'We run your SEO, manage your Google Ads, and handle your social media. Monthly reporting, real results.',
     path: '/digital-marketing',
   },
   {
     icon: Shield,
-    title: 'Managed IT & Security',
-    desc: 'AWS-certified cloud setup, round-the-clock IT support, and proper cybersecurity for your business.',
+    title: 'DevOps, Cloud & IT Support',
+    desc: 'We set up your AWS infrastructure, manage your servers, run your CI/CD pipelines, and provide day-to-day IT support.',
     path: '/technical-services',
   },
 ];
@@ -142,12 +142,12 @@ const Homepage = () => (
             Trusted by 20+ businesses across the UK
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
-            Your Local Tech Partner
+            We Build Websites,
             <br />
-            <span className="text-accent">in Aldershot, Hampshire</span>
+            <span className="text-accent">Run Infrastructure & Manage IT</span>
           </h1>
           <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
-            Based in Aldershot, covering the full stack from web design to cloud infrastructure. We're the only local agency that handles your website, IT support, cybersecurity, and marketing under one roof. No juggling suppliers. One team, one bill.
+            Joro Services delivers web development, DevOps, cloud engineering, graphic design, and IT support for UK businesses. We do the work — websites, apps, servers, pipelines, marketing. One team handles everything so you don't have to manage five suppliers.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-3">
             <Link
@@ -172,12 +172,12 @@ const Homepage = () => (
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Everything Your Business Needs, Tech-wise
+            IT Services We Deliver
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Apps, infrastructure, security, marketing. We handle it all so you can focus on running your business.
+            We build websites, develop apps, set up cloud infrastructure, manage IT support, and run digital marketing campaigns. These are services we deliver, not advice we give.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -213,13 +213,13 @@ const Homepage = () => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 items-end mb-14">
           <div>
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Solutions</p>
+            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Build</p>
             <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-gray-900">
-              Solutions That Drive Growth
+              Real Work We've Delivered
             </h2>
           </div>
           <p className="text-gray-500 lg:text-right">
-            Web apps, mobile apps, cloud infrastructure, security. We build what you need and make sure it keeps working.
+            Websites, web apps, mobile apps, cloud setups, and marketing campaigns — built and shipped for UK businesses.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -253,10 +253,10 @@ const Homepage = () => (
         <div className="mt-10 bg-gradient-to-r from-primary to-secondary rounded-2xl px-6 py-10 sm:p-10 lg:p-12">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-white text-xl sm:text-2xl font-bold mb-3">
-              One Partner. Every Technology Need.
+              One Team. Every IT Service You Need.
             </h3>
             <p className="text-gray-400 mb-6 text-sm sm:text-base leading-relaxed">
-              Stop dealing with five different agencies. We handle your cloud, your website, your marketing, and your IT. One team, one bill.
+              Web development, DevOps, cloud infrastructure, graphic design, IT support, and digital marketing — all delivered by one team. No subcontractors. No middlemen.
             </p>
             <Link
               to="/getintouch"
@@ -277,10 +277,10 @@ const Homepage = () => (
           <div>
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Why Joro Services</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Enterprise expertise. SMB pricing.
+              We do the work. No outsourcing.
             </h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
-              We bring the same quality of work that big companies get, but at prices that make sense for smaller businesses. The people you talk to are the people doing the work. No passing you off to juniors.
+              The people you speak to are the engineers and designers who do the work. We don't sell projects and hand them to freelancers. Every website, every deployment, every support ticket is handled by our team.
             </p>
             <ul className="space-y-4">
               {[
