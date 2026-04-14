@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://www.joroservices.org/</loc>
+    <loc>https://joroservices.org/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -14,61 +14,61 @@
 
   <!-- Main Pages -->
   <url>
-    <loc>https://www.joroservices.org/development</loc>
+    <loc>https://joroservices.org/development</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/development/mobile-app-development</loc>
+    <loc>https://joroservices.org/development/mobile-app-development</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/technical-services</loc>
+    <loc>https://joroservices.org/technical-services</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/technical-services/cloud-infrastructure</loc>
+    <loc>https://joroservices.org/technical-services/cloud-infrastructure</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/creative-solutions</loc>
+    <loc>https://joroservices.org/creative-solutions</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/creative-solutions/website-design</loc>
+    <loc>https://joroservices.org/creative-solutions/website-design</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/digital-marketing</loc>
+    <loc>https://joroservices.org/digital-marketing</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/digital-marketing/seo-and-content-strategy</loc>
+    <loc>https://joroservices.org/digital-marketing/seo-and-content-strategy</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/about</loc>
+    <loc>https://joroservices.org/about</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/getintouch</loc>
+    <loc>https://joroservices.org/getintouch</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -76,61 +76,61 @@
 
   <!-- Additional Service Pages -->
   <url>
-    <loc>https://www.joroservices.org/services</loc>
+    <loc>https://joroservices.org/services</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/careers</loc>
+    <loc>https://joroservices.org/careers</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/development/web-development</loc>
+    <loc>https://joroservices.org/development/web-development</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/development/data-management</loc>
+    <loc>https://joroservices.org/development/data-management</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/technical-services/it-support-and-maintenance</loc>
+    <loc>https://joroservices.org/technical-services/it-support-and-maintenance</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/technical-services/cybersecurity</loc>
+    <loc>https://joroservices.org/technical-services/cybersecurity</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/creative-solutions/graphic-design-and-branding</loc>
+    <loc>https://joroservices.org/creative-solutions/graphic-design-and-branding</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/creative-solutions/user-interface-and-experience</loc>
+    <loc>https://joroservices.org/creative-solutions/user-interface-and-experience</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/digital-marketing/social-media-management</loc>
+    <loc>https://joroservices.org/digital-marketing/social-media-management</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/digital-marketing/ppc-and-online-campaigns</loc>
+    <loc>https://joroservices.org/digital-marketing/ppc-and-online-campaigns</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -138,67 +138,67 @@
 
   <!-- Blog / Insights -->
   <url>
-    <loc>https://www.joroservices.org/insights</loc>
+    <loc>https://joroservices.org/insights</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/platform-engineering-vs-devops-vs-sre-2026</loc>
+    <loc>https://joroservices.org/insights/platform-engineering-vs-devops-vs-sre-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/how-we-cut-aws-costs-26-percent</loc>
+    <loc>https://joroservices.org/insights/how-we-cut-aws-costs-26-percent</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/internal-developer-platform-small-team-2026</loc>
+    <loc>https://joroservices.org/insights/internal-developer-platform-small-team-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/terraform-iac-teams-doing-it-wrong-2026</loc>
+    <loc>https://joroservices.org/insights/terraform-iac-teams-doing-it-wrong-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/devsecops-practical-guide-uk-startups-2026</loc>
+    <loc>https://joroservices.org/insights/devsecops-practical-guide-uk-startups-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/ai-website-builder-vs-web-designer-uk-2026</loc>
+    <loc>https://joroservices.org/insights/ai-website-builder-vs-web-designer-uk-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/uk-sme-cybersecurity-30-minute-fix-2026</loc>
+    <loc>https://joroservices.org/insights/uk-sme-cybersecurity-30-minute-fix-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/google-ai-overviews-local-seo-hampshire-surrey-2026</loc>
+    <loc>https://joroservices.org/insights/google-ai-overviews-local-seo-hampshire-surrey-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/website-downtime-it-support-guide-uk-smes-2026</loc>
+    <loc>https://joroservices.org/insights/website-downtime-it-support-guide-uk-smes-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/insights/free-aws-cost-audit-uk-small-business-findings-2026</loc>
+    <loc>https://joroservices.org/insights/free-aws-cost-audit-uk-small-business-findings-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -206,19 +206,19 @@
 
   <!-- New High-Value Service Pages -->
   <url>
-    <loc>https://www.joroservices.org/it-services-care-providers</loc>
+    <loc>https://joroservices.org/it-services-care-providers</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/devops-small-business</loc>
+    <loc>https://joroservices.org/devops-small-business</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/fractional-cto</loc>
+    <loc>https://joroservices.org/fractional-cto</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -226,37 +226,37 @@
 
   <!-- Location Pages -->
   <url>
-    <loc>https://www.joroservices.org/locations/aldershot</loc>
+    <loc>https://joroservices.org/locations/aldershot</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/locations/farnborough</loc>
+    <loc>https://joroservices.org/locations/farnborough</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/locations/guildford</loc>
+    <loc>https://joroservices.org/locations/guildford</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/locations/camberley</loc>
+    <loc>https://joroservices.org/locations/camberley</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/locations/hampshire</loc>
+    <loc>https://joroservices.org/locations/hampshire</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/locations/surrey</loc>
+    <loc>https://joroservices.org/locations/surrey</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -264,43 +264,43 @@
 
   <!-- Service-Location Pages -->
   <url>
-    <loc>https://www.joroservices.org/it-support-aldershot</loc>
+    <loc>https://joroservices.org/it-support-aldershot</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/web-design-aldershot</loc>
+    <loc>https://joroservices.org/web-design-aldershot</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/it-support-farnham</loc>
+    <loc>https://joroservices.org/it-support-farnham</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/web-design-farnham</loc>
+    <loc>https://joroservices.org/web-design-farnham</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/it-support-fleet</loc>
+    <loc>https://joroservices.org/it-support-fleet</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/it-support-camberley</loc>
+    <loc>https://joroservices.org/it-support-camberley</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/web-design-guildford</loc>
+    <loc>https://joroservices.org/web-design-guildford</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -308,13 +308,13 @@
 
   <!-- Legal -->
   <url>
-    <loc>https://www.joroservices.org/privacy</loc>
+    <loc>https://joroservices.org/privacy</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.joroservices.org/terms</loc>
+    <loc>https://joroservices.org/terms</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

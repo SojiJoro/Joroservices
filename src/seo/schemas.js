@@ -1,4 +1,4 @@
-const BASE_URL = 'https://www.joroservices.org';
+const BASE_URL = 'https://joroservices.org';
 
 // Organization schema - global
 export const organizationSchema = {

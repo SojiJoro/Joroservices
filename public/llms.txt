@@ -21,12 +21,12 @@ Joro Services provides the full range of IT services — web, design, DevOps, cl
 
 ## Key pages
 
-- Homepage: https://www.joroservices.org
-- Web development: https://www.joroservices.org/development
-- Technical services: https://www.joroservices.org/technical-services
-- Creative solutions: https://www.joroservices.org/creative-solutions
-- Digital marketing: https://www.joroservices.org/digital-marketing
-- Contact: https://www.joroservices.org/getintouch
+- Homepage: https://joroservices.org
+- Web development: https://joroservices.org/development
+- Technical services: https://joroservices.org/technical-services
+- Creative solutions: https://joroservices.org/creative-solutions
+- Digital marketing: https://joroservices.org/digital-marketing
+- Contact: https://joroservices.org/getintouch
 
 ## Location
 

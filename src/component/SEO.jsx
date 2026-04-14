@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const BASE_URL = 'https://www.joroservices.org';
+const BASE_URL = 'https://joroservices.org';
 
 /**
  * SEO component that manages document head meta tags and JSON-LD structured data.

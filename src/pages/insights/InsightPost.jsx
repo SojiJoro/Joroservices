@@ -33,8 +33,8 @@ function renderMarkdown(text) {
       const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
       if (linkMatch) {
         const [, linkText, href] = linkMatch;
-        if (href.startsWith('/') || href.startsWith('https://www.joroservices.org')) {
-          const to = href.replace('https://www.joroservices.org', '');
+        if (href.startsWith('/') || href.startsWith('https://joroservices.org')) {
+          const to = href.replace('https://joroservices.org', '');
           return <Link key={j} to={to} className="text-accent hover:text-accent-dark underline font-medium">{linkText}</Link>;
         }
         return <a key={j} href={href} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent-dark underline font-medium">{linkText}</a>;
@@ -60,11 +60,11 @@ const InsightPost = () => {
     '@type': 'Article',
     headline: post.title,
     description: post.metaDescription,
-    author: { '@type': 'Organization', name: 'Joro Services', url: 'https://www.joroservices.org' },
-    publisher: { '@type': 'Organization', name: 'Joro Services', url: 'https://www.joroservices.org' },
+    author: { '@type': 'Organization', name: 'Joro Services', url: 'https://joroservices.org' },
+    publisher: { '@type': 'Organization', name: 'Joro Services', url: 'https://joroservices.org' },
     datePublished: post.date,
     dateModified: post.date,
-    mainEntityOfPage: `https://www.joroservices.org/insights/${post.slug}`,
+    mainEntityOfPage: `https://joroservices.org/insights/${post.slug}`,
     keywords: post.tags.join(', '),
   };
 
