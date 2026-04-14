@@ -7,6 +7,13 @@
  */
 
 const pagesSEO = {
+  '/insights': {
+    title: 'Insights & Articles on IT, Cloud, and Digital | Joro Services',
+    description:
+      'Practical articles on platform engineering, DevOps, cloud cost, cybersecurity, and local SEO for UK small and medium businesses. Written by Joro Services.',
+    keywords:
+      'IT insights UK, DevOps blog, platform engineering articles, cloud cost reduction, cybersecurity for small business, Joro Services insights',
+  },
   '/': {
     title: 'Joro Services — Web Development, IT Support & DevOps for UK Businesses',
     description:

@@ -12,6 +12,8 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import { blogPosts } from '../src/pages/insights/blogData.js';
+import { ServiceList } from '../src/pages/serviceData.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist');
@@ -707,6 +709,36 @@ if (!existsSync(templatePath)) {
 
 const templateHtml = readFileSync(templatePath, 'utf-8');
 let pagesCreated = 0;
+
+// Inject dynamic blog routes
+for (const post of blogPosts) {
+  const route = `/insights/${post.slug}`;
+  if (!pagesSEO[route]) {
+    pagesSEO[route] = {
+      title: `${post.title} | Joro Services`,
+      description: post.metaDescription,
+    };
+  }
+}
+
+// Inject /insights index
+if (!pagesSEO['/insights']) {
+  pagesSEO['/insights'] = {
+    title: 'Insights & Articles on IT, Cloud, and Digital | Joro Services',
+    description: 'Practical articles on platform engineering, DevOps, cloud cost, cybersecurity, and local SEO for UK small and medium businesses.',
+  };
+}
+
+// Inject dynamic service detail routes
+for (const service of ServiceList) {
+  const route = `/services/${service.id}`;
+  if (!pagesSEO[route]) {
+    pagesSEO[route] = {
+      title: `${service.title} | Joro Services`,
+      description: service.summary || `${service.title} from Joro Services, a UK IT services company based in Aldershot, Hampshire.`,
+    };
+  }
+}
 
 for (const [route, seo] of Object.entries(pagesSEO)) {
   if (route === '/') continue; // homepage already has correct meta
