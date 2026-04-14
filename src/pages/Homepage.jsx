@@ -52,65 +52,6 @@ const serviceCategories = [
   },
 ];
 
-// Review/testimonial schema for rich snippets
-const reviewSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.joroservices.org/#localbusiness-reviews',
-  name: 'Joro Services Ltd',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '6',
-    bestRating: '5',
-    worstRating: '4',
-  },
-  review: [
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Healthcare Provider' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'They streamlined our patient portal launch in under six weeks, boosting user registrations by 60% within the first month.',
-      datePublished: '2025-09-15',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Recruitment Platform' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Their cloud migration plan was spot on. We saw a 35% drop in hosting costs and zero downtime during the transition.',
-      datePublished: '2025-11-20',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Social Care Organisation' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'After implementing their security roadmap, phishing incidents declined by 80% and our audit passed with no critical findings.',
-      datePublished: '2025-08-10',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'E-commerce Business' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Their custom dashboard gave us real-time metrics we never had before. Our delivery accuracy improved from 92% to 98%.',
-      datePublished: '2026-01-05',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Non-profit Organisation' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'The website redesign increased average session duration by 45% and reduced bounce rate by 30%. Our conversion rate is the highest it has ever been.',
-      datePublished: '2025-12-12',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'SaaS Company' },
-      reviewRating: { '@type': 'Rating', ratingValue: '4', bestRating: '5' },
-      reviewBody: 'Their team integrated seamlessly with ours. We shipped features faster than we thought possible and the quality was outstanding.',
-      datePublished: '2026-02-18',
-    },
-  ],
-};
-
 const localServiceLinks = [
   { label: 'IT Support in Aldershot', path: '/it-support-aldershot', desc: 'From £30/user/month' },
   { label: 'Web Design in Aldershot', path: '/web-design-aldershot', desc: 'From £1,500' },
@@ -126,7 +67,7 @@ const Homepage = () => (
     <SEO
       {...pagesSEO['/']}
       dateModified="2026-03-20"
-      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema, reviewSchema, speakableSchema({ url: '/' }), orgLocalBusinessSchema, webDevServiceSchema, devopsServiceSchema, graphicDesignServiceSchema, digitalMarketingServiceSchema, itSupportServiceSchema, mobileAppServiceSchema, founderPersonSchema]}
+      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema, speakableSchema({ url: '/' }), orgLocalBusinessSchema, webDevServiceSchema, devopsServiceSchema, graphicDesignServiceSchema, digitalMarketingServiceSchema, itSupportServiceSchema, mobileAppServiceSchema, founderPersonSchema]}
     />
 
     {/* Hero Section */}
