@@ -3,10 +3,10 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import { Plus } from 'lucide-react';
 
 const metrics = [
-  { desc: 'Years building software for real businesses', fig: 10 },
-  { desc: 'Projects shipped and live', fig: 75 },
-  { desc: 'Happy clients around the world', fig: 50 },
-  { desc: 'Developers and designers on the team', fig: 20 },
+  { desc: 'Years building software for real businesses', fig: 4 },
+  { desc: 'Projects shipped and live', fig: 35 },
+  { desc: 'Happy clients across the UK', fig: 20 },
+  { desc: 'Developers and designers on the team', fig: 8 },
 ];
 
 const ExperienceSection = () => (

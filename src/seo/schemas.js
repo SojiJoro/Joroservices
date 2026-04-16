@@ -73,7 +73,6 @@ export const organizationSchema = {
       email: 'info@joroservices.org',
       areaServed: 'GB',
       availableLanguage: 'English',
-      contactOption: 'TollFree',
     },
     {
       '@type': 'ContactPoint',

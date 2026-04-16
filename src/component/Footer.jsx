@@ -1,9 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState(null);
+  const [sending, setSending] = useState(false);
+
+  const handleNewsletter = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    setSending(true);
+    setNewsletterStatus(null);
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: 'Newsletter Subscriber',
+          email,
+          message: `New newsletter subscription from ${email}`,
+          projectType: 'Newsletter Signup',
+        }),
+      });
+      if (res.ok) {
+        setNewsletterStatus('success');
+        setEmail('');
+      } else {
+        setNewsletterStatus('error');
+      }
+    } catch {
+      setNewsletterStatus('error');
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -113,19 +146,29 @@ const Footer = () => {
               Newsletter
             </h3>
             <p className="text-gray-400 text-sm mb-4">Stay updated with our latest insights and news.</p>
-            <form className="flex gap-2">
+            <form className="flex gap-2" onSubmit={handleNewsletter}>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 placeholder="Your email"
                 className="flex-1 px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 text-sm transition-all"
               />
               <button
                 type="submit"
-                className="px-5 py-2.5 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition text-sm"
+                disabled={sending}
+                className="px-5 py-2.5 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition text-sm disabled:opacity-50"
               >
-                Join
+                {sending ? '...' : 'Join'}
               </button>
             </form>
+            {newsletterStatus === 'success' && (
+              <p className="mt-3 text-xs text-green-400">Thanks, you are subscribed.</p>
+            )}
+            {newsletterStatus === 'error' && (
+              <p className="mt-3 text-xs text-red-400">Something went wrong. Please try again.</p>
+            )}
           </div>
         </div>
       </div>
