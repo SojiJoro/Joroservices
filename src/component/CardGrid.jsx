@@ -4,7 +4,7 @@ import { MapPin, Phone } from 'lucide-react';
 const CardGrid = () => {
   const cards = [
     {
-      img: 'https://tecdn.b-cdn.net/img/new/standard/city/042.webp',
+      img: '/bg7.webp',
       location: 'Registered Office',
       address: 'Kemp House, 152-160 City Road, London, EC1V 2NX, United Kingdom',
       phone: '07867 374034',
