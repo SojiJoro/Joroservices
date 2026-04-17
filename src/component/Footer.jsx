@@ -106,6 +106,7 @@ const Footer = () => {
                 <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
                 <li><Link to="/getintouch" className="hover:text-white transition-colors">Contact</Link></li>
                 <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+                <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li>
               </ul>
             </div>
             <div>
@@ -133,9 +134,9 @@ const Footer = () => {
               <ul className="space-y-2.5 text-gray-400 text-sm">
                 <li><Link to="/it-support-aldershot" className="hover:text-white transition-colors">IT Support Aldershot</Link></li>
                 <li><Link to="/web-design-aldershot" className="hover:text-white transition-colors">Web Design Aldershot</Link></li>
-                <li><Link to="/web-design-guildford" className="hover:text-white transition-colors">Web Design Guildford</Link></li>
-                <li><Link to="/it-support-camberley" className="hover:text-white transition-colors">IT Support Camberley</Link></li>
-                <li><Link to="/it-support-farnham" className="hover:text-white transition-colors">IT Support Farnham</Link></li>
+                <li><Link to="/fractional-cto" className="hover:text-white transition-colors">Fractional CTO</Link></li>
+                <li><Link to="/devops-small-business" className="hover:text-white transition-colors">DevOps for Small Business</Link></li>
+                <li><Link to="/it-services-care-providers" className="hover:text-white transition-colors">IT for Care Providers</Link></li>
               </ul>
             </div>
           </nav>

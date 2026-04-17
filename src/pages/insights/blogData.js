@@ -204,7 +204,7 @@ At Joro Services we do infrastructure reviews and help teams get their Terraform
   {
     slug: 'devsecops-practical-guide-uk-startups-2026',
     title: "DevSecOps Is Not a Tool, It's a Pipeline: A Practical Guide for UK Startups",
-    metaDescription: "Most UK startups treat security as something to sort out later. Here's why that's increasingly risky in 2026 and how to build security into your pipeline from day one.",
+    metaDescription: "UK startups often treat security as a later problem. Here's why that's risky in 2026 and how to build it into your pipeline from day one.",
     category: 'Technical Services',
     tags: ['devsecops', 'cybersecurity', 'GDPR', 'CI/CD security', 'startup IT UK'],
     author: 'Joro Services',
@@ -292,7 +292,7 @@ The comparison isn't £0 vs £1,500. It's the difference between a site that wor
   {
     slug: 'uk-sme-cybersecurity-30-minute-fix-2026',
     title: "32% of UK Small Businesses Have Zero Cybersecurity in Place. Here's Your 30-Minute Fix",
-    metaDescription: "Over a third of UK SMEs have no cybersecurity protections at all. Here's a practical, non-technical guide to the essentials every business should have in place right now.",
+    metaDescription: "Over a third of UK SMEs have no cybersecurity protections. A practical, non-technical guide to the essentials every business should have in place.",
     category: 'Technical Services',
     tags: ['cybersecurity UK', 'small business cyber security', 'Cyber Essentials UK', 'IT support Hampshire', 'GDPR compliance'],
     author: 'Joro Services',
@@ -338,7 +338,7 @@ We also handle Cyber Essentials assessments, GDPR compliance reviews, and full m
   {
     slug: 'google-ai-overviews-local-seo-hampshire-surrey-2026',
     title: "Google's AI Overviews Are Changing SEO for Local Businesses. Here's What to Do If You're in Hampshire or Surrey",
-    metaDescription: "Google AI Overviews are pushing organic results down the page. Here's what Hampshire and Surrey businesses need to do right now to protect their local search traffic.",
+    metaDescription: "Google AI Overviews are pushing organic results down the page. Here's what Hampshire and Surrey businesses need to do to protect local search traffic.",
     category: 'Digital Marketing',
     tags: ['local SEO Hampshire', 'local SEO Surrey', 'Google AI Overviews', 'SEO Aldershot', 'small business SEO UK'],
     author: 'Joro Services',
