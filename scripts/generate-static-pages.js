@@ -12,26 +12,27 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import { blogPosts } from '../src/pages/insights/blogData.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist');
 
-// Import pagesSEO data — duplicated here to avoid ESM/CJS issues
+// Static-render SEO. Titles target ≤60 chars, descriptions 140-160 chars.
 const pagesSEO = {
   '/': {
-    title: 'Web Design, IT Support & Cloud Services in Aldershot | Joro Services',
-    description: 'Joro Services is a full-service digital agency in Aldershot, Hampshire. Web design, IT support, cybersecurity, and cloud infrastructure for local businesses.',
+    title: 'Joro Services | Digital Agency in Aldershot',
+    description: 'Full-service digital agency in Aldershot, Hampshire. Web design, IT support, cybersecurity, and AWS cloud for local businesses. Free consultation.',
   },
   '/services': {
     title: 'IT Services & Digital Solutions in Hampshire | Joro Services',
     description: 'IT support, web development, cybersecurity, cloud infrastructure, and digital marketing for businesses across Hampshire, Surrey, and the UK.',
   },
   '/about': {
-    title: 'About Joro Services | IT & Digital Agency in Aldershot, Hampshire',
+    title: 'About Joro Services | IT Agency in Aldershot',
     description: 'Joro Services gives small businesses enterprise-level IT, web development, and digital marketing. AWS-certified, GDPR-compliant, based in Aldershot.',
   },
   '/getintouch': {
-    title: 'Get a Free Consultation | Joro Services in Aldershot, Hampshire',
+    title: 'Free Consultation | Joro Services Aldershot',
     description: 'Book a free consultation with Joro Services for IT support, web development, cybersecurity, or cloud migration. Based in Aldershot. Call 07867 374034.',
   },
   '/careers': {
@@ -39,19 +40,19 @@ const pagesSEO = {
     description: 'Join Joro Services. We hire cloud engineers, developers, cybersecurity consultants, and digital marketers. Remote and hybrid roles across the UK.',
   },
   '/creative-solutions': {
-    title: 'Website Design, Branding & UI/UX in Hampshire | Joro Services',
-    description: 'Professional website design, branding, and UI/UX services for businesses in Aldershot, Farnborough, Guildford, and across Hampshire and Surrey.',
+    title: 'Website Design, Branding & UI/UX | Joro Services',
+    description: 'Website design, branding, and UI/UX services for businesses in Aldershot, Farnborough, Guildford, and across Hampshire and Surrey.',
   },
   '/creative-solutions/website-design': {
     title: 'Website Design in Aldershot, Hampshire | Joro Services',
     description: 'Custom website design for businesses in Aldershot and Hampshire. Mobile-first, SEO-friendly sites that turn visitors into customers. From £1,500.',
   },
   '/creative-solutions/graphic-design-and-branding': {
-    title: 'Graphic Design & Branding in Aldershot, Hampshire | Joro Services',
+    title: 'Graphic Design & Branding in Hampshire | Joro Services',
     description: 'Logo design, brand guidelines, and marketing materials for businesses in Aldershot and Hampshire. Build a brand identity that stands out locally.',
   },
   '/creative-solutions/user-interface-and-experience': {
-    title: 'UI/UX Design in Aldershot, Hampshire | Joro Services',
+    title: 'UI/UX Design in Hampshire | Joro Services',
     description: 'User interface and experience design for web and mobile apps. Wireframing, prototyping, and usability testing for businesses across Hampshire.',
   },
   '/development': {
@@ -63,11 +64,11 @@ const pagesSEO = {
     description: 'Custom web development using React and Next.js for businesses in Aldershot and Hampshire. Fast, secure, SEO-friendly sites from £1,500.',
   },
   '/development/mobile-app-development': {
-    title: 'Mobile App Development in Aldershot, Hampshire | Joro Services',
+    title: 'Mobile App Development in Hampshire | Joro Services',
     description: 'iOS and Android app development using React Native and Flutter. Cross-platform mobile apps for businesses in Aldershot, Hampshire, and the UK.',
   },
   '/development/data-management': {
-    title: 'Data Management & Analytics in Aldershot, Hampshire | Joro Services',
+    title: 'Data Management & Analytics | Joro Services',
     description: 'Database design, data migration, analytics dashboards, and reporting for businesses in Aldershot and Hampshire. Free data assessment available.',
   },
   '/digital-marketing': {
@@ -75,15 +76,15 @@ const pagesSEO = {
     description: 'SEO, Google Ads, social media management, and content strategy for businesses in Aldershot, Farnborough, and across Hampshire. Free audit available.',
   },
   '/digital-marketing/seo-and-content-strategy': {
-    title: 'SEO & Content Strategy in Aldershot, Hampshire | Joro Services',
+    title: 'SEO & Content Strategy in Hampshire | Joro Services',
     description: 'SEO services that get results for Hampshire businesses. Technical audits, keyword-targeted content, and local SEO. Free SEO audit, no lock-in.',
   },
   '/digital-marketing/social-media-management': {
-    title: 'Social Media Management in Aldershot, Hampshire | Joro Services',
+    title: 'Social Media Management in Hampshire | Joro Services',
     description: 'Social media strategy, content creation, and community management for businesses in Aldershot and Hampshire. LinkedIn, Instagram, Facebook, and X.',
   },
   '/digital-marketing/ppc-and-online-campaigns': {
-    title: 'PPC & Online Advertising in Aldershot, Hampshire | Joro Services',
+    title: 'PPC & Online Advertising in Hampshire | Joro Services',
     description: 'Google Ads and social media advertising for Hampshire businesses. Transparent reporting, no markup on ad spend. Average 4.2x ROAS across clients.',
   },
   '/technical-services': {
@@ -91,16 +92,16 @@ const pagesSEO = {
     description: 'IT support, cybersecurity, and AWS cloud infrastructure for businesses in Aldershot, Farnborough, Camberley, and across Hampshire and Surrey.',
   },
   '/technical-services/it-support-and-maintenance': {
-    title: 'IT Support & Maintenance in Aldershot, Hampshire | Joro Services',
+    title: 'IT Support & Maintenance in Hampshire | Joro Services',
     description: 'Managed IT support for businesses in Aldershot and Hampshire. 24/7 monitoring, helpdesk, and on-site visits. From £30 per user per month.',
   },
   '/technical-services/cybersecurity': {
-    title: 'Cybersecurity Services in Aldershot, Hampshire | Joro Services',
+    title: 'Cybersecurity Services in Hampshire | Joro Services',
     description: 'Cybersecurity for UK small businesses. Security audits, M365 hardening, endpoint protection, and phishing simulations. Free security health check.',
   },
   '/technical-services/cloud-infrastructure': {
-    title: 'Cloud Infrastructure & AWS Services in Aldershot, Hampshire | Joro Services',
-    description: 'AWS cloud migration, cost optimisation, and managed infrastructure for Hampshire businesses. We save clients 26.6% on average. Free cost audit.',
+    title: 'AWS Cloud Infrastructure in Hampshire | Joro Services',
+    description: 'AWS cloud migration, cost optimisation, and managed infrastructure for Hampshire businesses. Clients save 26.6% on average. Free cost audit.',
   },
   '/privacy': {
     title: 'Privacy Policy | Joro Services Ltd',
@@ -113,37 +114,37 @@ const pagesSEO = {
 
   // General Location Pages
   '/locations/aldershot': {
-    title: 'Web Development, IT Support & Digital Marketing in Aldershot | Joro Services',
+    title: 'Digital Agency in Aldershot | Joro Services',
     description: 'Aldershot\'s only full-service digital agency. Web design, IT support, cybersecurity, mobile apps, and cloud solutions for local businesses. Free consultation.',
   },
   '/locations/farnborough': {
-    title: 'Web Development, IT Support & Digital Marketing in Farnborough | Joro Services',
+    title: 'Digital Agency in Farnborough | Joro Services',
     description: 'Web development, IT support, SEO, and digital marketing for Farnborough businesses. Based 3 miles away in Aldershot. Free consultation available.',
   },
   '/locations/guildford': {
-    title: 'Web Development, IT Support & Digital Marketing in Guildford | Joro Services',
+    title: 'Digital Agency in Guildford | Joro Services',
     description: 'Professional web development, IT support, digital marketing, and cybersecurity for Guildford businesses. Local expertise from Joro Services.',
   },
   '/locations/camberley': {
-    title: 'Web Development, IT Support & Digital Marketing in Camberley | Joro Services',
+    title: 'Digital Agency in Camberley, Surrey | Joro Services',
     description: 'Web development, IT support, SEO, and digital marketing for Camberley businesses. Full-service digital solutions in Surrey Heath.',
   },
   '/locations/hampshire': {
-    title: 'Web Development, IT Support & Digital Marketing in Hampshire | Joro Services',
+    title: 'Digital Agency in Hampshire | Joro Services',
     description: 'Expert web development, IT support, SEO, cybersecurity, and digital marketing for businesses across Hampshire. Based in Aldershot, serving the county.',
   },
   '/locations/surrey': {
-    title: 'Web Development, IT Support & Digital Marketing in Surrey | Joro Services',
+    title: 'Digital Agency in Surrey | Joro Services',
     description: 'Full-service digital agency serving Surrey businesses. Web development, IT support, SEO, cybersecurity, and cloud solutions from Guildford to Camberley.',
   },
 
   // Service-Location Pages
   '/it-support-aldershot': {
-    title: 'IT Support in Aldershot, Hampshire | From £30/User/Month | Joro Services',
+    title: 'IT Support in Aldershot | From £30/User | Joro Services',
     description: 'Managed IT support for Aldershot businesses. Same-day on-site visits, 24/7 monitoring, Microsoft 365 support, and helpdesk. From £30 per user per month.',
   },
   '/web-design-aldershot': {
-    title: 'Web Design in Aldershot, Hampshire | From £1,500 | Joro Services',
+    title: 'Web Design in Aldershot | From £1,500 | Joro Services',
     description: 'Custom website design for Aldershot businesses. Mobile-first, no templates, sub-2-second load times. Fixed pricing from £1,500. Free consultation.',
   },
   '/it-support-farnham': {
@@ -166,9 +167,54 @@ const pagesSEO = {
     title: 'Web Design in Guildford, Surrey | Joro Services',
     description: 'Professional web design for Guildford businesses. Same quality as London agencies with lower overheads. Competitive pricing for professional services.',
   },
+
+  // Specialist service pages
+  '/fractional-cto': {
+    title: 'Fractional CTO Services UK | Joro Services',
+    description: 'Senior technical leadership for UK startups and SMBs without the full-time cost. Strategy, architecture, and delivery from £2,000 per month.',
+  },
+  '/devops-small-business': {
+    title: 'DevOps for Small Business UK | Joro Services',
+    description: 'CI/CD pipelines, Terraform, Docker, and monitoring for UK small businesses. Enterprise-grade DevOps at SMB pricing. Starting from £1,500.',
+  },
+  '/it-services-care-providers': {
+    title: 'IT Services for UK Care Providers | Joro Services',
+    description: 'Web, IT support, and scheduling integrations for UK care agencies. CQC-aware, GDPR-compliant, and built for domiciliary and residential providers.',
+  },
+
+  // Blog / Insights index
+  '/insights': {
+    title: 'Insights & IT News | Joro Services Blog',
+    description: 'Practical articles on DevOps, cloud infrastructure, cybersecurity, SEO, and web development for UK small and medium businesses. From the Joro Services team.',
+  },
 };
 
-const BASE_URL = 'https://joroservices.org';
+// For blog posts, prefer the first clause (split on ":" or "." or "?") when
+// the full title would exceed 60 characters. Keeps the author's phrasing
+// intact while staying within the SEO-friendly title length.
+function shortenPostTitle(title) {
+  if (title.length <= 60) return title;
+  const clauses = title.split(/[:.?]/).map(s => s.trim()).filter(Boolean);
+  for (const clause of clauses) {
+    if (clause.length >= 20 && clause.length <= 60) {
+      return title.startsWith(clause) && title[clause.length] === '?'
+        ? `${clause}?`
+        : clause;
+    }
+  }
+  return title;
+}
+
+for (const post of blogPosts) {
+  const shortTitle = shortenPostTitle(post.title);
+  const withSuffix = `${shortTitle} | Joro Services`;
+  pagesSEO[`/insights/${post.slug}`] = {
+    title: withSuffix.length <= 60 ? withSuffix : shortTitle,
+    description: post.metaDescription,
+  };
+}
+
+const BASE_URL = 'https://www.joroservices.org';
 
 // Navigation links for noscript fallback content
 const NAV_LINKS = [
@@ -193,6 +239,15 @@ const LOCATION_LINKS = [
   { href: '/locations/camberley', text: 'Camberley' },
   { href: '/locations/hampshire', text: 'Hampshire' },
   { href: '/locations/surrey', text: 'Surrey' },
+];
+
+// Specialist pages included in every noscript so they receive internal links
+// from every rendered page (fixes "orphan page" audit findings).
+const SPECIALIST_LINKS = [
+  { href: '/fractional-cto', text: 'Fractional CTO' },
+  { href: '/devops-small-business', text: 'DevOps for Small Business' },
+  { href: '/it-services-care-providers', text: 'IT Services for Care Providers' },
+  { href: '/insights', text: 'Insights & IT News' },
 ];
 
 /**
@@ -553,6 +608,11 @@ function generateNoscript(route, seo) {
     .map(l => `<li><a href="${l.href}">${l.text}</a></li>`)
     .join('\n          ');
 
+  const specialistLinksHtml = SPECIALIST_LINKS
+    .filter(l => l.href !== route)
+    .map(l => `<li><a href="${l.href}">${l.text.replace(/&/g, '&amp;')}</a></li>`)
+    .join('\n          ');
+
   // Escape ampersands in title for valid HTML
   const safeTitle = seo.title.replace(/&/g, '&amp;');
 
@@ -619,6 +679,11 @@ function generateNoscript(route, seo) {
         <h2>Locations We Serve</h2>
         <ul>
           ${locationLinksHtml}
+        </ul>
+
+        <h2>Specialist Services</h2>
+        <ul>
+          ${specialistLinksHtml}
         </ul>
 
         <h2>Contact Us</h2>
