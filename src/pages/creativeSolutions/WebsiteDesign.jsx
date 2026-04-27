@@ -83,33 +83,6 @@ const serviceCards = [
   },
 ]
 
-const portfolio = [
-  {
-    name: '1 Noble Healthcare',
-    tag: 'Healthcare · Brochure',
-    gradient: 'from-secondary via-primary-dark to-accent',
-    url: 'https://1noblehealthcare.com',
-    description:
-      'A clean, modern healthcare site for supported living services, with easy-to-use contact forms and a straightforward layout.',
-  },
-  {
-    name: 'PathSync Recruitment',
-    tag: 'Recruitment',
-    gradient: 'from-accent-dark via-secondary-dark to-primary',
-    url: 'https://pathsyncrecruitment.com',
-    description:
-      'A professional site for a tech recruitment agency, complete with a blog, application forms, and a layout that works on any device.',
-  },
-  {
-    name: 'save the men',
-    tag: 'Editorial · Next.js',
-    gradient: 'from-primary via-secondary to-accent-dark',
-    url: 'https://save-the-men.com',
-    description:
-      'A platform to help men going through abuse.',
-  },
-]
-
 const pricingTiers = [
   {
     name: 'Free Consultation',
@@ -303,34 +276,6 @@ const WebsiteDesign = () => {
         <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
           Most design agencies hand you a pretty mockup and leave you to figure out the rest. We don't. We design it, build it, optimise it for Google, and host it. You get one team, one point of contact, and a website that actually works for your business — not just one that looks good in a portfolio.
         </p>
-      </div>
-    </section>
-
-    {/* Portfolio Showcase */}
-    <section className="py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Work</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolio.map((site, i) => (
-            <a
-              key={i}
-              href={site.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
-            >
-              <div className={`h-48 w-full bg-gradient-to-br ${site.gradient} relative flex items-center justify-center overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{site.tag}</span>
-              </div>
-              <div className="p-7">
-                <h3 className="text-xl font-semibold text-accent">{site.name}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm mt-2">{site.description}</p>
-              </div>
-            </a>
-          ))}
-        </div>
       </div>
     </section>
 
