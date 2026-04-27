@@ -33,7 +33,7 @@ const serviceCards = [
       'Permissions audit',
       'Plain-English report with prioritised recommendations',
     ],
-    note: 'This is included in our Free Security Health Check.',
+    note: 'This is included in our Talk to us.',
   },
   {
     icon: FaEnvelopeOpenText,
@@ -234,10 +234,10 @@ const Cybersecurity = () => {
         ]}
       />
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-xs font-medium text-gray-500 mb-3">
               Cybersecurity
             </p>
             <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Technical Services', path: '/technical-services' }, { name: 'Cybersecurity' }]} />
@@ -256,9 +256,9 @@ const Cybersecurity = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/getintouch"
-                className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+                className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
               >
-                Get a Free Security Health Check <ArrowRight className="w-4 h-4" />
+                Talk to us
               </Link>
               <a
                 href="#services"
@@ -287,7 +287,6 @@ const Cybersecurity = () => {
               {['MFA', 'Patching', 'Backup', 'Email Security', 'Staff Training'].map(
                 (item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-accent flex-shrink-0" />
                     <span className="text-white/90">{item}</span>
                   </div>
                 )
@@ -359,7 +358,6 @@ const Cybersecurity = () => {
                 <ul className="space-y-2">
                   {card.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm text-gray-700">
-                      <FaCheckCircle className="text-accent-dark mt-0.5 flex-shrink-0 text-xs" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -375,11 +373,11 @@ const Cybersecurity = () => {
         </div>
       </section>
 
-      {/* Free Security Health Check */}
+      {/* Talk to us */}
       <section className="py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Free Security Health Check
+            Talk to us
           </h2>
           <p className="text-xl text-gray-600 mb-2">
             Know Where You Stand in 48 Hours
@@ -395,16 +393,15 @@ const Cybersecurity = () => {
             <ul className="space-y-3">
               {healthCheckItems.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <FaCheckCircle className="text-accent-dark mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
             </ul>
             <Link
               to="/getintouch"
-              className="mt-6 inline-flex items-center justify-center gap-2 w-full bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="mt-6 inline-flex items-center justify-center gap-2 w-full bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Book Your Free Security Health Check <ArrowRight className="w-4 h-4" />
+              Book Your Talk to us
             </Link>
             <p className="mt-3 text-xs text-gray-500 text-center">
               We only need read-only access to your M365 tenant. We never make
@@ -445,7 +442,6 @@ const Cybersecurity = () => {
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm text-gray-700">
-                      <FaCheckCircle className="text-accent-dark mt-0.5 flex-shrink-0 text-xs" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -457,11 +453,11 @@ const Cybersecurity = () => {
                   to="/getintouch"
                   className={`mt-4 inline-flex items-center justify-center gap-2 w-full px-7 py-3.5 font-semibold rounded-xl transition-all text-sm ${
                     tier.highlighted
-                      ? 'bg-accent text-white hover:bg-accent-dark shadow-lg shadow-accent/20'
+                      ? 'bg-accent text-white hover:bg-accent-dark'
                       : 'border-2 border-accent-dark text-accent-dark hover:bg-accent-dark hover:text-white'
                   }`}
                 >
-                  Get Started <ArrowRight className="w-4 h-4" />
+                  Talk to us
                 </Link>
               </div>
             ))}
@@ -529,13 +525,13 @@ const Cybersecurity = () => {
               <h3 className="text-xl font-semibold mb-4">Related Services</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Link to="/technical-services/it-support-and-maintenance" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                  <ArrowRight className="w-4 h-4" /> IT Support & Maintenance
+                  IT Support & Maintenance
                 </Link>
                 <Link to="/technical-services/cloud-infrastructure" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                  <ArrowRight className="w-4 h-4" /> Cloud Infrastructure
+                  Cloud Infrastructure
                 </Link>
                 <Link to="/development/data-management" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                  <ArrowRight className="w-4 h-4" /> Data Management
+                  Data Management
                 </Link>
               </div>
             </div>
@@ -569,7 +565,7 @@ const Cybersecurity = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Cybersecurity Doesn't Have to Be Complicated or Expensive
@@ -580,9 +576,9 @@ const Cybersecurity = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Book Your Free Security Health Check <ArrowRight className="w-4 h-4" />
+            Book Your Talk to us
           </Link>
         </div>
       </section>

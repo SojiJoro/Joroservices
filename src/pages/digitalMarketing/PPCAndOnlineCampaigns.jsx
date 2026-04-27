@@ -244,9 +244,8 @@ const PPCAndOnlineCampaigns = () => {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">PPC & Online Campaigns</p>
           <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Digital Marketing', path: '/digital-marketing' }, { name: 'PPC & Online Campaigns' }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-6">
             PPC & Online Campaigns in Aldershot, Hampshire
@@ -262,9 +261,9 @@ const PPCAndOnlineCampaigns = () => {
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Get a Free PPC Audit <ArrowRight className="w-4 h-4" />
+              Talk to us
             </Link>
             <a
               href="#pricing"
@@ -320,7 +319,6 @@ const PPCAndOnlineCampaigns = () => {
                       key={j}
                       className="flex items-start gap-2 text-sm text-gray-600"
                     >
-                      <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -332,7 +330,7 @@ const PPCAndOnlineCampaigns = () => {
       </section>
 
       {/* Transparency Promise */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <FaHandshake className="text-4xl text-accent mx-auto mb-4" />
@@ -349,7 +347,6 @@ const PPCAndOnlineCampaigns = () => {
                 key={i}
                 className="bg-white/10 rounded-2xl p-5 backdrop-blur"
               >
-                <FaCheckCircle className="text-accent mb-2" />
                 <h3 className="font-semibold mb-1">{promise.title}</h3>
                 <p className="text-sm text-gray-400">{promise.description}</p>
               </div>
@@ -399,7 +396,6 @@ const PPCAndOnlineCampaigns = () => {
                       key={j}
                       className="flex items-start gap-2 text-sm text-gray-600"
                     >
-                      <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -420,7 +416,7 @@ const PPCAndOnlineCampaigns = () => {
                       : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
                   }`}
                 >
-                  {tier.isFree ? 'Get Free Audit' : 'Get Started'}
+                  {tier.isFree ? 'Talk to us' : 'Talk to us'}
                 </Link>
               </div>
             ))}
@@ -531,7 +527,7 @@ const PPCAndOnlineCampaigns = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Stop Wasting Ad Spend. Start Generating Leads.
@@ -542,9 +538,9 @@ const PPCAndOnlineCampaigns = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Get Your Free PPC Audit <ArrowRight className="w-4 h-4" />
+            Talk to us
           </Link>
         </div>
       </section>

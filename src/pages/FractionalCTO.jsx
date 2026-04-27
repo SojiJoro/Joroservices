@@ -99,9 +99,9 @@ const FractionalCTO = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="text-xs font-medium text-gray-500 mb-3">
             Fractional CTO Services
           </p>
           <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Fractional CTO' }]} />
@@ -115,9 +115,9 @@ const FractionalCTO = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Book a Free Discovery Call <ArrowRight className="w-4 h-4" />
+              Talk to us
             </Link>
             <a
               href="#faq"
@@ -133,7 +133,6 @@ const FractionalCTO = () => {
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               What Does a Fractional CTO Actually Do?
             </h2>
@@ -156,7 +155,6 @@ const FractionalCTO = () => {
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Who It Is For</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
               Is a Fractional CTO Right for You?
             </h2>
@@ -176,7 +174,6 @@ const FractionalCTO = () => {
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Why Joro Services</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               We Advise AND We Deliver
             </h2>
@@ -220,7 +217,6 @@ const FractionalCTO = () => {
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What You Get</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
               The Value a Fractional CTO Brings
             </h2>
@@ -240,7 +236,6 @@ const FractionalCTO = () => {
       <section className="py-20 lg:py-28" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-3">
@@ -253,7 +248,7 @@ const FractionalCTO = () => {
                   <span className="font-semibold text-gray-900">{faq.question}</span>
                   <ChevronDown size={20} className={`text-gray-400 flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
-                <div className={`grid transition-all duration-300 ease-in-out ${openFaq === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                <div className={`grid transition-colors ease-in-out ${openFaq === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="overflow-hidden">
                     <p className="px-5 pb-5 text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
@@ -265,7 +260,7 @@ const FractionalCTO = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+      <section className="bg-primary text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Get Senior Technical Leadership Without the Full-Time Salary
@@ -276,9 +271,9 @@ const FractionalCTO = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Book Your Free Discovery Call <ArrowRight className="w-4 h-4" />
+              Talk to us
             </Link>
             <a
               href="tel:+4407867374034"

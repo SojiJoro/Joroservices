@@ -33,7 +33,6 @@ const DigitalMarketing = () => (
     <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Solutions</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
             Full-Service Digital Marketing
           </h2>

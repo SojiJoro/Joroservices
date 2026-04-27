@@ -87,7 +87,7 @@ const InsightPost = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-16">
+      <section className="bg-primary text-white pt-28 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[
             { name: 'Home', path: '/' },
@@ -145,10 +145,10 @@ const InsightPost = () => {
           <p className="text-gray-600 mb-6">We deliver these services for UK businesses. Get in touch for a free consultation.</p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
             Get in Touch
-            <ArrowRight size={16} />
+           
           </Link>
         </div>
       </section>

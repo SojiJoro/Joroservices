@@ -29,14 +29,13 @@ const Services = () => (
     />
 
     {/* Hero */}
-    <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+    <section id="hero" className="bg-primary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumb items={[
           { name: 'Home', path: '/' },
           { name: 'Services' },
         ]} />
         <div className="max-w-3xl">
-          <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Our Expertise</p>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
             What We Do Best
           </h1>
@@ -51,14 +50,13 @@ const Services = () => (
     <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Service Areas</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Browse by Category</h2>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {categories.map((cat, i) => {
             const Icon = cat.icon;
             return (
-              <Link key={i} to={cat.path} className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-accent/20 hover:shadow-lg transition-all duration-300 text-center">
+              <Link key={i} to={cat.path} className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-accent/20 hover:shadow-lg transition-colors text-center">
                 <div className="w-11 h-11 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon size={20} className="text-accent" />
                 </div>
@@ -75,7 +73,6 @@ const Services = () => (
     <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">All Services</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">What We Deliver</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -83,7 +80,7 @@ const Services = () => (
             <Link
               key={service.id}
               to={`/services/${service.id}`}
-              className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300"
+              className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-colors"
             >
               <div className="overflow-hidden">
                 <img
@@ -100,7 +97,7 @@ const Services = () => (
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{service.summary}</p>
                 <span className="inline-flex items-center gap-1 text-accent text-sm font-medium mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  View details <ArrowRight size={14} />
+                  View details
                 </span>
               </div>
             </Link>
@@ -113,7 +110,6 @@ const Services = () => (
     <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Local Services</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Find Us Near You</h2>
         </div>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -143,16 +139,16 @@ const Services = () => (
     </section>
 
     {/* CTA */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+    <section className="bg-primary text-white py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl lg:text-3xl font-bold mb-4">Not sure where to start?</h2>
         <p className="text-gray-400 mb-8">Book a free consultation and we will work out the right solution for your business together.</p>
         <Link
           to="/getintouch"
-          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
         >
           Book a Consultation
-          <ArrowRight size={16} />
+         
         </Link>
       </div>
     </section>

@@ -17,10 +17,9 @@ const Privacy = () => {
         ]}
       />
 
-      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section id="hero" className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Legal</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">Privacy Policy</h1>
             <p className="text-lg text-gray-300">
               How Joro Services Ltd collects, uses, and protects your personal data.

@@ -76,7 +76,7 @@ const DevopsSmallBusiness = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb
             items={[
@@ -94,9 +94,9 @@ const DevopsSmallBusiness = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Get a Free DevOps Audit <ArrowRight className="w-4 h-4" />
+              Talk to us
             </Link>
             <a
               href="tel:+4407867374034"
@@ -202,7 +202,7 @@ const DevopsSmallBusiness = () => {
                   />
                 </button>
                 <div
-                  className={`grid transition-all duration-300 ${
+                  className={`grid transition-colors ${
                     openFaq === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
                   }`}
                 >
@@ -219,7 +219,7 @@ const DevopsSmallBusiness = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+      <section className="bg-primary text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Ready to Stop Deploying Manually?
@@ -230,9 +230,9 @@ const DevopsSmallBusiness = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Book Your Free DevOps Audit <ArrowRight className="w-4 h-4" />
+              Talk to us
             </Link>
             <a
               href="tel:+4407867374034"

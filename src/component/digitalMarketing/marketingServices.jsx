@@ -29,13 +29,10 @@ const ServiceCards = () => {
       {services.map((service, index) => (
         <div
           key={index}
-          className="bg-white rounded-2xl border border-gray-100 p-6"
+          className="bg-white rounded-xl border border-gray-100 p-6"
         >
-          <span className="text-accent font-semibold text-sm uppercase tracking-widest">
-            Service
-          </span>
-          <h2 className="text-2xl font-semibold mt-2 text-gray-900">{service.title}</h2>
-          <p className="text-gray-600 text-sm mt-3">{service.description}</p>
+          <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+          <p className="text-gray-600 text-sm mt-3 leading-relaxed">{service.description}</p>
         </div>
       ))}
     </div>
@@ -44,9 +41,9 @@ const ServiceCards = () => {
 
 const holisticBenefits = [
   {
-    title: 'Tap into Expert Knowledge',
+    title: 'Senior team, no offshoring',
     description:
-      'Get access to our team\'s experience, with a dedicated group of over 100 professionals ready to help.',
+      'You work with the engineers and marketers who do the work. Eight people, all in-house, based in the UK.',
   },
   {
     title: 'We Get to Know Your Business',
@@ -104,7 +101,6 @@ const MarketingServices = () => {
     <div className="bg-gray-50 rounded-t-3xl text-gray-900">
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Expertise</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
             All Your Marketing, One Team
           </h2>

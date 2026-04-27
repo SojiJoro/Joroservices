@@ -29,7 +29,7 @@ const pagesSEO = {
       'about Joro Services, IT company Aldershot, technology partner UK, digital agency Hampshire, AWS certified, managed service provider London, IT consultancy Farnborough, digital transformation partner, GDPR compliant IT services, IT company Surrey',
   },
   '/getintouch': {
-    title: 'Contact Joro Services | Free Consultation',
+    title: 'Contact Joro Services',
     description:
       'Get in touch with Joro Services for a free consultation on web development, IT support, DevOps, cloud infrastructure, or graphic design. We respond within one working day.',
     keywords:

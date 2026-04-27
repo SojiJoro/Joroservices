@@ -25,14 +25,13 @@ const InsightsIndex = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[
             { name: 'Home', path: '/' },
             { name: 'Insights' },
           ]} />
           <div className="max-w-3xl">
-            <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Blog</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">Insights</h1>
             <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
               Practical articles on DevOps, cloud infrastructure, web development, cybersecurity, and digital marketing. No fluff — just things we've learned from doing the work.
@@ -49,7 +48,7 @@ const InsightsIndex = () => {
               <Link
                 key={post.slug}
                 to={`/insights/${post.slug}`}
-                className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-lg transition-all duration-300 flex flex-col"
+                className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-lg transition-colors flex flex-col"
               >
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-xs font-semibold text-accent bg-accent/10 px-2.5 py-1 rounded-full">
@@ -66,7 +65,7 @@ const InsightsIndex = () => {
                   {post.metaDescription}
                 </p>
                 <div className="flex items-center gap-1 text-accent text-sm font-medium">
-                  Read article <ArrowRight size={14} />
+                  Read article
                 </div>
               </Link>
             ))}
@@ -75,7 +74,7 @@ const InsightsIndex = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">Need Help With Any of This?</h2>
           <p className="text-gray-400 mb-8">
@@ -83,10 +82,10 @@ const InsightsIndex = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
             Get in Touch
-            <ArrowRight size={16} />
+           
           </Link>
         </div>
       </section>

@@ -36,12 +36,12 @@ const Navbar = () => {
 
   const getNavbarClasses = () => {
     if (scrolled) {
-      return "bg-primary/95 backdrop-blur-xl shadow-lg shadow-black/10 border-b border-white/5";
+      return "bg-primary border-b border-white/5";
     }
     if (location.pathname === "/") {
       return "bg-transparent";
     }
-    return "bg-primary/90 backdrop-blur-xl";
+    return "bg-primary";
   };
 
   useEffect(() => {
@@ -71,9 +71,9 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               to="/getintouch"
-              className="px-6 py-2.5 text-sm font-semibold bg-accent text-white rounded-lg hover:bg-accent-dark transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-accent/20"
+              className="px-6 py-2.5 text-sm font-semibold bg-accent text-white rounded-lg hover:bg-accent-dark transition-colors"
             >
-              Get in Touch
+              Talk to us
             </Link>
           </div>
 

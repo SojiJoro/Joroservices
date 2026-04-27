@@ -86,14 +86,13 @@ const Contact = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-16">
+      <section id="hero" className="bg-primary text-white pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[
             { name: 'Home', path: '/' },
             { name: 'Contact' },
           ]} />
           <div className="max-w-2xl">
-            <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Contact</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">Get in Touch</h1>
             <p className="text-lg text-gray-300 leading-relaxed">
               Tell us about your project and one of our team will be in touch as soon as possible.
@@ -107,7 +106,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-5 gap-x-4 text-center md:text-left">
             {[
-              { icon: Clock, label: 'Free 30-min consultation' },
+              { icon: Clock, label: '30-min discovery call' },
               { icon: Tag, label: 'Fixed pricing — no surprises' },
               { icon: MapPin, label: '100% UK team — no outsourcing' },
               { icon: ShieldCheck, label: 'Professional indemnity insured' },
@@ -273,7 +272,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="w-full bg-accent hover:bg-accent-dark p-3 rounded-xl text-white font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                  className="w-full bg-accent hover:bg-accent-dark p-3 rounded-xl text-white font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                 >
                   {sending ? "Sending..." : "Send Message"}
                 </button>
@@ -286,7 +285,6 @@ const Contact = () => {
       {/* Find Us */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Location</p>
           <h3 className="text-2xl font-bold text-gray-900 mb-2">Find Us</h3>
           <p className="text-gray-600 text-sm mb-8">
             <strong>Joro Services Ltd</strong> &middot; Kemp House, 152-160 City Road, London, EC1V 2NX

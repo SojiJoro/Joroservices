@@ -2,57 +2,54 @@ import React from 'react';
 
 const services = [
   {
-    title: 'Brand Identity & Strategy',
+    title: 'Brand Identity',
     description:
-      'We craft cohesive brand identities that resonate with your audience. From logo creation to a complete visual language, we ensure every touchpoint reflects your story.',
+      'Logo, colour, typography, and guidelines. A complete identity that you own and can hand to any printer or supplier.',
   },
   {
     title: 'UX/UI Design',
     description:
-      'Our UX research and interface designs focus on clarity and engagement. We streamline user journeys, reducing friction and increasing satisfaction.',
+      'User research, wireframes, and interface design. We work in Figma and hand off production-ready files with a working prototype.',
   },
   {
-    title: 'Responsive Web Development',
+    title: 'Responsive Web Design',
     description:
-      'Using the latest front-end frameworks, we build fast, accessible websites that adapt seamlessly across devices, delivering performance and reliability.',
+      'Custom websites built in React or Next.js. Fast on mobile, accessible by default, easy for you to update.',
   },
   {
     title: 'Digital Marketing & SEO',
     description:
-      'From targeted ad campaigns to organic search optimisation, we develop data-driven strategies that boost visibility and drive qualified traffic.',
+      'Paid ads and organic search. Monthly reporting on the numbers that matter: leads, cost per lead, conversion rate.',
   },
   {
-    title: 'Content Strategy & Creation',
+    title: 'Content & Copy',
     description:
-      'We help you tell your brand’s story with compelling copy, engaging visuals, and multimedia content that connects and converts.',
+      'Website copy, case studies, and supporting content. Written by humans, edited for clarity, structured for search.',
   },
 ];
 
 const DesignCard = () => {
   return (
-    <div className="min-h-screen bg-white text-black p-8 md:p-16">
-      {/* Header Section */}
-      <div className="max-w-3xl mx-auto text-center">
-        <h1 className="text-3xl md:text-5xl font-bold">Welcome to Joro Services</h1>
-        <p className="mt-4 text-black text-base md:text-lg">
-          At Joro Services, we blend creativity, technology, and strategy to deliver tailored digital experiences that captivate your audience and drive growth. From strategic branding to seamless web development and targeted marketing, we support your vision at every step.
-        </p>
-      </div>
+    <div className="bg-white text-gray-900 px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl md:text-4xl font-bold">What we do</h2>
+          <p className="mt-4 text-gray-600 text-base md:text-lg">
+            Five services, delivered in-house. We design, write, build, and ship.
+          </p>
+        </div>
 
-      {/* Service Cards */}
-      <div className="lg:mt-16 mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition"
-          >
-            <span className="text-sm font-medium text-accent-dark uppercase">
-              Service
-            </span>
-            <h2 className="text-2xl font-semibold mt-2 text-black">{service.title}</h2>
-            <p className="text-black text-sm mt-3">{service.description}</p>
-          </div>
-        ))}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 rounded-xl p-6 border border-gray-100"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+              <p className="text-gray-600 text-sm mt-3 leading-relaxed">{service.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

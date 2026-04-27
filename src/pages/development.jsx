@@ -59,7 +59,6 @@ function Development() {
       <section className="py-20 lg:py-28 bg-gray-50" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-3">
@@ -72,7 +71,7 @@ function Development() {
                   <span className="font-semibold text-gray-900">{faq.question}</span>
                   <ChevronDown size={20} className={`text-gray-400 flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
-                <div className={`grid transition-all duration-300 ease-in-out ${openFaq === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                <div className={`grid transition-colors ease-in-out ${openFaq === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="overflow-hidden">
                     <p className="px-5 pb-5 text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>

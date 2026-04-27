@@ -99,9 +99,8 @@ const ItServicesCareProviders = () => {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Care Sector IT</p>
           <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'IT Services for Care Providers' }]} />
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">
             IT Services for UK Care Providers
@@ -111,9 +110,9 @@ const ItServicesCareProviders = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Book a Free Scoping Call <ArrowRight className="w-4 h-4" />
+            Talk to us
           </Link>
         </div>
       </section>
@@ -121,7 +120,6 @@ const ItServicesCareProviders = () => {
       {/* Why Care Providers Have Specific IT Needs */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">The Challenge</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
             Why Care Providers Have Specific IT Needs
           </h2>
@@ -145,7 +143,6 @@ const ItServicesCareProviders = () => {
       {/* What Joro Services Offers Care Providers */}
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
             What Joro Services Offers Care Providers
           </h2>
@@ -170,7 +167,6 @@ const ItServicesCareProviders = () => {
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Product</p>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Corcada — Scheduling Built for Care Agencies
             </h2>
@@ -184,9 +180,9 @@ const ItServicesCareProviders = () => {
               href="https://corcada.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Visit Corcada <ArrowRight className="w-4 h-4" />
+              Visit Corcada
             </a>
           </div>
         </div>
@@ -213,7 +209,7 @@ const ItServicesCareProviders = () => {
                   />
                 </button>
                 <div
-                  className={`grid transition-all duration-300 ${
+                  className={`grid transition-colors ${
                     openFaq === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
                   }`}
                 >
@@ -230,7 +226,7 @@ const ItServicesCareProviders = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+      <section className="bg-primary text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Ready to Sort Your Care Agency's IT?
@@ -240,9 +236,9 @@ const ItServicesCareProviders = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Book Your Free Scoping Call <ArrowRight className="w-4 h-4" />
+            Talk to us
           </Link>
         </div>
       </section>

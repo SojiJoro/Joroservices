@@ -196,9 +196,8 @@ const UXUIExperience = () => {
     />
 
     {/* Hero Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+    <section className="bg-primary text-white pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">UI/UX Design</p>
         <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Creative Solutions', path: '/creative-solutions' }, { name: 'UI/UX Design' }]} />
         <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight max-w-3xl">UI/UX Design in Aldershot, Hampshire</h1>
         <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
@@ -206,9 +205,9 @@ const UXUIExperience = () => {
         </p>
         <Link
           to="/getintouch"
-          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
         >
-          Book a Free UX Audit <ArrowRight className="w-4 h-4" />
+          Book a Free UX Audit
         </Link>
       </div>
     </section>
@@ -236,7 +235,6 @@ const UXUIExperience = () => {
     {/* Service Cards */}
     <section id="services" className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
         <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What We Do</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {serviceCards.map((card, i) => (
@@ -245,7 +243,7 @@ const UXUIExperience = () => {
               className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition"
             >
               <card.icon className="text-3xl text-accent mb-4" />
-              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-1">
+              <p className="text-xs font-medium text-gray-500 mb-1">
                 {card.label}
               </p>
               <h3 className="text-xl font-bold mb-3">{card.title}</h3>
@@ -256,7 +254,6 @@ const UXUIExperience = () => {
                     key={j}
                     className="flex items-start gap-2 text-sm text-gray-600"
                   >
-                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -268,7 +265,7 @@ const UXUIExperience = () => {
     </section>
 
     {/* Differentiator */}
-    <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
+    <section className="py-20 lg:py-28 bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl lg:text-3xl font-bold mb-6 max-w-3xl mx-auto">
           Research + Design + Development Under One Roof
@@ -282,7 +279,6 @@ const UXUIExperience = () => {
     {/* Pricing */}
     <section id="pricing" className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Pricing</p>
         <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
           Transparent Pricing
         </h2>
@@ -316,7 +312,6 @@ const UXUIExperience = () => {
                     key={j}
                     className="flex items-start gap-2 text-sm text-gray-600"
                   >
-                    <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -332,7 +327,7 @@ const UXUIExperience = () => {
                     : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
                 }`}
               >
-                {tier.isFree ? 'Get Free Audit' : 'Get Started'}
+                {tier.isFree ? 'Talk to us' : 'Talk to us'}
               </Link>
             </div>
           ))}
@@ -423,7 +418,7 @@ const UXUIExperience = () => {
     </section>
 
     {/* CTA Section */}
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+    <section className="bg-primary text-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl lg:text-3xl font-bold mb-4">
           Your Users Are Struggling. Let's Fix That.
@@ -433,9 +428,9 @@ const UXUIExperience = () => {
         </p>
         <Link
           to="/getintouch"
-          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
         >
-          Get Your Free UX Audit <ArrowRight className="w-4 h-4" />
+          Get Your Free UX Audit
         </Link>
       </div>
     </section>

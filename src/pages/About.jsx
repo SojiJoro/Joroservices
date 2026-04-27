@@ -51,14 +51,13 @@ const About = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section id="hero" className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[
             { name: 'Home', path: '/' },
             { name: 'About' },
           ]} />
           <div className="max-w-3xl">
-            <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">About Us</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">About Joro Services</h1>
             <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
               We are a UK IT services company. We build websites, develop apps, set up cloud infrastructure, provide IT support, and run digital marketing — for small and medium businesses who need real delivery, not just advice.
@@ -72,7 +71,6 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
               <h2 className="text-3xl font-bold mb-8">An IT services company, not a consultancy</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
@@ -112,7 +110,6 @@ const About = () => {
       <section className="bg-gray-50 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Values</p>
             <h2 className="text-3xl font-bold">What drives us every day</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-6">
@@ -152,7 +149,6 @@ const About = () => {
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</p>
             <h2 className="text-3xl font-bold">Services We Deliver</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -166,7 +162,7 @@ const About = () => {
                   <h3 className="text-base font-bold mb-2 text-gray-900 group-hover:text-white transition-colors">{item.title}</h3>
                   <p className="text-gray-500 group-hover:text-gray-400 text-sm transition-colors leading-relaxed">{item.desc}</p>
                   <div className="mt-3 flex items-center gap-1 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                    Explore <ArrowRight size={14} />
+                    Explore
                   </div>
                 </Link>
               );
@@ -185,10 +181,10 @@ const About = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
               Get in Touch
-              <ArrowRight size={16} />
+             
             </Link>
             <a
               href="https://wa.me/447867374034"

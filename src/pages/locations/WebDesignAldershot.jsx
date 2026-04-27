@@ -64,11 +64,11 @@ const WebDesignAldershot = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-5 h-5 text-accent-dark" />
-            <span className="text-accent font-semibold text-sm uppercase tracking-widest">Aldershot, Hampshire</span>
+            <span className="text-xs font-medium text-gray-500">Aldershot, Hampshire</span>
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
             Web Design in{' '}
@@ -80,9 +80,9 @@ const WebDesignAldershot = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Get a Free Quote
+              Talk to us
             </Link>
             <a
               href="tel:+4407867374034"
@@ -144,7 +144,6 @@ const WebDesignAldershot = () => {
               { title: 'Content Management', text: 'A simple backend so you can update text, add blog posts, and swap images without needing a developer every time.' },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
-                <CheckCircle className="w-5 h-5 text-accent-dark mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-1">{item.title}</h3>
                   <p className="text-gray-600">{item.text}</p>
@@ -171,7 +170,7 @@ const WebDesignAldershot = () => {
                   <span className="font-medium text-lg pr-4">{faq.question}</span>
                   <ChevronDown className={`w-5 h-5 text-accent-dark flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
-                <div className={`grid transition-all duration-300 ${openFaq === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                <div className={`grid transition-colors ${openFaq === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
                   <div className="overflow-hidden">
                     <div className="px-5 pb-5">
                       <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
@@ -210,7 +209,7 @@ const WebDesignAldershot = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+      <section className="bg-primary text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Ready for a Website That Works as Hard as You Do?
@@ -220,9 +219,9 @@ const WebDesignAldershot = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Get Your Free Quote
+            Talk to us
           </Link>
         </div>
       </section>

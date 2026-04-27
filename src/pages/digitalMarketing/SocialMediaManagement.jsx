@@ -240,9 +240,9 @@ const SocialMediaManagement = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="text-xs font-medium text-gray-500 mb-3">
             Social Media Management
           </p>
           <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Digital Marketing', path: '/digital-marketing' }, { name: 'Social Media Management' }]} />
@@ -259,9 +259,9 @@ const SocialMediaManagement = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Get a Free Social Media Review <ArrowRight className="w-4 h-4" />
+            Get a Free Social Media Review
           </Link>
         </div>
       </section>
@@ -289,7 +289,6 @@ const SocialMediaManagement = () => {
       {/* Service Cards */}
       <section id="services" className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Services</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
             What We Do
           </h2>
@@ -300,7 +299,7 @@ const SocialMediaManagement = () => {
                 className="bg-white rounded-2xl border border-gray-100 p-7 hover:shadow-md transition"
               >
                 <card.icon className="text-3xl text-accent mb-4" />
-                <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-1">
+                <p className="text-xs font-medium text-gray-500 mb-1">
                   {card.label}
                 </p>
                 <h3 className="text-xl font-bold mb-3">{card.title}</h3>
@@ -311,7 +310,6 @@ const SocialMediaManagement = () => {
                       key={j}
                       className="flex items-start gap-2 text-sm text-gray-600"
                     >
-                      <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -323,7 +321,7 @@ const SocialMediaManagement = () => {
       </section>
 
       {/* Platforms */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary-dark to-secondary text-white">
+      <section className="py-20 lg:py-28 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl lg:text-3xl font-bold text-center mb-10">
             Platforms We Manage
@@ -354,7 +352,6 @@ const SocialMediaManagement = () => {
       {/* Pricing */}
       <section id="pricing" className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Pricing</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
             Simple Plans
           </h2>
@@ -393,7 +390,6 @@ const SocialMediaManagement = () => {
                       key={j}
                       className="flex items-start gap-2 text-sm text-gray-600"
                     >
-                      <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -409,7 +405,7 @@ const SocialMediaManagement = () => {
                       : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
                   }`}
                 >
-                  {tier.isFree ? 'Get Free Review' : 'Get Started'}
+                  {tier.isFree ? 'Get Free Review' : 'Talk to us'}
                 </Link>
               </div>
             ))}
@@ -516,7 +512,7 @@ const SocialMediaManagement = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+      <section className="bg-primary text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Audience Is Already Scrolling. Show Up.
@@ -527,9 +523,9 @@ const SocialMediaManagement = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Get Your Free Social Media Review <ArrowRight className="w-4 h-4" />
+            Get Your Free Social Media Review
           </Link>
         </div>
       </section>

@@ -40,7 +40,6 @@ export default function FAQ() {
     <section className="bg-gray-50 py-20 lg:py-28" id="faq">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Frequently Asked Questions</h2>
         </div>
         <div className="space-y-3">
@@ -62,7 +61,7 @@ export default function FAQ() {
                 />
               </button>
               <div
-                className={`grid transition-all duration-300 ease-in-out ${
+                className={`grid transition-colors ease-in-out ${
                   openIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >

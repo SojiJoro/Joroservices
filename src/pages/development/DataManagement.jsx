@@ -221,7 +221,6 @@ const DataManagement = () => {
       <ul className="space-y-2">
         {card.items.map((item, j) => (
           <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
-            <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
             <span>{item}</span>
           </li>
         ))}
@@ -260,9 +259,8 @@ const DataManagement = () => {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Data Management</p>
           <h1 className="text-3xl lg:text-4xl font-bold mb-6">
             Data Management in Aldershot, Hampshire
           </h1>
@@ -272,9 +270,9 @@ const DataManagement = () => {
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Book a Free Data Assessment <ArrowRight className="w-4 h-4" />
+              Talk to us
             </Link>
             <a
               href="#services"
@@ -289,7 +287,6 @@ const DataManagement = () => {
       {/* Two Sides of Data Management */}
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Overview</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">
             Two Sides of Data Management
           </h2>
@@ -386,7 +383,6 @@ const DataManagement = () => {
                       key={j}
                       className="flex items-start gap-2 text-sm text-gray-600"
                     >
-                      <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0 text-xs" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -402,7 +398,7 @@ const DataManagement = () => {
                       : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
                   }`}
                 >
-                  {tier.isFree ? 'Book Free Assessment' : 'Get Started'}
+                  {tier.isFree ? 'Talk to us' : 'Talk to us'}
                 </Link>
               </div>
             ))}
@@ -503,7 +499,7 @@ const DataManagement = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Data Should Work For You, Not Against You
@@ -514,9 +510,9 @@ const DataManagement = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Book a Free Data Assessment <ArrowRight className="w-4 h-4" />
+            Talk to us
           </Link>
         </div>
       </section>
