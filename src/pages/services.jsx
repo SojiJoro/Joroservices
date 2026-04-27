@@ -86,9 +86,13 @@ const Services = () => (
               className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300"
             >
               <div className="overflow-hidden">
-                <div className={`w-full h-48 bg-gradient-to-br ${service.gradient} relative group-hover:scale-105 transition-transform duration-500`}>
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-                </div>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-accent transition-colors">

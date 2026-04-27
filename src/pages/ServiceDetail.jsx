@@ -66,12 +66,13 @@ const ServiceDetail = () => {
               </Link>
             </div>
             <div className="hidden lg:block">
-              <div className={`w-full h-80 rounded-2xl shadow-2xl bg-gradient-to-br ${service.gradient} relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-20" />
-                <div className="absolute inset-0 flex items-center justify-center px-8">
-                  <span className="text-white/90 font-bold text-2xl text-center leading-snug">{service.title}</span>
-                </div>
-              </div>
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+                loading="eager"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
@@ -134,9 +135,13 @@ const ServiceDetail = () => {
                   className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="overflow-hidden">
-                    <div className={`w-full h-44 bg-gradient-to-br ${s.gradient} relative group-hover:scale-105 transition-transform duration-500`}>
-                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-                    </div>
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-accent transition-colors">{s.title}</h3>
