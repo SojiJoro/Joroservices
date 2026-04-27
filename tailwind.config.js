@@ -4,15 +4,6 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      backgroundImage: {
-        "hero-bg": "url('/heroo.gif')",
-        bgImage2: "url('/bg7.webp')",
-        bgImage3: "url('/serv2.webp')",
-        bgImage4: "url('/bg9.webp')",
-        bgImage7: "url('/pexel1.webp')",
-        bgImage8: "url('/pexel2.webp')",
-        bgImage9: "url('/pexel3.webp')",
-      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],

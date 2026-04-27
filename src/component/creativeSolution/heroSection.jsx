@@ -33,12 +33,15 @@ const HeroSection = () => {
         </p>
       </div>
 
-      {/* Right: Background image */}
+      {/* Right: Decorative panel */}
       <div
-        className="bg-bgImage8 h-[50vh] lg:h-[80vh] mt-12 lg:col-span-2 rounded-lg bg-cover bg-center bg-no-repeat"
+        className="relative h-[50vh] lg:h-[80vh] mt-12 lg:col-span-2 rounded-lg overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent-dark"
         role="img"
         aria-label="Showcase of our creative work"
-      />
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,#14b8a6,transparent_55%)] opacity-30" />
+      </div>
     </section>
   )
 }

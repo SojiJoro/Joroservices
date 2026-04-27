@@ -85,19 +85,22 @@ const serviceCards = [
 const portfolio = [
   {
     name: 'PathSync Recruitment Identity',
-    image: '/images/branding-pathsync.jpg',
+    tag: 'Brand · Identity',
+    gradient: 'from-accent-dark via-secondary-dark to-primary',
     description:
       'A bold brand with clean fonts, structured layouts, and colour-coded sections to help a tech recruitment agency stand out.',
   },
   {
     name: 'Clear Vital Social Care Branding',
-    image: '/images/branding-clearvital.jpg',
+    tag: 'Care · Brand System',
+    gradient: 'from-secondary via-primary-dark to-accent',
     description:
       'Warm, calming colours and a friendly design system for a care service. The goal was to feel trustworthy and approachable from the first glance.',
   },
   {
     name: 'Save the Men',
-    image: '/images/savethe-men.jpg',
+    tag: 'Editorial Brand',
+    gradient: 'from-primary via-secondary to-accent-dark',
     description:
       'A bold, content-focused brand with bright colours, fun fonts, and flexible templates built around blog and article content.',
   },
@@ -307,7 +310,10 @@ const GraphicBranding = () => {
               key={i}
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
             >
-              <img src={project.image} alt={project.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
+              <div className={`h-48 w-full bg-gradient-to-br ${project.gradient} relative flex items-center justify-center overflow-hidden`}>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
+                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{project.tag}</span>
+              </div>
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{project.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{project.description}</p>
