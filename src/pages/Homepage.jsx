@@ -229,9 +229,13 @@ const Homepage = () => (
               to={`/services/${service.id}`}
               className="group relative overflow-hidden rounded-2xl aspect-[4/3] block"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} transition-transform duration-700 group-hover:scale-105`}>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-              </div>
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <h3 className="text-white text-base font-bold mb-1">
@@ -262,6 +266,34 @@ const Homepage = () => (
               <ArrowRight size={16} />
             </Link>
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Companies We've Worked With */}
+    <section className="bg-white py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-center text-accent font-semibold text-sm uppercase tracking-widest mb-3">Trusted By</p>
+        <h2 className="text-center text-2xl lg:text-3xl font-bold text-gray-900 mb-12">
+          Companies We've Worked With
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-12 items-center">
+          {[
+            { name: '1 Noble Healthcare', logo: '/Client%20Logos/1nobleHealthcare.png' },
+            { name: 'ClearVital', logo: '/Client%20Logos/ClearVital.ico' },
+            { name: 'DebtMap', logo: '/Client%20Logos/DebtMap.png' },
+            { name: 'EMK', logo: '/Client%20Logos/emk-logo.jpg' },
+          ].map((client) => (
+            <div key={client.name} className="flex items-center justify-center">
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="max-h-14 lg:max-h-16 w-auto opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
