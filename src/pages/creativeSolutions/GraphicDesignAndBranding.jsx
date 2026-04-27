@@ -82,30 +82,6 @@ const serviceCards = [
   },
 ]
 
-const portfolio = [
-  {
-    name: 'PathSync Recruitment Identity',
-    tag: 'Brand · Identity',
-    gradient: 'from-accent-dark via-secondary-dark to-primary',
-    description:
-      'A bold brand with clean fonts, structured layouts, and colour-coded sections to help a tech recruitment agency stand out.',
-  },
-  {
-    name: 'Clear Vital Social Care Branding',
-    tag: 'Care · Brand System',
-    gradient: 'from-secondary via-primary-dark to-accent',
-    description:
-      'Warm, calming colours and a friendly design system for a care service. The goal was to feel trustworthy and approachable from the first glance.',
-  },
-  {
-    name: 'Save the Men',
-    tag: 'Editorial Brand',
-    gradient: 'from-primary via-secondary to-accent-dark',
-    description:
-      'A bold, content-focused brand with bright colours, fun fonts, and flexible templates built around blog and article content.',
-  },
-]
-
 const pricingTiers = [
   {
     name: 'Free Brand Review',
@@ -296,31 +272,6 @@ const GraphicBranding = () => {
         <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
           Most design agencies stop at the logo. We don't. We can take your brand from concept all the way through to a live website, social media templates, and marketing materials. One team, one vision, everything consistent. No briefing three different agencies and hoping they all get it right.
         </p>
-      </div>
-    </section>
-
-    {/* Portfolio Section */}
-    <section className="py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Work</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Recent Brand Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolio.map((project, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
-            >
-              <div className={`h-48 w-full bg-gradient-to-br ${project.gradient} relative flex items-center justify-center overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{project.tag}</span>
-              </div>
-              <div className="p-7">
-                <h3 className="text-xl font-semibold text-accent">{project.name}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm mt-2">{project.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
 

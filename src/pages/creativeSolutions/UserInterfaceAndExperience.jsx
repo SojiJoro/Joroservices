@@ -83,29 +83,6 @@ const serviceCards = [
   },
 ]
 
-const portfolio = [
-  {
-    name: 'Joro Services Admin Dashboard',
-    tag: 'Dashboard UX',
-    gradient: 'from-secondary via-primary-dark to-accent',
-    description:
-      'A simple admin dashboard with user stats, activity logs, and role-based access. Built to make day-to-day operations easier.',
-  },
-  {
-    name: 'Healthcare Referral Portal UX',
-    tag: 'Healthcare · A11y',
-    gradient: 'from-primary via-secondary to-accent-dark',
-    description:
-      'A clean, accessible flow for patients and staff with easy navigation, clear buttons, and forms that work on any device.',
-  },
-  {
-    name: 'Mobile Job App UI',
-    tag: 'Mobile UI',
-    gradient: 'from-accent-dark via-secondary-dark to-primary',
-    description:
-      'A job search app with swipeable cards, saved jobs, and quick-apply. Designed so you can do everything with one thumb.',
-  },
-]
 
 const pricingTiers = [
   {
@@ -299,28 +276,6 @@ const UXUIExperience = () => {
         <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
           Good UX isn't just for big tech companies. We keep the process simple. You'll get wireframes and prototypes you can click through and give feedback on before any code gets written. That means fewer surprises, fewer revisions, and a better end result. And because we handle development too, your designs get built exactly as intended.
         </p>
-      </div>
-    </section>
-
-    {/* Portfolio / Case Studies */}
-    <section className="py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Case Studies</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">UX in Action</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolio.map((item, i) => (
-            <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
-              <div className={`h-48 w-full bg-gradient-to-br ${item.gradient} relative flex items-center justify-center overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{item.tag}</span>
-              </div>
-              <div className="p-7">
-                <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm mt-2">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
 

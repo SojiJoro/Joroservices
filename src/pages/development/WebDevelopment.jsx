@@ -83,33 +83,6 @@ const serviceCards = [
   },
 ]
 
-const portfolio = [
-  {
-    name: 'Save the Men Website',
-    tag: 'Next.js 14',
-    gradient: 'from-primary via-secondary to-accent-dark',
-    description:
-      'A blog-driven site with dynamic routing, category filters, and interactive animations built using Next.js 14.',
-    url: 'https://save-the-men.com',
-  },
-  {
-    name: '1 Noble Healthcare Website',
-    tag: 'Corporate · CMS',
-    gradient: 'from-secondary via-primary-dark to-accent',
-    description:
-      'Fully responsive, SEO-optimised corporate site with custom contact forms and a CMS for easy updates.',
-    url: 'https://1noblehealthcare.com',
-  },
-  {
-    name: 'PathSync Recruitment',
-    tag: 'Recruitment Portal',
-    gradient: 'from-accent-dark via-secondary-dark to-primary',
-    description:
-      'A clean and professional recruitment portal with blog pages, service filters, and job application forms.',
-    url: 'https://pathsyncrecruitment.com',
-  },
-]
-
 const pricingTiers = [
   {
     name: 'Free Consultation',
@@ -308,34 +281,6 @@ const WebDevelopment = () => {
         <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
           A lot of agencies will sell you a template site and call it custom. We don't do that. Every website we build is coded from scratch or carefully configured to fit your business properly. You get a site that loads quickly, ranks well on Google, and doesn't fall apart the moment you try to update something. And because we handle hosting and infrastructure too, your site stays fast and secure long after launch.
         </p>
-      </div>
-    </section>
-
-    {/* Portfolio Section */}
-    <section className="py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Work</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Web Projects We've Delivered</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolio.map((site, i) => (
-            <a
-              key={i}
-              href={site.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition block"
-            >
-              <div className={`h-48 w-full bg-gradient-to-br ${site.gradient} relative flex items-center justify-center overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{site.tag}</span>
-              </div>
-              <div className="p-7">
-                <h3 className="text-xl font-semibold text-accent">{site.name}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm mt-2">{site.description}</p>
-              </div>
-            </a>
-          ))}
-        </div>
       </div>
     </section>
 

@@ -83,29 +83,6 @@ const serviceCards = [
   },
 ]
 
-const portfolio = [
-  {
-    name: 'Care Timesheet App (Flutter)',
-    tag: 'Flutter · Offline-first',
-    gradient: 'from-primary via-secondary to-accent-dark',
-    description:
-      'A hybrid timesheet app for carers to log hours, sign on-screen, and export to PDF. Works offline and syncs data in real time.',
-  },
-  {
-    name: 'QuickApply Recruitment App',
-    tag: 'React Native',
-    gradient: 'from-accent-dark via-secondary-dark to-primary',
-    description:
-      'A job discovery app with profile login, swipe-to-save, and one-tap apply. Built with React Native for Android and iOS.',
-  },
-  {
-    name: 'Client Support Portal',
-    tag: 'Mobile Dashboard',
-    gradient: 'from-secondary via-primary-dark to-accent',
-    description:
-      'Mobile dashboard with in-app notifications, ticket tracking, and secure file uploads. Built for remote teams.',
-  },
-]
 
 const pricingTiers = [
   {
@@ -306,31 +283,6 @@ const MobileAppDevelopment = () => {
         <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
           Mobile app development can feel like a big investment, especially for small and mid-sized businesses. That's why it helps to work with a team that's actually nearby. Being local means we can sit down with you, understand how your business works, and build an app that fits — not just something that looks good in a demo. And because we handle cloud infrastructure too, your app's backend stays fast, secure, and cost-effective.
         </p>
-      </div>
-    </section>
-
-    {/* Portfolio Section */}
-    <section className="py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our Work</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Apps We've Built</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolio.map((app, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
-            >
-              <div className={`h-48 w-full bg-gradient-to-br ${app.gradient} relative flex items-center justify-center overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{app.tag}</span>
-              </div>
-              <div className="p-7">
-                <h3 className="text-xl font-semibold text-accent">{app.name}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm mt-2">{app.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
 
