@@ -86,19 +86,22 @@ const serviceCards = [
 const portfolio = [
   {
     name: 'Care Timesheet App (Flutter)',
-    image: '/images/mobile-timesheet.jpg',
+    tag: 'Flutter · Offline-first',
+    gradient: 'from-primary via-secondary to-accent-dark',
     description:
       'A hybrid timesheet app for carers to log hours, sign on-screen, and export to PDF. Works offline and syncs data in real time.',
   },
   {
     name: 'QuickApply Recruitment App',
-    image: '/images/ux-jobapp.jpg',
+    tag: 'React Native',
+    gradient: 'from-accent-dark via-secondary-dark to-primary',
     description:
       'A job discovery app with profile login, swipe-to-save, and one-tap apply. Built with React Native for Android and iOS.',
   },
   {
     name: 'Client Support Portal',
-    image: '/images/ux-healthcare-mobile.jpg',
+    tag: 'Mobile Dashboard',
+    gradient: 'from-secondary via-primary-dark to-accent',
     description:
       'Mobile dashboard with in-app notifications, ticket tracking, and secure file uploads. Built for remote teams.',
   },
@@ -317,7 +320,10 @@ const MobileAppDevelopment = () => {
               key={i}
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
             >
-              <img src={app.image} alt={app.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
+              <div className={`h-48 w-full bg-gradient-to-br ${app.gradient} relative flex items-center justify-center overflow-hidden`}>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
+                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{app.tag}</span>
+              </div>
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{app.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{app.description}</p>

@@ -86,21 +86,24 @@ const serviceCards = [
 const portfolio = [
   {
     name: 'Save the Men Website',
-    image: '/images/savethemen.jpg',
+    tag: 'Next.js 14',
+    gradient: 'from-primary via-secondary to-accent-dark',
     description:
       'A blog-driven site with dynamic routing, category filters, and interactive animations built using Next.js 14.',
     url: 'https://save-the-men.com',
   },
   {
     name: '1 Noble Healthcare Website',
-    image: '/images/1noble.jpg',
+    tag: 'Corporate · CMS',
+    gradient: 'from-secondary via-primary-dark to-accent',
     description:
       'Fully responsive, SEO-optimised corporate site with custom contact forms and a CMS for easy updates.',
     url: 'https://1noblehealthcare.com',
   },
   {
     name: 'PathSync Recruitment',
-    image: '/images/pathsync.jpg',
+    tag: 'Recruitment Portal',
+    gradient: 'from-accent-dark via-secondary-dark to-primary',
     description:
       'A clean and professional recruitment portal with blog pages, service filters, and job application forms.',
     url: 'https://pathsyncrecruitment.com',
@@ -322,7 +325,10 @@ const WebDevelopment = () => {
               rel="noopener noreferrer"
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition block"
             >
-              <img src={site.image} alt={site.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
+              <div className={`h-48 w-full bg-gradient-to-br ${site.gradient} relative flex items-center justify-center overflow-hidden`}>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
+                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{site.tag}</span>
+              </div>
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{site.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{site.description}</p>

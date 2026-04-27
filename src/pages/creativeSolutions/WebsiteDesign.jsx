@@ -86,21 +86,24 @@ const serviceCards = [
 const portfolio = [
   {
     name: '1 Noble Healthcare',
-    image: '/images/1noble.jpg',
+    tag: 'Healthcare · Brochure',
+    gradient: 'from-secondary via-primary-dark to-accent',
     url: 'https://1noblehealthcare.com',
     description:
       'A clean, modern healthcare site for supported living services, with easy-to-use contact forms and a straightforward layout.',
   },
   {
     name: 'PathSync Recruitment',
-    image: '/images/pathsync.jpg',
+    tag: 'Recruitment',
+    gradient: 'from-accent-dark via-secondary-dark to-primary',
     url: 'https://pathsyncrecruitment.com',
     description:
       'A professional site for a tech recruitment agency, complete with a blog, application forms, and a layout that works on any device.',
   },
   {
     name: 'save the men',
-    image: '/images/savethemen.jpg',
+    tag: 'Editorial · Next.js',
+    gradient: 'from-primary via-secondary to-accent-dark',
     url: 'https://save-the-men.com',
     description:
       'A platform to help men going through abuse.',
@@ -317,7 +320,10 @@ const WebsiteDesign = () => {
               rel="noopener noreferrer"
               className="block bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
             >
-              <img src={site.image} alt={site.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
+              <div className={`h-48 w-full bg-gradient-to-br ${site.gradient} relative flex items-center justify-center overflow-hidden`}>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
+                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{site.tag}</span>
+              </div>
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{site.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{site.description}</p>

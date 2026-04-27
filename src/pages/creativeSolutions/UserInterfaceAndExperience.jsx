@@ -86,19 +86,22 @@ const serviceCards = [
 const portfolio = [
   {
     name: 'Joro Services Admin Dashboard',
-    image: '/images/ux-dashboard.jpg',
+    tag: 'Dashboard UX',
+    gradient: 'from-secondary via-primary-dark to-accent',
     description:
       'A simple admin dashboard with user stats, activity logs, and role-based access. Built to make day-to-day operations easier.',
   },
   {
     name: 'Healthcare Referral Portal UX',
-    image: '/images/ux-healthcare.jpg',
+    tag: 'Healthcare · A11y',
+    gradient: 'from-primary via-secondary to-accent-dark',
     description:
       'A clean, accessible flow for patients and staff with easy navigation, clear buttons, and forms that work on any device.',
   },
   {
     name: 'Mobile Job App UI',
-    image: '/images/ux-jobapp.jpg',
+    tag: 'Mobile UI',
+    gradient: 'from-accent-dark via-secondary-dark to-primary',
     description:
       'A job search app with swipeable cards, saved jobs, and quick-apply. Designed so you can do everything with one thumb.',
   },
@@ -307,7 +310,10 @@ const UXUIExperience = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolio.map((item, i) => (
             <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
-              <img src={item.image} alt={item.name} className="h-48 w-full object-cover" loading="lazy" decoding="async" />
+              <div className={`h-48 w-full bg-gradient-to-br ${item.gradient} relative flex items-center justify-center overflow-hidden`}>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
+                <span className="relative text-white/90 font-semibold tracking-widest text-xs uppercase">{item.tag}</span>
+              </div>
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-accent">{item.name}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm mt-2">{item.description}</p>

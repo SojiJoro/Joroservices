@@ -4,7 +4,6 @@ import { MapPin, Phone } from 'lucide-react';
 const CardGrid = () => {
   const cards = [
     {
-      img: '/bg7.webp',
       location: 'Registered Office',
       address: 'Kemp House, 152-160 City Road, London, EC1V 2NX, United Kingdom',
       phone: '07867 374034',
@@ -18,13 +17,10 @@ const CardGrid = () => {
           key={index}
           className="bg-gray-50 border border-gray-100 rounded-2xl overflow-hidden"
         >
-          <img
-            className="w-full h-48 object-cover"
-            src={card.img}
-            alt={card.location}
-            loading="lazy"
-            decoding="async"
-          />
+          <div className="w-full h-48 bg-gradient-to-br from-primary via-secondary to-accent-dark relative overflow-hidden flex items-center justify-center">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
+            <MapPin size={48} className="text-white/80 relative" />
+          </div>
           <div className="p-6">
             <h5 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
               <MapPin size={18} className="text-accent" />

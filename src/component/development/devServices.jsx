@@ -10,7 +10,7 @@ import { BsShieldCheck } from 'react-icons/bs';
 const offerings = [
   {
     title: 'Custom Web Development',
-    image: '/bg8.webp',
+    gradient: 'from-primary via-secondary to-accent-dark',
     tagline: 'Websites that work hard and handle growth',
     desc:
       'We design and build secure, responsive websites that grow with your business. From simple brochure sites to full e-commerce platforms, we focus on making things reliable and easy to use.',
@@ -22,7 +22,7 @@ const offerings = [
   },
   {
     title: 'Mobile App Solutions',
-    image: '/bg9.webp',
+    gradient: 'from-secondary via-primary-dark to-accent',
     tagline: 'Native and cross-platform apps',
     desc:
       'We build mobile apps for iOS and Android that feel natural and work properly on every device. Whether native, hybrid, or cross-platform, we make apps that people actually want to keep using.',
@@ -34,7 +34,7 @@ const offerings = [
   },
   {
     title: 'Data & Analytics Services',
-    image: '/pexel3.webp',
+    gradient: 'from-accent-dark via-secondary-dark to-primary',
     tagline: 'Make sense of your data and use it',
     desc:
       'We help you manage, connect, and understand your data. From keeping it clean and secure to building dashboards that show you what is actually going on, so you can make better decisions.',
@@ -71,7 +71,12 @@ const DevServices = () => {
             >
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="lg:w-1/2">
-                  <img src={serv.image} alt={serv.title} className="w-full h-auto" loading="lazy" decoding="async" />
+                  <div className={`w-full h-64 lg:h-full min-h-[16rem] bg-gradient-to-br ${serv.gradient} relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
+                    <div className="absolute inset-0 flex items-center justify-center px-6">
+                      <span className="text-white/90 font-bold text-2xl text-center leading-snug">{serv.tagline}</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="lg:w-1/2 flex flex-col justify-center p-6">
                   <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-2">
