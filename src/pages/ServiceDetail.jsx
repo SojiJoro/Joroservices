@@ -40,7 +40,7 @@ const ServiceDetail = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="relative bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section id="hero" className="relative bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -59,10 +59,10 @@ const ServiceDetail = () => {
               </p>
               <Link
                 to="/getintouch"
-                className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20"
+                className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all"
               >
                 Discuss This Service
-                <ArrowRight size={16} />
+               
               </Link>
             </div>
             <div className="hidden lg:block">
@@ -83,7 +83,6 @@ const ServiceDetail = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-6">
-              <p className="text-accent font-semibold text-sm uppercase tracking-widest">Overview</p>
               <h2 className="text-3xl font-bold text-gray-900">What We Deliver</h2>
               {service.details.map((paragraph, idx) => (
                 <p key={idx} className="text-gray-600 leading-relaxed text-lg">{paragraph}</p>
@@ -100,7 +99,6 @@ const ServiceDetail = () => {
                   'UK-based team',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-600 text-sm">
-                    <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -111,7 +109,7 @@ const ServiceDetail = () => {
                   to="/getintouch"
                   className="block bg-accent text-white text-center font-semibold py-3 rounded-xl hover:bg-accent-dark transition-all text-sm"
                 >
-                  Request a Quote
+                  Talk to us
                 </Link>
               </div>
             </div>
@@ -124,7 +122,6 @@ const ServiceDetail = () => {
         <section className="bg-gray-50 py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Explore More</p>
               <h2 className="text-3xl font-bold text-gray-900">Other Services</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -132,7 +129,7 @@ const ServiceDetail = () => {
                 <Link
                   key={s.id}
                   to={`/services/${s.id}`}
-                  className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300"
+                  className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-colors"
                 >
                   <div className="overflow-hidden">
                     <img

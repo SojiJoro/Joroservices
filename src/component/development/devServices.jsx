@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { useAnimation, motion, useInView } from 'framer-motion';
+import React from 'react';
 import { LiaLaptopCodeSolid } from 'react-icons/lia';
 import { FaDatabase, FaLaptopCode } from 'react-icons/fa6';
 import { MdShoppingBag, MdCloudUpload, MdAnalytics } from 'react-icons/md';
@@ -10,10 +9,8 @@ import { BsShieldCheck } from 'react-icons/bs';
 const offerings = [
   {
     title: 'Custom Web Development',
-    gradient: 'from-primary via-secondary to-accent-dark',
-    tagline: 'Websites that work hard and handle growth',
     desc:
-      'We design and build secure, responsive websites that grow with your business. From simple brochure sites to full e-commerce platforms, we focus on making things reliable and easy to use.',
+      'We design and build secure, responsive websites that grow with your business. From simple brochure sites to full e-commerce platforms.',
     category: [
       { title: 'Front-end Engineering', icon: LiaLaptopCodeSolid },
       { title: 'Back-end Development', icon: FaDatabase },
@@ -22,10 +19,8 @@ const offerings = [
   },
   {
     title: 'Mobile App Solutions',
-    gradient: 'from-secondary via-primary-dark to-accent',
-    tagline: 'Native and cross-platform apps',
     desc:
-      'We build mobile apps for iOS and Android that feel natural and work properly on every device. Whether native, hybrid, or cross-platform, we make apps that people actually want to keep using.',
+      'iOS and Android apps that work properly on every device. Native, hybrid, or cross-platform — built for people who actually use them.',
     category: [
       { title: 'iOS & Android', icon: FaLaptopCode },
       { title: 'Cross-platform', icon: GiPlatform },
@@ -33,11 +28,9 @@ const offerings = [
     ],
   },
   {
-    title: 'Data & Analytics Services',
-    gradient: 'from-accent-dark via-secondary-dark to-primary',
-    tagline: 'Make sense of your data and use it',
+    title: 'Data & Analytics',
     desc:
-      'We help you manage, connect, and understand your data. From keeping it clean and secure to building dashboards that show you what is actually going on, so you can make better decisions.',
+      'We help you manage, connect, and understand your data. Clean storage, secure access, and dashboards that show what is actually going on.',
     category: [
       { title: 'Data Integration', icon: MdCloudUpload },
       { title: 'Security & Compliance', icon: BsShieldCheck },
@@ -49,57 +42,29 @@ const offerings = [
 const DevServices = () => {
   return (
     <section className="py-20 lg:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12">
-        {offerings.map((serv, i) => {
-          const control = useAnimation();
-          const ref = useRef(null);
-          const isInView = useInView(ref, { once: true });
-
-          useEffect(() => {
-            if (isInView) control.start('visible');
-          }, [isInView, control]);
-
-          return (
-            <motion.div
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12 max-w-2xl">
+          What we build
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {offerings.map((serv, i) => (
+            <div
               key={i}
-              ref={ref}
-              variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
-              initial="hidden"
-              animate={control}
-              transition={{ duration: 1, delay: i * 0.3 }}
-              className="bg-white rounded-2xl border border-gray-100 overflow-hidden"
+              className="bg-gray-50 rounded-xl border border-gray-100 p-6 flex flex-col"
             >
-              <div className="flex flex-col lg:flex-row gap-6">
-                <div className="lg:w-1/2">
-                  <div className={`w-full h-64 lg:h-full min-h-[16rem] bg-gradient-to-br ${serv.gradient} relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-                    <div className="absolute inset-0 flex items-center justify-center px-6">
-                      <span className="text-white/90 font-bold text-2xl text-center leading-snug">{serv.tagline}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="lg:w-1/2 flex flex-col justify-center p-6">
-                  <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-2">
-                    {serv.title}
-                  </p>
-                  <h2 className="text-2xl font-bold mb-2 text-gray-900">{serv.tagline}</h2>
-                  <p className="text-sm text-gray-700 mb-4">{serv.desc}</p>
-                  <div className="flex flex-wrap gap-4">
-                    {serv.category.map((cate, idx) => (
-                      <div
-                        key={idx}
-                        className="flex flex-col items-center justify-center bg-gray-900 text-white p-4 rounded-xl w-32 h-32"
-                      >
-                        <cate.icon className="text-2xl text-accent-dark mb-2" />
-                        <p className="text-xs text-center">{cate.title}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          );
-        })}
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{serv.title}</h3>
+              <p className="text-sm text-gray-600 mb-6 leading-relaxed">{serv.desc}</p>
+              <ul className="mt-auto space-y-2 text-sm text-gray-700">
+                {serv.category.map((cate, idx) => (
+                  <li key={idx} className="flex items-center gap-3">
+                    <cate.icon className="text-lg text-accent" />
+                    {cate.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

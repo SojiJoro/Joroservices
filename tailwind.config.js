@@ -5,9 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
         inter: ["Inter", "sans-serif"],
-        nunito: ["Nunito", "sans-serif"],
       },
       colors: {
         primary: {

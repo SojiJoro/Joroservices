@@ -41,7 +41,7 @@ const UnderDevelopment = () => {
           </p>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-6 py-3 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-6 py-3 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
             <ArrowLeft size={16} />
             Back to Home

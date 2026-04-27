@@ -189,10 +189,9 @@ function Careers() {
       />
 
       {/* Hero */}
-      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section id="hero" className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Careers</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">Join Our Team</h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
               We are growing and looking for good people to join us. Have a look at our open roles below.

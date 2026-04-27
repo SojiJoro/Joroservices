@@ -146,7 +146,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-sm mb-4">
               Newsletter
             </h3>
-            <p className="text-gray-400 text-sm mb-4">Stay updated with our latest insights and news.</p>
+            <p className="text-gray-400 text-sm mb-4">A short monthly note on UK SMB tech, IT, and security. No noise.</p>
             <form className="flex gap-2" onSubmit={handleNewsletter}>
               <input
                 type="email"

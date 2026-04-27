@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code2, Palette, BarChart3, Shield, CheckCircle2 } from 'lucide-react';
+import { Code2, Palette, BarChart3, Shield } from 'lucide-react';
 import Footer from '../component/Footer';
-import TestimonialGrid from '../component/TestimonialGrid';
-import ImpressionCard from '../component/impressionCard';
 import { ServiceList } from './serviceData';
 import InsightsSection from '../component/insightSection.jsx';
-import FAQ from '../component/faq.jsx';
 import SEO from '../component/SEO';
 import pagesSEO from '../seo/pagesSEO';
 import {
@@ -52,65 +49,6 @@ const serviceCategories = [
   },
 ];
 
-// Review/testimonial schema for rich snippets
-const reviewSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.joroservices.org/#localbusiness-reviews',
-  name: 'Joro Services Ltd',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '6',
-    bestRating: '5',
-    worstRating: '4',
-  },
-  review: [
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Healthcare Provider' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'They streamlined our patient portal launch in under six weeks, boosting user registrations by 60% within the first month.',
-      datePublished: '2025-09-15',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Recruitment Platform' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Their cloud migration plan was spot on. We saw a 35% drop in hosting costs and zero downtime during the transition.',
-      datePublished: '2025-11-20',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Social Care Organisation' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'After implementing their security roadmap, phishing incidents declined by 80% and our audit passed with no critical findings.',
-      datePublished: '2025-08-10',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'E-commerce Business' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Their custom dashboard gave us real-time metrics we never had before. Our delivery accuracy improved from 92% to 98%.',
-      datePublished: '2026-01-05',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Non-profit Organisation' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'The website redesign increased average session duration by 45% and reduced bounce rate by 30%. Our conversion rate is the highest it has ever been.',
-      datePublished: '2025-12-12',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: 'SaaS Company' },
-      reviewRating: { '@type': 'Rating', ratingValue: '4', bestRating: '5' },
-      reviewBody: 'Their team integrated seamlessly with ours. We shipped features faster than we thought possible and the quality was outstanding.',
-      datePublished: '2026-02-18',
-    },
-  ],
-};
-
 const localServiceLinks = [
   { label: 'IT Support in Aldershot', path: '/it-support-aldershot', desc: 'From £30/user/month' },
   { label: 'Web Design in Aldershot', path: '/web-design-aldershot', desc: 'From £1,500' },
@@ -125,45 +63,29 @@ const Homepage = () => (
   <div className="max-w-full overflow-x-hidden">
     <SEO
       {...pagesSEO['/']}
-      dateModified="2026-03-20"
-      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema, reviewSchema, speakableSchema({ url: '/' }), orgLocalBusinessSchema, webDevServiceSchema, devopsServiceSchema, graphicDesignServiceSchema, digitalMarketingServiceSchema, itSupportServiceSchema, mobileAppServiceSchema, founderPersonSchema]}
+      dateModified="2026-04-27"
+      jsonLd={[organizationSchema, localBusinessSchema, websiteSchema, homepageFaqSchema, speakableSchema({ url: '/' }), orgLocalBusinessSchema, webDevServiceSchema, devopsServiceSchema, graphicDesignServiceSchema, digitalMarketingServiceSchema, itSupportServiceSchema, mobileAppServiceSchema, founderPersonSchema]}
     />
 
-    {/* Hero Section */}
+    {/* Hero */}
     <section
       id="hero"
-      className="relative bg-gradient-to-br from-primary via-[#0e1f38] to-secondary min-h-[92vh] w-full flex items-center"
+      className="relative bg-primary min-h-[80vh] w-full flex items-center"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(20,184,166,0.08),transparent_60%)]" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-white/[0.06] border border-white/[0.08] rounded-full px-4 py-1.5 mb-8 text-sm text-gray-400">
-            <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-            Trusted by 20+ businesses across the UK
-          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
-            We Build Websites,
-            <br />
-            <span className="text-accent">Run Infrastructure & Manage IT</span>
+            IT and web for UK businesses too small to need a CIO.
           </h1>
-          <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
-            Joro Services delivers web development, DevOps, cloud engineering, graphic design, and IT support for UK businesses. We do the work — websites, apps, servers, pipelines, marketing. One team handles everything so you don't have to manage five suppliers.
+          <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
+            Joro Services is an Aldershot-based team of engineers, designers and marketers. We build the websites, run the cloud, and handle day-to-day IT for businesses with 5 to 50 staff.
           </p>
-          <div className="flex flex-col sm:flex-row items-start gap-3">
-            <Link
-              to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/20 text-sm"
-            >
-              Get Your Free Consultation
-              <ArrowRight size={16} />
-            </Link>
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-2 bg-white/[0.06] border border-white/[0.08] text-white font-medium px-7 py-3.5 rounded-xl hover:bg-white/[0.1] transition-all duration-300 text-sm"
-            >
-              View Our Services
-            </Link>
-          </div>
+          <Link
+            to="/getintouch"
+            className="inline-flex items-center bg-accent text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-accent-dark transition-colors text-sm"
+          >
+            Talk to us
+          </Link>
         </div>
       </div>
     </section>
@@ -171,13 +93,12 @@ const Homepage = () => (
     {/* Service Categories */}
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</p>
+        <div className="mb-14 max-w-2xl">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            IT Services We Deliver
+            Four things we do
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
-            We build websites, develop apps, set up cloud infrastructure, manage IT support, and run digital marketing campaigns. These are services we deliver, not advice we give.
+          <p className="text-gray-500">
+            We build websites, develop apps, set up cloud infrastructure, manage IT support, and run digital marketing campaigns. Services we deliver, not advice we give.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -187,20 +108,15 @@ const Homepage = () => (
               <Link
                 key={idx}
                 to={cat.path}
-                className="group relative bg-gray-50 rounded-2xl p-7 hover:bg-primary hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-transparent"
+                className="group block bg-gray-50 rounded-xl p-7 hover:bg-primary transition-colors duration-300 border border-gray-100 hover:border-transparent"
               >
-                <div className="w-11 h-11 bg-accent/10 group-hover:bg-accent/20 rounded-xl flex items-center justify-center mb-5 transition-colors">
-                  <Icon size={20} className="text-accent" />
-                </div>
+                <Icon size={22} className="text-accent mb-5" strokeWidth={1.5} />
                 <h3 className="text-base font-bold text-gray-900 group-hover:text-white mb-2 transition-colors">
                   {cat.title}
                 </h3>
                 <p className="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">
                   {cat.desc}
                 </p>
-                <div className="mt-4 flex items-center gap-1 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                  Learn more <ArrowRight size={14} />
-                </div>
               </Link>
             );
           })}
@@ -208,18 +124,15 @@ const Homepage = () => (
       </div>
     </section>
 
-    {/* Portfolio / Services Grid */}
+    {/* Recent projects */}
     <section className="bg-gray-50 py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 items-end mb-14">
-          <div>
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Build</p>
-            <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-gray-900">
-              Real Work We've Delivered
-            </h2>
-          </div>
-          <p className="text-gray-500 lg:text-right">
-            Websites, web apps, mobile apps, cloud setups, and marketing campaigns — built and shipped for UK businesses.
+        <div className="mb-14 max-w-2xl">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Recent projects
+          </h2>
+          <p className="text-gray-500">
+            Websites, web apps, mobile apps, cloud setups, and marketing campaigns built and shipped for UK businesses.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -227,7 +140,7 @@ const Homepage = () => (
             <Link
               key={idx}
               to={`/services/${service.id}`}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/3] block"
+              className="group relative overflow-hidden rounded-xl aspect-[4/3] block"
             >
               <img
                 src={service.image}
@@ -250,32 +163,30 @@ const Homepage = () => (
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-10 bg-gradient-to-r from-primary to-secondary rounded-2xl px-6 py-10 sm:p-10 lg:p-12">
-          <div className="max-w-2xl mx-auto text-center">
+        <div className="mt-10 bg-primary rounded-xl px-6 py-10 sm:p-10 lg:p-12">
+          <div className="max-w-2xl">
             <h3 className="text-white text-xl sm:text-2xl font-bold mb-3">
-              One Team. Every IT Service You Need.
+              One team. Every IT service you need.
             </h3>
             <p className="text-gray-400 mb-6 text-sm sm:text-base leading-relaxed">
-              Web development, DevOps, cloud infrastructure, graphic design, IT support, and digital marketing — all delivered by one team. No subcontractors. No middlemen.
+              Web development, DevOps, cloud infrastructure, graphic design, IT support, and digital marketing. All in-house. No subcontractors.
             </p>
             <Link
               to="/getintouch"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-white font-semibold px-6 py-3 rounded-xl hover:bg-accent-dark transition-all duration-300 text-sm"
+              className="inline-flex items-center bg-accent text-white font-semibold px-6 py-3 rounded-lg hover:bg-accent-dark transition-colors text-sm"
             >
-              Start Your Project
-              <ArrowRight size={16} />
+              Talk to us
             </Link>
           </div>
         </div>
       </div>
     </section>
 
-    {/* Companies We've Worked With */}
+    {/* Clients */}
     <section className="bg-white py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-accent font-semibold text-sm uppercase tracking-widest mb-3">Trusted By</p>
-        <h2 className="text-center text-2xl lg:text-3xl font-bold text-gray-900 mb-12">
-          Companies We've Worked With
+        <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12">
+          Clients
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-12 items-center">
           {[
@@ -288,7 +199,7 @@ const Homepage = () => (
               <img
                 src={client.logo}
                 alt={client.name}
-                className="max-h-14 lg:max-h-16 w-auto opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="max-h-14 lg:max-h-16 w-auto opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-colors"
                 loading="lazy"
                 decoding="async"
               />
@@ -298,75 +209,47 @@ const Homepage = () => (
       </div>
     </section>
 
-    {/* Why Us */}
+    {/* Why us */}
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Why Joro Services</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               We do the work. No outsourcing.
             </h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
-              The people you speak to are the engineers and designers who do the work. We don't sell projects and hand them to freelancers. Every website, every deployment, every support ticket is handled by our team.
+              The people you speak to are the engineers and designers who do the work. We don&apos;t sell projects and hand them to freelancers. Every website, every deployment, every support ticket is handled by our team.
             </p>
-            <ul className="space-y-4">
-              {[
-                'AWS Solutions Architect certified team',
-                'GDPR-compliant processes and professional indemnity insured',
-                'Fixed pricing with no hidden fees or hourly surprises',
-                'Proven results across healthcare, financial services, and recruitment',
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-600">
-                  <CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">{item}</span>
-                </li>
-              ))}
+            <ul className="space-y-3 text-sm text-gray-600">
+              <li>— AWS Solutions Architect certified team</li>
+              <li>— GDPR-compliant processes and professional indemnity insured</li>
+              <li>— Fixed pricing with no hidden fees or hourly surprises</li>
+              <li>— Work delivered in healthcare, financial services and recruitment</li>
             </ul>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {[
-              { value: '20+', label: 'Clients Served' },
-              { value: '35+', label: 'Projects Delivered' },
-              { value: '26.6%', label: 'Avg Cloud Savings' },
-              { value: '99%', label: 'Client Satisfaction' },
-            ].map((stat, i) => (
-              <div key={i} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
-                <span className="text-3xl lg:text-4xl font-bold text-accent block mb-1">{stat.value}</span>
-                <span className="text-xs text-gray-500 uppercase tracking-wider">{stat.label}</span>
-              </div>
-            ))}
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+              <span className="text-3xl lg:text-4xl font-bold text-gray-900 block mb-1">20+</span>
+              <span className="text-xs text-gray-500 uppercase tracking-wider">Clients served</span>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+              <span className="text-3xl lg:text-4xl font-bold text-gray-900 block mb-1">35+</span>
+              <span className="text-xs text-gray-500 uppercase tracking-wider">Projects delivered</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    {/* Testimonials Section */}
-    <section className="bg-primary py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Testimonials</p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">
-            What Our Clients Say
-          </h2>
-        </div>
-        <TestimonialGrid />
-        <div className="mt-14">
-          <ImpressionCard />
-        </div>
-      </div>
-    </section>
-
-    {/* Local Services Section - Internal Linking for SEO */}
+    {/* Local Services */}
     <section className="bg-gray-50 py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Local Coverage</p>
+        <div className="mb-14 max-w-2xl">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            IT Support &amp; Web Design Near You
+            IT support and web design near you
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
-            Based in Aldershot, we provide same-day on-site support across Hampshire and Surrey. Find the right service for your area.
+          <p className="text-gray-500">
+            Based in Aldershot. Same-day on-site support across Hampshire and Surrey.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -374,7 +257,7 @@ const Homepage = () => (
             <Link
               key={idx}
               to={item.path}
-              className="group bg-white rounded-xl p-5 border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all"
+              className="group bg-white rounded-lg p-5 border border-gray-100 hover:border-accent/30 transition-colors"
             >
               <h3 className="font-semibold text-gray-900 group-hover:text-accent transition-colors text-sm">
                 {item.label}
@@ -384,24 +267,19 @@ const Homepage = () => (
           ))}
           <Link
             to="/services"
-            className="group bg-accent/5 rounded-xl p-5 border border-accent/20 hover:bg-accent/10 transition-all flex items-center justify-center"
+            className="group bg-accent/5 rounded-lg p-5 border border-accent/20 hover:bg-accent/10 transition-colors flex items-center justify-center"
           >
-            <span className="font-semibold text-accent text-sm flex items-center gap-2">
-              View All Services
-              <ArrowRight size={14} />
+            <span className="font-semibold text-accent text-sm">
+              View all services
             </span>
           </Link>
         </div>
       </div>
     </section>
 
-    {/* Insights Section */}
+    {/* Insights */}
     <InsightsSection />
 
-    {/* FAQ Section */}
-    <FAQ />
-
-    {/* Footer */}
     <Footer />
   </div>
 );

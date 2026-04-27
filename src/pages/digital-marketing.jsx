@@ -9,7 +9,7 @@ import { serviceSchema, breadcrumbSchema } from '../seo/schemas';
 
 const DigitalMarketing = () => {
   return (
-    <div className="min-h-screen bg-white text-text font-poppins">
+    <div className="min-h-screen bg-white text-text">
       <SEO
         {...pagesSEO['/digital-marketing']}
         jsonLd={[

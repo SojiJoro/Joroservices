@@ -78,10 +78,9 @@ const CreativeSolutions = () => {
       />
 
       {/* Hero Section */}
-      <section id="hero" className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section id="hero" className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4">Creative Solutions</p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Design That Makes People Remember Your Brand
             </h1>
@@ -90,10 +89,10 @@ const CreativeSolutions = () => {
             </p>
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
               Start a Project
-              <ArrowRight size={16} />
+             
             </Link>
           </div>
         </div>
@@ -103,7 +102,6 @@ const CreativeSolutions = () => {
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</p>
             <h2 className="text-3xl lg:text-4xl font-bold">What We Offer</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -111,12 +109,12 @@ const CreativeSolutions = () => {
               <Link
                 key={index}
                 to={`/creative-solutions/${service.slug}`}
-                className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-lg transition-all duration-300"
+                className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-lg transition-colors"
               >
                 <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-accent transition-colors">{service.title}</h3>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">{service.description}</p>
                 <span className="inline-flex items-center gap-1 text-sm font-medium text-accent">
-                  Learn more <ArrowRight size={14} />
+                  Learn more
                 </span>
               </Link>
             ))}
@@ -128,7 +126,6 @@ const CreativeSolutions = () => {
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Benefits</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Why Creative Design Matters</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -146,7 +143,6 @@ const CreativeSolutions = () => {
       <section className="py-20 lg:py-28 bg-gray-50" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-3">
@@ -159,7 +155,7 @@ const CreativeSolutions = () => {
                   <span className="font-semibold text-gray-900">{faq.question}</span>
                   <ChevronDown size={20} className={`text-gray-400 flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
-                <div className={`grid transition-all duration-300 ease-in-out ${openFaq === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                <div className={`grid transition-colors ease-in-out ${openFaq === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="overflow-hidden">
                     <p className="px-5 pb-5 text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
@@ -171,16 +167,16 @@ const CreativeSolutions = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">Want Your Brand to Stand Out?</h2>
           <p className="text-gray-400 mb-8">Let's create a look that makes you different from everyone else in your space.</p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
             Get in Touch
-            <ArrowRight size={16} />
+           
           </Link>
         </div>
       </section>

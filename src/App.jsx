@@ -92,7 +92,7 @@ function App() {
         {isVisible && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 p-3 bg-accent text-white rounded-xl shadow-lg shadow-accent/20 hover:bg-accent-dark transition-all duration-300 z-40"
+            className="fixed bottom-6 right-6 p-3 bg-accent text-white rounded-xl hover:bg-accent-dark transition-colors z-40"
           >
             <FaArrowUp className="text-sm" />
           </button>

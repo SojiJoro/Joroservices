@@ -10,7 +10,6 @@ const InsightsSection = () => {
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Insights</p>
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
             Latest Insights for Your Business
           </h2>
@@ -49,7 +48,7 @@ const InsightsSection = () => {
                     </div>
                   </div>
                   <span className="text-accent text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Read <ArrowRight size={14} />
+                    Read
                   </span>
                 </div>
               </div>
@@ -62,7 +61,7 @@ const InsightsSection = () => {
             to="/insights"
             className="inline-flex items-center gap-2 text-accent hover:text-accent-dark font-semibold text-sm transition-colors"
           >
-            View all articles <ArrowRight size={14} />
+            View all articles
           </Link>
         </div>
       </div>

@@ -1,46 +1,15 @@
 import React from 'react'
-import { FaCircleDot } from 'react-icons/fa6'
-import { Typewriter } from 'react-simple-typewriter'
 
 const HeroSection = () => {
   return (
-    <section className="grid p-4 pt-28 pb-20 justify-center grid-cols-1 lg:grid-cols-4 lg:items-center gap-4 min-h-screen bg-white">
-      {/* Left: Text */}
-      <div className="flex lg:col-span-2 flex-col">
-        <p className="flex items-center gap-4 pb-4 text-xs">
-          <FaCircleDot className="text-accent-dark" />
-          <span className="text-accent-dark uppercase">Creative Solutions</span>
-        </p>
-        <h1 className="text-2xl h-28 lg:h-36 lg:text-5xl font-medium text-black">
-          <Typewriter
-            words={[
-              'Design that resonates and converts',
-              'Web experiences tailored to your brand',
-            ]}
-            loop={true}
-            cursor
-            cursorStyle="|"
-            typeSpeed={40}
-            deleteSpeed={30}
-            delaySpeed={1500}
-          />
+    <section className="bg-white pt-28 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 max-w-3xl leading-tight">
+          Websites and brand identity, designed and built.
         </h1>
-        <p className="text-sm lg:text-base text-black pr-4 mt-4">
-          At Joro Services, we combine creativity with strategic insight to build
-          digital and print experiences that stand out. From engaging websites
-          and seamless interfaces to eye-catching graphics, our work is designed
-          to capture your audience and drive real results.
+        <p className="mt-6 text-base lg:text-lg text-gray-600 max-w-2xl leading-relaxed">
+          We design websites and brand identity for UK businesses. From discovery to launch, usually 4 to 6 weeks. No templates, no resold themes.
         </p>
-      </div>
-
-      {/* Right: Decorative panel */}
-      <div
-        className="relative h-[50vh] lg:h-[80vh] mt-12 lg:col-span-2 rounded-lg overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent-dark"
-        role="img"
-        aria-label="Showcase of our creative work"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,white,transparent_60%)] opacity-15" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,#14b8a6,transparent_55%)] opacity-30" />
       </div>
     </section>
   )

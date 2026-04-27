@@ -118,7 +118,7 @@ const Aldershot = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[
             { name: 'Home', path: '/' },
@@ -127,7 +127,7 @@ const Aldershot = () => {
           ]} />
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-5 h-5 text-accent-dark" />
-            <span className="text-accent font-semibold text-sm uppercase tracking-widest">Aldershot, Hampshire</span>
+            <span className="text-xs font-medium text-gray-500">Aldershot, Hampshire</span>
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
             Web Development, IT Support &amp; Digital Marketing in{' '}
@@ -139,9 +139,9 @@ const Aldershot = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Get a Free Consultation
+              Talk to us
             </Link>
             <a
               href="tel:+4407867374034"
@@ -156,7 +156,6 @@ const Aldershot = () => {
       {/* Services Grid */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 text-center">What We Offer</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">
             Our Services in Aldershot
           </h2>
@@ -204,7 +203,6 @@ const Aldershot = () => {
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
-                <CheckCircle className="w-5 h-5 text-accent-dark mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-1">{item.title}</h3>
                   <p className="text-gray-600">{item.text}</p>
@@ -257,7 +255,7 @@ const Aldershot = () => {
                   />
                 </button>
                 <div
-                  className={`grid transition-all duration-300 ${openFaq === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+                  className={`grid transition-colors ${openFaq === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
                 >
                   <div className="overflow-hidden">
                     <div className="px-5 pb-5">
@@ -304,7 +302,7 @@ const Aldershot = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20 lg:py-28">
+      <section className="bg-primary text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Ready to Grow Your Aldershot Business Online?
@@ -314,9 +312,9 @@ const Aldershot = () => {
           </p>
           <Link
             to="/getintouch"
-            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+            className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
           >
-            Book Your Free Consultation
+            Talk to us
           </Link>
         </div>
       </section>

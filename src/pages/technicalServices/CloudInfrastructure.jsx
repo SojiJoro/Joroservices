@@ -233,9 +233,9 @@ const CloudInfrastructure = () => {
         ]}
       />
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white pt-28 pb-20">
+      <section className="bg-primary text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="text-xs font-medium text-gray-500 mb-3">
             AWS Cloud Services
           </p>
           <Breadcrumb items={[{ name: 'Home', path: '/' }, { name: 'Technical Services', path: '/technical-services' }, { name: 'Cloud Infrastructure' }]} />
@@ -254,9 +254,9 @@ const CloudInfrastructure = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Get a Free AWS Cost Audit <ArrowRight className="w-4 h-4" />
+              Get a Free AWS Cost Audit
             </Link>
             <a
               href="#pricing"
@@ -395,7 +395,6 @@ const CloudInfrastructure = () => {
               'A prioritised action plan you can implement yourself, or hire us to do it',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
-                <FaCheckCircle className="text-accent-dark mt-1 flex-shrink-0" />
                 <p className="text-gray-700 text-sm">{item}</p>
               </div>
             ))}
@@ -430,9 +429,9 @@ const CloudInfrastructure = () => {
           <div className="text-center">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Book Your Free AWS Cost Audit <ArrowRight className="w-4 h-4" />
+              Book Your Free AWS Cost Audit
             </Link>
             <p className="text-xs text-gray-500 mt-4">
               Read-only access only. We never modify your infrastructure without
@@ -477,7 +476,6 @@ const CloudInfrastructure = () => {
                       key={j}
                       className="flex items-start gap-3 text-gray-700 text-sm"
                     >
-                      <FaCheckCircle className="text-accent-dark mt-0.5 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -494,9 +492,9 @@ const CloudInfrastructure = () => {
             </p>
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Let's Talk About Your Cloud <ArrowRight className="w-4 h-4" />
+              Let's Talk About Your Cloud
             </Link>
           </div>
         </div>
@@ -593,13 +591,13 @@ const CloudInfrastructure = () => {
               <h3 className="text-xl font-semibold mb-4">Related Services</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Link to="/technical-services/it-support-and-maintenance" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                  <ArrowRight className="w-4 h-4" /> IT Support & Maintenance
+                  IT Support & Maintenance
                 </Link>
                 <Link to="/technical-services/cybersecurity" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                  <ArrowRight className="w-4 h-4" /> Cybersecurity
+                  Cybersecurity
                 </Link>
                 <Link to="/development/web-development" className="flex items-center gap-2 text-accent hover:text-accent-dark font-medium transition">
-                  <ArrowRight className="w-4 h-4" /> Web Development
+                  Web Development
                 </Link>
               </div>
             </div>
@@ -608,7 +606,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-secondary text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
             Your Cloud Should Save You Money, Not Drain It
@@ -621,9 +619,9 @@ const CloudInfrastructure = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/getintouch"
-              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/20 text-sm"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-accent-dark transition-all text-sm"
             >
-              Book Your Free AWS Cost Audit <ArrowRight className="w-4 h-4" />
+              Book Your Free AWS Cost Audit
             </Link>
             <Link
               to="/getintouch"
