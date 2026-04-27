@@ -3,6 +3,7 @@ import CardGrid from "../component/CardGrid";
 import Footer from "../component/Footer";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Clock, ShieldCheck, MapPin, Tag, Lock } from "lucide-react";
 import SEO from "../component/SEO";
 import pagesSEO from "../seo/pagesSEO";
 import { organizationSchema, localBusinessSchema, breadcrumbSchema, contactPageSchema } from "../seo/schemas";
@@ -98,6 +99,29 @@ const Contact = () => {
               Tell us about your project and one of our team will be in touch as soon as possible.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Trust Strip */}
+      <section className="bg-white border-b border-gray-100 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-5 gap-x-4 text-center md:text-left">
+            {[
+              { icon: Clock, label: 'Free 30-min consultation' },
+              { icon: Tag, label: 'Fixed pricing — no surprises' },
+              { icon: MapPin, label: '100% UK team — no outsourcing' },
+              { icon: ShieldCheck, label: 'Professional indemnity insured' },
+              { icon: Lock, label: 'GDPR-compliant by default' },
+            ].map((item) => {
+              const Icon = item.icon;
+              return (
+                <li key={item.label} className="flex items-center justify-center md:justify-start gap-2.5">
+                  <Icon size={18} className="text-accent flex-shrink-0" />
+                  <span className="text-sm font-medium text-gray-700 leading-snug">{item.label}</span>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </section>
 

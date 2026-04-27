@@ -178,7 +178,7 @@ const Footer = () => {
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Joro Services Ltd. All rights reserved.</p>
-          <p className="mt-1">Company No. 14079588 | Registered in England &amp; Wales | Aldershot, Hampshire, UK</p>
+          <p className="mt-1">Company No. 14079588 | ICO Reg. ZC099099 | Registered in England &amp; Wales | Aldershot, Hampshire, UK</p>
         </div>
       </div>
     </footer>
